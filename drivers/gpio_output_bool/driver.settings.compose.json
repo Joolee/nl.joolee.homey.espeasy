@@ -1,0 +1,43 @@
+[
+	{
+		"$extends": "connectionSettings"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings"
+		},
+		"children": [
+			{
+				"id": "pollInterval",
+				"type": "number",
+				"label": {
+					"en": "Polling interval"
+				},
+				"value": 5,
+				"min": 5,
+				"max": 3600,
+				"units": {
+					"en": "seconds"
+				},
+				"hint": {
+					"en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit"
+				}
+			},
+			{
+				"id": "invert",
+				"type": "checkbox",
+				"label": {
+					"en": "Invert device state"
+				},
+				"options": {
+					"type": "bool"
+				},
+				"value": false,
+				"hint": {
+					"en": "Consider state '0' on and state '1' off"
+				}
+			}
+		]
+	}
+]

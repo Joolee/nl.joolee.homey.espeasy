@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<script>
+		Homey.setTitle(__('pair.unit.addTitle'));
+
+		if (!unit) {
+			Homey.alert("You need to connect to the unit first", "error", () => { Homey.prevView(); });
+		}
+		else {
+			console.log('Adding unit', unit);
+			Homey.addDevice({
+				"name": unit.name,
+				"data": {
+					"mac": unit.mac
+				},
+				"settings": {
+					"host": unit.host,
+					"port": parseInt(unit.port),
+					"mac": unit.mac,
+					"pollInterval": 60
+				}
+			}, (err, result) => {
+				console.log(err, result);
+				if (err) {
+					Homey.alert("Something went wrong adding the unit. Please try again", error, () => { Homey.prevView(); });
+				} else {
+					Homey.done();
+				}
+			});
+		}
+
+	</script>
+	<style>
+		.parent {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+		}
+
+		.child {
+			margin: auto;
+			background-color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="parent">
+		<div class="child"><span class="fa fa-sun fa-spin fa-5x"></div>
+	</div>
+</body>
+
+</html>

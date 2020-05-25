@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg viewBox="0 0 113.392 113.392" xmlns="http://www.w3.org/2000/svg">
+	<path
+		stroke="black" stroke-width="9.96280003"  stroke-linecap="round"
+		d="M 14.174,42.521 42.521,14.174"
+	></path>
+
+	<path
+		stroke="black" stroke-width="9.96280003"  stroke-linecap="round"
+		d="M 14.174,70.867 70.867,14.174"
+	></path>
+	<path
+		stroke="black" stroke-width="9.96280003"  stroke-linecap="round"
+		d="M 14.174,99.212 99.212,14.174"
+	></path>
+	<path
+		stroke="black" stroke-width="9.96280003"  stroke-linecap="round"
+		d="M 42.521,99.212 99.212,42.521"
+	></path>
+	<path
+		fill="black"
+		d="m 103.462,92.132 c 0,-6.267 -5.07,-11.343 -11.33,-11.343 -6.267,0 -11.343,5.076 -11.343,11.343 0,6.26 5.076,11.33 11.343,11.33 6.26,0 11.33,-5.07 11.33,-11.33 z m -11.33,0"
+	></path>
+</svg>

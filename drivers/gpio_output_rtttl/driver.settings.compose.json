@@ -1,0 +1,40 @@
+[
+	{
+		"$extends": "connectionSettings"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings"
+		},
+		"children": [
+			{
+				"id": "pollInterval",
+				"type": "number",
+				"label": {
+					"en": "Polling interval"
+				},
+				"value": 60,
+				"min": 5,
+				"max": 3600,
+				"units": {
+					"en": "seconds"
+				},
+				"hint": {
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+				}
+			},
+			{
+				"id": "melody",
+				"type": "text",
+				"label": {
+					"en": "RTTTL Melody"
+				},
+				"value": "d=8,o=6,b=340:c,e,g",
+				"hint": {
+					"en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work."
+				}
+			}
+		]
+	}
+]

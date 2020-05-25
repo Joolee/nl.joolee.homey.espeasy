@@ -1,0 +1,10 @@
+{
+    "type": "string",
+    "title": {
+        "en": "Last seen"
+	},
+	"icon": "/assets/icons/heartbeat.svg",
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false
+}

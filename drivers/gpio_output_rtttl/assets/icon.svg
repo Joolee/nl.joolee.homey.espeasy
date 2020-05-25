@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
+	<path
+		stroke="black" stroke-width="5" fill="transparent" stroke-linecap="round"
+		d="
+		M 10,45 V 55
+		M 20,80 V 20
+		M 30,70 V 30
+		M 40,60 V 40
+		M 50,50 V 50
+		M 60,55 V 45
+		M 70,40 V 60
+		M 80,55 V 45
+		M 90,50 V 50
+		"
+	></path>
+</svg>

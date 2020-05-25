@@ -1,0 +1,46 @@
+input[type=text],
+input[type=number],
+select,
+option {
+	width: 100%;
+	border: 1px solid#ddd;
+	border-radius: 3px;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 0 10px 0 10px;
+	font-size: 14px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	transition: all .3s;
+	margin-bottom: 3px;
+	font-family: "Roboto";
+	font-weight: 300;
+}
+
+body label:not(.hy-nostyle),
+.label {
+	font-size: 1em;
+	font-weight: 450;
+	text-transform: unset;
+	color: #616161;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	margin-left: 10px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.fa-info-circle {
+	color: blue;
+	padding: 5px;
+}
+
+.fa-exclamation-triangle {
+	color: orange;
+	padding: 5px;
+}
+
+.hidden {
+	display: none;
+}

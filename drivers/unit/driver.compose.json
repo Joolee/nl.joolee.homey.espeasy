@@ -1,0 +1,36 @@
+{
+	"id": "unit",
+	"name": {
+		"en": "ESP Easy Unit"
+	},
+	"class": "other",
+	"capabilities": [
+		"custom_load",
+		"custom_ram",
+		"custom_heap",
+		"custom_uptime",
+		"custom_heartbeat"
+	],
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"pair": [
+		{
+			"id": "ask_unit_ip",
+			"navigation": {
+				"next": "setup_controller"
+			}
+		},
+		{
+			"id": "setup_controller",
+			"navigation": {
+				"prev": "ask_unit_ip",
+				"next": "add_device"
+			}
+		},
+		{
+			"id": "add_device"
+		}
+	]
+}

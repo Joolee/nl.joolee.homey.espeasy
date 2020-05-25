@@ -1,0 +1,24 @@
+{
+	"id": "gpio_pulse",
+	"name": {
+		"en": "GPIO Pulse Output"
+	},
+	"class": "other",
+	"capabilities": [],
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"pair": [
+		{
+			"id": "start",
+			"navigation": {
+				"next": "done"
+			}
+		},
+		{
+			"id": "done",
+			"template": "done"
+		}
+	]
+}

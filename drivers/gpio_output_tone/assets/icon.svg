@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
+	<path
+		stroke="black" stroke-width="5" fill="transparent" stroke-linecap="square"
+		d="M 2.5,30 H 30 L 65,10 V 90 L 30,70 H 2.5 Z"
+	></path>
+	<path
+		stroke="black" stroke-width="5" fill="transparent" stroke-linecap="square"
+		d="M 80,40 Q 85,50 80,60"
+	></path>
+	<path
+		stroke="black" stroke-width="5" fill="transparent" stroke-linecap="square"
+		d="M 90,25 Q 105,50 90,75"
+	></path>
+</svg>

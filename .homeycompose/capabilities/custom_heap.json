@@ -1,0 +1,15 @@
+{
+    "type": "number",
+    "title": {
+        "en": "Heap Free",
+        "nl": "Heap Beschikbaar"
+	},
+	"icon": "/assets/icons/heap.svg",
+    "insights": true,
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "units": {
+        "en": "Blocks"
+    }
+}

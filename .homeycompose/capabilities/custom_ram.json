@@ -1,0 +1,15 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Free RAM",
+      "nl": "RAM Beschikbaar"
+	},
+	"icon": "/assets/icons/ram-alt.svg",
+    "insights": true,
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "units": {
+      "en": "KB"
+    }
+  }

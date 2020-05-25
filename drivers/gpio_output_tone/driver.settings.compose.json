@@ -1,0 +1,57 @@
+[
+	{
+		"$extends": "connectionSettings"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings"
+		},
+		"children": [
+			{
+				"id": "pollInterval",
+				"type": "number",
+				"label": {
+					"en": "Polling interval"
+				},
+				"value": 60,
+				"min": 5,
+				"max": 3600,
+				"units": {
+					"en": "seconds"
+				},
+				"hint": {
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+				}
+			},
+			{
+				"id": "duration",
+				"type": "number",
+				"label": {
+					"en": "Tone duration"
+				},
+				"units": {
+					"en": "milliseconds"
+				},
+				"value": 150,
+				"hint": {
+					"en": "Default tone duration."
+				}
+			},
+			{
+				"id": "frequency",
+				"type": "number",
+				"label": {
+					"en": "Tone frequency"
+				},
+				"units": {
+					"en": "hertz"
+				},
+				"value": 1300,
+				"hint": {
+					"en": "Default tone frequency. Recommended to keep between 20 and 13000."
+				}
+			}
+		]
+	}
+]

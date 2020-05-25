@@ -1,0 +1,12 @@
+{
+  "name": "nl.joolee.homey.espeasy",
+  "version": "0.0.1",
+  "main": "app.js",
+  "devDependencies": {
+    "homey": "^2.3.3"
+  },
+  "dependencies": {
+    "homey-lib": "^2.4.9",
+    "http.min": "^2.0.1"
+  }
+}

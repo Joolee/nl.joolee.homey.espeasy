@@ -1,0 +1,51 @@
+[
+	{
+		"$extends": "connectionSettings"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings"
+		},
+		"children": [
+			{
+				"id": "pollInterval",
+				"type": "number",
+				"label": {
+					"en": "Polling interval"
+				},
+				"value": 60,
+				"min": 5,
+				"max": 3600,
+				"units": {
+					"en": "seconds"
+				},
+				"hint": {
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+				}
+			},
+			{
+				"id": "duration",
+				"type": "number",
+				"label": {
+					"en": "Pulse duration"
+				},
+				"value": 500,
+				"units": {
+					"en": "milliseconds"
+				}
+			},
+			{
+				"id": "invert",
+				"type": "checkbox",
+				"label": {
+					"en": "Invert command"
+				},
+				"value": false,
+				"hint": {
+					"en": "Send state '0' as pulse command instead of '1'"
+				}
+			}
+		]
+	}
+]

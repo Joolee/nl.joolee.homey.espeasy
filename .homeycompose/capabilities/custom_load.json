@@ -1,0 +1,15 @@
+{
+    "type": "number",
+    "title": {
+        "en": "System load"
+	},
+	"icon": "/assets/icons/cpu.svg",
+    "decimals": 2,
+    "insights": true,
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "units": {
+        "en": "%"
+    }
+}

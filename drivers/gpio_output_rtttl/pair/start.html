@@ -1,0 +1,41 @@
+<link href="../../../assets/pairing/pair.css" rel="stylesheet" type="text/css" />
+<script src="../../../assets/pairing/GPIO.js" type="text/javascript"></script>
+
+<p data-i18n="pair.gpio.rtttl.description"></p>
+
+<p>
+	<label for="unitList" data-i18n="pair.gpio.select_unit"></label>
+	<select id="unitList">
+		<option data-i18n="pair.gpio.unit_list_placeholder"></option>
+	</select>
+</p>
+
+<section id="pinProperties" class="hidden" data-pintype="rtttl">
+	<p>
+		<label for="pinList" data-i18n="pair.gpio.select_pin"></label>
+		<select id="pinList">
+			<option data-i18n="pair.gpio.gpio_list_placeholder"></option>
+		</select>
+	</p>
+
+	<p id="pinWarning" class="warning hidden">
+		<span class="fa fa-exclamation-triangle"></span>
+		<span></span>
+	</p>
+
+	<p id="pinHint" class="hint hidden">
+		<span class="fa fa-info-circle"></span>
+		<span></span>
+	</p>
+
+	<p>
+		<label for="capabilityList" data-i18n="pair.gpio.selectCapability"></label>
+		<select id="capabilityList">
+		</select>
+	</p>
+
+	<p>
+		<label for="melody" data-i18n="pair.gpio.rtttl.melody"></label>
+		<input id="melody" type="text" value="d=8,o=6,b=340:c,e,g">
+	</p>
+</section>
