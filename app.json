@@ -1,759 +1,759 @@
 {
-  "id": "nl.joolee.homey.espeasy",
-  "version": "1.0.0",
-  "compatibility": ">=2.0",
-  "sdk": 2,
-  "brandColor": "#2F4252",
-  "name": {
-    "en": "ESP Easy",
-    "nl": "ESP Easy"
-  },
-  "description": {
-    "en": "Connects to ESP8266 boards like WeMos D1 and NodeMCU running ESP Easy firmware"
-  },
-  "category": [
-    "tools"
-  ],
-  "permissions": [],
-  "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
-  },
-  "author": {
-    "name": "Joolee",
-    "email": "homey-app@joolee.nl"
-  },
-  "contributing": {
-    "donate": {
-      "paypal": {
-        "username": "joolee3000"
-      }
-    }
-  },
-  "bugs": {
-    "url": "https://github.com/Joolee/nl.joolee.homey.espeasy/issues"
-  },
-  "homeyCommunityTopicId": 30381,
-  "source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
-  "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy",
-  "drivers": [
-    {
-      "id": "gpio_output_bool",
-      "name": {
-        "en": "GPIO Digital Output"
-      },
-      "class": "other",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/gpio_output_bool/assets/images/large.png",
-        "small": "/drivers/gpio_output_bool/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "start",
-          "navigation": {
-            "next": "done"
-          }
-        },
-        {
-          "id": "done",
-          "template": "done"
-        }
-      ],
-      "settings": [
-        {
-          "id": "unitInfo",
-          "type": "group",
-          "label": {
-            "en": "Unit information"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "host",
-              "type": "label",
-              "label": {
-                "en": "Unit host"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 5,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit"
-              }
-            },
-            {
-              "id": "invert",
-              "type": "checkbox",
-              "label": {
-                "en": "Invert device state"
-              },
-              "options": {
-                "type": "bool"
-              },
-              "value": false,
-              "hint": {
-                "en": "Consider state '0' on and state '1' off"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gpio_output_pulse",
-      "name": {
-        "en": "GPIO Pulse Output"
-      },
-      "class": "other",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/gpio_output_pulse/assets/images/large.png",
-        "small": "/drivers/gpio_output_pulse/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "start",
-          "navigation": {
-            "next": "done"
-          }
-        },
-        {
-          "id": "done",
-          "template": "done"
-        }
-      ],
-      "settings": [
-        {
-          "id": "unitInfo",
-          "type": "group",
-          "label": {
-            "en": "Unit information"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "host",
-              "type": "label",
-              "label": {
-                "en": "Unit host"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 60,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
-              }
-            },
-            {
-              "id": "duration",
-              "type": "number",
-              "label": {
-                "en": "Pulse duration"
-              },
-              "value": 500,
-              "units": {
-                "en": "milliseconds"
-              }
-            },
-            {
-              "id": "invert",
-              "type": "checkbox",
-              "label": {
-                "en": "Invert command"
-              },
-              "value": false,
-              "hint": {
-                "en": "Send state '0' as pulse command instead of '1'"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gpio_output_pwm",
-      "name": {
-        "en": "GPIO PWM Output"
-      },
-      "class": "other",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/gpio_output_pwm/assets/images/large.png",
-        "small": "/drivers/gpio_output_pwm/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "start",
-          "navigation": {
-            "next": "done"
-          }
-        },
-        {
-          "id": "done",
-          "template": "done"
-        }
-      ],
-      "settings": [
-        {
-          "id": "unitInfo",
-          "type": "group",
-          "label": {
-            "en": "Unit information"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "host",
-              "type": "label",
-              "label": {
-                "en": "Unit host"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 60,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gpio_output_rtttl",
-      "name": {
-        "en": "GPIO Melody Output"
-      },
-      "class": "other",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/gpio_output_rtttl/assets/images/large.png",
-        "small": "/drivers/gpio_output_rtttl/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "start",
-          "navigation": {
-            "next": "done"
-          }
-        },
-        {
-          "id": "done",
-          "template": "done"
-        }
-      ],
-      "settings": [
-        {
-          "id": "unitInfo",
-          "type": "group",
-          "label": {
-            "en": "Unit information"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "host",
-              "type": "label",
-              "label": {
-                "en": "Unit host"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 60,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
-              }
-            },
-            {
-              "id": "melody",
-              "type": "text",
-              "label": {
-                "en": "RTTTL Melody"
-              },
-              "value": "d=8,o=6,b=340:c,e,g",
-              "hint": {
-                "en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work."
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gpio_output_tone",
-      "name": {
-        "en": "GPIO Tone Output"
-      },
-      "class": "other",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/gpio_output_tone/assets/images/large.png",
-        "small": "/drivers/gpio_output_tone/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "start",
-          "navigation": {
-            "next": "done"
-          }
-        },
-        {
-          "id": "done",
-          "template": "done"
-        }
-      ],
-      "settings": [
-        {
-          "id": "unitInfo",
-          "type": "group",
-          "label": {
-            "en": "Unit information"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "host",
-              "type": "label",
-              "label": {
-                "en": "Unit host"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 60,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
-              }
-            },
-            {
-              "id": "duration",
-              "type": "number",
-              "label": {
-                "en": "Tone duration"
-              },
-              "units": {
-                "en": "milliseconds"
-              },
-              "value": 150,
-              "hint": {
-                "en": "Default tone duration."
-              }
-            },
-            {
-              "id": "frequency",
-              "type": "number",
-              "label": {
-                "en": "Tone frequency"
-              },
-              "units": {
-                "en": "hertz"
-              },
-              "value": 1300,
-              "hint": {
-                "en": "Default tone frequency. Recommended to keep between 20 and 13000."
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "unit",
-      "name": {
-        "en": "ESP Easy Unit"
-      },
-      "class": "other",
-      "capabilities": [
-        "custom_load",
-        "custom_ram",
-        "custom_heap",
-        "custom_uptime",
-        "custom_heartbeat"
-      ],
-      "images": {
-        "large": "/drivers/unit/assets/images/large.png",
-        "small": "/drivers/unit/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "ask_unit_ip",
-          "navigation": {
-            "next": "setup_controller"
-          }
-        },
-        {
-          "id": "setup_controller",
-          "navigation": {
-            "prev": "ask_unit_ip",
-            "next": "add_device"
-          }
-        },
-        {
-          "id": "add_device"
-        }
-      ],
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Connection settings"
-          },
-          "children": [
-            {
-              "id": "mac",
-              "type": "label",
-              "label": {
-                "en": "MAC Address"
-              },
-              "value": "",
-              "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
-              }
-            },
-            {
-              "id": "idx",
-              "type": "label",
-              "label": {
-                "en": "Unit ID"
-              },
-              "value": "",
-              "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
-              }
-            },
-            {
-              "id": "host",
-              "type": "text",
-              "label": {
-                "en": "IP Address or hostname"
-              },
-              "value": "",
-              "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
-              }
-            },
-            {
-              "id": "port",
-              "type": "number",
-              "label": {
-                "en": "Port number"
-              },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
-              "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Device settings"
-          },
-          "children": [
-            {
-              "id": "pollInterval",
-              "type": "number",
-              "label": {
-                "en": "Polling interval"
-              },
-              "value": 60,
-              "min": 5,
-              "max": 3600,
-              "units": {
-                "en": "seconds"
-              },
-              "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "capabilities": {
-    "custom_heap": {
-      "type": "number",
-      "title": {
-        "en": "Heap Free",
-        "nl": "Heap Beschikbaar"
-      },
-      "icon": "/assets/icons/heap.svg",
-      "insights": true,
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false,
-      "units": {
-        "en": "Blocks"
-      }
-    },
-    "custom_heartbeat": {
-      "type": "string",
-      "title": {
-        "en": "Last seen"
-      },
-      "icon": "/assets/icons/heartbeat.svg",
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false
-    },
-    "custom_load": {
-      "type": "number",
-      "title": {
-        "en": "System load"
-      },
-      "icon": "/assets/icons/cpu.svg",
-      "decimals": 2,
-      "insights": true,
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false,
-      "units": {
-        "en": "%"
-      }
-    },
-    "custom_ram": {
-      "type": "number",
-      "title": {
-        "en": "Free RAM",
-        "nl": "RAM Beschikbaar"
-      },
-      "icon": "/assets/icons/ram-alt.svg",
-      "insights": true,
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false,
-      "units": {
-        "en": "KB"
-      }
-    },
-    "custom_uptime": {
-      "type": "string",
-      "title": {
-        "en": "Uptime"
-      },
-      "icon": "/assets/icons/uptime.svg",
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false
-    }
-  }
+	"id": "nl.joolee.homey.espeasy",
+	"version": "1.0.0",
+	"compatibility": ">=2.0",
+	"sdk": 2,
+	"brandColor": "#2F4252",
+	"name": {
+		"en": "ESP Easy",
+		"nl": "ESP Easy"
+	},
+	"description": {
+		"en": "ESP Easy ondersteuning voor Homey"
+	},
+	"category": [
+		"tools"
+	],
+	"permissions": [],
+	"images": {
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
+	},
+	"author": {
+		"name": "Joolee",
+		"email": "homey-app@joolee.nl"
+	},
+	"contributing": {
+		"donate": {
+			"paypal": {
+				"username": "joolee3000"
+			}
+		}
+	},
+	"bugs": {
+		"url": "https://github.com/Joolee/nl.joolee.homey.espeasy/issues"
+	},
+	"homeyCommunityTopicId": 30381,
+	"source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
+	"homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy",
+	"drivers": [
+		{
+			"id": "gpio_output_bool",
+			"name": {
+				"en": "GPIO Digital Output"
+			},
+			"class": "other",
+			"capabilities": [],
+			"images": {
+				"large": "/drivers/gpio_output_bool/assets/images/large.png",
+				"small": "/drivers/gpio_output_bool/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "done"
+					}
+				},
+				{
+					"id": "done",
+					"template": "done"
+				}
+			],
+			"settings": [
+				{
+					"id": "unitInfo",
+					"type": "group",
+					"label": {
+						"en": "Unit information"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "host",
+							"type": "label",
+							"label": {
+								"en": "Unit host"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 5,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit"
+							}
+						},
+						{
+							"id": "invert",
+							"type": "checkbox",
+							"label": {
+								"en": "Invert device state"
+							},
+							"options": {
+								"type": "bool"
+							},
+							"value": false,
+							"hint": {
+								"en": "Consider state '0' on and state '1' off"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gpio_output_pulse",
+			"name": {
+				"en": "GPIO Pulse Output"
+			},
+			"class": "other",
+			"capabilities": [],
+			"images": {
+				"large": "/drivers/gpio_output_pulse/assets/images/large.png",
+				"small": "/drivers/gpio_output_pulse/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "done"
+					}
+				},
+				{
+					"id": "done",
+					"template": "done"
+				}
+			],
+			"settings": [
+				{
+					"id": "unitInfo",
+					"type": "group",
+					"label": {
+						"en": "Unit information"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "host",
+							"type": "label",
+							"label": {
+								"en": "Unit host"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 60,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+							}
+						},
+						{
+							"id": "duration",
+							"type": "number",
+							"label": {
+								"en": "Pulse duration"
+							},
+							"value": 500,
+							"units": {
+								"en": "milliseconds"
+							}
+						},
+						{
+							"id": "invert",
+							"type": "checkbox",
+							"label": {
+								"en": "Invert command"
+							},
+							"value": false,
+							"hint": {
+								"en": "Send state '0' as pulse command instead of '1'"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gpio_output_pwm",
+			"name": {
+				"en": "GPIO PWM Output"
+			},
+			"class": "other",
+			"capabilities": [],
+			"images": {
+				"large": "/drivers/gpio_output_pwm/assets/images/large.png",
+				"small": "/drivers/gpio_output_pwm/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "done"
+					}
+				},
+				{
+					"id": "done",
+					"template": "done"
+				}
+			],
+			"settings": [
+				{
+					"id": "unitInfo",
+					"type": "group",
+					"label": {
+						"en": "Unit information"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "host",
+							"type": "label",
+							"label": {
+								"en": "Unit host"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 60,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gpio_output_rtttl",
+			"name": {
+				"en": "GPIO Melody Output"
+			},
+			"class": "other",
+			"capabilities": [],
+			"images": {
+				"large": "/drivers/gpio_output_rtttl/assets/images/large.png",
+				"small": "/drivers/gpio_output_rtttl/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "done"
+					}
+				},
+				{
+					"id": "done",
+					"template": "done"
+				}
+			],
+			"settings": [
+				{
+					"id": "unitInfo",
+					"type": "group",
+					"label": {
+						"en": "Unit information"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "host",
+							"type": "label",
+							"label": {
+								"en": "Unit host"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 60,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+							}
+						},
+						{
+							"id": "melody",
+							"type": "text",
+							"label": {
+								"en": "RTTTL Melody"
+							},
+							"value": "d=8,o=6,b=340:c,e,g",
+							"hint": {
+								"en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gpio_output_tone",
+			"name": {
+				"en": "GPIO Tone Output"
+			},
+			"class": "other",
+			"capabilities": [],
+			"images": {
+				"large": "/drivers/gpio_output_tone/assets/images/large.png",
+				"small": "/drivers/gpio_output_tone/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "done"
+					}
+				},
+				{
+					"id": "done",
+					"template": "done"
+				}
+			],
+			"settings": [
+				{
+					"id": "unitInfo",
+					"type": "group",
+					"label": {
+						"en": "Unit information"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "host",
+							"type": "label",
+							"label": {
+								"en": "Unit host"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 60,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+							}
+						},
+						{
+							"id": "duration",
+							"type": "number",
+							"label": {
+								"en": "Tone duration"
+							},
+							"units": {
+								"en": "milliseconds"
+							},
+							"value": 150,
+							"hint": {
+								"en": "Default tone duration."
+							}
+						},
+						{
+							"id": "frequency",
+							"type": "number",
+							"label": {
+								"en": "Tone frequency"
+							},
+							"units": {
+								"en": "hertz"
+							},
+							"value": 1300,
+							"hint": {
+								"en": "Default tone frequency. Recommended to keep between 20 and 13000."
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "unit",
+			"name": {
+				"en": "ESP Easy Unit"
+			},
+			"class": "other",
+			"capabilities": [
+				"custom_load",
+				"custom_ram",
+				"custom_heap",
+				"custom_uptime",
+				"custom_heartbeat"
+			],
+			"images": {
+				"large": "/drivers/unit/assets/images/large.png",
+				"small": "/drivers/unit/assets/images/small.png"
+			},
+			"pair": [
+				{
+					"id": "ask_unit_ip",
+					"navigation": {
+						"next": "setup_controller"
+					}
+				},
+				{
+					"id": "setup_controller",
+					"navigation": {
+						"prev": "ask_unit_ip",
+						"next": "add_device"
+					}
+				},
+				{
+					"id": "add_device"
+				}
+			],
+			"settings": [
+				{
+					"type": "group",
+					"label": {
+						"en": "Connection settings"
+					},
+					"children": [
+						{
+							"id": "mac",
+							"type": "label",
+							"label": {
+								"en": "MAC Address"
+							},
+							"value": "",
+							"hint": {
+								"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+							}
+						},
+						{
+							"id": "idx",
+							"type": "label",
+							"label": {
+								"en": "Unit ID"
+							},
+							"value": "",
+							"hint": {
+								"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+							}
+						},
+						{
+							"id": "host",
+							"type": "text",
+							"label": {
+								"en": "IP Address or hostname"
+							},
+							"value": "",
+							"hint": {
+								"en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+							}
+						},
+						{
+							"id": "port",
+							"type": "number",
+							"label": {
+								"en": "Port number"
+							},
+							"value": 80,
+							"min": 0,
+							"max": 65535,
+							"hint": {
+								"en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+							}
+						}
+					]
+				},
+				{
+					"type": "group",
+					"label": {
+						"en": "Device settings"
+					},
+					"children": [
+						{
+							"id": "pollInterval",
+							"type": "number",
+							"label": {
+								"en": "Polling interval"
+							},
+							"value": 60,
+							"min": 5,
+							"max": 3600,
+							"units": {
+								"en": "seconds"
+							},
+							"hint": {
+								"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"capabilities": {
+		"custom_heap": {
+			"type": "number",
+			"title": {
+				"en": "Heap Free",
+				"nl": "Heap Beschikbaar"
+			},
+			"icon": "/assets/icons/heap.svg",
+			"insights": true,
+			"uiComponent": "sensor",
+			"getable": true,
+			"setable": false,
+			"units": {
+				"en": "Blocks"
+			}
+		},
+		"custom_heartbeat": {
+			"type": "string",
+			"title": {
+				"en": "Last seen"
+			},
+			"icon": "/assets/icons/heartbeat.svg",
+			"uiComponent": "sensor",
+			"getable": true,
+			"setable": false
+		},
+		"custom_load": {
+			"type": "number",
+			"title": {
+				"en": "System load"
+			},
+			"icon": "/assets/icons/cpu.svg",
+			"decimals": 2,
+			"insights": true,
+			"uiComponent": "sensor",
+			"getable": true,
+			"setable": false,
+			"units": {
+				"en": "%"
+			}
+		},
+		"custom_ram": {
+			"type": "number",
+			"title": {
+				"en": "Free RAM",
+				"nl": "RAM Beschikbaar"
+			},
+			"icon": "/assets/icons/ram-alt.svg",
+			"insights": true,
+			"uiComponent": "sensor",
+			"getable": true,
+			"setable": false,
+			"units": {
+				"en": "KB"
+			}
+		},
+		"custom_uptime": {
+			"type": "string",
+			"title": {
+				"en": "Uptime"
+			},
+			"icon": "/assets/icons/uptime.svg",
+			"uiComponent": "sensor",
+			"getable": true,
+			"setable": false
+		}
+	}
 }
