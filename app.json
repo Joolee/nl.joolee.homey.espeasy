@@ -62,10 +62,10 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
+          "id": "unitInfo",
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Unit information"
           },
           "children": [
             {
@@ -81,26 +81,24 @@
             },
             {
               "id": "host",
-              "type": "text",
+              "type": "label",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "Unit host"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
               }
             },
             {
-              "id": "port",
-              "type": "number",
+              "id": "idx",
+              "type": "label",
               "label": {
-                "en": "Port number"
+                "en": "Unit ID"
               },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
+              "value": "",
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             }
           ]
@@ -170,10 +168,10 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
+          "id": "unitInfo",
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Unit information"
           },
           "children": [
             {
@@ -189,26 +187,24 @@
             },
             {
               "id": "host",
-              "type": "text",
+              "type": "label",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "Unit host"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
               }
             },
             {
-              "id": "port",
-              "type": "number",
+              "id": "idx",
+              "type": "label",
               "label": {
-                "en": "Port number"
+                "en": "Unit ID"
               },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
+              "value": "",
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             }
           ]
@@ -286,10 +282,10 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
+          "id": "unitInfo",
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Unit information"
           },
           "children": [
             {
@@ -305,26 +301,24 @@
             },
             {
               "id": "host",
-              "type": "text",
+              "type": "label",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "Unit host"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
               }
             },
             {
-              "id": "port",
-              "type": "number",
+              "id": "idx",
+              "type": "label",
               "label": {
-                "en": "Port number"
+                "en": "Unit ID"
               },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
+              "value": "",
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             }
           ]
@@ -380,10 +374,10 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
+          "id": "unitInfo",
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Unit information"
           },
           "children": [
             {
@@ -399,26 +393,24 @@
             },
             {
               "id": "host",
-              "type": "text",
+              "type": "label",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "Unit host"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
               }
             },
             {
-              "id": "port",
-              "type": "number",
+              "id": "idx",
+              "type": "label",
               "label": {
-                "en": "Port number"
+                "en": "Unit ID"
               },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
+              "value": "",
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             }
           ]
@@ -485,10 +477,10 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
+          "id": "unitInfo",
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Unit information"
           },
           "children": [
             {
@@ -504,26 +496,24 @@
             },
             {
               "id": "host",
-              "type": "text",
+              "type": "label",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "Unit host"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
               }
             },
             {
-              "id": "port",
-              "type": "number",
+              "id": "idx",
+              "type": "label",
               "label": {
-                "en": "Port number"
+                "en": "Unit ID"
               },
-              "value": 80,
-              "min": 0,
-              "max": 65535,
+              "value": "",
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             }
           ]
@@ -619,7 +609,6 @@
       ],
       "settings": [
         {
-          "id": "connectionSettings",
           "type": "group",
           "label": {
             "en": "Connection settings"
@@ -634,6 +623,17 @@
               "value": "",
               "hint": {
                 "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+              }
+            },
+            {
+              "id": "idx",
+              "type": "label",
+              "label": {
+                "en": "Unit ID"
+              },
+              "value": "",
+              "hint": {
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
               }
             },
             {
@@ -658,6 +658,30 @@
               "max": 65535,
               "hint": {
                 "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device settings"
+          },
+          "children": [
+            {
+              "id": "pollInterval",
+              "type": "number",
+              "label": {
+                "en": "Polling interval"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "units": {
+                "en": "seconds"
+              },
+              "hint": {
+                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
               }
             }
           ]

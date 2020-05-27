@@ -40,7 +40,7 @@ module.exports = class Unit extends Homey.Driver {
 			for (const unit of Homey.app.units.listUnregistered()) {
 				unregisteredUnits.push({
 					"name": unit.name,
-					"id": unit.id,
+					"idx": unit.idx,
 					"host": unit.hostname,
 					"port": unit.port,
 					"mac": unit.mac
@@ -72,7 +72,7 @@ module.exports = class Unit extends Homey.Driver {
 
 						callback(null, {
 							"name": unit.name,
-							"id": unit.id,
+							"idx": unit.idx,
 							"uptime": unit.uptime + ' ' + Homey.__('minutes'),
 							"eventCount": unit.eventCount,
 							"staticIP": unit.hasStaticIP(),

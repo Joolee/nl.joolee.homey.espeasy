@@ -1,0 +1,41 @@
+	{
+		"type": "group",
+		"label": {
+			"en": "Unit information"
+		},
+		"children": [
+			{
+				"id": "mac",
+				"type": "label",
+				"label": {
+					"en": "MAC Address"
+				},
+				"value": "",
+				"hint": {
+					"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+				}
+			},
+			{
+				"id": "host",
+				"type": "label",
+				"label": {
+					"en": "Unit host"
+				},
+				"value": "",
+				"hint": {
+					"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+				}
+			},
+			{
+				"id": "idx",
+				"type": "label",
+				"label": {
+					"en": "Unit ID"
+				},
+				"value": "",
+				"hint": {
+					"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+				}
+			}
+		]
+	}

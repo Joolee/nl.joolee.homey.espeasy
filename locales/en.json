@@ -1,4 +1,5 @@
 {
+	"offline": "Device offline",
 	"pair": {
 		"unit": {
 			"ipTitle": "Locate ESP Easy unit",

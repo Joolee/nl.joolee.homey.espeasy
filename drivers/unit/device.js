@@ -8,6 +8,7 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.getData().mac,
 			this.getSetting('host'),
 			this.getSetting('port'));
+		this.unit.on('newhostname', this.updateHostname.bind(this))
 		this.unit.addDriver(this);
 
 		this.unit.updateJSON();
@@ -15,17 +16,42 @@ module.exports = class UnitDevice extends Homey.Device {
 		// Permanent binds for functions that get passed around :)
 		this.onRawMessage = this.onRawMessage.bind(this);
 		this.onJSONUpdate = this.onJSONUpdate.bind(this);
+		this.onUnitUpdate = this.onUnitUpdate.bind(this);
 		this.unit.on('rawMessage', this.onRawMessage);
 		this.unit.on('jsonUpdate', this.onJSONUpdate);
+		this.unit.on('settingsUpdate', this.onUnitUpdate);
 
-		let pollInterval = this.getSetting('pollInterval');
-		if (!pollInterval || pollInterval < 5)
-			pollInterval = 60;
-		this.poller = setInterval(() => {
-			this.unit.updateJSON(true)
-		}, pollInterval * 1000);
-
+		this.unit.pollInterval = this.getSetting('pollInterval');
 		this.log('Init:', this.getName());
+	}
+
+	onUnitUpdate(unit, newSettings) {
+		this.updateHostname(unit, newSettings.host, newSettings.port);
+		this.setSettings({
+			"idx": newSettings.idx.toString()
+		}).catch(error => this.log('Settings update failed', error, newSettings.idx));
+	}
+
+
+	updateHostname(unit, hostname, port) {
+		if (hostname != this.getSetting('host') || port != this.getSetting('port')) {
+			this.log(`Changing hostname to ${hostname}`);
+			this.setSettings({
+				"host": hostname,
+				"port": port
+			});
+		}
+	}
+
+	onSettings(oldSettingsObj, newSettingsObj, changedKeysArr, callback) {
+		callback();
+		if (changedKeysArr.includes('host') || changedKeysArr.includes('port')) {
+			this.unit.updateHost(newSettingsObj.host, newSettingsObj.port);
+		}
+
+		if (changedKeysArr.includes('pollInterval')) {
+			this.unit.pollInterval = newSettingsObj.pollInterval;
+		}
 	}
 
 	// Homey function

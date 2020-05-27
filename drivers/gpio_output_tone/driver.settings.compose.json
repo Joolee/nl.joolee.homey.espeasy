@@ -1,6 +1,6 @@
 [
 	{
-		"$extends": "connectionSettings"
+		"$extends": "unitInfo"
 	},
 	{
 		"type": "group",

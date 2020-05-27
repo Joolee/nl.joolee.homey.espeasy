@@ -156,9 +156,9 @@ document.body.addEventListener('click', (event) => {
 			"pin": pin.id
 		},
 		"settings": {
-			"host": unit.host,
-			"port": unit.port,
-			"mac": unit.mac
+			"mac": unit.mac,
+			"host": unit.host + ':' + unit.port,
+			"idx": unit.idx
 		},
 		capabilities: []
 	}
