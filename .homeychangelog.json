@@ -4,5 +4,8 @@
   },
   "1.0.1": {
     "en": "Updated app description"
+  },
+  "1.0.2": {
+    "en": "Fixed bug in unit initialisation"
   }
 }
