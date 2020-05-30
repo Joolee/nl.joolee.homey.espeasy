@@ -1,0 +1,81 @@
+{
+	"offline": "Apparaat offline",
+	"pair": {
+		"unit": {
+			"ipTitle": "Vind ESP Easy unit",
+			"connect_description": "Voer de netwerklocatie van je ESP Easy unit in",
+			"select_description": "Of selecteer de unit uit de onderstaande lijst:",
+			"list_placeholder": "-- Selecteer Unit --",
+			"host": "IP adres of hostname:",
+			"ip": "IP Adres:",
+			"port": "Poort nummer:",
+			"button_connect": "Verbinden",
+			"unitId": "Unit ID:",
+			"uptime": "Uptime:",
+			"numEvents": "Activiteit:",
+			"dhcpWarning": "Deze unit heeft geen statisch IP adres geconfigureerd! Overweeg dit alsnog in te stellen in de unit.",
+			"controllerTitle": "Setup controller",
+			"controller_login": "Configureer een nieuwe controller in ESP Easy op de pagina __url__.<br>Hint: De standaard logingegevens zijn: admin/configesp",
+			"publishURL": "Publish URL:",
+			"tip": "Als je nog geen apparaten hebt verbonden met de ESP unit krijgt Homey geen automatische activiteit binnen. Je kunt hiervoor een 'System Info' dummy apparaat toevoegen of gewoon op 'volgende' klikken om de setup te voltooien.",
+			"waiting": "Wachten op activiteit",
+			"finish": "Data ontvangen! Klik op volgende om de setup te voltooien.",
+			"addTitle": "Toevoegen unit",
+			"generichttp": "Generic HTTP",
+			"protocol": "Protocol"
+		},
+		"gpio": {
+			"bool": {
+				"title": "Digitale output pin toevoegen",
+				"description": "Definieer de digitale output pin"
+			},
+			"pwm": {
+				"title": "PWM output pin toevoegen",
+				"description": "Definieer de PWM output pin"
+			},
+			"pulse": {
+				"title": "Puls output pin toevoegen",
+				"description": "Definieer de puls output pin",
+				"duration": "Standaard puls duur in ms:"
+			},
+			"rtttl": {
+				"title": "Melodie-pin toevoegen",
+				"description": "Definieer de melodie output pin",
+				"melody": "Standaard RTTTL melodie string:"
+			},
+			"tone": {
+				"title": "Voeg toon output pin toe",
+				"description": "Definieer de toon output pin",
+				"duration": "Standaard toon duur in ms:",
+				"frequency": "Standaard toon frequentie in hz:"
+			},
+			"select_unit": "ESP Easy unit:",
+			"unit_list_placeholder": "-- Selecteer Unit --",
+			"select_pin": "GPIO Pin:",
+			"gpio_list_placeholder": "-- Selecteer GPIO Pin --",
+			"pin_warning": "Pin is ingesteld als __mode__, dit zal worden overschreven wanneer je het apparaat toevoegt!",
+			"pin_mode_default": "Deze pin is nog niet geconfigureerd op de unit",
+			"selectCapability": "Select Homey functionaliteit:",
+			"error": {
+				"unit": "Je moet een unit selecteren",
+				"pin": "Je moet een GPIO pin selecteren",
+				"pulseDuration": "Je moet een standaardduratie opgeven",
+				"toneDuration": "Je moet een standaardduratie opgeven",
+				"toneFrequency": "Je moet een standaardfrequentie opgeven"
+			}
+		}
+	},
+	"minutes": "Minuten",
+	"gpio": {
+		"pinmodewarning": "Waarschuwing! Pin __pin__ veranderd van __frommode__ naar __tomode__",
+		"names": {
+			"bool": "digitale output",
+			"pulse": "puls output",
+			"pwm": "pwm output",
+			"servo": "servo output",
+			"tone": "toon output",
+			"rtttl": "melodie output",
+			"input": "digitale input"
+		}
+	}
+}

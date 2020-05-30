@@ -1,10 +1,11 @@
 {
-    "type": "string",
-    "title": {
-        "en": "Last seen"
+	"type": "string",
+	"title": {
+		"en": "Last seen",
+		"nl": "Laatste activiteit"
 	},
 	"icon": "/assets/icons/heartbeat.svg",
-    "uiComponent": "sensor",
-    "getable": true,
-    "setable": false
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false
 }

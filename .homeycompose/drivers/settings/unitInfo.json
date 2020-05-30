@@ -1,29 +1,34 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Unit information"
+			"en": "Unit information",
+			"nl": "Unitinformatie"
 		},
 		"children": [
 			{
 				"id": "mac",
 				"type": "label",
 				"label": {
-					"en": "MAC Address"
+					"en": "MAC Address",
+					"nl": "MAC-Adres"
 				},
 				"value": "",
 				"hint": {
-					"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+					"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+					"nl": "Het MAC-Adres van je ESP Easy unit. Dit gebruikt Homey om een unit te identificeren, binnenkomende berichten worden hiermee herkent en als het IP adres van afzender niet overeen komt, wordt deze aangepast in Homey."
 				}
 			},
 			{
 				"id": "host",
 				"type": "label",
 				"label": {
-					"en": "Unit host"
+					"en": "Unit hostname",
+					"nl": "Unit hostnaam"
 				},
 				"value": "",
 				"hint": {
-					"en": "The IP address can be changed in the unit settings or it will change automagically when Homey receives an event from another IP with the same MAC address"
+					"en": "The hostname or IP address can be changed in the unit settings but it will change automagically when Homey receives an event from another IP with the same MAC address.",
+					"nl": "Het IP adres kan veranderd worden n de unit instellingen. Deze wordt automagisch geüpdate wanneer Homey een bericht binnen krijgt van een nieuwe IP met hetzelfde MAC-adres."
 				}
 			},
 			{
@@ -34,7 +39,8 @@
 				},
 				"value": "",
 				"hint": {
-					"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+					"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that.",
+					"nl": "Zoals kan worden ingesteld op de ESP Easy instellingenpagina. Dit ID wordt momenteel niet gebruikt door Homey."
 				}
 			}
 		]

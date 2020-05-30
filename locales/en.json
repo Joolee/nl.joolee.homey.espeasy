@@ -31,7 +31,7 @@
 			},
 			"pwm": {
 				"title": "Add PWM output pin",
-				"description": "Define the digital output pin"
+				"description": "Define the PWM output pin"
 			},
 			"pulse": {
 				"title": "Add pulse output pin",
@@ -59,7 +59,6 @@
 			"error": {
 				"unit": "You need to select a unit",
 				"pin": "You need to select a GPIO pin",
-				"pinDirection": "You need to select either input or output",
 				"pulseDuration": "You need to enter a valid default pulse duration",
 				"toneDuration": "You need to enter a valid default tone duration",
 				"toneFrequency": "You need to enter a valid default tone frequency"
