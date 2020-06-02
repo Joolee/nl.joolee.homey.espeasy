@@ -14,5 +14,9 @@
 	"1.0.3": {
 		"en": "Added Dutch translation",
 		"nl": "Nederlandse vertaling toegevoegd"
+	},
+	"1.0.4": {
+		"en": "Fixed unit ID handling which could prevent adding a unit",
+		"nl": "Verwerking van unit ID verbeterd. Dit kon zorgen dat een unit niet toegevoegd kon worden"
 	}
 }
