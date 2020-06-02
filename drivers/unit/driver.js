@@ -72,7 +72,7 @@ module.exports = class Unit extends Homey.Driver {
 
 						callback(null, {
 							"name": unit.name,
-							"idx": unit.idx,
+							"idx": unit.idx.toString(),
 							"uptime": unit.uptime + ' ' + Homey.__('minutes'),
 							"eventCount": unit.eventCount,
 							"staticIP": unit.hasStaticIP(),

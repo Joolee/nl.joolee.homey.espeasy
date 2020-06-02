@@ -160,7 +160,7 @@
 				else {
 					unit = data;
 					unitName.textContent = data.name;
-					unitId.textContent = data.id;
+					unitId.textContent = data.idx;
 					unitUptime.textContent = data.uptime;
 					unitEvents.textContent = data.eventCount;
 
@@ -198,7 +198,7 @@
 			console.log('Units', unregisteredUnits);
 			for (const unregisteredUnit of unregisteredUnits) {
 				const option = document.createElement("option");
-				option.text = unregisteredUnit.id + ': ' + unregisteredUnit.name;
+				option.text = unregisteredUnit.idx + ': ' + unregisteredUnit.name;
 				option.unit = unregisteredUnit;
 				if (oldUnit && oldUnit.mac == unregisteredUnit.mac) {
 					option.selected = true;
