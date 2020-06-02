@@ -7,8 +7,7 @@
 		"name": "GPIO 0 - D3",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -29,8 +28,7 @@
 		"name": "GPIO 1 - D10",
 		"description": "TX0",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -51,8 +49,7 @@
 		"name": "GPIO 2 - D4",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -73,8 +70,7 @@
 		"name": "GPIO 3 - D9",
 		"description": "RX0",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -95,8 +91,7 @@
 		"name": "GPIO 4 - D2",
 		"description": "I2C:SDA",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -117,8 +112,7 @@
 		"name": "GPIO 5 - D1",
 		"description": "I2C:SCL",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -169,8 +163,7 @@
 		"name": "GPIO 9 - D11",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -191,8 +184,7 @@
 		"name": "GPIO 10 - D12",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -223,8 +215,7 @@
 		"name": "GPIO 12 - D6",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -245,8 +236,7 @@
 		"name": "GPIO 13 - D7",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -267,8 +257,7 @@
 		"name": "GPIO 14 - D5",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -289,8 +278,7 @@
 		"name": "GPIO 15 - D8",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
@@ -311,8 +299,7 @@
 		"name": "GPIO 16 - D0",
 		"description": "",
 		"input": {
-			"status": "Status,GPIO",
-			"monitor": "Monitor,GPIO"
+			"status": "Status,GPIO"
 		},
 		"output": {
 			"bool": "GPIO",
