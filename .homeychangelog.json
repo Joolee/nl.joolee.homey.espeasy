@@ -1,22 +1,25 @@
 {
-	"1.0.0": {
-		"en": "Initial release",
-		"nl": "Eerste release"
-	},
-	"1.0.1": {
-		"en": "Updated app description",
-		"nl": "Applicatiebeschrijving geüpdatet"
-	},
-	"1.0.2": {
-		"en": "Fixed bug in unit initialisation",
-		"nl": "Bug opgelost in het laden van een nieuwe unit"
-	},
-	"1.0.3": {
-		"en": "Added Dutch translation",
-		"nl": "Nederlandse vertaling toegevoegd"
-	},
-	"1.0.4": {
-		"en": "Fixed unit ID handling which could prevent adding a unit",
-		"nl": "Verwerking van unit ID verbeterd. Dit kon zorgen dat een unit niet toegevoegd kon worden"
-	}
+  "1.0.0": {
+    "en": "Initial release",
+    "nl": "Eerste release"
+  },
+  "1.0.1": {
+    "en": "Updated app description",
+    "nl": "Applicatiebeschrijving geüpdatet"
+  },
+  "1.0.2": {
+    "en": "Fixed bug in unit initialisation",
+    "nl": "Bug opgelost in het laden van een nieuwe unit"
+  },
+  "1.0.3": {
+    "en": "Added Dutch translation",
+    "nl": "Nederlandse vertaling toegevoegd"
+  },
+  "1.0.4": {
+    "en": "Fixed unit ID handling which could prevent adding a unit",
+    "nl": "Verwerking van unit ID verbeterd. Dit kon zorgen dat een unit niet toegevoegd kon worden"
+  },
+  "1.0.5": {
+    "en": "Fix race condition in unit initialisation"
+  }
 }
