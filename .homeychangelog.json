@@ -30,5 +30,9 @@
 	"1.1.1": {
 		"en": "Miscellaneous fixes",
 		"nl": "Diverse fixes"
+	},
+	"1.2.0": {
+		"en": "Add experimental support for environmental sensors (temperature, pressure and humidity)",
+		"nl": "Experimentele ondersteuning toegevoegd voor ongevingssensoren (temperatuur, luchtdruk en luchtvochtigheid)"
 	}
 }
