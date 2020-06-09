@@ -26,5 +26,9 @@
 	"1.1.0": {
 		"en": "Add support for input devices, starting with a basic 'input switch'",
 		"nl": "Ondersteuning voor invoerapparaten toegevoegd, beginnend met een eenvoudige 'input switch'"
+	},
+	"1.1.1": {
+		"en": "Miscellaneous fixes",
+		"nl": "Diverse fixes"
 	}
 }
