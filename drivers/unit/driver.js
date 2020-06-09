@@ -22,7 +22,7 @@ module.exports = class Unit extends Homey.Driver {
 					unit.on("rawevent", updateEventCount);
 				}
 				else {
-					console.log("Clicked next too soon!");
+					this.log("Clicked next too soon!");
 				}
 			}
 			callback();
