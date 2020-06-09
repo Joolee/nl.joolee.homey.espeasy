@@ -45,7 +45,7 @@
 		"pin": 2,
 		"enabled": true,
 		"visible": true,
-		"warning": false,
+		"warning": true,
 		"name": "GPIO 2 - D4",
 		"description": "",
 		"input": {
