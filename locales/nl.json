@@ -1,6 +1,11 @@
 {
 	"offline": "Apparaat offline",
 	"pair": {
+		"input": {
+			"identity_info": "Het apparaat zal worden geïdentificeerd met task nummer: ",
+			"device_not_found": "Het geselecteerde apparaat kan niet worden gevonden",
+			"selectCapability": "Select Homey functionaliteit:"
+		},
 		"unit": {
 			"ipTitle": "Vind ESP Easy unit",
 			"connect_description": "Voer de netwerklocatie van je ESP Easy unit in",
