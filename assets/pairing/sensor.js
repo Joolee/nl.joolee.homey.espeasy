@@ -35,7 +35,7 @@ $(document).ready(() => {
 		$('#taskIDX').html(controller.IDX);
 		$('#oneController').show();
 	} else if (window.device.controllers.length > 1) {
-		for (const [key, controller] of Object.entries(window.device.controllers)) {
+		for (const [key, controller] of Object.keys(window.device.controllers)) {
 			let error = controller.IDX == 0 || controller.duplicate;
 			let text = error ? '⚠ ' : '';
 			text += "Controller: " + controller.Controller + "; IDX: " + controller.IDX;
@@ -66,7 +66,7 @@ $(document).ready(() => {
 	let capabilityList = null;
 	if (window.device.capabilities) {
 		for (const value of window.device.capabilities) {
-			if (typeof (value.capabilities) == 'string')
+			if (typeof (value.capabilities) == 'string' || Object.entries(value.capabilities).length == 1)
 				continue;
 
 			capabilityList = $('<select>')
@@ -144,7 +144,11 @@ document.body.addEventListener('click', (event) => {
 			if (typeof (value.capabilities) == 'string') {
 				device.capabilities.push(value.capabilities);
 			} else {
-				capability = $(`#capabilityList${value.index} :selected`).val();
+				if (Object.keys(value.capabilities).length == 1) {
+					capability = Object.keys(value.capabilities)[0];
+				} else {
+					capability = $(`#capabilityList${value.index} :selected`).val();
+				}
 				device.capabilities.push(capability);
 				device.settings['capability-' + value.index] = capability;
 			}
