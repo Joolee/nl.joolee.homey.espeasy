@@ -7,5 +7,16 @@ Ondersteuning voor GPIO output apparaten (boolean, pulse, pwm, rtttl and tone) e
 		- P001 Switch input - Switch
 		- P009 Switch input - MCP23017
 		- P019 Switch input - PCF8574
+	- Environment (temperatuur, luchtdruk, vochtigheid) (Grotendeels ongetest!)
+		- P006 Environment - BMP085/180
+		- P028 Environment - BMx280
+		- P005 Environment - DHT11/12/22 SONOFF2301/7021
+		- P034 Environment - DHT12 (I2C)
+		- P004 Environment - DS18b20
+		- P024 Environment - MLX90614
+		- P032 Environment - MS5611 (GY-63)
+		- P031 Environment - SHT1X
+		- P014 Environment - SI7021/HTU21D
+		- P039 Environment - Thermocouple
 
 Mijn eigen use-cases zijn beperkt dus ik heb jouw input nodig om meer borjes en apparaten te kunnen ondersteunen. Je kunt helpen op Github door informatie over jouw set-up op te sturen of direct code aan te dragen.
