@@ -1,0 +1,37 @@
+{
+	"id": "sensor_switch",
+	"name": {
+		"en": "Switch Input"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"custom_heartbeat"
+	],
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"pair": [
+		{
+			"id": "list_devices",
+			"template": "list_devices",
+			"options": {
+				"singular": true
+			},
+			"navigation": {
+				"next": "settings"
+			}
+		},
+		{
+			"id": "settings",
+			"navigation": {
+				"prev": "list_devices",
+				"next": "done"
+			}
+		},
+		{
+			"id": "done",
+			"template": "done"
+		}
+	]
+}
