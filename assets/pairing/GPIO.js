@@ -13,7 +13,7 @@ $(document).ready(() => {
 		for (const onlineUnit of onlineUnits) {
 			$('#unitList').append(
 				$('<option>')
-					.text(onlineUnit.id + ': ' + onlineUnit.name)
+					.text(onlineUnit.idx + ': ' + onlineUnit.name)
 					.data('unit', onlineUnit)
 			);
 		}
@@ -158,7 +158,7 @@ document.body.addEventListener('click', (event) => {
 		"settings": {
 			"mac": unit.mac,
 			"host": unit.host + ':' + unit.port,
-			"idx": unit.idx
+			"idx": unit.idx.toString()
 		},
 		capabilities: []
 	}
