@@ -21,7 +21,7 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.unit.on('jsonUpdate', this.onJSONUpdate);
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
 
-		this.unit.pollInterval = this.getSetting('pollInterval');
+		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log('Init:', this.getName());
 	}
 
@@ -50,7 +50,7 @@ module.exports = class UnitDevice extends Homey.Device {
 		}
 
 		if (changedKeysArr.includes('pollInterval')) {
-			this.unit.pollInterval = newSettingsObj.pollInterval;
+			this.unit.setPollInterval(newSettingsObj.pollInterval);
 		}
 	}
 
