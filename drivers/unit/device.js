@@ -8,7 +8,6 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.getData().mac,
 			this.getSetting('host'),
 			this.getSetting('port'));
-		this.unit.on('newhostname', this.updateHostname.bind(this))
 		this.unit.addDriver(this);
 
 		this.unit.updateJSON();
@@ -17,12 +16,18 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.onRawMessage = this.onRawMessage.bind(this);
 		this.onJSONUpdate = this.onJSONUpdate.bind(this);
 		this.onUnitUpdate = this.onUnitUpdate.bind(this);
+		this.onUnitStateChange = this.onUnitStateChange.bind(this);
 		this.unit.on('rawMessage', this.onRawMessage);
 		this.unit.on('jsonUpdate', this.onJSONUpdate);
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
+		this.unit.on('stateChange', this.onUnitStateChange);
 
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log('Init:', this.getName());
+	}
+
+	onUnitStateChange(unit, state) {
+		state ? this.setAvailable() : this.setUnavailable(Homey.__("offline"));
 	}
 
 	onUnitUpdate(unit, newSettings) {

@@ -1,5 +1,6 @@
 {
 	"offline": "Apparaat offline",
+	"waiting_for_unit": "Wachten op unit",
 	"pair": {
 		"input": {
 			"identity_info": "Het apparaat zal worden geïdentificeerd met task nummer: ",

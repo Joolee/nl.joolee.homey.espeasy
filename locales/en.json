@@ -1,5 +1,6 @@
 {
 	"offline": "Device offline",
+	"waiting_for_unit": "Waiting for unit",
 	"pair": {
 		"sensor": {
 			"title": "Configure device",
