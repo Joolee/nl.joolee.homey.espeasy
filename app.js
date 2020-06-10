@@ -8,6 +8,10 @@ class ESPEasy extends Homey.App {
 	onInit() {
 		this.units = new ESPEasyUnits();
 		this.log('App started');
+
+		process.on('unhandledRejection', (reason, p) => {
+			this.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+		});
 	}
 
 	getI18nString(i18n) {
