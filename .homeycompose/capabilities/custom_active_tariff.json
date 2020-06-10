@@ -1,0 +1,27 @@
+{
+	"type": "enum",
+	"title": {
+		"en": "Active tariff",
+		"nl": "Actief tarief"
+	},
+	"icon": "/assets/icons/euro.svg",
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false,
+	"values": [
+		{
+			"id": "1",
+			"title": {
+				"en": "Low",
+				"nl": "Laag"
+			}
+		},
+		{
+			"id": "2",
+			"title": {
+				"en": "High",
+				"nl": "Hoog"
+			}
+		}
+	]
+}

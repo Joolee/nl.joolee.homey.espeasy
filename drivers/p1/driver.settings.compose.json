@@ -1,0 +1,67 @@
+[
+	{
+		"$extends": "unitInfo"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device identification"
+		},
+		"children": [
+			{
+				"id": "taskid",
+				"type": "label",
+				"label": {
+					"en": "Task ID"
+				},
+				"value": "",
+				"hint": {
+					"en": "As the P1 device doesn't export an IDX for the controller, the Task ID is used to identify the device."
+				}
+			}
+		]
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings"
+		},
+		"children": [
+			{
+				"id": "p1port",
+				"type": "number",
+				"label": {
+					"en": "Wifi Gateway TCP Port"
+				},
+				"value": 8088,
+				"hint": {
+					"en": "TCP Port for the P1 Wifi gateway as configured in ESP Easy. You can test your set-up by going to http://<esp-easyip>:<port-number> in your webbrowser.\nIf you see output there, you have configured ESP Easy correctly."
+				}
+			}
+		]
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Meter information"
+		},
+		"children": [
+			{
+				"id": "meterType",
+				"type": "label",
+				"label": {
+					"en": "Meter type"
+				},
+				"value": "Unknown"
+			},
+			{
+				"id": "DSMRVersion",
+				"type": "label",
+				"label": {
+					"en": "DSMR Version"
+				},
+				"value": "Unknown"
+			}
+		]
+	}
+]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
+	<circle cx="50" cy="50" r="45" stroke="black" stroke-width="5" fill="transparent" />
+
+	<rect x="20" y="30" width="60" height="15" stroke="black" stroke-width="4" fill="transparent" rx="1" />
+
+	<text x="25" y="42" font-size="12" font-weight="bold" letter-spacing="4" font-family="Robotica, Arial, Helvetica, sans-serif">03895</text>
+
+	<line x1="25" y1="55" x2="75" y2="55" stroke="black" stroke-width="4" stroke-linecap="round" />
+
+	<text x="38" y="80" font-size="18" font-weight="bold" letter-spacing="4" font-family="Robotica, Arial, Helvetica, sans-serif">P1</text>
+</svg>

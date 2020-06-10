@@ -1,7 +1,20 @@
 {
 	"offline": "Device offline",
 	"waiting_for_unit": "Waiting for unit",
+	"p1": {
+		"connecting": "Connecting to P1 Wifi Gateway on port __port__",
+		"waiting": "Waiting for first P1 datagram",
+		"connection_lost": "Unable to connect",
+		"invalid_datagram": "Invalid data received",
+		"connected_to_http_server": "Seem to be connected to a HTTP server on port __port__. Make sure you configure the P1 relay port and not the webserver port."
+	},
 	"pair": {
+		"p1": {
+			"description": "Make sure you see a P1 datagram when you visit http://__esp-ip__:&lt;portnumber&gt; before adding the P1 device to Homey.<br>Visit the folowing websites for more information:",
+			"title": "Configure new P1 Meter",
+			"device_not_found": "Could not find selected device",
+			"portnumber": "Wifi Gateway TCP Port:"
+		},
 		"sensor": {
 			"title": "Configure device",
 			"controller_list_placeholder": "-- Select Homey --",

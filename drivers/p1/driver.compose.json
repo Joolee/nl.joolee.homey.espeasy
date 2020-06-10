@@ -1,0 +1,80 @@
+{
+	"id": "p1",
+	"name": {
+		"en": "P1 Energy Meter"
+	},
+	"class": "sensor",
+	"capabilities": [
+		"custom_heartbeat",
+		"measure_power",
+		"custom_active_tariff"
+	],
+	"capabilitiesOptions": {
+		"measure_power": {
+			"title": {
+				"en": "Power usage",
+				"nl": "Stroomverbruik"
+			}
+		},
+		"meter_power.received1": {
+			"title": {
+				"en": "Log tariff",
+				"nl": "Laag tarief"
+			}
+		},
+		"meter_power.received2": {
+			"title": {
+				"en": "High tariff",
+				"nl": "Hoog tarief"
+			}
+		},
+		"measure_power.delivery": {
+			"title": {
+				"en": "Power surplus",
+				"nl": "Teruglevering"
+			}
+		},
+		"meter_power.delivered1": {
+			"title": {
+				"en": "Surplus tariff 1",
+				"nl": "Teruglevering tarief 1"
+			}
+		},
+		"meter_power.delivered2": {
+			"title": {
+				"en": "Surplus tariff 2",
+				"nl": "Teruglevering tarief 2"
+			}
+		}
+	},
+	"energy": {
+		"cumulative": true
+	},
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"pair": [
+		{
+			"id": "list_devices",
+			"template": "list_devices",
+			"options": {
+				"singular": true
+			},
+			"navigation": {
+				"next": "settings"
+			}
+		},
+		{
+			"id": "settings",
+			"navigation": {
+				"prev": "list_devices",
+				"next": "done"
+			}
+		},
+		{
+			"id": "done",
+			"template": "done"
+		}
+	]
+}

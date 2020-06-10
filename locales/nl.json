@@ -1,6 +1,13 @@
 {
 	"offline": "Apparaat offline",
 	"waiting_for_unit": "Wachten op unit",
+	"p1": {
+		"connecting": "Bezig met verbinden met P1 Wifi Gateway op poort __port__",
+		"waiting": "BEzig met wachten op het eerste P1 datagram",
+		"connection_lost": "Er kan geen verbinding worden gemaakt",
+		"invalid_datagram": "Ongeldige data ontvangen",
+		"connected_to_http_server": "Het lijkt erop dat er is verbonden met een HTTP server. Controleer of het ingevoerde poortnummer dat van de P1 Wifi Gateway is en niet van de webserver."
+	},
 	"pair": {
 		"input": {
 			"identity_info": "Het apparaat zal worden geïdentificeerd met task nummer: ",
