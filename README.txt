@@ -18,5 +18,7 @@ Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input 
 		- P031 Environment - SHT1X
 		- P014 Environment - SI7021/HTU21D
 		- P039 Environment - Thermocouple
+	- P1 Energy Meter (http://www.esp8266thingies.nl/wp/)
+		- P044 Communication - P1 Wifi Gateway
 
 As my own use cases are limited, I need your input for Supporting more boards and devices. Please help me on Github or on the forum by sending information about your setup or contributing code.

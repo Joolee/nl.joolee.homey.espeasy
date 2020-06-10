@@ -1,7 +1,8 @@
 {
 	"id": "p1",
 	"name": {
-		"en": "P1 Energy Meter"
+		"en": "P1 Energy Meter",
+		"nl": "P1 EnergieMeter"
 	},
 	"class": "sensor",
 	"capabilities": [
