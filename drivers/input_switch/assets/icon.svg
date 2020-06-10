@@ -7,11 +7,11 @@
 
 	<g mask="url(#canvas)">
 		<path
-			stroke="black" stroke-width="5" fill="transparent" stroke-linecap="square"
+			stroke="black" stroke-width="5" fill="none" stroke-linecap="square"
 			d="M -9,115 Q 0,80 35,70 L 45,20 H 55 L 65,70 Q 100,80 109,115" transform="rotate(-20 50 128)"
 		></path>
 	</g>
 	<!-- <circle cx="50" cy="128" r="60" stroke="black" stroke-width="1" fill="transparent" stroke-linecap="square" /> -->
-	<line x1="0" y1="90" x2="100" y2="90" stroke="black" stroke-width="5"  />
+	<line x1="0" y1="90" x2="100" y2="90" stroke="black" stroke-width="3"  />
 
 </svg>
