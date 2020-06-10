@@ -2,6 +2,6 @@
 
 const SensorDevice = require('/lib/SensorDevice.js');
 
-module.exports = class Sensor_Switch extends SensorDevice {
+module.exports = class Environment extends SensorDevice {
 
 }
