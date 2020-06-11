@@ -17,7 +17,7 @@ module.exports = class Sensor_Switch extends SensorDriver {
 				"values": ["Temperature", "Humidity", "Pressure"]
 			},
 			{
-				"name": 'Environment - DHT11/12/22 SONOFF2301/7021',
+				"name": 'Environment - DHT11/12/22  SONOFF2301/7021',
 				"plugin": 5,
 				"values": ["Temperature", "Humidity"]
 			},
