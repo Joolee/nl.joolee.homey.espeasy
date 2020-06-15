@@ -9,6 +9,7 @@
 		"custom_ram",
 		"custom_heap",
 		"custom_uptime",
+		"custom_signal_strength",
 		"custom_heartbeat"
 	],
 	"images": {

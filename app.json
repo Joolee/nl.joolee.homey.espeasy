@@ -1041,6 +1041,7 @@
         "custom_ram",
         "custom_heap",
         "custom_uptime",
+        "custom_signal_strength",
         "custom_heartbeat"
       ],
       "images": {
@@ -1230,6 +1231,21 @@
       "setable": false,
       "units": {
         "en": "KB"
+      }
+    },
+    "custom_signal_strength": {
+      "type": "number",
+      "title": {
+        "en": "Signal strength",
+        "nl": "Signaalsterkte"
+      },
+      "icon": "/assets/icons/wifi.svg",
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "dB"
       }
     },
     "custom_uptime": {

@@ -10,7 +10,8 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.getSetting('port'));
 		this.unit.addDriver(this);
 
-		this.unit.updateJSON();
+		if (!this.getCapabilities().includes("custom_signal_strength"))
+			this.addCapability("custom_signal_strength");
 
 		// Permanent binds for functions that get passed around :)
 		this.onRawMessage = this.onRawMessage.bind(this);
@@ -24,6 +25,7 @@ module.exports = class UnitDevice extends Homey.Device {
 
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log('Init:', this.getName());
+		this.unit.updateJSON();
 	}
 
 	onUnitStateChange(unit, state) {
@@ -84,7 +86,8 @@ module.exports = class UnitDevice extends Homey.Device {
 			.catch(this.log);
 		unit.driver.setCapabilityValue('custom_heap', json.System['Heap Max Free Block'])
 			.catch(this.log);
-		unit.driver.setCapabilityValue('custom_uptime', json.System['Uptime'] + " " + Homey.__('minutes'))
+		unit.driver.setCapabilityValue('custom_uptime', json.System['Uptime'] + " " + Homey.__('minutes'));
+		unit.driver.setCapabilityValue('custom_signal_strength', json.WiFi['RSSI'])
 			.catch(this.log);
 		unit.driver.setCapabilityValue('custom_heartbeat', unit.lastEvent.toLocaleString())
 			.catch(this.log);
