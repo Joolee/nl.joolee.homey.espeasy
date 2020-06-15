@@ -31,7 +31,7 @@
 			"controller_login": "Configureer een nieuwe controller in ESP Easy op de pagina __url__.<br>Hint: De standaard logingegevens zijn: admin/configesp",
 			"publishURL": "Publish URL:",
 			"tip": "Als je nog geen apparaten hebt verbonden met de ESP unit krijgt Homey geen automatische activiteit binnen. Je kunt hiervoor een 'System Info' dummy apparaat toevoegen of gewoon op 'volgende' klikken om de setup te voltooien.",
-			"waiting": "Wachten op activiteit",
+			"waiting": "Configureer Homey als controller in ESP Easy<br>Wachten op activiteit",
 			"finish": "Data ontvangen! Klik op volgende om de setup te voltooien.",
 			"addTitle": "Toevoegen unit",
 			"generichttp": "Generic HTTP",

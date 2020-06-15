@@ -46,7 +46,7 @@
 			"controller_login": "Configure a new controller in ESP Easy at __url__.<br>Note: The default credentials are admin/configesp",
 			"publishURL": "Publish URL:",
 			"tip": "You might not have any devices connected to ESP Easy yet so Homey will not get any events. You can add a 'System Info' device to test the connection or just click Next to finish setup.",
-			"waiting": "Waiting for device events",
+			"waiting": "Please configure Homey as controller in ESP Easy<br>Waiting for device events",
 			"finish": "Events received! Click next to finish setup",
 			"addTitle": "Adding unit",
 			"generichttp": "Generic HTTP",
