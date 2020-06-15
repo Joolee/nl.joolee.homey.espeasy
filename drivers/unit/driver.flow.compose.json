@@ -1,0 +1,76 @@
+{
+	"triggers": [
+		{
+			"id": "custom_load_changed",
+			"title": {
+				"en": "System load changed",
+				"nl": "Systeembelasting is veranderd"
+			},
+			"tokens": [
+				{
+					"name": "custom_load",
+					"type": "number",
+					"title": {
+						"en": "System load",
+						"nl": "Systeembelasting"
+					},
+					"example": 11.42
+				}
+			]
+		},
+		{
+			"id": "custom_ram_changed",
+			"title": {
+				"en": "System RAM usage changed",
+				"nl": "Beschikbaar werkgeheugen is veranderd"
+			},
+			"tokens": [
+				{
+					"name": "custom_ram",
+					"type": "number",
+					"title": {
+						"en": "Free RAM",
+						"nl": "Beschikbaar RAM"
+					},
+					"example": 14680
+				}
+			]
+		},
+		{
+			"id": "custom_heap_changed",
+			"title": {
+				"en": "Available heap blocks changed",
+				"nl": "Beschikbare heap blocks veranderd"
+			},
+			"tokens": [
+				{
+					"name": "custom_heap",
+					"type": "number",
+					"title": {
+						"en": "Heap Free",
+						"nl": "Heap Beschikbaar"
+					},
+					"example": 13112
+				}
+			]
+		},
+		{
+			"id": "custom_signal_strength_changed",
+			"title": {
+				"en": "Signal strength changed",
+				"nl": "Signaalsterkte is veranderd"
+			},
+			"tokens": [
+				{
+					"name": "custom_signal_strength",
+					"type": "number",
+					"title": {
+						"en": "Signal strength",
+						"nl": "Signaalsterkte"
+					},
+					"example": -66
+				}
+			]
+		}
+	]
+}

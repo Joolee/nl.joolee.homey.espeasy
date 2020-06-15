@@ -13,6 +13,9 @@ module.exports = class UnitDevice extends Homey.Device {
 		if (!this.getCapabilities().includes("custom_signal_strength"))
 			this.addCapability("custom_signal_strength");
 
+		this.triggers = [];
+		this.addTrigger("custom_signal_strength_changed");
+
 		// Permanent binds for functions that get passed around :)
 		this.onRawMessage = this.onRawMessage.bind(this);
 		this.onJSONUpdate = this.onJSONUpdate.bind(this);
@@ -26,6 +29,10 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log('Init:', this.getName());
 		this.unit.updateJSON();
+	}
+
+	addTrigger(name) {
+		this.triggers[name] = new Homey.FlowCardTrigger(name).register();
 	}
 
 	onUnitStateChange(unit, state) {
@@ -80,16 +87,29 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.setAvailable();
 		}
 
-		unit.driver.setCapabilityValue('custom_load', json.System['Load'])
-			.catch(this.log);
-		unit.driver.setCapabilityValue('custom_ram', json.System['Free RAM'])
-			.catch(this.log);
-		unit.driver.setCapabilityValue('custom_heap', json.System['Heap Max Free Block'])
-			.catch(this.log);
+		this.setValue("custom_load", json.System['Load']);
+		this.setValue("custom_ram", json.System['Free RAM']);
+		this.setValue("custom_heap", json.System['Heap Max Free Block']);
+
 		unit.driver.setCapabilityValue('custom_uptime', json.System['Uptime'] + " " + Homey.__('minutes'));
-		unit.driver.setCapabilityValue('custom_signal_strength', json.WiFi['RSSI'])
-			.catch(this.log);
+
+		this.setValue("custom_signal_strength", json.WiFi['RSSI']);
+
 		unit.driver.setCapabilityValue('custom_heartbeat', unit.lastEvent.toLocaleString())
 			.catch(this.log);
+	}
+
+	setValue(key, value) {
+		if (this.getCapabilityValue(key) != value) {
+			this.setCapabilityValue(key, value)
+				.catch(this.log);
+
+			const trigger = this.triggers[key + "_changed"];
+			if (trigger) {
+				// Ignore invalid_flow_card_id errors that appear for some reason
+				trigger.trigger({ [key]: value })
+					.catch(() => { });
+			}
+		}
 	}
 }
