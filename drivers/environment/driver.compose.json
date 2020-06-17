@@ -5,7 +5,7 @@
 	},
 	"class": "sensor",
 	"capabilities": [
-		"custom_heartbeat"
+		"device_heartbeat"
 	],
 	"images": {
 		"large": "{{driverAssetsPath}}/images/large.png",

@@ -5,12 +5,12 @@
 	},
 	"class": "other",
 	"capabilities": [
-		"custom_load",
-		"custom_ram",
-		"custom_heap",
-		"custom_uptime",
-		"custom_signal_strength",
-		"custom_heartbeat"
+		"measure_load",
+		"measure_ram",
+		"measure_heap",
+		"unit_uptime",
+		"measure_signal_strength",
+		"device_heartbeat"
 	],
 	"images": {
 		"large": "{{driverAssetsPath}}/images/large.png",

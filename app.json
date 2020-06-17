@@ -45,7 +45,7 @@
       },
       "class": "sensor",
       "capabilities": [
-        "custom_heartbeat"
+        "device_heartbeat"
       ],
       "images": {
         "large": "/drivers/environment/assets/images/large.png",
@@ -727,7 +727,7 @@
       },
       "class": "sensor",
       "capabilities": [
-        "custom_heartbeat"
+        "device_heartbeat"
       ],
       "images": {
         "large": "/drivers/input_switch/assets/images/large.png",
@@ -845,9 +845,9 @@
       },
       "class": "sensor",
       "capabilities": [
-        "custom_heartbeat",
+        "device_heartbeat",
         "measure_power",
-        "custom_active_tariff"
+        "alarm_active_tariff"
       ],
       "capabilitiesOptions": {
         "measure_power": {
@@ -1037,12 +1037,12 @@
       },
       "class": "other",
       "capabilities": [
-        "custom_load",
-        "custom_ram",
-        "custom_heap",
-        "custom_uptime",
-        "custom_signal_strength",
-        "custom_heartbeat"
+        "measure_load",
+        "measure_ram",
+        "measure_heap",
+        "unit_uptime",
+        "measure_signal_strength",
+        "device_heartbeat"
       ],
       "images": {
         "large": "/drivers/unit/assets/images/large.png",
@@ -1151,14 +1151,14 @@
   "flow": {
     "triggers": [
       {
-        "id": "custom_load_changed",
+        "id": "measure_load_changed",
         "title": {
           "en": "System load changed",
           "nl": "Systeembelasting is veranderd"
         },
         "tokens": [
           {
-            "name": "custom_load",
+            "name": "value",
             "type": "number",
             "title": {
               "en": "System load",
@@ -1176,14 +1176,14 @@
         ]
       },
       {
-        "id": "custom_ram_changed",
+        "id": "measure_ram_changed",
         "title": {
           "en": "System RAM usage changed",
           "nl": "Beschikbaar werkgeheugen is veranderd"
         },
         "tokens": [
           {
-            "name": "custom_ram",
+            "name": "value",
             "type": "number",
             "title": {
               "en": "Free RAM",
@@ -1201,14 +1201,14 @@
         ]
       },
       {
-        "id": "custom_heap_changed",
+        "id": "measure_heap_changed",
         "title": {
           "en": "Available heap blocks changed",
           "nl": "Beschikbare heap blocks veranderd"
         },
         "tokens": [
           {
-            "name": "custom_heap",
+            "name": "value",
             "type": "number",
             "title": {
               "en": "Heap Free",
@@ -1226,14 +1226,14 @@
         ]
       },
       {
-        "id": "custom_signal_strength_changed",
+        "id": "measure_signal_strength_changed",
         "title": {
           "en": "Signal strength changed",
           "nl": "Signaalsterkte is veranderd"
         },
         "tokens": [
           {
-            "name": "custom_signal_strength",
+            "name": "value",
             "type": "number",
             "title": {
               "en": "Signal strength",
@@ -1253,7 +1253,7 @@
     ]
   },
   "capabilities": {
-    "custom_active_tariff": {
+    "alarm_active_tariff": {
       "type": "enum",
       "title": {
         "en": "Active tariff",
@@ -1280,7 +1280,18 @@
         }
       ]
     },
-    "custom_heap": {
+    "device_heartbeat": {
+      "type": "string",
+      "title": {
+        "en": "Last seen",
+        "nl": "Laatste activiteit"
+      },
+      "icon": "/assets/icons/heartbeat.svg",
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false
+    },
+    "measure_heap": {
       "type": "number",
       "title": {
         "en": "Heap Free",
@@ -1295,18 +1306,7 @@
         "en": "Blocks"
       }
     },
-    "custom_heartbeat": {
-      "type": "string",
-      "title": {
-        "en": "Last seen",
-        "nl": "Laatste activiteit"
-      },
-      "icon": "/assets/icons/heartbeat.svg",
-      "uiComponent": "sensor",
-      "getable": true,
-      "setable": false
-    },
-    "custom_load": {
+    "measure_load": {
       "type": "number",
       "title": {
         "en": "System load",
@@ -1322,7 +1322,7 @@
         "en": "%"
       }
     },
-    "custom_ram": {
+    "measure_ram": {
       "type": "number",
       "title": {
         "en": "Free RAM",
@@ -1337,7 +1337,7 @@
         "en": "KB"
       }
     },
-    "custom_signal_strength": {
+    "measure_signal_strength": {
       "type": "number",
       "title": {
         "en": "Signal strength",
@@ -1352,7 +1352,7 @@
         "en": "dB"
       }
     },
-    "custom_uptime": {
+    "unit_uptime": {
       "type": "string",
       "title": {
         "en": "Uptime"

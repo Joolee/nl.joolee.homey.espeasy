@@ -6,9 +6,9 @@
 	},
 	"class": "sensor",
 	"capabilities": [
-		"custom_heartbeat",
+		"device_heartbeat",
 		"measure_power",
-		"custom_active_tariff"
+		"alarm_active_tariff"
 	],
 	"capabilitiesOptions": {
 		"measure_power": {

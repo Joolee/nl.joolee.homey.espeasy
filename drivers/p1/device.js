@@ -9,6 +9,8 @@ module.exports = class P1 extends GeneralDevice {
 	onInit() {
 		super.onInit();
 
+		this.migrateCapability("custom_active_tariff", "alarm_active_tariff");
+
 		this.errorMsg = null
 
 		this.unit.addSensor(this);
@@ -171,7 +173,7 @@ module.exports = class P1 extends GeneralDevice {
 		this.setValue("meter_power.delivered2", dg.electricity.delivered.tariff2.reading);
 
 		// Active tariff
-		this.setValue("custom_active_tariff", dg.electricity.tariffIndicator.toString());
+		this.setValue("alarm_active_tariff", dg.electricity.tariffIndicator.toString());
 
 		// Gas meter
 		this.setValue("measure_gas", dg.gas.reading);
