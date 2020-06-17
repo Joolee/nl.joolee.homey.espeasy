@@ -73,6 +73,8 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.log("Device deleted", this.unit.mac, this.unit.name);
 		this.unit.removeListener('rawMessage', this.onRawMessage);
 		this.unit.removeListener('jsonUpdate', this.onJSONUpdate);
+		this.unit.removeListener('settingsUpdate', this.onUnitUpdate);
+		this.unit.removeListener('stateChange', this.onUnitStateChange);
 		clearInterval(this.poller);
 		this.unit.removeDriver();
 	}
