@@ -10,7 +10,9 @@ class ESPEasy extends Homey.App {
 		this.log('App started');
 
 		process.on('unhandledRejection', (reason, p) => {
-			this.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+			this.log("Unhandled Rejection at:", p);
+			this.log("Rejection reason:", reason);
+			this.log("Rejection stack:", reason.stack);
 		});
 	}
 
