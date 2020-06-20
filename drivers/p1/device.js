@@ -194,7 +194,11 @@ module.exports = class P1 extends GeneralDevice {
 		if (typeof error == "string" && error.substr(0, 22) == "Error: write after end")
 			return;
 
-		this.log("Error received:", error);
+		if (error.errno && error.errno == "ECONNRESET") {
+			this.log("Connection reset. Previous connection had probably not been closed correctly");
+		} else {
+			this.log("Error received:", error);
+		}
 	}
 
 	setValue(capability, value) {
