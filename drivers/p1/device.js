@@ -24,12 +24,14 @@ module.exports = class P1 extends GeneralDevice {
 		this.onClosed = this.onClosed.bind(this);
 		this.onData = this.onData.bind(this);
 		this.onError = this.onError.bind(this);
+		this.destroy = this.destroy.bind(this);
 
 		this.p1.on("connect", this.onConnected);
 		this.p1.on("close", this.onClosed);
 		this.p1.on("end", this.onClosed);
 		this.p1.on("data", this.onData);
 		this.p1.on("error", this.onError);
+		Homey.on("unload", this.destroy);
 
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
 
@@ -74,6 +76,12 @@ module.exports = class P1 extends GeneralDevice {
 		this.p1.end();
 	}
 
+	destroy() {
+		this.log("Destroying all connections");
+		this.p1.removeAllListeners("close", this.onClosed);
+		this.p1.destroy();
+	}
+
 	// New port number for this device
 	onSettings(oldSettings, newSettings, changedKeys, callback) {
 		callback();
@@ -90,10 +98,11 @@ module.exports = class P1 extends GeneralDevice {
 		this.unit.removeListener('settingsUpdate', this.onUnitUpdate);
 		this.unit.deleteSensor(this);
 
+		Homey.removeListener("unload", this.destroy)
+
 		clearTimeout(this.keepAlive);
 
-		this.p1.removeAllListeners("close", this.onClosed);
-		this.p1.destroy();
+		this.destroy();
 	}
 
 	connect() {
