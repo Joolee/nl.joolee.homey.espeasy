@@ -2,13 +2,14 @@
 	"triggers": [
 		{
 			"id": "measure_load_changed",
+			"$filter": "capabilities=measure_load",
 			"title": {
 				"en": "System load changed",
 				"nl": "Systeembelasting is veranderd"
 			},
 			"tokens": [
 				{
-					"name": "value",
+					"name": "measure_load",
 					"type": "number",
 					"title": {
 						"en": "System load",
@@ -20,13 +21,14 @@
 		},
 		{
 			"id": "measure_ram_changed",
+			"$filter": "capabilities=measure_ram",
 			"title": {
 				"en": "System RAM usage changed",
 				"nl": "Beschikbaar werkgeheugen is veranderd"
 			},
 			"tokens": [
 				{
-					"name": "value",
+					"name": "measure_ram",
 					"type": "number",
 					"title": {
 						"en": "Free RAM",
@@ -38,13 +40,14 @@
 		},
 		{
 			"id": "measure_heap_changed",
+			"$filter": "capabilities=measure_heap",
 			"title": {
 				"en": "Available heap blocks changed",
 				"nl": "Beschikbare heap blocks veranderd"
 			},
 			"tokens": [
 				{
-					"name": "value",
+					"name": "measure_heap",
 					"type": "number",
 					"title": {
 						"en": "Heap Free",
@@ -56,13 +59,14 @@
 		},
 		{
 			"id": "measure_signal_strength_changed",
+			"$filter": "capabilities=measure_signal_strength",
 			"title": {
 				"en": "Signal strength changed",
 				"nl": "Signaalsterkte is veranderd"
 			},
 			"tokens": [
 				{
-					"name": "value",
+					"name": "measure_signal_strength",
 					"type": "number",
 					"title": {
 						"en": "Signal strength",

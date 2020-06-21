@@ -1158,7 +1158,7 @@
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "measure_load",
             "type": "number",
             "title": {
               "en": "System load",
@@ -1171,7 +1171,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=unit"
+            "filter": "driver_id=unit&capabilities=measure_load"
           }
         ]
       },
@@ -1183,7 +1183,7 @@
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "measure_ram",
             "type": "number",
             "title": {
               "en": "Free RAM",
@@ -1196,7 +1196,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=unit"
+            "filter": "driver_id=unit&capabilities=measure_ram"
           }
         ]
       },
@@ -1208,7 +1208,7 @@
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "measure_heap",
             "type": "number",
             "title": {
               "en": "Heap Free",
@@ -1221,7 +1221,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=unit"
+            "filter": "driver_id=unit&capabilities=measure_heap"
           }
         ]
       },
@@ -1233,7 +1233,7 @@
         },
         "tokens": [
           {
-            "name": "value",
+            "name": "measure_signal_strength",
             "type": "number",
             "title": {
               "en": "Signal strength",
@@ -1246,7 +1246,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=unit"
+            "filter": "driver_id=unit&capabilities=measure_signal_strength"
           }
         ]
       }
