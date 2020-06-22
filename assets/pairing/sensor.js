@@ -35,7 +35,7 @@ $(document).ready(() => {
 		$('#taskIDX').html(controller.IDX);
 		$('#oneController').show();
 	} else if (window.device.controllers.length > 1) {
-		for (const [key, controller] of Object.keys(window.device.controllers)) {
+		for (const [key, controller] of Object.entries(window.device.controllers)) {
 			let error = controller.IDX == 0 || controller.duplicate;
 			let text = error ? '⚠ ' : '';
 			text += "Controller: " + controller.Controller + "; IDX: " + controller.IDX;
