@@ -118,7 +118,7 @@ module.exports = class P1 extends GeneralDevice {
 
 	onConnected() {
 		const server = this.p1.address();
-		this.log("Connected to P1 server at", server.address, this.port);
+		this.log("Connected to P1 server at", this.unit.ip, this.port);
 		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.waiting"));
 
 		this.connected = new Date();
