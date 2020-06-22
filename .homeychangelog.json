@@ -42,5 +42,9 @@
 	"1.3.1": {
 		"en": "Fixed typo's, one of which was breaking for the SONOFF environment device",
 		"nl": "Typfouten opgelost waarvan één breaking was voor de SONOFF environment sensor"
+	},
+	"1.4.0": {
+		"en": "Lots of bug fixes. Added WiFi strength and flow cards to Units. You might want to check your flows and insights. You can remove and re-add the unit without any effect on other devices.",
+		"nl": "Een boel bugs opgelost. WiFi signaalsterkte en trigger flow-cards toegevoegd aan units. Controleer je flows en insights, je kunt eventueel units opnieuw toevoegen zonder dat dit effect heeft op andere devices. "
 	}
 }
