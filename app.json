@@ -36,7 +36,7 @@
   },
   "homeyCommunityTopicId": 30381,
   "source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
-  "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy",
+  "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy/wiki",
   "drivers": [
     {
       "id": "environment",
