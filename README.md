@@ -1,8 +1,17 @@
 # ESP Easy
-ESP Easy is a firmware for ESP8266 boards like the WeMos D1 and NodeMCU. It allows you to quickly make custom devices with switches, sensors and other hardware. This app adds support to Homey for connecting with ESP Easy units.
+<img align="right" src="https://github.com/Joolee/nl.joolee.homey.espeasy/raw/master/assets/images/small.png">
 
+[ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) is a firmware for ESP8266 boards like the WeMos D1 and NodeMCU. It allows you to quickly make custom devices with switches, sensors and other hardware for use in Domotica setups. [Homey](https://homey.app/) is a Domotica controller with support for a bunch of different protocols. This app binds them together by adding support to Homey for connecting with ESP Easy units.
+
+# Get help
+* You can read all about the using of this app in the [Wiki](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki)
+* Get support in the [Forum](https://community.athom.com/t/esp-easy/30381)
+* Report issues or feature requests in the [bug tracker](https://github.com/Joolee/nl.joolee.homey.espeasy/issues)
+
+# Supported boards
 The app has been developed and tested on a NodeMCU V3 board, if you run into any problems with other boards or want to have the pin-layout displayed in the GPIO pairing wizard, let me know in a feature request!
 
+# Supported devices
 Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input devices:
 * Switch Input (Only in "Switch" mode, type "Normal switch" and no special events)
 	* P001 Switch input - Switch
