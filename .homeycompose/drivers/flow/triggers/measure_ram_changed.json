@@ -1,0 +1,19 @@
+{
+	"id": "measure_ram_changed",
+	"$filter": "capabilities=measure_ram",
+	"title": {
+		"en": "System RAM usage changed",
+		"nl": "Beschikbaar werkgeheugen is veranderd"
+	},
+	"tokens": [
+		{
+			"name": "measure_ram",
+			"type": "number",
+			"title": {
+				"en": "Free RAM",
+				"nl": "Beschikbaar RAM"
+			},
+			"example": 14680
+		}
+	]
+}

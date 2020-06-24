@@ -5,6 +5,8 @@
 	},
 	"class": "other",
 	"capabilities": [
+		"measure_uptime",
+		"measure_idle_time",
 		"measure_load",
 		"measure_ram",
 		"measure_heap",
@@ -34,5 +36,15 @@
 			"id": "done",
 			"template": "done"
 		}
-	]
+	],
+	"capabilitiesOptions": {
+		"device_heartbeat": {
+			"preventInsights": true,
+			"preventTag ": true
+		},
+		"unit_uptime": {
+			"preventInsights": true,
+			"preventTag ": true
+		}
+	}
 }

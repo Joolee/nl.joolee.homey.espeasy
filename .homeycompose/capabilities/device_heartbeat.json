@@ -6,6 +6,7 @@
 	},
 	"icon": "/assets/icons/heartbeat.svg",
 	"uiComponent": "sensor",
+	"insights": false,
 	"getable": true,
 	"setable": false
 }

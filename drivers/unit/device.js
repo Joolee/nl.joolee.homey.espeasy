@@ -10,22 +10,14 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.getSetting('port'));
 		this.unit.addDriver(this);
 
-		// Fix updated capabilities
-		if (!this.getCapabilities().includes("measure_signal_strength"))
-			this.addCapability("measure_signal_strength");
-
-		this.migrateCapability("custom_heartbeat", "device_heartbeat");
-		this.migrateCapability("custom_uptime", "unit_uptime");
-		this.migrateCapability("custom_heap", "measure_heap");
-		this.migrateCapability("custom_load", "measure_load");
-		this.migrateCapability("custom_ram", "measure_ram");
+		this.upgradeCapabilities();
 
 		// Permanent binds for functions that get passed around :)
-		this.onRawMessage = this.onRawMessage.bind(this);
+		this.updateUptime = this.updateUptime.bind(this);
 		this.onJSONUpdate = this.onJSONUpdate.bind(this);
 		this.onUnitUpdate = this.onUnitUpdate.bind(this);
 		this.onUnitStateChange = this.onUnitStateChange.bind(this);
-		this.unit.on('rawMessage', this.onRawMessage);
+		this.unit.on('rawMessage', this.updateUptime);
 		this.unit.on('jsonUpdate', this.onJSONUpdate);
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
 		this.unit.on('stateChange', this.onUnitStateChange);
@@ -33,6 +25,56 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log('Init:', this.getName());
 		this.unit.updateJSON();
+
+		this.uptimeInterval = setInterval(this.updateUptime, 60000);
+	}
+
+	upgradeCapabilities() {
+		// Fix updated capabilities
+		this.migrateCapability("custom_heartbeat", "device_heartbeat");
+		this.migrateCapability("custom_uptime", "unit_uptime");
+		this.migrateCapability("custom_heap", "measure_heap");
+		this.migrateCapability("custom_load", "measure_load");
+		this.migrateCapability("custom_ram", "measure_ram");
+
+		if (!this.getCapabilities().includes("measure_signal_strength"))
+			this.addCapability("measure_signal_strength");
+
+		if (!this.getCapabilities().includes("measure_uptime")) {
+			this.addCapability("measure_uptime");
+			this.setCapabilityOptions("unit_uptime", {
+				"preventInsights": true,
+				"preventTag ": true
+			});
+		}
+
+		if (!this.getCapabilities().includes("measure_idle_time")) {
+			this.addCapability("measure_idle_time");
+			this.setCapabilityOptions("device_heartbeat", {
+				"preventInsights": true,
+				"preventTag ": true
+			});
+		}
+	}
+
+	updateUptime() {
+		if (this.getAvailable()) {
+
+			const idleTime = Math.floor((new Date().getTime() - this.unit.lastEvent.getTime()) / 60);
+			if (this.getCapabilityValue("measure_idle_time") != idleTime) {
+				this.setCapabilityValue("device_heartbeat", this.unit.lastEvent.toLocaleString());
+				this.setCapabilityValue("measure_idle_time", idleTime);
+			}
+
+			const uptime = this.unit.json.System["Uptime"];
+			if (this.getCapabilityValue("measure_uptime") != uptime) {
+				this.setCapabilityValue("unit_uptime", uptime + " " + Homey.__("minutes"));
+				this.setCapabilityValue("measure_uptime", uptime);
+			}
+		} else {
+			this.setCapabilityValue("measure_idle_time", null);
+			this.setCapabilityValue("measure_uptime", null);
+		}
 	}
 
 	onUnitStateChange(unit, state) {
@@ -71,16 +113,13 @@ module.exports = class UnitDevice extends Homey.Device {
 	// Homey function
 	onDeleted() {
 		this.log("Device deleted", this.unit.mac, this.unit.name);
-		this.unit.removeListener('rawMessage', this.onRawMessage);
+		this.unit.removeListener('rawMessage', this.updateUptime);
 		this.unit.removeListener('jsonUpdate', this.onJSONUpdate);
 		this.unit.removeListener('settingsUpdate', this.onUnitUpdate);
 		this.unit.removeListener('stateChange', this.onUnitStateChange);
 		clearInterval(this.poller);
+		clearInterval(this.uptimeInterval);
 		this.unit.removeDriver();
-	}
-
-	onRawMessage() {
-		this.setCapabilityValue('heartbeat', this.unit.lastEvent.toLocaleString());
 	}
 
 	onJSONUpdate(unit, json) {
@@ -93,12 +132,9 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.setValue("measure_ram", json.System['Free RAM']);
 		this.setValue("measure_heap", json.System['Heap Max Free Block']);
 
-		unit.driver.setCapabilityValue('unit_uptime', json.System['Uptime'] + " " + Homey.__('minutes'));
-
 		this.setValue("measure_signal_strength", json.WiFi['RSSI']);
 
-		unit.driver.setCapabilityValue('device_heartbeat', unit.lastEvent.toLocaleString())
-			.catch(this.log);
+		this.updateUptime();
 	}
 
 	setValue(key, value) {

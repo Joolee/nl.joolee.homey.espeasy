@@ -37,6 +37,285 @@
   "homeyCommunityTopicId": 30381,
   "source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
   "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy/wiki",
+  "flow": {
+    "triggers": [
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=environment&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_switch&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=p1&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_raw_number",
+        "title": {
+          "en": "Raw sensor value changed",
+          "nl": "Ruwe sensorwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_raw_number",
+            "type": "number",
+            "title": {
+              "en": "Raw value",
+              "nl": "Ruwe waarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=p1&capabilities=measure_raw_number"
+          }
+        ]
+      },
+      {
+        "id": "measure_heap_changed",
+        "title": {
+          "en": "Available heap blocks changed",
+          "nl": "Beschikbare heap blocks veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_heap",
+            "type": "number",
+            "title": {
+              "en": "Heap Free",
+              "nl": "Heap Beschikbaar"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_heap"
+          }
+        ]
+      },
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_load_changed",
+        "title": {
+          "en": "System load changed",
+          "nl": "Systeembelasting is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_load",
+            "type": "number",
+            "title": {
+              "en": "System load",
+              "nl": "Systeembelasting"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_load"
+          }
+        ]
+      },
+      {
+        "id": "measure_ram_changed",
+        "title": {
+          "en": "System RAM usage changed",
+          "nl": "Beschikbaar werkgeheugen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_ram",
+            "type": "number",
+            "title": {
+              "en": "Free RAM",
+              "nl": "Beschikbaar RAM"
+            },
+            "example": 14680
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_ram"
+          }
+        ]
+      },
+      {
+        "id": "measure_signal_strength_changed",
+        "title": {
+          "en": "Signal strength changed",
+          "nl": "Signaalsterkte is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_signal_strength",
+            "type": "number",
+            "title": {
+              "en": "Signal strength",
+              "nl": "Signaalsterkte"
+            },
+            "example": -66
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_signal_strength"
+          }
+        ]
+      },
+      {
+        "id": "measure_uptime_changed",
+        "title": {
+          "en": "Uptime changed",
+          "nl": "Uptime is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_uptime",
+            "type": "number",
+            "title": {
+              "en": "Uptime minutes",
+              "nl": "Uptime minuten"
+            },
+            "example": -66
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit&capabilities=measure_uptime"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "id": "environment",
@@ -45,6 +324,8 @@
       },
       "class": "sensor",
       "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
         "device_heartbeat"
       ],
       "images": {
@@ -728,6 +1009,8 @@
       },
       "class": "sensor",
       "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
         "measure_raw_number",
         "device_heartbeat"
       ],
@@ -868,6 +1151,8 @@
       },
       "class": "sensor",
       "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
         "device_heartbeat"
       ],
       "images": {
@@ -987,6 +1272,8 @@
       },
       "class": "sensor",
       "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
         "device_heartbeat",
         "measure_power",
         "alarm_active_tariff"
@@ -1179,6 +1466,8 @@
       },
       "class": "other",
       "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
         "measure_load",
         "measure_ram",
         "measure_heap",
@@ -1209,6 +1498,16 @@
           "template": "done"
         }
       ],
+      "capabilitiesOptions": {
+        "device_heartbeat": {
+          "preventInsights": true,
+          "preventTag ": true
+        },
+        "unit_uptime": {
+          "preventInsights": true,
+          "preventTag ": true
+        }
+      },
       "settings": [
         {
           "type": "group",
@@ -1310,135 +1609,6 @@
       ]
     }
   ],
-  "flow": {
-    "triggers": [
-      {
-        "id": "measure_raw_number",
-        "title": {
-          "en": "Raw sensor value has been changed",
-          "nl": "Ruwe sensorwaarde is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_raw_number",
-            "type": "number",
-            "title": {
-              "en": "Raw value",
-              "nl": "Ruwe waarde"
-            },
-            "example": 11.42
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=input_analog&capabilities=measure_raw_number"
-          }
-        ]
-      },
-      {
-        "id": "measure_load_changed",
-        "title": {
-          "en": "System load changed",
-          "nl": "Systeembelasting is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_load",
-            "type": "number",
-            "title": {
-              "en": "System load",
-              "nl": "Systeembelasting"
-            },
-            "example": 11.42
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit&capabilities=measure_load"
-          }
-        ]
-      },
-      {
-        "id": "measure_ram_changed",
-        "title": {
-          "en": "System RAM usage changed",
-          "nl": "Beschikbaar werkgeheugen is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_ram",
-            "type": "number",
-            "title": {
-              "en": "Free RAM",
-              "nl": "Beschikbaar RAM"
-            },
-            "example": 14680
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit&capabilities=measure_ram"
-          }
-        ]
-      },
-      {
-        "id": "measure_heap_changed",
-        "title": {
-          "en": "Available heap blocks changed",
-          "nl": "Beschikbare heap blocks veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_heap",
-            "type": "number",
-            "title": {
-              "en": "Heap Free",
-              "nl": "Heap Beschikbaar"
-            },
-            "example": 13112
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit&capabilities=measure_heap"
-          }
-        ]
-      },
-      {
-        "id": "measure_signal_strength_changed",
-        "title": {
-          "en": "Signal strength changed",
-          "nl": "Signaalsterkte is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_signal_strength",
-            "type": "number",
-            "title": {
-              "en": "Signal strength",
-              "nl": "Signaalsterkte"
-            },
-            "example": -66
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit&capabilities=measure_signal_strength"
-          }
-        ]
-      }
-    ]
-  },
   "capabilities": {
     "alarm_active_tariff": {
       "type": "enum",
@@ -1475,6 +1645,7 @@
       },
       "icon": "/assets/icons/heartbeat.svg",
       "uiComponent": "sensor",
+      "insights": false,
       "getable": true,
       "setable": false
     },
@@ -1492,6 +1663,17 @@
       "units": {
         "en": "Blocks"
       }
+    },
+    "measure_idle_time": {
+      "type": "number",
+      "title": {
+        "en": "Idle time",
+        "nl": "Inactiviteit"
+      },
+      "uiComponent": null,
+      "insights": false,
+      "getable": true,
+      "setable": false
     },
     "measure_load": {
       "type": "number",
@@ -1550,6 +1732,16 @@
         "en": "dB"
       }
     },
+    "measure_uptime": {
+      "type": "number",
+      "title": {
+        "en": "Uptime"
+      },
+      "uiComponent": null,
+      "insights": false,
+      "getable": true,
+      "setable": false
+    },
     "unit_uptime": {
       "type": "string",
       "title": {
@@ -1557,6 +1749,7 @@
       },
       "icon": "/assets/icons/uptime.svg",
       "uiComponent": "sensor",
+      "insights": false,
       "getable": true,
       "setable": false
     }

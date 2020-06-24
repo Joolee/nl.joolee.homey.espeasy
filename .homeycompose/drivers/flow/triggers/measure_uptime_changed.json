@@ -1,0 +1,19 @@
+{
+	"id": "measure_uptime_changed",
+	"$filter": "capabilities=measure_uptime",
+	"title": {
+		"en": "Uptime changed",
+		"nl": "Uptime is veranderd"
+	},
+	"tokens": [
+		{
+			"name": "measure_uptime",
+			"type": "number",
+			"title": {
+				"en": "Uptime minutes",
+				"nl": "Uptime minuten"
+			},
+			"example": -66
+		}
+	]
+}
