@@ -28,6 +28,12 @@ Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input 
 	* P009 Switch input - MCP23017
 	* P019 Switch input - PCF8574
 	* P033 Generic - Dummy Device (Possible values -1, 0 and 1. See the [Wiki](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/6.-Add-sensor-to-Homey) for more information)
+* Analog Input
+	* P002 Analog input - internal
+	* P060 Analog input - MCP3221 [TESTING]
+	* P060 Analog input - MCP3221
+	* P025 Analog input - ADS1115
+	* P007 Analog input - PCF8591
 * Environment (Temperature, pressure, humidity) (Mostly untested!)
 	* P006 Environment - BMP085/180
 	* P028 Environment - BMx280

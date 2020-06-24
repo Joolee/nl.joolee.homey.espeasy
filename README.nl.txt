@@ -8,6 +8,12 @@ Ondersteuning voor GPIO output apparaten (boolean, pulse, pwm, rtttl and tone) e
 		- P009 Switch input - MCP23017
 		- P019 Switch input - PCF8574
 		- P033 Generic - Dummy Device (Mogelijke waarden -1, 0 and 1)
+	- Analog Input
+		- P002 Analog input - internal
+		- P060 Analog input - MCP3221 [TESTING]
+		- P060 Analog input - MCP3221
+		- P025 Analog input - ADS1115
+		- P007 Analog input - PCF8591
 	- Environment (temperatuur, luchtdruk, vochtigheid) (Grotendeels ongetest!)
 		- P006 Environment - BMP085/180
 		- P028 Environment - BMx280
