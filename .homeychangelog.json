@@ -45,6 +45,10 @@
 	},
 	"1.4.0": {
 		"en": "Lots of bug fixes. Added WiFi strength and flow cards to Units. You might want to check your flows and insights. You can remove and re-add the unit without any effect on other devices.",
-		"nl": "Een boel bugs opgelost. WiFi signaalsterkte en trigger flow-cards toegevoegd aan units. Controleer je flows en insights, je kunt eventueel units opnieuw toevoegen zonder dat dit effect heeft op andere devices. "
+		"nl": "Een boel bugs opgelost. WiFi signaalsterkte en trigger flow-cards toegevoegd aan units. Controleer je flows en insights, je kunt eventueel units opnieuw toevoegen zonder dat dit effect heeft op andere devices."
+	},
+	"1.5.0": {
+		"en": "Adds idle and uptime triggers and tokens to applicable devices. Adds support for 'Analog input' sensor. Add timeout option for unit polling. Rewrote unit pairing wizard. Added Wiki (click on Visit website). Add support for dummy device as 'Input switch' device. Also, lots of bugfixes!",
+		"nl": "Voegt idle en uptime triggers en tokens toe aan apparaten, Voegt ondersteuning voor 'Analog Input' apparaten toe. Voegt timeout optie toe voor het pollen van de unit. Pairing wizard voor units herschreven. Wiki toegevoegd (klik op Bezoek website). Ondersteuning voor Dummy apparaat toegevoegd als 'Input switch'. Tevens een hoop bugs opgelost!"
 	}
 }
