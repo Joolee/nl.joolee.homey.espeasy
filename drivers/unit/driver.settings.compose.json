@@ -74,6 +74,25 @@
 				"hint": {
 					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
 				}
+			},
+			{
+				"id": "timeout",
+				"type": "number",
+				"label": {
+					"en": "Connection timeout",
+					"nl": "Verbindingstimeout"
+				},
+				"value": 10,
+				"min": 5,
+				"max": 45,
+				"units": {
+					"en": "seconds",
+					"nl": "seconden"
+				},
+				"hint": {
+					"en": "Number of seconds before a request for /json will time out.\n10 Seconds is a reasonable default.",
+					"nl": "Aantal seconden voordat een verzoek naar /json zal falen.\n10 Seconden is de aanbevolen standaard."
+				}
 			}
 		]
 	}
