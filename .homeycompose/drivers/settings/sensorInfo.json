@@ -1,0 +1,30 @@
+{
+	"type": "group",
+	"label": {
+		"en": "Device identification"
+	},
+	"children": [
+		{
+			"id": "controller",
+			"type": "number",
+			"label": {
+				"en": "Controller ID"
+			},
+			"value": 0,
+			"hint": {
+				"en": "Controller number of Homey in ESP Easy"
+			}
+		},
+		{
+			"id": "taskIDX",
+			"type": "label",
+			"label": {
+				"en": "Device IDX"
+			},
+			"value": "",
+			"hint": {
+				"en": "IDX as configured on device page for the Homey controller"
+			}
+		}
+	]
+}
