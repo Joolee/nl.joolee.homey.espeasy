@@ -124,6 +124,7 @@
           ]
         },
         {
+          "id": "sensorInfo",
           "type": "group",
           "label": {
             "en": "Device identification"
@@ -721,6 +722,146 @@
       ]
     },
     {
+      "id": "input_analog",
+      "name": {
+        "en": "Analog Input"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_raw_number",
+        "device_heartbeat"
+      ],
+      "images": {
+        "large": "/drivers/input_analog/assets/images/large.png",
+        "small": "/drivers/input_analog/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "settings"
+          }
+        },
+        {
+          "id": "settings",
+          "navigation": {
+            "prev": "list_devices",
+            "next": "done"
+          }
+        },
+        {
+          "id": "done",
+          "template": "done"
+        }
+      ],
+      "settings": [
+        {
+          "id": "unitInfo",
+          "type": "group",
+          "label": {
+            "en": "Unit information",
+            "nl": "Unitinformatie"
+          },
+          "children": [
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC Address",
+                "nl": "MAC-Adres"
+              },
+              "value": "",
+              "hint": {
+                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+                "nl": "Het MAC-Adres van je ESP Easy unit. Dit gebruikt Homey om een unit te identificeren, binnenkomende berichten worden hiermee herkent en als het IP adres van afzender niet overeen komt, wordt deze aangepast in Homey."
+              }
+            },
+            {
+              "id": "host",
+              "type": "label",
+              "label": {
+                "en": "Unit hostname",
+                "nl": "Unit hostnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The hostname or IP address can be changed in the unit settings but it will change automagically when Homey receives an event from another IP with the same MAC address.",
+                "nl": "Het IP adres kan veranderd worden n de unit instellingen. Deze wordt automagisch geüpdate wanneer Homey een bericht binnen krijgt van een nieuwe IP met hetzelfde MAC-adres."
+              }
+            },
+            {
+              "id": "idx",
+              "type": "label",
+              "label": {
+                "en": "Unit ID"
+              },
+              "value": "",
+              "hint": {
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that.",
+                "nl": "Zoals kan worden ingesteld op de ESP Easy instellingenpagina. Dit ID wordt momenteel niet gebruikt door Homey."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensorInfo",
+          "type": "group",
+          "label": {
+            "en": "Device identification"
+          },
+          "children": [
+            {
+              "id": "controller",
+              "type": "number",
+              "label": {
+                "en": "Controller ID"
+              },
+              "value": 0,
+              "hint": {
+                "en": "Controller number of Homey in ESP Easy"
+              }
+            },
+            {
+              "id": "taskIDX",
+              "type": "label",
+              "label": {
+                "en": "Device IDX"
+              },
+              "value": "",
+              "hint": {
+                "en": "IDX as configured on device page for the Homey controller"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device settings"
+          },
+          "children": [
+            {
+              "id": "value_multiplier",
+              "type": "number",
+              "label": {
+                "en": "Value multiplier",
+                "nl": "vermenigvuldigingsfactor "
+              },
+              "value": 1,
+              "hint": {
+                "en": "Homey will do <sensor value>*<this multiplier> to calculate the real value you want to see in your sensor.\n\nI recommend using a formula in the ESP Easy device configuration but you can use this setting if you don't want to.",
+                "nl": "Homey zal de berekening <sensorwaarde>*<deze factor> uitvoeren om de sensorwaarde te berekenen die je in Homey ziet.\n\nIk adviseer om de formule mogelijkheid te gebruiken op de ESP Easy device pagina maar als dat niet mogelijk is kun je deze waarde inzetten."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "input_switch",
       "name": {
         "en": "Switch Input"
@@ -806,6 +947,7 @@
           ]
         },
         {
+          "id": "sensorInfo",
           "type": "group",
           "label": {
             "en": "Device identification"
@@ -1171,6 +1313,31 @@
   "flow": {
     "triggers": [
       {
+        "id": "measure_raw_number",
+        "title": {
+          "en": "Raw sensor value has been changed",
+          "nl": "Ruwe sensorwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_raw_number",
+            "type": "number",
+            "title": {
+              "en": "Raw value",
+              "nl": "Ruwe waarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_raw_number"
+          }
+        ]
+      },
+      {
         "id": "measure_load_changed",
         "title": {
           "en": "System load changed",
@@ -1356,6 +1523,17 @@
       "units": {
         "en": "KB"
       }
+    },
+    "measure_raw_number": {
+      "type": "number",
+      "title": {
+        "en": "Raw value",
+        "nl": "Ruwe waarde"
+      },
+      "insights": true,
+      "uiComponent": null,
+      "getable": true,
+      "setable": false
     },
     "measure_signal_strength": {
       "type": "number",
