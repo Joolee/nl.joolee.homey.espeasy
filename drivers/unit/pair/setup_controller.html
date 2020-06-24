@@ -1,151 +1,66 @@
-<!doctype html>
-<html>
+<link href="../../../assets/pairing/pair.css" rel="stylesheet" type="text/css" />
+<script src="../../../assets/pairing/unit.js" type="text/javascript"></script>
+<style>
+	#status {
+		margin-top: 25px;
+	}
 
-<head>
-	<style>
-		#content input,
-		#content select,
-		#content option {
-			width: 100%;
-			border: 1px solid#ddd;
-			border-radius: 3px;
-			height: 40px;
-			box-sizing: border-box;
-			padding: 0 10px 0 10px;
-			font-size: 14px;
-			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-			transition: all .3s;
-			margin-bottom: 3px;
-			font-family: "Roboto";
-			font-weight: 300;
-		}
+	#status div {
+		text-align: center;
+	}
 
-		#unitName {
-			font-weight: bold;
-			margin-bottom: .3em;
-		}
+	div.icon {
+		width: 100%;
+		margin-bottom: 5px;
+	}
 
-		table th {
-			font-weight: bold;
-			padding-right: 5px;
-		}
+	#controllerSuccess {
+		display: none;
+	}
 
-		table th,
-		table td {
-			vertical-align: top;
-		}
+	#controllerSuccess .icon {
+		color: green;
+	}
+</style>
+<p id="controllerLogin"></p>
+<p data-i18n="pair.unit.controller_help"></p>
+<a data-i18n="pair.unit.controller_manual" id="trymanual"></a>
+<section id="technical" class="hidden">
+	<table>
+		<tr>
+			<th data-i18n="pair.unit.protocol"></th>
+			<td>Generic HTTP</td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.ip"></th>
+			<td id="homeyIP"></td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.port"></th>
+			<td id="homeyPort"></td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.publish_url"></th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				api/app/nl.joolee.ho<wbr>mey.esp<wbr>easy/?i=%ip%&m=%m<wbr>ac%&t=%tsk<wbr>name%&x=%id%<wbr>&k=%valn<wbr>ame%&v=%value%</td>
+		</tr>
+	</table>
+</section>
+<p></p>
 
-		#status {
-			margin-top: 25px;
-		}
+<p data-i18n="pair.unit.configure_first" id="configureFirst"></p>
 
-		#status div {
-			text-align: center;
-		}
-
-		#controllerTip {
-			display: none;
-		}
-
-		div.icon {
-			width: 100%;
-			margin-bottom: 5px;
-		}
-
-		#controllerSuccess {
-			display: none;
-		}
-
-		#controllerSuccess .icon {
-			color: green;
-		}
-
-		#setup_controller {
-			display: none;
-		}
-	</style>
-</head>
-
-<body>
-	<div id="setup_controller">
-		<div id="content">
-			<p id="controllerLogin"></p>
-			<table>
-				<tr>
-					<th data-i18n="pair.unit.protocol"></th>
-					<td data-i18n="pair.unit.generichttp">Generic HTTP</td>
-				</tr>
-				<tr>
-					<th data-i18n="pair.unit.ip"></th>
-					<td id="homeyIP"></td>
-				</tr>
-				<tr>
-					<th data-i18n="pair.unit.port"></th>
-					<td id="homeyPort"></td>
-				</tr>
-				<tr>
-					<th data-i18n="pair.unit.publishURL"></th>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						api/app/nl.joolee.ho<wbr>mey.esp<wbr>easy/?i=%ip%&m=%m<wbr>ac%&t=%tsk<wbr>name%&x=%id%<wbr>&k=%valn<wbr>ame%&v=%value%</td>
-				</tr>
-			</table>
-
-			<div id="status">
-				<p id="controllerTip" data-i18n="pair.unit.tip"></p>
-				<div id="waiting">
-					<div class="icon"><span class="fa fa-sun fa-spin fa-5x"></span></div>
-					<span data-i18n="pair.unit.waiting"></span>
-				</div>
-				<div id="controllerSuccess">
-					<div class="icon"><span class="fa fa-check fa-5x"></span></div>
-					<span data-i18n="pair.unit.finish"></span>
-				</div>
-			</div>
-		</div>
-
+<section id="status" class="hidden">
+	<p id="controllerTip" data-i18n="pair.unit.tip"></p>
+	<div id="waiting">
+		<div class="icon"><span class="fa fa-sun fa-spin fa-5x"></span></div>
+		<span data-i18n="pair.unit.waiting"></span>
 	</div>
-	<script>
-		Homey.setTitle(__('pair.unit.controllerTitle'));
-
-		function init() {
-			document.getElementById('setup_controller').style.display = 'block';
-
-			var controllerTip = document.getElementById('controllerTip');
-			var waiting = document.getElementById('waiting');
-			var controllerSuccess = document.getElementById('controllerSuccess');
-
-			document.getElementById('homeyIP').innerHTML = homeyIP.substr(0, homeyIP.lastIndexOf(':'));
-			document.getElementById('homeyPort').innerHTML = homeyIP.substr(homeyIP.lastIndexOf(':') + 1);
-			document.getElementById('controllerLogin').innerHTML = __('pair.unit.controller_login', {
-				"url": "http://" + unit.host + "/controllers"
-			});
-
-			if (unit.eventCount > 0) {
-				waiting.style.display = "none";
-				controllerSuccess.style.display = "block";
-			}
-			else if (unit.numSensors < 1) {
-				controllerTip.style.display = "block";
-			}
-
-			Homey.on('updateEventCount', (eventCount) => {
-				controllerTip.style.display = "none";
-				waiting.style.display = "none";
-				controllerSuccess.style.display = "block";
-			});
-		}
-
-		if (!unit) {
-			Homey.alert("You need to connect to the unit first", error, () => { Homey.prevView(); });
-		}
-		else {
-			init();
-		}
-
-	</script>
-</body>
-
-</html>
+	<div id="controllerSuccess">
+		<div class="icon"><span class="fa fa-check fa-5x"></span></div>
+		<span data-i18n="pair.unit.finish"></span>
+	</div>
+</section>

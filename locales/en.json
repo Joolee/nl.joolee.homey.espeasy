@@ -30,26 +30,25 @@
 			"duplicate": "Using a duplicate device IDX is not supported. Please make sure the IDX of your devices are unique per controller. You can find and change these values on the ESP Easy device settings page."
 		},
 		"unit": {
-			"ipTitle": "Locate ESP Easy unit",
-			"connect_description": "Enter the network information of your ESP Easy unit",
+			"find_title": "Locate ESP Easy unit",
+			"connect_description": "Enter the network information of your ESP Easy unit.<br>Detailed information about setting up your unit can be found at:<br>https://git.io/homey-esp-wiki",
 			"select_description": "Or select your unit from the list below:",
 			"list_placeholder": "-- Select Unit --",
 			"host": "IP address or hostname:",
 			"ip": "IP Address:",
 			"port": "Port number:",
-			"button_connect": "Connect",
-			"unitId": "Unit ID:",
-			"uptime": "Uptime:",
-			"numEvents": "Events:",
-			"dhcpWarning": "No static IP detected for this unit! Consider configuring a static IP address.",
-			"controllerTitle": "Setup controller",
-			"controller_login": "Configure a new controller in ESP Easy at __url__.<br>Note: The default credentials are admin/configesp",
-			"publishURL": "Publish URL:",
-			"tip": "You might not have any devices connected to ESP Easy yet so Homey will not get any events. You can add a 'System Info' device to test the connection or just click Next to finish setup.",
+			"error_no_host": "You need to input a valid IP address!",
+			"warning_dhcp": "No static IP detected for this unit, consider configuring a static IP address.\n\nPress Cancel to return to the previous page.",
+			"warning_no_events": "Homey has not received any events from the ESP unit yet! Are your sure you configured the controller correctly?\n\nPress Cancel to return to the previous page.",
+			"controller_title": "Setup controller",
+			"controller_login": "To allow Homey to receive events from ESP Easy, you need to set up Homey as new controller at __url__.<br>Note: The default credentials are admin/configesp",
+			"controller_help": "You can find a detailed how-to at<br>https://git.io/homey-esp-controller",
+			"controller_manual": "&gt; Or click here for the technical details if you want to give it a go.",
+			"publish_url": "Publish URL:",
+			"configure_first": "Click \"Next\" when you have finished the setup",
+			"tip": "Tip: If you don't have any sensors connected yet, add a dummy device: https://git.io/homey-esp-sysinfo",
 			"waiting": "Please configure Homey as controller in ESP Easy<br>Waiting for device events",
 			"finish": "Events received! Click next to finish setup",
-			"addTitle": "Adding unit",
-			"generichttp": "Generic HTTP",
 			"protocol": "Protocol"
 		},
 		"gpio": {
@@ -111,5 +110,8 @@
 		"invalid_task": "Invalid device type of \"__type__\" for controller __controller__, IDX __idx__",
 		"duplicate_idx": "Controller __controller__ has multiple devices with IDX __idx__",
 		"io_board_offline": "I/O Expander board seems to be offline"
+	},
+	"unit": {
+		"error_connecting": "Could not reach device"
 	}
 }

@@ -60,20 +60,21 @@ module.exports = class Unit extends Homey.Driver {
 				unit = null;
 			}
 
-			this.log('User requested connection to: ' + data[0] + ':' + data[1]);
-			unit = Homey.app.units.getUnit(null, data[0], data[1], true, (err, unit, newlyFound) => {
-				if (err) {
-					callback(err, null);
+			this.log(`User requested connection to: ${data[0]}:${data[1]}`);
+			unit = Homey.app.units.getUnit(null, data[0], data[1], true, (error, unit, newlyFound) => {
+				if (error) {
+					// Can't get the error message back to the client so I'll send it as data
+					callback(null, error);
 				}
 				else {
-					this.log('Unit found', unit.name)
+					this.log("Unit found", unit.name)
 					const unitFound = (unit) => {
 						unit.on("rawevent", updateEventCount);
 
 						callback(null, {
 							"name": unit.name,
 							"idx": unit.idx.toString(),
-							"uptime": unit.uptime + ' ' + Homey.__('minutes'),
+							"uptime": unit.uptime + ' ' + Homey.__("minutes"),
 							"eventCount": unit.eventCount,
 							"staticIP": unit.hasStaticIP(),
 							"host": unit.hostname,
@@ -87,7 +88,9 @@ module.exports = class Unit extends Homey.Driver {
 						unitFound(unit);
 					}
 					else {
-						unit.updateJSON(false, () => { unitFound(unit) });
+						unit.updateJSON(false, () => {
+							unitFound(unit)
+						});
 					}
 				}
 			});

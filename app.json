@@ -1050,7 +1050,7 @@
       },
       "pair": [
         {
-          "id": "ask_unit_ip",
+          "id": "find_unit",
           "navigation": {
             "next": "setup_controller"
           }
@@ -1058,12 +1058,13 @@
         {
           "id": "setup_controller",
           "navigation": {
-            "prev": "ask_unit_ip",
-            "next": "add_device"
+            "prev": "find_unit",
+            "next": "done"
           }
         },
         {
-          "id": "add_device"
+          "id": "done",
+          "template": "done"
         }
       ],
       "settings": [
