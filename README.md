@@ -17,6 +17,7 @@ Follow these steps to start using ESP Easy together with Homey:
 * You can read all about the using of this app in the [Wiki](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki)
 * Get support in the [Forum](https://community.athom.com/t/esp-easy/30381)
 * Report issues or feature requests in the [bug tracker](https://github.com/Joolee/nl.joolee.homey.espeasy/issues)
+* [Get a new device supported](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/Get-new-device-supported)
 
 # Supported boards
 The app has been developed and tested on a NodeMCU V3 board, if you run into any problems with other boards or want to have the pin-layout displayed in the GPIO pairing wizard, let me know in a feature request!
@@ -48,4 +49,4 @@ Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input 
 * P1 Energy Meter (http://www.esp8266thingies.nl/wp/)
 	* P044 Communication - P1 Wifi Gateway
 
-As my own use cases are limited, I need your input for Supporting more boards, devices and languages. Please help me on Github by sending information about your setup or contributing code.
+As my own use cases are limited, I need your input for Supporting more boards, devices and languages. [Read here](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/Get-new-device-supported) how you can help me!
