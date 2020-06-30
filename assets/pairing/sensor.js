@@ -8,12 +8,13 @@ $(document).ready(() => {
 		window.device = JSON.parse(window.selected_devices[0]);
 	}
 
-
 	if (!window.device) {
 		Homey.alert(Homey.__('pair.sensor.device_not_found'), 'error');
 		Homey.done();
 		return;
 	}
+
+	console.dir("Device:", window.device);
 
 	// When all controllers have an error, just pick the first and display the error
 	if (window.device.controllers.length && window.device.controllers.every(c => c.IDX == 0 || c.duplicate)) {
@@ -63,6 +64,23 @@ $(document).ready(() => {
 		return;
 	}
 
+	if (window.device.variants) {
+		$("#selectVariant label").html(Homey.__("pair.sensor.select_variant", {
+			"variant-title": window.device.variantTitle
+		}));
+
+		for (const [key, variant] of Object.entries(window.device.variants)) {
+			$('#variantList').append(
+				$('<option>')
+					.text(variant.name)
+					.prop("disabled", !variant.enabled)
+					.data("variant", variant)
+			);
+		}
+
+		$("#selectVariant").show();
+	}
+
 	let capabilityList = null;
 	if (window.device.capabilities) {
 		for (const value of window.device.capabilities) {
@@ -77,7 +95,7 @@ $(document).ready(() => {
 				.append(
 					$('<label>')
 						.attr("for", "capabilityList" + value.index)
-						.html(Homey.__('pair.sensor.selectCapability', { "name": value.name }))
+						.html(Homey.__('pair.sensor.select_capability', { "name": value.name }))
 						.append(capabilityList)
 				)
 			);
@@ -116,7 +134,15 @@ document.body.addEventListener('click', (event) => {
 		controller = $('#controllerList :selected').data('controller');
 	}
 	if (!controller) {
-		Homey.alert(Homey.__('pair.sensor.noControllerSelected'), "error");
+		Homey.alert(Homey.__('pair.sensor.no_controller_selected'), "error");
+		return false;
+	}
+
+	if (window.device.variants) {
+		variant = $('#variantList :selected').data('variant');
+	}
+	if (!variant) {
+		Homey.alert(Homey.__('pair.sensor.no_variant_selected'), "error");
 		return false;
 	}
 
@@ -138,9 +164,22 @@ document.body.addEventListener('click', (event) => {
 		capabilities: []
 	}
 
+	deviceCapabilities = window.device.capabilities;
 
-	if (window.device.capabilities) {
-		for (const value of window.device.capabilities) {
+	if (variant) {
+		device.settings.variant = variant.key;
+
+		const basicCapabilities = window.device.capabilities.filter(cap => !cap.hasOwnProperty("index"));
+		const variantCapabilities = window.device.capabilities.filter(cap => cap.hasOwnProperty("index") && variant.values.includes(cap.name));
+
+		deviceCapabilities = basicCapabilities.concat(variantCapabilities);
+
+		console.dir(basicCapabilities, variantCapabilities);
+		console.dir(deviceCapabilities);
+	}
+
+	if (deviceCapabilities) {
+		for (const value of deviceCapabilities) {
 			if (typeof (value.capabilities) == 'string') {
 				device.capabilities.push(value.capabilities);
 			} else {
@@ -162,6 +201,8 @@ document.body.addEventListener('click', (event) => {
 		else
 			device.settings[element.id] = element.value;
 	});
+
+	console.dir("Creating device:", device);
 
 	Homey.createDevice(device, (error) => {
 		if (error) {
