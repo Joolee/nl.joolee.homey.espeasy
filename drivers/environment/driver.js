@@ -55,6 +55,37 @@ module.exports = class Sensor_Switch extends SensorDriver {
 				"name": 'Environment - Thermocouple',
 				"plugin": 39,
 				"values": ["Temperature"]
+			},
+			{
+				"name": "Generic - Dummy Device",
+				"plugin": 33,
+				"variantTitle": "Output Data Type",
+				"variants": {
+					"single_temp": {
+						"name": "Single (Temperature)",
+						"values": ["Temperature"]
+					},
+					"single_hum": {
+						"name": "Single (Humidity)",
+						"values": ["Humidity"]
+					},
+					"single_baro": {
+						"name": "Single (Pressure)",
+						"values": ["Pressure"]
+					},
+					"temp_hum": {
+						"name": "Temp / Hum",
+						"values": ["Temperature", "Humidity"]
+					},
+					"temp_baro": {
+						"name": "Temp / Baro",
+						"values": ["Temperature", "Pressure"]
+					},
+					"temp_hum_baro": {
+						"name": "Temp / Hum / Baro",
+						"values": ["Temperature", "Humidity", "Pressure"]
+					}
+				}
 			}
 		]
 
@@ -64,22 +95,15 @@ module.exports = class Sensor_Switch extends SensorDriver {
 				"capability": "measure_temperature"
 			},
 			{
-				"name": "Pressure",
-				"capability": "measure_pressure"
-			},
-			{
 				"name": "Humidity",
 				"capability": "measure_humidity"
+			},
+			{
+				"name": "Pressure",
+				"capability": "measure_pressure"
 			}
 		]
 
 		super.onInit();
-	}
-
-	getValues(task) {
-		const type = this.taskTypes.find(tt => tt.name == task.Type);
-		return type.values.map(value => {
-			return this.values.find(val => val.name == value)
-		});
 	}
 }

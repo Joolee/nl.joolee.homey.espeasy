@@ -18,7 +18,7 @@
 	<span data-i18n="pair.sensor.duplicate"></span>
 </p>
 
-<div id="oneController" class="hidden">
+<section id="oneController" class="hidden">
 	<p class="label" data-i18n="pair.sensor.controllerSettings"></p>
 	<table id="controllerInfo">
 		<tr>
@@ -30,7 +30,15 @@
 			<td id="taskIDX"></td>
 		</tr>
 	</table>
-</div>
+</section>
+
+<p id="selectVariant" class="hidden">
+	<label for="variantList"></label>
+	<select id="variantList">
+		<option data-i18n="pair.sensor.variant_list_placeholder"></option>
+	</select>
+	<span data-i18n="pair.sensor.variant_hint"></span>
+</p>
 
 <section id="capabilities">
 
