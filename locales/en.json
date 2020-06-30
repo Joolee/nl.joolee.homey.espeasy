@@ -29,9 +29,9 @@
 			"taskIDX": "Device IDX:",
 			"no_controller_selected": "You need to select a controller",
 			"no_variant_selected": "You need to select a device variant",
-			"noController": "You don't have a controller enabled for this device. Enable the Homey controller and set a unique IDX in the ESP Easy device settings. If you haven't set-up Homey as a controller yet, add the Unit to Homey first. The pairing wizard wil walk you through setting up a controller",
+			"noController": "You don't have a controller enabled for this device. Enable the Homey controller and set a unique IDX in the ESP Easy device settings. If you haven't set-up Homey as a controller yet, you can follow the step-by-step guide at: https://git.io/homey-esp-controller",
 			"idx0": "Using device IDX 0 is not supported. Change it in the ESP Easy device settings page.",
-			"duplicate": "Using a duplicate device IDX is not supported. Please make sure the IDX of your devices are unique per controller. You can find and change these values on the ESP Easy device settings page."
+			"duplicate": "Using a duplicate device IDX is not supported. You can find help with this issue at https://git.io/homey-esp-idxs"
 		},
 		"unit": {
 			"find_title": "Locate ESP Easy unit",

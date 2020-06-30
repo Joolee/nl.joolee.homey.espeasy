@@ -9,10 +9,29 @@
 		"connected_to_http_server": "Het lijkt erop dat er is verbonden met een HTTP server. Controleer of het ingevoerde poortnummer dat van de P1 Wifi Gateway is en niet van de webserver."
 	},
 	"pair": {
-		"input": {
-			"identity_info": "Het apparaat zal worden geïdentificeerd met task nummer: ",
-			"device_not_found": "Het geselecteerde apparaat kan niet worden gevonden",
-			"selectCapability": "Select Homey functionaliteit:"
+		"p1": {
+			"description": "Controleer of u een P1 datagram ziet wanneer u http://__esp-ip__:&lt;portnumber&gt; bezoekt, voordat u het apparaat aan Homey toevoegt. Bezoek de volgende websites voor meer informatie:",
+			"title": "Configureer de P1 Meter",
+			"device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
+			"portnumber": "Wifi Gateway TCP Poort:"
+		},
+		"sensor": {
+			"title": "Configureer apparaat",
+			"controller_list_placeholder": "-- Selecteer Homey --",
+			"variant_list_placeholder": "-- Selecteer apparaatvariant --",
+			"device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
+			"selectController": "You have this device enabled for multiple controllers. Select Homey:",
+			"select_capability": "Selecteer de gewenste Homey functionaliteit voor de waarde '__name__':",
+			"select_variant": "Selecteer de waarde van '__variant-title__' die is ingesteld voor dit apparaat in ESP Easy:",
+			"variant_hint": "Note: De 'values' die zijn ingesteld in ESP Easy voor dir apparaat dienen een unieke naam te hebben",
+			"controllerSettings": "Gebruik deze controller instellingen:",
+			"controller": "Controller:",
+			"taskIDX": "Apparaat IDX:",
+			"no_controller_selected": "Je moet een controller selecteren",
+			"no_variant_selected": "Je moet een variant selecteren",
+			"noController": "Je hebt geen controller ingesteld voor dit apparaat. Schakel de Homey controller in, in de ESP Easy instellingen voor dit apparaat. Configureer tevens een IDX dat uniek is voor het apparaat op de controller. Als Homey nog niet ingesteld is als controller, volg dan de handleiding op https://git.io/homey-esp-controller",
+			"idx0": "Apparaat IDX 0 kan niet worden gebruikt. Verander dit bij de apparaatinstellingen in ESP Easy.",
+			"duplicate": "Het gebruiken van een duplicaat IDX is niet ondersteund. Voor hulp kunt u terecht op https://git.io/homey-esp-idxs"
 		},
 		"unit": {
 			"find_title": "Vind ESP Easy unit",
