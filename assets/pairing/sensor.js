@@ -69,10 +69,13 @@ $(document).ready(() => {
 			"variant-title": window.device.variantTitle
 		}));
 
+		numEnabled = Object.values(window.device.variants).filter(value => value.enabled).length;
+
 		for (const [key, variant] of Object.entries(window.device.variants)) {
 			$('#variantList').append(
 				$('<option>')
 					.text(variant.name)
+					.prop("selected", variant.enabled && numEnabled == 1)
 					.prop("disabled", !variant.enabled)
 					.data("variant", variant)
 			);

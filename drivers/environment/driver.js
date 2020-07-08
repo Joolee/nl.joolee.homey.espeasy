@@ -63,26 +63,32 @@ module.exports = class Sensor_Switch extends SensorDriver {
 				"variants": {
 					"single_temp": {
 						"name": "Single (Temperature)",
+						"numValues": 1,
 						"values": ["Temperature"]
 					},
 					"single_hum": {
 						"name": "Single (Humidity)",
+						"numValues": 1,
 						"values": ["Humidity"]
 					},
 					"single_baro": {
 						"name": "Single (Pressure)",
+						"numValues": 1,
 						"values": ["Pressure"]
 					},
 					"temp_hum": {
 						"name": "Temp / Hum",
+						"numValues": 2,
 						"values": ["Temperature", "Humidity"]
 					},
 					"temp_baro": {
 						"name": "Temp / Baro",
+						"numValues": 2,
 						"values": ["Temperature", "Pressure"]
 					},
 					"temp_hum_baro": {
 						"name": "Temp / Hum / Baro",
+						"numValues": 3,
 						"values": ["Temperature", "Humidity", "Pressure"]
 					}
 				}
