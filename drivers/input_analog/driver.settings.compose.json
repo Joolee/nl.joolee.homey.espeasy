@@ -20,7 +20,7 @@
 				},
 				"value": 1,
 				"hint": {
-					"en": "Homey will do <sensor value>*<this multiplier> to calculate the real value you want to see in your sensor.\n\nI recommend using a formula in the ESP Easy device configuration but you can use this setting if you don't want to.",
+					"en": "Homey will do <sensor value>*<this multiplier> to calculate the real value you want to see in your sensor.\n\nI recommend using a formula in the ESP Easy device configuration but you can use this setting if you can't for some reason.",
 					"nl": "Homey zal de berekening <sensorwaarde>*<deze factor> uitvoeren om de sensorwaarde te berekenen die je in Homey ziet.\n\nIk adviseer om de formule mogelijkheid te gebruiken op de ESP Easy device pagina maar als dat niet mogelijk is kun je deze waarde inzetten."
 				}
 			}
