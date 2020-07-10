@@ -35,7 +35,7 @@ Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input 
 	* P025 Analog input - ADS1115
 	* P007 Analog input - PCF8591
 * Pulse Counter
-	* Generic - Pulse counter
+	* P003 Generic - Pulse counter
 * Environment (Temperature, pressure, humidity) (Mostly untested!)
 	* P006 Environment - BMP085/180
 	* P028 Environment - BMx280

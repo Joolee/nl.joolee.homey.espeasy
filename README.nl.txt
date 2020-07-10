@@ -14,7 +14,7 @@ Ondersteuning voor GPIO output apparaten (boolean, pulse, pwm, rtttl and tone) e
 		- P025 Analog input - ADS1115
 		- P007 Analog input - PCF8591
 	- Pulse Counter
-		- Generic - Pulse counter
+		- P003 Generic - Pulse counter
 	- Environment (temperatuur, luchtdruk, vochtigheid) (Grotendeels ongetest!)
 		- P006 Environment - BMP085/180
 		- P028 Environment - BMx280
