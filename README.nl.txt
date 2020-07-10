@@ -15,7 +15,7 @@ Ondersteuning voor GPIO output apparaten (boolean, pulse, pwm, rtttl and tone) e
 		- P007 Analog input - PCF8591
 	- Pulse Counter
 		- P003 Generic - Pulse counter
-	- Environment (temperatuur, luchtdruk, vochtigheid) (Grotendeels ongetest!)
+	- Environment (temperatuur, luchtdruk, vochtigheid)
 		- P006 Environment - BMP085/180
 		- P028 Environment - BMx280
 		- P005 Environment - DHT11/12/22 SONOFF2301/7021
