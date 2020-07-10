@@ -1,0 +1,7 @@
+{
+	"triggers": [
+		{
+			"$extends": "measure_idle_time_changed"
+		}
+	]
+}
