@@ -50,5 +50,9 @@
 	"1.5.0": {
 		"en": "Adds idle and uptime triggers and tokens to applicable devices. Adds support for 'Analog input' sensor. Add timeout option for unit polling. Rewrote unit pairing wizard. Added Wiki (click on Visit website). Add support for dummy device as 'Input switch' device. Also, lots of bugfixes!",
 		"nl": "Voegt idle en uptime triggers en tokens toe aan apparaten, Voegt ondersteuning voor 'Analog Input' apparaten toe. Voegt timeout optie toe voor het pollen van de unit. Pairing wizard voor units herschreven. Wiki toegevoegd (klik op Bezoek website). Ondersteuning voor Dummy apparaat toegevoegd als 'Input switch'. Tevens een hoop bugs opgelost!"
+	},
+	"1.6.0": {
+		"en": "Adds ability for 'Pulse Counter' devices and to use dummy devices as 'Environment sensor'",
+		"nl": "Ondersteuning toegevoegd voor 'Pulse Counter' apparaten en het gebruik van een Dummy apparaat als 'Environment sensor'"
 	}
 }
