@@ -3,7 +3,7 @@
 const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
-module.exports = class Driver_Sensor_Analog extends SensorDriver {
+module.exports = class Input_Analog_Driver extends SensorDriver {
 	onInit() {
 		this.taskTypes = [
 			{

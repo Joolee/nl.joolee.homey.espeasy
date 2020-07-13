@@ -5,7 +5,7 @@ const net = require('net');
 const Homey = require('homey');
 const parsePacket = require('p1-reader/lib/parsePacket');
 
-module.exports = class P1 extends GeneralDevice {
+module.exports = class P1_Device extends GeneralDevice {
 	onInit() {
 		super.onInit();
 
