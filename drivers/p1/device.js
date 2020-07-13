@@ -25,12 +25,15 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.onData = this.onData.bind(this);
 		this.onError = this.onError.bind(this);
 		this.destroy = this.destroy.bind(this);
+		this.onTimeout = this.onTimeout.bind(this);
 
 		this.p1.on("connect", this.onConnected);
+		this.p1.on("timeout", this.onTimeout);
 		this.p1.on("close", this.onClosed);
 		this.p1.on("end", this.onClosed);
 		this.p1.on("data", this.onData);
 		this.p1.on("error", this.onError);
+		this.p1.setTimeout(60000);
 		Homey.on("unload", this.destroy);
 
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
@@ -38,32 +41,27 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.datagrams = 0;
 
 		this.connect();
-		this.keepAlive = setTimeout(this.detectProblems, 60000);
+		this.keepAlive = setInterval(this.detectProblems, 60000);
 	}
 
 	detectProblems() {
-		// If connected but no datagram received in 120s
+		// If connected but no datagram received in 180s
+		const lastActivity = this.lastDatagram ? this.lastDatagram : this.connected;
+
 		if (
 			this.connected
 			&&
-			(
-				(
-					!this.lastDatagram
-					&&
-					(!new Date().getTime() - this.connected.getTime()) > 120
-				)
-				||
-				(
-					this.lastDatagram
-					&&
-					(!new Date().getTime() - this.lastDatagram.getTime()) > 120
-				)
-			)
+			(new Date().getTime() - lastActivity.getTime()) > 120000
 		) {
-			// Reconnect
-			this.log("Not receiving any datagrams, trying to reconnect");
-			this.p1.end();
+			this.log("Problem detected");
+			this.onTimeout();
 		}
+	}
+
+	onTimeout() {
+		// Reconnect
+		this.log("Not receiving any datagrams, trying to reconnect");
+		this.p1.end();
 	}
 
 	// Override GeneralDevice function
@@ -78,6 +76,7 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	destroy() {
 		this.log("Destroying all connections");
+		this.connected = null;
 		this.p1.removeAllListeners("close", this.onClosed);
 		this.p1.destroy();
 	}
@@ -100,7 +99,7 @@ module.exports = class P1_Device extends GeneralDevice {
 
 		Homey.removeListener("unload", this.destroy)
 
-		clearTimeout(this.keepAlive);
+		clearInterval(this.keepAlive);
 
 		this.destroy();
 	}
