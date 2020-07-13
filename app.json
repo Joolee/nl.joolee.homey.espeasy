@@ -142,8 +142,8 @@
       {
         "id": "measure_raw_number",
         "title": {
-          "en": "Raw sensor value changed",
-          "nl": "Ruwe sensorwaarde is veranderd"
+          "en": "Raw value changed",
+          "nl": "Ruwe waarde is veranderd"
         },
         "tokens": [
           {
@@ -186,6 +186,56 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=pulse_counter&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_sensor_value",
+        "title": {
+          "en": "Raw sensor value changed",
+          "nl": "Ruwe sensorwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_sensor_value",
+            "type": "number",
+            "title": {
+              "en": "Raw sensor value",
+              "nl": "Ruwe sensorwaarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_sensor_value"
+          }
+        ]
+      },
+      {
+        "id": "measure_raw_number",
+        "title": {
+          "en": "Raw value changed",
+          "nl": "Ruwe waarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_raw_number",
+            "type": "number",
+            "title": {
+              "en": "Raw value",
+              "nl": "Ruwe waarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_raw_number"
           }
         ]
       },

@@ -2,6 +2,12 @@
 	"triggers": [
 		{
 			"$extends": "measure_idle_time_changed"
+		},
+		{
+			"$extends": "measure_sensor_value_changed"
+		},
+		{
+			"$extends": "measure_raw_number_changed"
 		}
 	]
 }

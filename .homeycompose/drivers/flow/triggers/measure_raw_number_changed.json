@@ -2,8 +2,8 @@
 	"id": "measure_raw_number",
 	"$filter": "capabilities=measure_raw_number",
 	"title": {
-		"en": "Raw sensor value changed",
-		"nl": "Ruwe sensorwaarde is veranderd"
+		"en": "Raw value changed",
+		"nl": "Ruwe waarde is veranderd"
 	},
 	"tokens": [
 		{
