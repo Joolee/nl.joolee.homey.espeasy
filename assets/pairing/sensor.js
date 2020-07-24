@@ -143,10 +143,11 @@ document.body.addEventListener('click', (event) => {
 
 	if (window.device.variants) {
 		variant = $('#variantList :selected').data('variant');
-	}
-	if (!variant) {
-		Homey.alert(Homey.__('pair.sensor.no_variant_selected'), "error");
-		return false;
+
+		if (!variant) {
+			Homey.alert(Homey.__('pair.sensor.no_variant_selected'), "error");
+			return false;
+		}
 	}
 
 	Homey.showLoadingOverlay();
