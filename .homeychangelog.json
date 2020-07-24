@@ -54,5 +54,9 @@
 	"1.6.0": {
 		"en": "Adds ability for 'Pulse Counter' devices and to use dummy devices as 'Environment sensor'",
 		"nl": "Ondersteuning toegevoegd voor 'Pulse Counter' apparaten en het gebruik van een Dummy apparaat als 'Environment sensor'"
+	},
+	"1.6.1": {
+		"en": "Make P1 sensors automagically reconnect on connection loss. Other small bug fixes.",
+		"nl": "P1 sensoren verbinden nu automagisch opnieuw bij een verbroken verbinding. Overige kleine bugfixes."
 	}
 }
