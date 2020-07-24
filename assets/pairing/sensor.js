@@ -170,19 +170,16 @@ document.body.addEventListener('click', (event) => {
 
 	deviceCapabilities = window.device.capabilities;
 
-	if (variant) {
+	if (typeof variant != "undefined") {
 		device.settings.variant = variant.key;
 
 		const basicCapabilities = window.device.capabilities.filter(cap => !cap.hasOwnProperty("index"));
 		const variantCapabilities = window.device.capabilities.filter(cap => cap.hasOwnProperty("index") && variant.values.includes(cap.name));
 
 		deviceCapabilities = basicCapabilities.concat(variantCapabilities);
-
-		console.dir(basicCapabilities, variantCapabilities);
-		console.dir(deviceCapabilities);
 	}
 
-	if (deviceCapabilities) {
+	if (typeof deviceCapabilities != "undefined") {
 		for (const value of deviceCapabilities) {
 			if (typeof (value.capabilities) == 'string') {
 				device.capabilities.push(value.capabilities);
