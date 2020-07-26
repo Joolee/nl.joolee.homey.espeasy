@@ -1,15 +1,14 @@
-{
-	"gpio0": {
+[
+	{
+		"id": "gpio0",
 		"pin": 0,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 0 - D3",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -20,17 +19,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio1": {
+	{
+		"id": "gpio1",
 		"pin": 1,
 		"enabled": true,
 		"visible": true,
 		"warning": true,
 		"name": "GPIO 1 - D10",
 		"description": "TX0",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -41,17 +39,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio2": {
+	{
+		"id": "gpio2",
 		"pin": 2,
 		"enabled": true,
 		"visible": true,
 		"warning": true,
 		"name": "GPIO 2 - D4",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -62,17 +59,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio3": {
+	{
+		"id": "gpio3",
 		"pin": 3,
 		"enabled": true,
 		"visible": true,
 		"warning": true,
 		"name": "GPIO 3 - D9",
 		"description": "RX0",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -83,17 +79,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio4": {
+	{
+		"id": "gpio4",
 		"pin": 4,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 4 - D2",
 		"description": "I2C:SDA",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -104,17 +99,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio5": {
+	{
+		"id": "gpio5",
 		"pin": 5,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 5 - D1",
 		"description": "I2C:SCL",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -125,47 +119,46 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio6": {
+	{
+		"id": "gpio6",
 		"pin": 6,
 		"enabled": false,
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 6",
 		"description": "",
-		"input": {},
-		"output": {}
+		"commands": {}
 	},
-	"gpio7": {
+	{
+		"id": "gpio7",
 		"pin": 7,
 		"enabled": false,
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 7",
 		"description": "",
-		"input": false,
-		"output": {}
+		"commands": {}
 	},
-	"gpio8": {
+	{
+		"id": "gpio8",
 		"pin": 8,
 		"enabled": false,
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 8",
 		"description": "",
-		"input": {},
-		"output": {}
+		"commands": {}
 	},
-	"gpio9": {
+	{
+		"id": "gpio9",
 		"pin": 9,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 9 - D11",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -176,17 +169,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio10": {
+	{
+		"id": "gpio10",
 		"pin": 10,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 10 - D12",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -197,27 +189,26 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio11": {
+	{
+		"id": "gpio11",
 		"pin": 11,
 		"enabled": false,
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 11",
 		"description": "",
-		"input": {},
-		"output": {}
+		"commands": {}
 	},
-	"gpio12": {
+	{
+		"id": "gpio12",
 		"pin": 12,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 12 - D6",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -228,17 +219,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio13": {
+	{
+		"id": "gpio13",
 		"pin": 13,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 13 - D7",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -249,17 +239,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio14": {
+	{
+		"id": "gpio14",
 		"pin": 14,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 14 - D5",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -270,17 +259,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio15": {
+	{
+		"id": "gpio15",
 		"pin": 15,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 15 - D8",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": "PWM",
 			"pulse": "Pulse",
@@ -291,17 +279,16 @@
 			"rtttl": "rtttl"
 		}
 	},
-	"gpio16": {
+	{
+		"id": "gpio16",
 		"pin": 16,
 		"enabled": true,
 		"visible": true,
 		"warning": false,
 		"name": "GPIO 16 - D0",
 		"description": "",
-		"input": {
-			"status": "Status,GPIO"
-		},
-		"output": {
+		"commands": {
+			"status": "Status,GPIO",
 			"bool": "GPIO",
 			"pwm": null,
 			"pulse": "Pulse",
@@ -312,4 +299,4 @@
 			"rtttl": "rtttl"
 		}
 	}
-}
+]

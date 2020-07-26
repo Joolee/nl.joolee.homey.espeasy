@@ -26,9 +26,9 @@ module.exports = class GPIO_PWM_Device extends GPIODevice {
 		if (!options.silent)
 			this.log('PWM value for pin', this.id, 'changed:', newState);
 
-		if (this.properties.output.pwm) {
+		if (this.properties.commands.pwm) {
 			this.unit.sendCommand([
-				this.properties.output.pwm,
+				this.properties.commands.pwm,
 				this.properties.pin,
 				Math.round(newState * 1024)
 			], callback, !!options.silent);

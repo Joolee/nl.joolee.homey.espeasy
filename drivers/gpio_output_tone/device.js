@@ -5,9 +5,9 @@ const GPIODevice = require('/lib/GPIODevice.js');
 module.exports = class GPIO_Tone_Device extends GPIODevice {
 
 	initPin() {
-		if (this.properties.output.bool) {
+		if (this.properties.commands.bool) {
 			this.unit.sendCommand([
-				this.properties.output.bool,
+				this.properties.commands.bool,
 				this.properties.pin,
 				0
 			]);
@@ -17,13 +17,13 @@ module.exports = class GPIO_Tone_Device extends GPIODevice {
 	}
 
 	set(newState, options = {}, callback = () => { }) {
-		if (this.properties.output.tone) {
+		if (this.properties.commands.tone) {
 			let duration = this.getSetting('duration');
 			let frequency = this.getSetting('frequency');
 			this.log('Play tone on pin', this.id, 'for', duration, 'ms on', frequency, 'hz');
 
 			this.unit.sendCommand([
-				this.properties.output.tone,
+				this.properties.commands.tone,
 				this.properties.pin,
 				frequency,
 				duration
