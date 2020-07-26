@@ -5,9 +5,9 @@ const GPIODevice = require('/lib/GPIODevice.js');
 module.exports = class GPIO_Pulse_Device extends GPIODevice {
 
 	initPin() {
-		if (this.properties.output.bool) {
+		if (this.properties.commands.bool) {
 			this.unit.sendCommand([
-				this.properties.output.bool,
+				this.properties.commands.bool,
 				this.properties.pin,
 				this.getSetting('invert') === true ? 1 : 0
 			]);
@@ -17,14 +17,14 @@ module.exports = class GPIO_Pulse_Device extends GPIODevice {
 	}
 
 	set(newState, options = {}, callback = () => { }) {
-		if (this.properties.output.pulse) {
+		if (this.properties.commands.pulse) {
 			let duration = this.getSetting('duration');
-			let command = this.properties.output.pulse;
+			let command = this.properties.commands.pulse;
 			let state = this.getSetting('invert') === true ? 0 : 1;
 			this.log('Pulse pin', this.id, 'for', duration, 'ms to', state ? "'on'" : "'off'");
 
-			if (duration > 1000 && this.properties.output.longpulsems)
-				command = this.properties.output.longpulsems;
+			if (duration > 1000 && this.properties.commands.longpulsems)
+				command = this.properties.commands.longpulsems;
 
 			this.unit.sendCommand([
 				command,

@@ -1880,6 +1880,102 @@
               }
             }
           ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "MCP23017 Expansion boards"
+          },
+          "children": [
+            {
+              "id": "mcp23017-0x20",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x20"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x20."
+              }
+            },
+            {
+              "id": "mcp23017-0x21",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x21"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x21."
+              }
+            },
+            {
+              "id": "mcp23017-0x22",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x22"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x22."
+              }
+            },
+            {
+              "id": "mcp23017-0x23",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x23"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x23."
+              }
+            },
+            {
+              "id": "mcp23017-0x24",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x24"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x24."
+              }
+            },
+            {
+              "id": "mcp23017-0x25",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x25"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x25."
+              }
+            },
+            {
+              "id": "mcp23017-0x26",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x26"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x26."
+              }
+            },
+            {
+              "id": "mcp23017-0x27",
+              "type": "checkbox",
+              "label": {
+                "en": "I2C address 0x27"
+              },
+              "value": false,
+              "hint": {
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x27."
+              }
+            }
+          ]
         }
       ]
     }

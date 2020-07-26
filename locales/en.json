@@ -116,6 +116,7 @@
 		"io_board_offline": "I/O Expander board seems to be offline"
 	},
 	"unit": {
-		"error_connecting": "Could not reach device"
+		"error_connecting": "Could not reach device",
+		"on_board_pins": "On-board"
 	}
 }

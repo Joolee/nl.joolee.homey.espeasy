@@ -54,7 +54,7 @@ $(document).ready(() => {
 			Homey.emit('getUnitPins', {
 				'unit': unit,
 				'pinType': $('#pinProperties').data('pintype')
-			}, (error, pins) => {
+			}, (error, pinGroups) => {
 				if (error) {
 					Homey.alert(error, 'error');
 					Homey.hideLoadingOverlay();
@@ -63,26 +63,31 @@ $(document).ready(() => {
 
 				$('#pinList option:not(:first)').remove();
 
-				for (let pin of pins) {
-					console.log(pin);
+				for (let group of pinGroups) {
+					let optGroup = $("<optgroup>")
+						.attr("label", group.name)
+						.appendTo("#pinList");
 
-					if (!pin.visible)
-						continue;
+					for (let pin of group.pins) {
+						console.log(pin);
 
-					let name = pin.name;
-					if (pin.description)
-						name += " (" + pin.description + ")";
-					if (pin.warning)
-						name += ' ⚠';
+						if (!pin.visible)
+							continue;
 
-					$('#pinList').append(
-						$('<option>')
-							.text(name)
-							.data('pin', pin)
-							.prop('disabled', !pin.enabled)
-					);
+						let name = pin.name;
+						if (pin.description)
+							name += " (" + pin.description + ")";
+						if (pin.warning)
+							name += ' ⚠';
+
+						optGroup.append(
+							$('<option>')
+								.text(name)
+								.data('pin', pin)
+								.prop('disabled', !pin.enabled)
+						);
+					}
 				}
-
 				$('#pinProperties').show();
 				Homey.hideLoadingOverlay();
 			});

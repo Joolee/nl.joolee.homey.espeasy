@@ -101,6 +101,7 @@ module.exports = class UnitDevice extends Homey.Device {
 
 	onSettings(oldSettingsObj, newSettingsObj, changedKeysArr, callback) {
 		callback();
+
 		if (changedKeysArr.includes('host') || changedKeysArr.includes('port')) {
 			this.unit.updateHost(newSettingsObj.host, newSettingsObj.port);
 		}

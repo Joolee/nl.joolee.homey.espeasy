@@ -5,9 +5,9 @@ const GPIODevice = require('/lib/GPIODevice.js');
 module.exports = class GPIO_RTTTL_Device extends GPIODevice {
 
 	initPin() {
-		if (this.properties.output.bool) {
+		if (this.properties.commands.bool) {
 			this.unit.sendCommand([
-				this.properties.output.bool,
+				this.properties.commands.bool,
 				this.properties.pin,
 				0
 			]);
@@ -17,12 +17,12 @@ module.exports = class GPIO_RTTTL_Device extends GPIODevice {
 	}
 
 	set(newState, options = {}, callback = () => { }) {
-		if (this.properties.output.rtttl) {
+		if (this.properties.commands.rtttl) {
 			let melody = this.getSetting('melody');
 			this.log('Play RTTTL melody on pin', this.id);
 
 			this.unit.sendCommand([
-				this.properties.output.rtttl,
+				this.properties.commands.rtttl,
 				this.properties.pin,
 				melody
 			], callback);
