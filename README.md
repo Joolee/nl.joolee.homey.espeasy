@@ -30,10 +30,10 @@ The app has been developed and tested on a NodeMCU V3 board, if you run into any
 * RTTTL
 * Tone
 
-## Extension boards:
+## Extension boards
 * MCP23017
 
-## Input devices:
+## Input devices
 * Switch Input (Only in "Switch" mode, type "Normal switch" and no special events)
 	* P001 Switch input - Switch
 	* P009 Switch input - MCP23017
