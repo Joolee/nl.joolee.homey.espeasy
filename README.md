@@ -23,7 +23,17 @@ Follow these steps to start using ESP Easy together with Homey:
 The app has been developed and tested on a NodeMCU V3 board, if you run into any problems with other boards or want to have the pin-layout displayed in the GPIO pairing wizard, let me know in a feature request!
 
 # Supported devices
-Support for GPIO output devices (boolean, pulse, pwm, rtttl and tone) and input devices:
+## GPIO output devices
+* Boolean
+* Pulse
+* PWM
+* RTTTL
+* Tone
+
+## Extension boards:
+* MCP23017
+
+## Input devices:
 * Switch Input (Only in "Switch" mode, type "Normal switch" and no special events)
 	* P001 Switch input - Switch
 	* P009 Switch input - MCP23017
