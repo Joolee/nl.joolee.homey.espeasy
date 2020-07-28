@@ -25,8 +25,8 @@
 		"enabled": true,
 		"visible": true,
 		"warning": true,
-		"name": "GPIO 1 - D10",
-		"description": "TX0",
+		"name": "GPIO 1 - TX",
+		"description": "",
 		"commands": {
 			"status": "Status,GPIO",
 			"bool": "GPIO",
@@ -46,7 +46,7 @@
 		"visible": true,
 		"warning": true,
 		"name": "GPIO 2 - D4",
-		"description": "LED",
+		"description": "",
 		"commands": {
 			"status": "Status,GPIO",
 			"bool": "GPIO",
@@ -65,8 +65,8 @@
 		"enabled": true,
 		"visible": true,
 		"warning": true,
-		"name": "GPIO 3 - D9",
-		"description": "RX0",
+		"name": "GPIO 3 - RX",
+		"description": "",
 		"commands": {
 			"status": "Status,GPIO",
 			"bool": "GPIO",
@@ -126,7 +126,7 @@
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 6",
-		"description": "",
+		"description": "Not connected",
 		"commands": {}
 	},
 	{
@@ -136,7 +136,7 @@
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 7",
-		"description": "",
+		"description": "Not connected",
 		"commands": {}
 	},
 	{
@@ -146,48 +146,28 @@
 		"visible": false,
 		"warning": false,
 		"name": "GPIO 8",
-		"description": "",
+		"description": "Not connected",
 		"commands": {}
 	},
 	{
 		"id": "gpio9",
 		"pin": 9,
-		"enabled": true,
-		"visible": true,
+		"enabled": false,
+		"visible": false,
 		"warning": false,
-		"name": "GPIO 9 - D11",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
+		"name": "GPIO 9",
+		"description": "Not connected",
+		"commands": {}
 	},
 	{
 		"id": "gpio10",
 		"pin": 10,
-		"enabled": true,
-		"visible": true,
+		"enabled": false,
+		"visible": false,
 		"warning": false,
-		"name": "GPIO 10 - D12",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
+		"name": "GPIO 10",
+		"description": "Not connected",
+		"commands": {}
 	},
 	{
 		"id": "gpio11",

@@ -1,0 +1,38 @@
+{
+	"nodemcu-v3": {
+		"name": "NodeMCU V3",
+		"pinlist": "nodemcu-v3"
+	},
+	"wemos-d1-mini": {
+		"name": {
+			"en": "Wemos D1 Mini"
+		},
+		"pinlist": "wemos-d1-mini"
+	},
+	"nodemcu-esp32": {
+		"name": {
+			"en": "NodeMCU ESP32"
+		},
+		"pinlist": "nodemcu-esp32"
+	},
+	"lolin32-oled": {
+		"name": {
+			"en": "Lolin32 OLED"
+		},
+		"pinlist": "lolin32-oled"
+	},
+	"esp32-all": {
+		"name": {
+			"en": "ESP32 (All ports)",
+			"nl": "ESP32 (Alle poorten)"
+		},
+		"pinlist": "esp32-all"
+	},
+	"esp8266-all": {
+		"name": {
+			"en": "ESP8266 (All ports)",
+			"nl": "ESP8266 (Alle poorten)"
+		},
+		"pinlist": "esp8266-all"
+	}
+}
