@@ -107,7 +107,8 @@
 			"tone": "tone output",
 			"rtttl": "melody output",
 			"input": "digital input"
-		}
+		},
+		"pin_not_found": "Could not find pin definition. Check board type and expansion board settings for unit."
 	},
 	"sensor": {
 		"task_not_found": "Controller __controller__ does not contain a device with IDX __idx__",

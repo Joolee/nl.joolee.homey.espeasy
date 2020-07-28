@@ -58,18 +58,11 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	detectBoard() {
-		let boardType = null;
-
-		if (!this.unit.json)
-			return false;
-		else if (typeof this.unit.json.System["Heap Max Free Block"] == "undefined") {
-			boardType = "nodemcu-esp32";
-		} else {
-			boardType = "nodemcu-v3"
-		}
+		let boardType = this.unit.detectBoardType();
 
 		this.log("Set board type to:", boardType);
 		this.setSettings({ "boardType": boardType });
+		return boardType;
 	}
 
 	updateUptime() {
@@ -123,7 +116,11 @@ module.exports = class UnitDevice extends Homey.Device {
 		}
 
 		if (newSettingsObj["boardType"] == "detect") {
-			this.detectBoard();
+			newSettingsObj["boardType"] = this.detectBoard();
+		}
+
+		if (changedKeysArr.includes('boardType')) {
+			this.unit.emit("boardTypeChanged", newSettingsObj["boardType"])
 		}
 
 		if (changedKeysArr.includes('pollInterval')) {
