@@ -57,6 +57,21 @@ module.exports = class UnitDevice extends Homey.Device {
 		}
 	}
 
+	detectBoard() {
+		let boardType = null;
+
+		if (!this.unit.json)
+			return false;
+		else if (typeof this.unit.json.System["Heap Max Free Block"] == "undefined") {
+			boardType = "nodemcu-esp32";
+		} else {
+			boardType = "nodemcu-v3"
+		}
+
+		this.log("Set board type to:", boardType);
+		this.setSettings({ "boardType": boardType });
+	}
+
 	updateUptime() {
 		if (this.getAvailable()) {
 
@@ -78,6 +93,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	onUnitStateChange(unit, state) {
+		this.log("Set online state to", state);
 		state ? this.setAvailable() : this.setUnavailable(Homey.__("offline"));
 	}
 
@@ -106,6 +122,10 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.unit.updateHost(newSettingsObj.host, newSettingsObj.port);
 		}
 
+		if (newSettingsObj["boardType"] == "detect") {
+			this.detectBoard();
+		}
+
 		if (changedKeysArr.includes('pollInterval')) {
 			this.unit.setPollInterval(newSettingsObj.pollInterval);
 		}
@@ -124,15 +144,13 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	onJSONUpdate(unit, json) {
-		if (!this.getAvailable()) {
-			this.log('Initialized with json data from ESP unit');
-			this.setAvailable();
+		if (this.getSetting("boardType") == "detect") {
+			this.detectBoard();
 		}
 
 		this.setValue("measure_load", json.System['Load']);
 		this.setValue("measure_ram", json.System['Free RAM']);
 		this.setValue("measure_heap", json.System['Heap Max Free Block']);
-
 		this.setValue("measure_signal_strength", json.WiFi['RSSI']);
 
 		this.updateUptime();

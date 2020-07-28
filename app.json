@@ -1845,6 +1845,66 @@
           },
           "children": [
             {
+              "id": "boardType",
+              "type": "dropdown",
+              "label": {
+                "en": "Board type",
+                "nl": "Bord type"
+              },
+              "value": "detect",
+              "values": [
+                {
+                  "id": "detect",
+                  "label": {
+                    "en": "- Auto detect -",
+                    "nl": "- Automatisch detecteren -"
+                  }
+                },
+                {
+                  "id": "nodemcu-v3",
+                  "label": {
+                    "en": "NodeMCU V3"
+                  }
+                },
+                {
+                  "id": "wemos-d1-mini",
+                  "label": {
+                    "en": "Wemos D1 Mini"
+                  }
+                },
+                {
+                  "id": "nodemcu-esp32",
+                  "label": {
+                    "en": "NodeMCU ESP32"
+                  }
+                },
+                {
+                  "id": "lolin32-oled",
+                  "label": {
+                    "en": "Lolin32 OLED"
+                  }
+                },
+                {
+                  "id": "esp32-all",
+                  "label": {
+                    "en": "ESP32 (All ports)",
+                    "nl": "ESP32 (Alle poorten)"
+                  }
+                },
+                {
+                  "id": "esp8266-all",
+                  "label": {
+                    "en": "ESP8266 (All ports)",
+                    "nl": "ESP8266 (Alle poorten)"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Warning: Only use the 'All ports' options if you know what you are doing! You can directly mess with your flash memory ports if you use these.\n\nSelect the type of board you are using. This will be used to decide which GPIO ports you can select when adding new output devices.\n\nNote: 'Auto detect' can only differentiate between ESP8266 and ESP32 chipsets.",
+                "nl": "Waarschuwing: Gebruik de 'Alle poorten' optie alleen als je weet wat je doet! Je kunt hiermee direct rommelen met de poorten van het flashgeheugen.\n\nSelecteer het type bord dat je gebruikt. Dit zal worden geruikt om te beslissen welke GPIO poorten je kunt selecteren bij het toevoegen van een nieuw output apparaat.\n\nNote: 'Automatisch detecteren' kan alleen onderscheid maken tussen ESP8266 en ESP32 chips."
+              }
+            },
+            {
               "id": "pollInterval",
               "type": "number",
               "label": {
