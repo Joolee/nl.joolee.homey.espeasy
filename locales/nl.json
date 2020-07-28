@@ -107,6 +107,17 @@
 			"tone": "toon output",
 			"rtttl": "melodie output",
 			"input": "digitale input"
-		}
+		},
+		"pin_not_found": "De definitie voor deze pin kan niet worden gevonden. Controlleer het board type en instellingen voor I/O extenders in de unit instellingen."
+	},
+	"sensor": {
+		"task_not_found": "De controller __controller__ kent geen apparaat met IDX __idx__",
+		"invalid_task": "Ongeldig apparaattype \"__type__\" voor controller __controller__, IDX __idx__",
+		"duplicate_idx": "De controller __controller__ kent meerdere apparaten met IDX __idx__",
+		"io_board_offline": "I/O Expander board lijkt offline"
+	},
+	"unit": {
+		"error_connecting": "Apparaat kan niet worden bereikt",
+		"on_board_pins": "On-board"
 	}
 }
