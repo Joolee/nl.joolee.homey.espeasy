@@ -61,7 +61,7 @@ $(document).ready(() => {
 					return;
 				}
 
-				$('#pinList option:not(:first)').remove();
+				$('#pinList optgroup').remove();
 
 				for (let group of pinGroups) {
 					let optGroup = $("<optgroup>")
