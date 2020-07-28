@@ -145,10 +145,22 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.detectBoard();
 		}
 
-		this.setValue("measure_load", json.System['Load']);
-		this.setValue("measure_ram", json.System['Free RAM']);
-		this.setValue("measure_heap", json.System['Heap Max Free Block']);
-		this.setValue("measure_signal_strength", json.WiFi['RSSI']);
+		this.setValue("measure_load", json.System["Load"]);
+		this.setValue("measure_ram", json.System["Free RAM"]);
+		this.setValue("measure_signal_strength", json.WiFi["RSSI"]);
+
+		// ESP32 chips don't supply this value
+		if (!this.getCapabilities().includes("measure_heap") && json.System["Heap Max Free Block"]) {
+			this.addCapability("measure_heap");
+		}
+
+		if (this.getCapabilities().includes("measure_heap")) {
+			if (json.System["Heap Max Free Block"]) {
+				this.setValue("measure_heap", json.System["Heap Max Free Block"]);
+			} else {
+				this.removeCapability("measure_heap");
+			}
+		}
 
 		this.updateUptime();
 	}
