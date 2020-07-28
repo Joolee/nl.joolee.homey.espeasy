@@ -60,7 +60,7 @@
 		"nl": "P1 sensoren verbinden nu automagisch opnieuw bij een verbroken verbinding. Overige kleine bugfixes."
 	},
 	"1.7.1": {
-		"en": "Add support for MCP23017 GPIO extension board to GPIO Output devices. Add support for tailored pin-layouts for different boards. Add support for ESP32 boards.",
-		"nl": "Voeg ondersteuning voor de MCP23017 GPIO uitbreidingschip bij gebruik als GPIO Output apparaten."
+		"en": "Add support for MCP23017 GPIO extension board to GPIO Output devices; tailored pin-layouts for different boards; better support for ESP32 boards.",
+		"nl": "Voeg ondersteuning voor de MCP23017 GPIO uitbreidingschip bij gebruik als GPIO Output apparaten; aangepaste pin-layouts voor verschillende boards; betere ondersteuning voor ESP32 boards."
 	}
 }
