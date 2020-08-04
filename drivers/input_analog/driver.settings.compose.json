@@ -16,7 +16,7 @@
 				"type": "number",
 				"label": {
 					"en": "Value multiplier",
-					"nl": "vermenigvuldigingsfactor "
+					"nl": "Vermenigvuldigingsfactor"
 				},
 				"value": 1,
 				"hint": {
