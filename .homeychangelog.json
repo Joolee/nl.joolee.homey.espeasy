@@ -62,5 +62,9 @@
 	"1.7.1": {
 		"en": "Add support for MCP23017 GPIO extension board to GPIO Output devices; tailored pin-layouts for different boards; better support for ESP32 boards.",
 		"nl": "Voeg ondersteuning voor de MCP23017 GPIO uitbreidingschip bij gebruik als GPIO Output apparaten; aangepaste pin-layouts voor verschillende boards; betere ondersteuning voor ESP32 boards."
+	},
+	"1.8.0": {
+		"en": "Add support for gas sensors like the MH-Z19.",
+		"nl": "Voeg ondersteuning voor de gas sensoren zoals de MH-Z19."
 	}
 }
