@@ -5,7 +5,6 @@
 	},
 	"class": "sensor",
 	"capabilities": [
-		"measure_uptime",
 		"measure_idle_time",
 		"device_heartbeat"
 	],
