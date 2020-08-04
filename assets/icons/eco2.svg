@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
+	<path
+		stroke="black" stroke-width="4" fill="transparent" stroke-linecap="round"
+		d="M 26 81
+		C -3 82, -3 47, 16 42
+		C 25 10, 64 10, 73 42
+		C 80 43, 86 50, 86 56"
+	></path>
+	<text x="13" y="66" font-size="25" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="black">e</text>
+	<text x="26" y="82" font-size="40" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="black">CO</text>
+	<text x="86" y="82" font-size="25" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="black">2</text>
+</svg>

@@ -85,6 +85,31 @@
           {
             "type": "device",
             "name": "device",
+            "filter": "driver_id=gasses&capabilities=measure_uptime"
+          }
+        ]
+      },
+      {
+        "id": "measure_idle_time_changed",
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
             "filter": "driver_id=input_analog&capabilities=measure_uptime"
           }
         ]
@@ -399,13 +424,132 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_uptime",
         "measure_idle_time",
         "device_heartbeat"
       ],
       "images": {
         "large": "/drivers/environment/assets/images/large.png",
         "small": "/drivers/environment/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "settings"
+          }
+        },
+        {
+          "id": "settings",
+          "navigation": {
+            "prev": "list_devices",
+            "next": "done"
+          }
+        },
+        {
+          "id": "done",
+          "template": "done"
+        }
+      ],
+      "settings": [
+        {
+          "id": "unitInfo",
+          "type": "group",
+          "label": {
+            "en": "Unit information",
+            "nl": "Unitinformatie"
+          },
+          "children": [
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC Address",
+                "nl": "MAC-Adres"
+              },
+              "value": "",
+              "hint": {
+                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+                "nl": "Het MAC-Adres van je ESP Easy unit. Dit gebruikt Homey om een unit te identificeren, binnenkomende berichten worden hiermee herkent en als het IP adres van afzender niet overeen komt, wordt deze aangepast in Homey."
+              }
+            },
+            {
+              "id": "host",
+              "type": "label",
+              "label": {
+                "en": "Unit hostname",
+                "nl": "Unit hostnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The hostname or IP address can be changed in the unit settings but it will change automagically when Homey receives an event from another IP with the same MAC address.",
+                "nl": "Het IP adres kan veranderd worden n de unit instellingen. Deze wordt automagisch geüpdate wanneer Homey een bericht binnen krijgt van een nieuwe IP met hetzelfde MAC-adres."
+              }
+            },
+            {
+              "id": "idx",
+              "type": "label",
+              "label": {
+                "en": "Unit ID"
+              },
+              "value": "",
+              "hint": {
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that.",
+                "nl": "Zoals kan worden ingesteld op de ESP Easy instellingenpagina. Dit ID wordt momenteel niet gebruikt door Homey."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensorInfo",
+          "type": "group",
+          "label": {
+            "en": "Device identification"
+          },
+          "children": [
+            {
+              "id": "controller",
+              "type": "number",
+              "label": {
+                "en": "Controller ID"
+              },
+              "value": 0,
+              "hint": {
+                "en": "Controller number of Homey in ESP Easy"
+              }
+            },
+            {
+              "id": "taskIDX",
+              "type": "label",
+              "label": {
+                "en": "Device IDX"
+              },
+              "value": "",
+              "hint": {
+                "en": "IDX as configured on device page for the Homey controller"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gasses",
+      "name": {
+        "en": "Gasses",
+        "nl": "Gassen"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_idle_time",
+        "device_heartbeat"
+      ],
+      "images": {
+        "large": "/drivers/gasses/assets/images/large.png",
+        "small": "/drivers/gasses/assets/images/small.png"
       },
       "pair": [
         {
@@ -1084,7 +1228,6 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_uptime",
         "measure_idle_time",
         "measure_raw_number",
         "device_heartbeat"
@@ -1207,7 +1350,7 @@
               "type": "number",
               "label": {
                 "en": "Value multiplier",
-                "nl": "vermenigvuldigingsfactor "
+                "nl": "Vermenigvuldigingsfactor"
               },
               "value": 1,
               "hint": {
@@ -1226,7 +1369,6 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_uptime",
         "measure_idle_time",
         "device_heartbeat"
       ],
@@ -1347,7 +1489,6 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_uptime",
         "measure_idle_time",
         "device_heartbeat",
         "measure_power",
@@ -2080,6 +2221,20 @@
       "getable": true,
       "setable": false
     },
+    "measure_eco2": {
+      "type": "number",
+      "title": {
+        "en": "Equivalent  CO2"
+      },
+      "icon": "/assets/icons/eco2.svg",
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "PPM"
+      }
+    },
     "measure_heap": {
       "type": "number",
       "title": {
@@ -2173,6 +2328,31 @@
       "units": {
         "en": "dB"
       }
+    },
+    "measure_tvoc": {
+      "type": "number",
+      "title": {
+        "en": "Total Volatile Organic Compounds "
+      },
+      "icon": "/assets/icons/tvoc.svg",
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "PPB"
+      }
+    },
+    "measure_unknown": {
+      "type": "number",
+      "title": {
+        "en": "Unknown value"
+      },
+      "icon": "/assets/icons/unknown.svg",
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false
     },
     "measure_uptime": {
       "type": "number",

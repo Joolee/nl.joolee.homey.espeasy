@@ -1,0 +1,11 @@
+{
+	"type": "number",
+	"title": {
+		"en": "Unknown value"
+	},
+	"icon": "/assets/icons/unknown.svg",
+	"insights": true,
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false
+}
