@@ -5,7 +5,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device identification"
+			"en": "Device identification",
+			"nl": "Apparaatidentificatie"
 		},
 		"children": [
 			{
@@ -16,7 +17,8 @@
 				},
 				"value": "",
 				"hint": {
-					"en": "As the P1 device doesn't export an IDX for the controller, the Task ID is used to identify the device."
+					"en": "As the P1 device doesn't export an IDX for the controller, the Task ID is used to identify the device.",
+					"nl": "Het is niet mogelijk een IDX waarde in te stellen voor een P1 apparaat. Daarom gebruikt Homey de Task ID om het apparaat te identificeren."
 				}
 			}
 		]
@@ -24,18 +26,21 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
 				"id": "p1port",
 				"type": "number",
 				"label": {
-					"en": "Wifi Gateway TCP Port"
+					"en": "Wifi Gateway TCP Port",
+					"nl": "Wifi Gateway TCP Poort"
 				},
 				"value": 8088,
 				"hint": {
-					"en": "TCP Port for the P1 Wifi gateway as configured in ESP Easy. You can test your set-up by going to http://<esp-easyip>:<port-number> in your webbrowser.\nIf you see output there, you have configured ESP Easy correctly."
+					"en": "TCP Port for the P1 Wifi gateway as configured in ESP Easy. You can test your set-up by going to http://<esp-easyip>:<port-number> in your webbrowser.\nIf you see output there, you have configured ESP Easy correctly.",
+					"nl": "De TCP port welke is ingesteld in ESP Easy. Je kunt je configuratie uittesten door de verbinden met http://<esp-easyip>:<poort-nummer> in je webbrowser.\nAls je hier output ziet is de P1 lezer correct ingesteld in ESP Easy."
 				}
 			}
 		]
@@ -43,7 +48,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Meter information"
+			"en": "Meter information",
+			"nl": "Meterinformatie"
 		},
 		"children": [
 			{
@@ -58,7 +64,8 @@
 				"id": "DSMRVersion",
 				"type": "label",
 				"label": {
-					"en": "DSMR Version"
+					"en": "DSMR Version",
+					"nl": "DSMR Versie"
 				},
 				"value": "Unknown"
 			}

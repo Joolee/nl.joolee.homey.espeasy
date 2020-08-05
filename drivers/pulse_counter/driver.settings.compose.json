@@ -8,18 +8,21 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
 				"id": "variant",
 				"type": "dropdown",
 				"label": {
-					"en": "Counter Type"
+					"en": "Counter Type",
+					"nl": "'Counter Type'"
 				},
 				"value": "delta",
 				"hint": {
-					"en": "Make sure this setting matches the 'Counter Type' you configured for this device in ESP Easy."
+					"en": "Make sure this setting matches the 'Counter Type' you configured for this device in ESP Easy.",
+					"nl": "Zorg ervoor dat de waarde van deze instelling matched met de 'Counter Type' zoals geconfigureerd in ESP Easy."
 				},
 				"values": [
 					{
@@ -52,22 +55,26 @@
 				"id": "use_totals",
 				"type": "checkbox",
 				"label": {
-					"en": "Use ESP Easy totals"
+					"en": "Use ESP Easy totals",
+					"nl": "Gebruik ESP Easy totalen"
 				},
 				"value": false,
 				"hint": {
-					"en": "Use the 'totals' as reported by ESP Easy. This setting is only used when your configured 'Counter Type' includes 'Total'. When 'Counter Type' is 'Total', this setting is also ignored.\n\nThis setting defaults to 'No' because the ESP Easy total counters are not persistent and therefore, Homey's counter is more reliable."
+					"en": "Use the 'totals' as reported by ESP Easy. This setting is only used when your configured 'Counter Type' includes 'Total'. When 'Counter Type' is 'Total', this setting is also ignored.\n\nThis setting defaults to 'No' because the ESP Easy total counters are not persistent and therefore, Homey's counter is more reliable.",
+					"nl": "Gebruik de totalen zoals deze worden gerapporteerd door ESP Easy. Deze instelling wordt alleen gebruikt wanneer er een 'Counter type' is ingesteld dat 'Totals' bevat. Wanneer 'Counter type' alleen 'Totals' is, wordt deze waarde ook genegeerd.\n\nDeze instelling staat standaard uitgeschakeld omdat de totalen in ESP easy counters niet persistent zijn, daarom is Homey's teller betrouwbaarder."
 				}
 			},
 			{
 				"id": "set_total",
 				"type": "number",
 				"label": {
-					"en": "Set total"
+					"en": "Set total",
+					"nl": "Zet totaal"
 				},
 				"value": 0,
 				"hint": {
-					"en": "Change Homey's 'Total' value manually to match the real meter value. Only usable when 'Use ESP Easy totals' is set to 'No'"
+					"en": "Change Homey's 'Total' value manually to match the real meter value. Only usable when 'Use ESP Easy totals' is set to 'No'",
+					"nl": "Verander Homey's 'Totaal' waarde handmatig. Gebruik deze instelling om de Homey waarde gelijk te laten lopen met je echte meter. Deze optie is alleen praktisch toepasbaar wanneer 'Gebruik ESP Easy totalen' is uitgeschakeld."
 				}
 			},
 			{

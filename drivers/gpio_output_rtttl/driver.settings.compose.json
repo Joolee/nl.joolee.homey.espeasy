@@ -5,7 +5,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
@@ -18,21 +19,25 @@
 				"min": 5,
 				"max": 3600,
 				"units": {
-					"en": "seconds"
+					"en": "seconds",
+					"nl": "seconden"
 				},
 				"hint": {
-					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
 				}
 			},
 			{
 				"id": "melody",
 				"type": "text",
 				"label": {
-					"en": "RTTTL Melody"
+					"en": "RTTTL Melody",
+					"nl": "RTTTL Melodie"
 				},
 				"value": "d=8,o=6,b=340:c,e,g",
 				"hint": {
-					"en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work."
+					"en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work.",
+					"nl": "RTTTL melodie string. De implementatie van ESP Easy is nogal buggy dus niet alles zal werken."
 				}
 			}
 		]

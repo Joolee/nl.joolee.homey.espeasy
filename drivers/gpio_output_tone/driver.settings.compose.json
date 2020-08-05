@@ -5,7 +5,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
@@ -18,38 +19,45 @@
 				"min": 5,
 				"max": 3600,
 				"units": {
-					"en": "seconds"
+					"en": "seconds",
+					"nl": "seconden"
 				},
 				"hint": {
-					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state.",
+					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
 				}
 			},
 			{
 				"id": "duration",
 				"type": "number",
 				"label": {
-					"en": "Tone duration"
+					"en": "Tone duration",
+					"nl": "Toonduur"
 				},
 				"units": {
-					"en": "milliseconds"
+					"en": "milliseconds",
+					"nl": "milliseconden"
 				},
 				"value": 150,
 				"hint": {
-					"en": "Default tone duration."
+					"en": "Default tone duration.",
+					"nl": "Standaard duur toonsignaal."
 				}
 			},
 			{
 				"id": "frequency",
 				"type": "number",
 				"label": {
-					"en": "Tone frequency"
+					"en": "Tone frequency",
+					"nl": "Toonfrequentie"
 				},
 				"units": {
 					"en": "hertz"
 				},
 				"value": 1300,
 				"hint": {
-					"en": "Default tone frequency. Recommended to keep between 20 and 13000."
+					"en": "Default tone frequency in hertz. ESP Easy recommends to keep between 20 and 13000 hertz.",
+					"nl": "Standaard toonfrequentie in hertz. ESP Easy raadt aan om deze tussen 20 en 13000 hertz te houden."
 				}
 			}
 		]

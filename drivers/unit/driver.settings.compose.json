@@ -2,18 +2,21 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Connection settings"
+			"en": "Connection settings",
+			"nl": "Verbindingsinstellingen"
 		},
 		"children": [
 			{
 				"id": "mac",
 				"type": "label",
 				"label": {
-					"en": "MAC Address"
+					"en": "MAC Address",
+					"nl": "MAC Adres"
 				},
 				"value": "",
 				"hint": {
-					"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+					"en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+					"nl": "Het MAC Adres van de ESP Easy unit. Deze waarde gebruikt Homey om een unit te herkennen. Wanneer Homeyt een bericht ontvant van een ander IP maar met dit MAC adres, zal de IP instelling automagisch worden aangepast."
 				}
 			},
 			{
@@ -24,31 +27,36 @@
 				},
 				"value": "",
 				"hint": {
-					"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+					"en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that",
+					"nl": "Zoals gedefinieerd op de ESP Easy instellingenpagina. Deze waarde wordt door Homey niet gebruikt om een unit te identificeren, daar wordt het MAC adres voor gebruikt."
 				}
 			},
 			{
 				"id": "host",
 				"type": "text",
 				"label": {
-					"en": "IP Address or hostname"
+					"en": "IP Address or hostname",
+					"nl": "IP Adress of hostnaam"
 				},
 				"value": "",
 				"hint": {
-					"en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+					"en": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
+					"nl": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
 				}
 			},
 			{
 				"id": "port",
 				"type": "number",
 				"label": {
-					"en": "Port number"
+					"en": "Port number",
+					"nl": "Poortnummer"
 				},
 				"value": 80,
 				"min": 0,
 				"max": 65535,
 				"hint": {
-					"en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+					"en": "Should be port 80 as I have not tested my app with anything else yet. :)",
+					"nl": "Dit zou poort 80 moeten zijn, ik heb mijn app nog niet getest met andere poortnummers. :)"
 				}
 			}
 		]
@@ -56,7 +64,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
@@ -129,10 +138,12 @@
 				"min": 5,
 				"max": 3600,
 				"units": {
-					"en": "seconds"
+					"en": "seconds",
+					"nl": "seconden"
 				},
 				"hint": {
-					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
 				}
 			},
 			{
@@ -166,88 +177,104 @@
 				"id": "mcp23017-0x20",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x20"
+					"en": "I2C address 0x20",
+					"nl": "I2C adres 0x20"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x20."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x20.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x20."
 				}
 			},
 			{
 				"id": "mcp23017-0x21",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x21"
+					"en": "I2C address 0x21",
+					"nl": "I2C adres 0x21"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x21."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x21.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x21."
 				}
 			},
 			{
 				"id": "mcp23017-0x22",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x22"
+					"en": "I2C address 0x22",
+					"nl": "I2C adres 0x22"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x22."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x22.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x22."
 				}
 			},
 			{
 				"id": "mcp23017-0x23",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x23"
+					"en": "I2C address 0x23",
+					"nl": "I2C adres 0x23"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x23."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x23.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x23."
 				}
 			},
 			{
 				"id": "mcp23017-0x24",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x24"
+					"en": "I2C address 0x24",
+					"nl": "I2C adres 0x24"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x24."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x24.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x24."
 				}
 			},
 			{
 				"id": "mcp23017-0x25",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x25"
+					"en": "I2C address 0x25",
+					"nl": "I2C adres 0x25"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x25."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x25.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x25."
 				}
 			},
 			{
 				"id": "mcp23017-0x26",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x26"
+					"en": "I2C address 0x26",
+					"nl": "I2C adres 0x26"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x26."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x26.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x26."
 				}
 			},
 			{
 				"id": "mcp23017-0x27",
 				"type": "checkbox",
 				"label": {
-					"en": "I2C address 0x27"
+					"en": "I2C address 0x27",
+					"nl": "I2C adres 0x27"
 				},
 				"value": false,
 				"hint": {
-					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x27."
+					"en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x27.",
+					"nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x27."
 				}
 			}
 		]

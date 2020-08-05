@@ -5,7 +5,8 @@
 	{
 		"type": "group",
 		"label": {
-			"en": "Device settings"
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
 		},
 		"children": [
 			{
@@ -18,24 +19,28 @@
 				"min": 5,
 				"max": 3600,
 				"units": {
-					"en": "seconds"
+					"en": "seconds",
+					"nl": "seconden"
 				},
 				"hint": {
-					"en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit"
+					"en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit",
+					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
 				}
 			},
 			{
 				"id": "invert",
 				"type": "checkbox",
 				"label": {
-					"en": "Invert device state"
+					"en": "Invert device state",
+					"nl": "Draai apparaatstatus om"
 				},
 				"options": {
 					"type": "bool"
 				},
 				"value": false,
 				"hint": {
-					"en": "Consider state '0' on and state '1' off"
+					"en": "Consider state '0' on and state '1' off",
+					"nl": "Beschouw waarde '0' als aan en de waarde '1' als uit"
 				}
 			}
 		]
