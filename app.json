@@ -872,15 +872,9 @@
           {
             "type": "text",
             "name": "melody_string",
-            "min": 1,
-            "step": 1,
             "placeholder": {
               "en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
               "nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
-            },
-            "hint": {
-              "en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work.",
-              "nl": "RTTTL melodie string. De implementatie van ESP Easy is nogal buggy dus niet alles zal werken."
             }
           }
         ]
@@ -914,6 +908,126 @@
             "placeholder": {
               "en": "Frequency in hertz",
               "nl": "Frequentie in hertz"
+            }
+          }
+        ]
+      },
+      {
+        "id": "send_custom_command",
+        "title": {
+          "en": "Send command"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "command_string",
+            "placeholder": {
+              "en": "ESP Easy command, will be send through HTTP",
+              "nl": "ESP Easy commando, wordt verzonden via HTTP"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_event",
+        "title": {
+          "en": "Start event"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "event_name",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_event_with_parameter",
+        "title": {
+          "en": "Start event (with parameter)"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "event_name",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          },
+          {
+            "type": "text",
+            "name": "event_parameter",
+            "placeholder": {
+              "en": "Event parameter"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_task_value",
+        "title": {
+          "en": "Set task value"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "autocomplete",
+            "name": "task_value_name",
+            "placeholder": {
+              "en": "Value name or ID",
+              "nl": "Value naam of ID"
+            }
+          },
+          {
+            "type": "text",
+            "name": "task_new_value",
+            "placeholder": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "run_task",
+        "title": {
+          "en": "Run (update) task"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "autocomplete",
+            "name": "task_name",
+            "placeholder": {
+              "en": "Task name or ID",
+              "nl": "Task naam of ID"
             }
           }
         ]

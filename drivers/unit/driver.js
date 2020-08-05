@@ -13,6 +13,16 @@ module.exports = class Unit extends GeneralDriver {
 				this.homeyIp = address;
 			}
 		});
+
+		this.addActionFlow("send_custom_command", "onActionCustomCommand");
+		this.addActionFlow("start_event", "onActionStartEvent");
+		this.addActionFlow("start_event_with_parameter", "onActionStartEvent");
+		this.addActionFlow("set_task_value", "onActionSetTaskValue", {
+			"task_value_name": "autoCompleteTaskValueName"
+		});
+		this.addActionFlow("run_task", "onActionRunTask", {
+			"task_name": "autoCompleteTaskName"
+		});
 	}
 
 	onPair(socket) {

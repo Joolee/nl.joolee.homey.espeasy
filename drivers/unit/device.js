@@ -1,4 +1,5 @@
 const Homey = require('homey');
+const util = require('util');
 
 module.exports = class UnitDevice extends Homey.Device {
 	// Homey function
@@ -178,5 +179,78 @@ module.exports = class UnitDevice extends Homey.Device {
 			this.removeCapability(oldCapability);
 			this.addCapability(newCapability);
 		}
+	}
+
+	async onActionCustomCommand(args) {
+		this.log("Action custom command:", args.command_string);
+		return util.promisify(this.unit.sendCommand)([args.command_string], false);
+	}
+
+	async onActionStartEvent(args) {
+		this.log("Action start event:", args.event_name, args.event_parameter);
+		let command = args.event_name;
+		if (args.event_parameter) {
+			command += "=" + args.event_parameter;
+		}
+		return util.promisify(this.unit.sendCommand)(["event", command], false);
+	}
+
+	async onActionSetTaskValue(args) {
+		this.log("Action set task value:", args.task_value_name, args.task_new_value);
+
+		return util.promisify(this.unit.sendCommand)([
+			"taskvalueset",
+			args.task_value_name.taskId,
+			args.task_value_name.valueId,
+			args.task_new_value
+		], false);
+	}
+
+	async onActionRunTask(args) {
+		this.log("Action run task:", args.task_name);
+
+		return util.promisify(this.unit.sendCommand)([
+			"TaskRun",
+			args.task_name.taskId
+		], false);
+	}
+
+	async autoCompleteTaskName(args, query) {
+		if (!this.unit.json) {
+			this.log("autoCompleteTaskName: Device offline");
+			return Promise.reject(Homey.__("offline"));
+		}
+
+		const tasks = this.unit.tasks.map(task => ({
+			"name": task.TaskNumber + ": " + task.TaskName,
+			"description": task.Type,
+			"taskId": task.TaskNumber
+		}));
+
+		return Promise.resolve(tasks);
+	}
+
+	async autoCompleteTaskValueName(args, query) {
+		if (!this.unit.json) {
+			this.log("autoCompleteTaskValueName: Device offline");
+			return Promise.reject(Homey.__("offline"));
+		}
+
+		const valueNames = [];
+
+		for (let task of this.unit.tasks) {
+			for (let value of task.TaskValues) {
+				this.log(value);
+				let existing = valueNames.find(val => val.name == value.name);
+				valueNames.push({
+					"name": `${value.ValueNumber}: ${value.Name}`,
+					"description": `Task: ${task.TaskNumber} - ${task.TaskName}`,
+					"taskId": task.TaskNumber,
+					"valueId": value.ValueNumber
+				})
+			}
+		};
+
+		return Promise.resolve(valueNames);
 	}
 }
