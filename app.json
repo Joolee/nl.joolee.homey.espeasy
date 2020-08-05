@@ -188,6 +188,179 @@
         ]
       },
       {
+        "id": "measure_eco2_changed",
+        "title": {
+          "en": "Equivalent CO2 changed",
+          "nl": "Equivalent CO2 veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_eco2",
+            "type": "number",
+            "title": {
+              "en": "Equivalent CO2"
+            },
+            "example": 7
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_eco2"
+          }
+        ]
+      },
+      {
+        "id": "measure_heap_changed",
+        "title": {
+          "en": "Available heap blocks changed",
+          "nl": "Beschikbare heap blocks veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_heap",
+            "type": "number",
+            "title": {
+              "en": "Heap Free",
+              "nl": "Heap Beschikbaar"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_heap"
+          }
+        ]
+      },
+      {
+        "id": "measure_load_changed",
+        "title": {
+          "en": "System load changed",
+          "nl": "Systeembelasting is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_load",
+            "type": "number",
+            "title": {
+              "en": "System load",
+              "nl": "Systeembelasting"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_load"
+          }
+        ]
+      },
+      {
+        "id": "measure_ram_changed",
+        "title": {
+          "en": "System RAM usage changed",
+          "nl": "Beschikbaar werkgeheugen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_ram",
+            "type": "number",
+            "title": {
+              "en": "Free RAM",
+              "nl": "Beschikbaar RAM"
+            },
+            "example": 14680
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_ram"
+          }
+        ]
+      },
+      {
+        "id": "measure_signal_strength_changed",
+        "title": {
+          "en": "Signal strength changed",
+          "nl": "Signaalsterkte is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_signal_strength",
+            "type": "number",
+            "title": {
+              "en": "Signal strength",
+              "nl": "Signaalsterkte"
+            },
+            "example": -66
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_signal_strength"
+          }
+        ]
+      },
+      {
+        "id": "measure_tvoc_changed",
+        "title": {
+          "en": "TVOC changed",
+          "nl": "TVOC veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_tvoc",
+            "type": "number",
+            "title": {
+              "en": "Total Volatile Organic Compounds "
+            },
+            "example": 3
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_tvoc"
+          }
+        ]
+      },
+      {
+        "id": "measure_unknown_changed",
+        "title": {
+          "en": "'Unknown value' changed",
+          "nl": "'Onbekende waarde' veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_unknown",
+            "type": "number",
+            "title": {
+              "en": "Unknown value",
+              "nl": "Onbekende waarde"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_analog&capabilities=measure_unknown"
+          }
+        ]
+      },
+      {
         "id": "measure_idle_time_changed",
         "title": {
           "en": "Idle time changed",
@@ -334,6 +507,179 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=pulse_counter&capabilities=measure_raw_number"
+          }
+        ]
+      },
+      {
+        "id": "measure_eco2_changed",
+        "title": {
+          "en": "Equivalent CO2 changed",
+          "nl": "Equivalent CO2 veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_eco2",
+            "type": "number",
+            "title": {
+              "en": "Equivalent CO2"
+            },
+            "example": 7
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_eco2"
+          }
+        ]
+      },
+      {
+        "id": "measure_heap_changed",
+        "title": {
+          "en": "Available heap blocks changed",
+          "nl": "Beschikbare heap blocks veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_heap",
+            "type": "number",
+            "title": {
+              "en": "Heap Free",
+              "nl": "Heap Beschikbaar"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_heap"
+          }
+        ]
+      },
+      {
+        "id": "measure_load_changed",
+        "title": {
+          "en": "System load changed",
+          "nl": "Systeembelasting is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_load",
+            "type": "number",
+            "title": {
+              "en": "System load",
+              "nl": "Systeembelasting"
+            },
+            "example": 11.42
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_load"
+          }
+        ]
+      },
+      {
+        "id": "measure_ram_changed",
+        "title": {
+          "en": "System RAM usage changed",
+          "nl": "Beschikbaar werkgeheugen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_ram",
+            "type": "number",
+            "title": {
+              "en": "Free RAM",
+              "nl": "Beschikbaar RAM"
+            },
+            "example": 14680
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_ram"
+          }
+        ]
+      },
+      {
+        "id": "measure_signal_strength_changed",
+        "title": {
+          "en": "Signal strength changed",
+          "nl": "Signaalsterkte is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_signal_strength",
+            "type": "number",
+            "title": {
+              "en": "Signal strength",
+              "nl": "Signaalsterkte"
+            },
+            "example": -66
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_signal_strength"
+          }
+        ]
+      },
+      {
+        "id": "measure_tvoc_changed",
+        "title": {
+          "en": "TVOC changed",
+          "nl": "TVOC veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_tvoc",
+            "type": "number",
+            "title": {
+              "en": "Total Volatile Organic Compounds "
+            },
+            "example": 3
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_tvoc"
+          }
+        ]
+      },
+      {
+        "id": "measure_unknown_changed",
+        "title": {
+          "en": "'Unknown value' changed",
+          "nl": "'Onbekende waarde' veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_unknown",
+            "type": "number",
+            "title": {
+              "en": "Unknown value",
+              "nl": "Onbekende waarde"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pulse_counter&capabilities=measure_unknown"
           }
         ]
       },

@@ -2,6 +2,27 @@
 	"triggers": [
 		{
 			"$extends": "measure_idle_time_changed"
+		},
+		{
+			"$extends": "measure_eco2_changed"
+		},
+		{
+			"$extends": "measure_heap_changed"
+		},
+		{
+			"$extends": "measure_load_changed"
+		},
+		{
+			"$extends": "measure_ram_changed"
+		},
+		{
+			"$extends": "measure_signal_strength_changed"
+		},
+		{
+			"$extends": "measure_tvoc_changed"
+		},
+		{
+			"$extends": "measure_unknown_changed"
 		}
 	]
 }
