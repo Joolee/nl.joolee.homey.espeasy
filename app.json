@@ -857,6 +857,66 @@
             }
           }
         ]
+      },
+      {
+        "id": "send_custom_melody",
+        "title": {
+          "en": "Play personalized melody"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_rtttl"
+          },
+          {
+            "type": "text",
+            "name": "melody_string",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
+              "nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
+            },
+            "hint": {
+              "en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work.",
+              "nl": "RTTTL melodie string. De implementatie van ESP Easy is nogal buggy dus niet alles zal werken."
+            }
+          }
+        ]
+      },
+      {
+        "id": "send_custom_tone",
+        "title": {
+          "en": "Play personalized tone"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_tone"
+          },
+          {
+            "type": "number",
+            "name": "tone_duration",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Duration in milliseconds",
+              "nl": "Duur in milliseconden"
+            }
+          },
+          {
+            "type": "number",
+            "name": "tone_frequency",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Frequency in hertz",
+              "nl": "Frequentie in hertz"
+            }
+          }
+        ]
       }
     ]
   },
@@ -951,7 +1011,8 @@
           "id": "sensorInfo",
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -962,18 +1023,20 @@
               },
               "value": 0,
               "hint": {
-                "en": "Controller number of Homey in ESP Easy"
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             },
             {
               "id": "taskIDX",
               "type": "label",
               "label": {
-                "en": "Device IDX"
+                "en": "Task/Device IDX"
               },
               "value": "",
               "hint": {
-                "en": "IDX as configured on device page for the Homey controller"
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             }
           ]
@@ -1071,7 +1134,8 @@
           "id": "sensorInfo",
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -1082,18 +1146,20 @@
               },
               "value": 0,
               "hint": {
-                "en": "Controller number of Homey in ESP Easy"
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             },
             {
               "id": "taskIDX",
               "type": "label",
               "label": {
-                "en": "Device IDX"
+                "en": "Task/Device IDX"
               },
               "value": "",
               "hint": {
-                "en": "IDX as configured on device page for the Homey controller"
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             }
           ]
@@ -1175,7 +1241,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1188,24 +1255,28 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit"
+                "en": "Detect state changes made by other means than this app and re-initialize the pin when it is set to something else by another app or a reboot of the unit",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             },
             {
               "id": "invert",
               "type": "checkbox",
               "label": {
-                "en": "Invert device state"
+                "en": "Invert device state",
+                "nl": "Draai apparaatstatus om"
               },
               "options": {
                 "type": "bool"
               },
               "value": false,
               "hint": {
-                "en": "Consider state '0' on and state '1' off"
+                "en": "Consider state '0' on and state '1' off",
+                "nl": "Beschouw waarde '0' als aan en de waarde '1' als uit"
               }
             }
           ]
@@ -1287,7 +1358,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1300,32 +1372,38 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             },
             {
               "id": "duration",
               "type": "number",
               "label": {
-                "en": "Pulse duration"
+                "en": "Pulse duration",
+                "nl": "Pulsduratie"
               },
               "value": 500,
               "units": {
-                "en": "milliseconds"
+                "en": "milliseconds",
+                "nl": "milliseconden"
               }
             },
             {
               "id": "invert",
               "type": "checkbox",
               "label": {
-                "en": "Invert command"
+                "en": "Invert command",
+                "nl": "Draai commando om"
               },
               "value": false,
               "hint": {
-                "en": "Send state '0' as pulse command instead of '1'"
+                "en": "Send state '0' as pulse command instead of '1'",
+                "nl": "Stuur de waarde '0' als pulse commando in plaats van '1'"
               }
             }
           ]
@@ -1407,7 +1485,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1420,10 +1499,12 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized"
+                "en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             }
           ]
@@ -1505,7 +1586,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1518,21 +1600,25 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             },
             {
               "id": "melody",
               "type": "text",
               "label": {
-                "en": "RTTTL Melody"
+                "en": "RTTTL Melody",
+                "nl": "RTTTL Melodie"
               },
               "value": "d=8,o=6,b=340:c,e,g",
               "hint": {
-                "en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work."
+                "en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work.",
+                "nl": "RTTTL melodie string. De implementatie van ESP Easy is nogal buggy dus niet alles zal werken."
               }
             }
           ]
@@ -1614,7 +1700,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1627,38 +1714,45 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state.",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             },
             {
               "id": "duration",
               "type": "number",
               "label": {
-                "en": "Tone duration"
+                "en": "Tone duration",
+                "nl": "Toonduur"
               },
               "units": {
-                "en": "milliseconds"
+                "en": "milliseconds",
+                "nl": "milliseconden"
               },
               "value": 150,
               "hint": {
-                "en": "Default tone duration."
+                "en": "Default tone duration.",
+                "nl": "Standaard duur toonsignaal."
               }
             },
             {
               "id": "frequency",
               "type": "number",
               "label": {
-                "en": "Tone frequency"
+                "en": "Tone frequency",
+                "nl": "Toonfrequentie"
               },
               "units": {
                 "en": "hertz"
               },
               "value": 1300,
               "hint": {
-                "en": "Default tone frequency. Recommended to keep between 20 and 13000."
+                "en": "Default tone frequency in hertz. ESP Easy recommends to keep between 20 and 13000 hertz.",
+                "nl": "Standaard toonfrequentie in hertz. ESP Easy raadt aan om deze tussen 20 en 13000 hertz te houden."
               }
             }
           ]
@@ -1756,7 +1850,8 @@
           "id": "sensorInfo",
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -1767,18 +1862,20 @@
               },
               "value": 0,
               "hint": {
-                "en": "Controller number of Homey in ESP Easy"
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             },
             {
               "id": "taskIDX",
               "type": "label",
               "label": {
-                "en": "Device IDX"
+                "en": "Task/Device IDX"
               },
               "value": "",
               "hint": {
-                "en": "IDX as configured on device page for the Homey controller"
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             }
           ]
@@ -1786,7 +1883,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -1896,7 +1994,8 @@
           "id": "sensorInfo",
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -1907,18 +2006,20 @@
               },
               "value": 0,
               "hint": {
-                "en": "Controller number of Homey in ESP Easy"
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             },
             {
               "id": "taskIDX",
               "type": "label",
               "label": {
-                "en": "Device IDX"
+                "en": "Task/Device IDX"
               },
               "value": "",
               "hint": {
-                "en": "IDX as configured on device page for the Homey controller"
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             }
           ]
@@ -2058,7 +2159,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -2069,7 +2171,8 @@
               },
               "value": "",
               "hint": {
-                "en": "As the P1 device doesn't export an IDX for the controller, the Task ID is used to identify the device."
+                "en": "As the P1 device doesn't export an IDX for the controller, the Task ID is used to identify the device.",
+                "nl": "Het is niet mogelijk een IDX waarde in te stellen voor een P1 apparaat. Daarom gebruikt Homey de Task ID om het apparaat te identificeren."
               }
             }
           ]
@@ -2077,18 +2180,21 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
               "id": "p1port",
               "type": "number",
               "label": {
-                "en": "Wifi Gateway TCP Port"
+                "en": "Wifi Gateway TCP Port",
+                "nl": "Wifi Gateway TCP Poort"
               },
               "value": 8088,
               "hint": {
-                "en": "TCP Port for the P1 Wifi gateway as configured in ESP Easy. You can test your set-up by going to http://<esp-easyip>:<port-number> in your webbrowser.\nIf you see output there, you have configured ESP Easy correctly."
+                "en": "TCP Port for the P1 Wifi gateway as configured in ESP Easy. You can test your set-up by going to http://<esp-easyip>:<port-number> in your webbrowser.\nIf you see output there, you have configured ESP Easy correctly.",
+                "nl": "De TCP port welke is ingesteld in ESP Easy. Je kunt je configuratie uittesten door de verbinden met http://<esp-easyip>:<poort-nummer> in je webbrowser.\nAls je hier output ziet is de P1 lezer correct ingesteld in ESP Easy."
               }
             }
           ]
@@ -2096,7 +2202,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Meter information"
+            "en": "Meter information",
+            "nl": "Meterinformatie"
           },
           "children": [
             {
@@ -2111,7 +2218,8 @@
               "id": "DSMRVersion",
               "type": "label",
               "label": {
-                "en": "DSMR Version"
+                "en": "DSMR Version",
+                "nl": "DSMR Versie"
               },
               "value": "Unknown"
             }
@@ -2210,7 +2318,8 @@
           "id": "sensorInfo",
           "type": "group",
           "label": {
-            "en": "Device identification"
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
           },
           "children": [
             {
@@ -2221,18 +2330,20 @@
               },
               "value": 0,
               "hint": {
-                "en": "Controller number of Homey in ESP Easy"
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             },
             {
               "id": "taskIDX",
               "type": "label",
               "label": {
-                "en": "Device IDX"
+                "en": "Task/Device IDX"
               },
               "value": "",
               "hint": {
-                "en": "IDX as configured on device page for the Homey controller"
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
               }
             }
           ]
@@ -2240,18 +2351,21 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
               "id": "variant",
               "type": "dropdown",
               "label": {
-                "en": "Counter Type"
+                "en": "Counter Type",
+                "nl": "'Counter Type'"
               },
               "value": "delta",
               "hint": {
-                "en": "Make sure this setting matches the 'Counter Type' you configured for this device in ESP Easy."
+                "en": "Make sure this setting matches the 'Counter Type' you configured for this device in ESP Easy.",
+                "nl": "Zorg ervoor dat de waarde van deze instelling matched met de 'Counter Type' zoals geconfigureerd in ESP Easy."
               },
               "values": [
                 {
@@ -2284,22 +2398,26 @@
               "id": "use_totals",
               "type": "checkbox",
               "label": {
-                "en": "Use ESP Easy totals"
+                "en": "Use ESP Easy totals",
+                "nl": "Gebruik ESP Easy totalen"
               },
               "value": false,
               "hint": {
-                "en": "Use the 'totals' as reported by ESP Easy. This setting is only used when your configured 'Counter Type' includes 'Total'. When 'Counter Type' is 'Total', this setting is also ignored.\n\nThis setting defaults to 'No' because the ESP Easy total counters are not persistent and therefore, Homey's counter is more reliable."
+                "en": "Use the 'totals' as reported by ESP Easy. This setting is only used when your configured 'Counter Type' includes 'Total'. When 'Counter Type' is 'Total', this setting is also ignored.\n\nThis setting defaults to 'No' because the ESP Easy total counters are not persistent and therefore, Homey's counter is more reliable.",
+                "nl": "Gebruik de totalen zoals deze worden gerapporteerd door ESP Easy. Deze instelling wordt alleen gebruikt wanneer er een 'Counter type' is ingesteld dat 'Totals' bevat. Wanneer 'Counter type' alleen 'Totals' is, wordt deze waarde ook genegeerd.\n\nDeze instelling staat standaard uitgeschakeld omdat de totalen in ESP easy counters niet persistent zijn, daarom is Homey's teller betrouwbaarder."
               }
             },
             {
               "id": "set_total",
               "type": "number",
               "label": {
-                "en": "Set total"
+                "en": "Set total",
+                "nl": "Zet totaal"
               },
               "value": 0,
               "hint": {
-                "en": "Change Homey's 'Total' value manually to match the real meter value. Only usable when 'Use ESP Easy totals' is set to 'No'"
+                "en": "Change Homey's 'Total' value manually to match the real meter value. Only usable when 'Use ESP Easy totals' is set to 'No'",
+                "nl": "Verander Homey's 'Totaal' waarde handmatig. Gebruik deze instelling om de Homey waarde gelijk te laten lopen met je echte meter. Deze optie is alleen praktisch toepasbaar wanneer 'Gebruik ESP Easy totalen' is uitgeschakeld."
               }
             },
             {
@@ -2372,18 +2490,21 @@
         {
           "type": "group",
           "label": {
-            "en": "Connection settings"
+            "en": "Connection settings",
+            "nl": "Verbindingsinstellingen"
           },
           "children": [
             {
               "id": "mac",
               "type": "label",
               "label": {
-                "en": "MAC Address"
+                "en": "MAC Address",
+                "nl": "MAC Adres"
               },
               "value": "",
               "hint": {
-                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end."
+                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+                "nl": "Het MAC Adres van de ESP Easy unit. Deze waarde gebruikt Homey om een unit te herkennen. Wanneer Homeyt een bericht ontvant van een ander IP maar met dit MAC adres, zal de IP instelling automagisch worden aangepast."
               }
             },
             {
@@ -2394,31 +2515,36 @@
               },
               "value": "",
               "hint": {
-                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that"
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that",
+                "nl": "Zoals gedefinieerd op de ESP Easy instellingenpagina. Deze waarde wordt door Homey niet gebruikt om een unit te identificeren, daar wordt het MAC adres voor gebruikt."
               }
             },
             {
               "id": "host",
               "type": "text",
               "label": {
-                "en": "IP Address or hostname"
+                "en": "IP Address or hostname",
+                "nl": "IP Adress of hostnaam"
               },
               "value": "",
               "hint": {
-                "en": "The IP Address of your ESP Easy unit. Will be updated automatically if any events from the unit (identified by MAC address) arrive with a different IP address. If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute."
+                "en": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
+                "nl": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
               }
             },
             {
               "id": "port",
               "type": "number",
               "label": {
-                "en": "Port number"
+                "en": "Port number",
+                "nl": "Poortnummer"
               },
               "value": 80,
               "min": 0,
               "max": 65535,
               "hint": {
-                "en": "Should be port 80 as ESP Easy doesn't support running on another port at the moment."
+                "en": "Should be port 80 as I have not tested my app with anything else yet. :)",
+                "nl": "Dit zou poort 80 moeten zijn, ik heb mijn app nog niet getest met andere poortnummers. :)"
               }
             }
           ]
@@ -2426,7 +2552,8 @@
         {
           "type": "group",
           "label": {
-            "en": "Device settings"
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
           },
           "children": [
             {
@@ -2499,10 +2626,12 @@
               "min": 5,
               "max": 3600,
               "units": {
-                "en": "seconds"
+                "en": "seconds",
+                "nl": "seconden"
               },
               "hint": {
-                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state"
+                "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
               }
             },
             {
@@ -2536,88 +2665,104 @@
               "id": "mcp23017-0x20",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x20"
+                "en": "I2C address 0x20",
+                "nl": "I2C adres 0x20"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x20."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x20.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x20."
               }
             },
             {
               "id": "mcp23017-0x21",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x21"
+                "en": "I2C address 0x21",
+                "nl": "I2C adres 0x21"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x21."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x21.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x21."
               }
             },
             {
               "id": "mcp23017-0x22",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x22"
+                "en": "I2C address 0x22",
+                "nl": "I2C adres 0x22"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x22."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x22.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x22."
               }
             },
             {
               "id": "mcp23017-0x23",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x23"
+                "en": "I2C address 0x23",
+                "nl": "I2C adres 0x23"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x23."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x23.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x23."
               }
             },
             {
               "id": "mcp23017-0x24",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x24"
+                "en": "I2C address 0x24",
+                "nl": "I2C adres 0x24"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x24."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x24.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x24."
               }
             },
             {
               "id": "mcp23017-0x25",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x25"
+                "en": "I2C address 0x25",
+                "nl": "I2C adres 0x25"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x25."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x25.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x25."
               }
             },
             {
               "id": "mcp23017-0x26",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x26"
+                "en": "I2C address 0x26",
+                "nl": "I2C adres 0x26"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x26."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x26.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x26."
               }
             },
             {
               "id": "mcp23017-0x27",
               "type": "checkbox",
               "label": {
-                "en": "I2C address 0x27"
+                "en": "I2C address 0x27",
+                "nl": "I2C adres 0x27"
               },
               "value": false,
               "hint": {
-                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x27."
+                "en": "Enable this setting if you have an MCP23017 expansion board connected with I2C address 0x27.",
+                "nl": "Schakel deze instelling in als je een MCP23017 uitbreidingsbord hebt verbonden met I2C adres 0x27."
               }
             }
           ]

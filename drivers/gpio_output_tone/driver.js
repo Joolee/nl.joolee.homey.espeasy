@@ -7,6 +7,8 @@ module.exports = class GPIO_Tone_Driver extends GPIODriver {
 		this.pinType = 'tone';
 		this.primaryCapability = 'button';
 		super.onInit();
+
+		this.addActionFlow("send_custom_tone", "onActionCustomTone");
 	}
 
 	isValidCapability(capability) {
