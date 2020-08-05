@@ -9,8 +9,6 @@
 				{
 					"type": "text",
 					"name": "melody_string",
-					"min": 1,
-					"step": 1,
 					"placeholder": {
 						"en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
 						"nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
