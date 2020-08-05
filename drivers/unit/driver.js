@@ -1,8 +1,11 @@
 const Homey = require('homey');
 const http = require('http.min');
+const GeneralDriver = require('/lib/GeneralDriver.js');
 
-module.exports = class Unit extends Homey.Driver {
+module.exports = class Unit extends GeneralDriver {
 	onInit() {
+		super.onInit();
+
 		// Find local subnet as user hint for pairing screen
 		this.homeyIp = null;
 		Homey.ManagerCloud.getLocalAddress((error, address) => {
