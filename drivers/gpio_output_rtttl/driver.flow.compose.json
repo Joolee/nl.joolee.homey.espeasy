@@ -14,10 +14,6 @@
 					"placeholder": {
 						"en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
 						"nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
-					},
-					"hint": {
-						"en": "RTTTL melody string. The ESP Easy implementation is a bit buggy so not everything will work.",
-						"nl": "RTTTL melodie string. De implementatie van ESP Easy is nogal buggy dus niet alles zal werken."
 					}
 				}
 			]
