@@ -1,7 +1,8 @@
 {
 	"type": "number",
 	"title": {
-		"en": "Unknown value"
+		"en": "Unknown value",
+		"nl": "Onbekende waarde"
 	},
 	"icon": "/assets/icons/unknown.svg",
 	"insights": true,
