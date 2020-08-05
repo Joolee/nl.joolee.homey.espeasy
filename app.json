@@ -833,6 +833,31 @@
           }
         ]
       }
+    ],
+    "actions": [
+      {
+        "id": "send_custom_pulse",
+        "title": {
+          "en": "Send pulse of custom length"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_pulse"
+          },
+          {
+            "type": "number",
+            "name": "pulse_duration",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Duration in milliseconds",
+              "nl": "Duur in milliseconden"
+            }
+          }
+        ]
+      }
     ]
   },
   "drivers": [

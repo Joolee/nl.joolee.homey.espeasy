@@ -7,6 +7,8 @@ module.exports = class GPIO_Pulse_Driver extends GPIODriver {
 		this.pinType = 'pulse';
 		this.primaryCapability = 'button';
 		super.onInit();
+
+		this.addActionFlow("send_custom_pulse", "onActionCustomPulse");
 	}
 
 	isValidCapability(capability) {
