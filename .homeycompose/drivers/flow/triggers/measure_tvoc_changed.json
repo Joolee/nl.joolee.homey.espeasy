@@ -1,0 +1,18 @@
+{
+	"id": "measure_tvoc_changed",
+	"$filter": "capabilities=measure_tvoc",
+	"title": {
+		"en": "TVOC changed",
+		"nl": "TVOC veranderd"
+	},
+	"tokens": [
+		{
+			"name": "measure_tvoc",
+			"type": "number",
+			"title": {
+				"en": "Total Volatile Organic Compounds "
+			},
+			"example": 3
+		}
+	]
+}

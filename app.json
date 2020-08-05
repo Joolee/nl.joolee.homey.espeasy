@@ -90,6 +90,79 @@
         ]
       },
       {
+        "id": "measure_tvoc_changed",
+        "title": {
+          "en": "TVOC changed",
+          "nl": "TVOC veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_tvoc",
+            "type": "number",
+            "title": {
+              "en": "Total Volatile Organic Compounds "
+            },
+            "example": 3
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gasses&capabilities=measure_tvoc"
+          }
+        ]
+      },
+      {
+        "id": "measure_eco2_changed",
+        "title": {
+          "en": "Equivalent CO2 changed",
+          "nl": "Equivalent CO2 veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_eco2",
+            "type": "number",
+            "title": {
+              "en": "Equivalent CO2"
+            },
+            "example": 7
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gasses&capabilities=measure_eco2"
+          }
+        ]
+      },
+      {
+        "id": "measure_unknown_changed",
+        "title": {
+          "en": "'Unknown value' changed",
+          "nl": "'Onbekende waarde' veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_unknown",
+            "type": "number",
+            "title": {
+              "en": "Unknown value",
+              "nl": "Onbekende waarde"
+            },
+            "example": 13112
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gasses&capabilities=measure_unknown"
+          }
+        ]
+      },
+      {
         "id": "measure_idle_time_changed",
         "title": {
           "en": "Idle time changed",
@@ -2224,7 +2297,7 @@
     "measure_eco2": {
       "type": "number",
       "title": {
-        "en": "Equivalent  CO2"
+        "en": "Equivalent CO2"
       },
       "icon": "/assets/icons/eco2.svg",
       "insights": true,
@@ -2346,7 +2419,8 @@
     "measure_unknown": {
       "type": "number",
       "title": {
-        "en": "Unknown value"
+        "en": "Unknown value",
+        "nl": "Onbekende waarde"
       },
       "icon": "/assets/icons/unknown.svg",
       "insights": true,

@@ -1,0 +1,19 @@
+{
+	"id": "measure_unknown_changed",
+	"$filter": "capabilities=measure_unknown",
+	"title": {
+		"en": "'Unknown value' changed",
+		"nl": "'Onbekende waarde' veranderd"
+	},
+	"tokens": [
+		{
+			"name": "measure_unknown",
+			"type": "number",
+			"title": {
+				"en": "Unknown value",
+				"nl": "Onbekende waarde"
+			},
+			"example": 13112
+		}
+	]
+}
