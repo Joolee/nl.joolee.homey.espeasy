@@ -31,7 +31,7 @@ module.exports = class GPIO_RTTTL_Device extends GPIODevice {
 				this.properties.commands.rtttl,
 				this.properties.pin,
 				melody
-			], callback);
+			], false, callback);
 		} else {
 			this.log('Pin', pin.id, 'does not have RTTTL output capability!');
 		}

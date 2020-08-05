@@ -31,7 +31,7 @@ module.exports = class GPIO_PWM_Device extends GPIODevice {
 				this.properties.commands.pwm,
 				this.properties.pin,
 				Math.round(newState * 1024)
-			], callback, !!options.silent);
+			], !!options.silent, callback);
 		} else {
 			this.log('Pin', pin.id, 'does not have pwm output capability!');
 		}

@@ -36,7 +36,7 @@ module.exports = class GPIO_Tone_Device extends GPIODevice {
 				this.properties.pin,
 				frequency,
 				duration
-			], callback);
+			], false, callback);
 		} else {
 			this.log('Pin', pin.id, 'does not have tone output capability!');
 		}

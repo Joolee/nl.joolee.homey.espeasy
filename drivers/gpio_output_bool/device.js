@@ -42,7 +42,7 @@ module.exports = class GPIO_Bool_Device extends GPIODevice {
 				this.properties.commands.bool,
 				this.properties.pin,
 				newState === true ? 1 : 0
-			], callback);
+			], false, callback);
 		} else {
 			this.log('Pin', pin.id, 'does not have boolean output capability!');
 		}

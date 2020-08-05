@@ -37,7 +37,7 @@ module.exports = class GPIO_Pulse_Device extends GPIODevice {
 				this.properties.pin,
 				state,
 				duration
-			], callback);
+			], false, callback);
 		} else {
 			this.log('Pin', pin.id, 'does not have pulse output capability!');
 		}
