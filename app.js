@@ -7,6 +7,7 @@ const HomeyLib = require('homey-lib');
 class ESPEasy extends Homey.App {
 
 	onInit() {
+		this.actions = {};
 		this.units = new ESPEasyUnits();
 		this.log('App started');
 
