@@ -40,8 +40,8 @@
 				},
 				"value": "",
 				"hint": {
-					"en": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
-					"nl": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
+					"nl": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
+					"en": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
 				}
 			},
 			{
