@@ -34,6 +34,10 @@ module.exports = class Input_Switch_Driver extends SensorDriver {
 						return Homey.__("sensor.io_board_offline")
 					else
 						return true;
+				},
+				"modifier": function (value) {
+					// Use full blown function because I need "this" from it's caller
+					return this.getSetting('invert') ? value : !value
 				}
 			}
 		]
