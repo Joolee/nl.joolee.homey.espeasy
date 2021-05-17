@@ -75,7 +75,7 @@ function find_unit() {
 				return;
 			}
 
-			if (!data.staticIP) {
+			if (data.staticIP) {
 				Homey.confirm(Homey.__("pair.unit.warning_dhcp"), "warning", (error, cont) => {
 					if (cont) {
 						next(data);
