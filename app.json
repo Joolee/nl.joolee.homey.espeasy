@@ -832,6 +832,92 @@
             "filter": "driver_id=unit&capabilities=measure_uptime"
           }
         ]
+      },
+      {
+        "id": "unit_rebooted",
+        "title": {
+          "en": "Unit rebooted",
+          "nl": "Unit herstart"
+        },
+        "tokens": [
+          {
+            "name": "reset_reason",
+            "type": "string",
+            "title": {
+              "en": "Reboot reason",
+              "nl": "Reden herstart"
+            },
+            "example": "Software/System restart"
+          },
+          {
+            "name": "boot_reason",
+            "type": "string",
+            "title": {
+              "en": "Boot reason",
+              "nl": "Reden herstart"
+            },
+            "example": "Software/System restart"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          }
+        ]
+      },
+      {
+        "id": "unit_reconnected",
+        "title": {
+          "en": "Unit WiFi reconnected",
+          "nl": "Unit WiFi opnieuw verbonden"
+        },
+        "tokens": [
+          {
+            "name": "milliseconds_ago",
+            "type": "number",
+            "title": {
+              "en": "Milliseconds ago",
+              "nl": "Milliseconden geleden"
+            },
+            "example": 784
+          },
+          {
+            "name": "reconnects_number",
+            "type": "number",
+            "title": {
+              "en": "Total number of reconnects",
+              "nl": "Totaal aantal verbrekingen"
+            },
+            "example": 3
+          },
+          {
+            "name": "disconnect_reason_number",
+            "type": "number",
+            "title": {
+              "en": "Disconnect reason",
+              "nl": "Reden verbreking"
+            },
+            "example": 2
+          },
+          {
+            "name": "disconnect_reason_string",
+            "type": "string",
+            "title": {
+              "en": "Disconnect reason",
+              "nl": "Reden verbreking"
+            },
+            "example": "(2) Previous authentication no longer valid"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          }
+        ]
       }
     ],
     "actions": [
@@ -2642,8 +2728,8 @@
               },
               "value": "",
               "hint": {
-                "en": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
-                "nl": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
+                "nl": "Het IP adres van de ESP Easu unit. Deze zal automagisch worden geupdate als Homey berichten ontvangt van de unit vanaf een nieuw IP adres. (Het MAC Adres dient ter identificatie.)\n\nTip: Als je enkel gebruik maakt van GPIO Output pinnen kun je een 'System info' apparaat toevoegen aan ESP Easy. Deze zal elke minuut een bericht naar Homey sturen. (Zie: https://git.io/homey-esp-sysinfo)",
+                "en": "The IP Address of your ESP Easy unit. Will be updated automagically if any events from the unit (identified by MAC address) arrive with a different IP address.\n\nHint: If you only use output pins (which will not send events), you can add a 'System Info' device to the ESP unit, it will send events to Homey every minute. (More information at: https://git.io/homey-esp-sysinfo)"
               }
             },
             {

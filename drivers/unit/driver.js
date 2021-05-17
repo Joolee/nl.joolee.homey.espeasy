@@ -23,6 +23,9 @@ module.exports = class Unit extends GeneralDriver {
 		this.addActionFlow("run_task", "onActionRunTask", {
 			"task_name": "autoCompleteTaskName"
 		});
+
+		this.addTriggerFlow("unit_rebooted");
+		this.addTriggerFlow("unit_reconnected");
 	}
 
 	onPair(socket) {

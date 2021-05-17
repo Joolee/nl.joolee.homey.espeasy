@@ -18,10 +18,14 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.onJSONUpdate = this.onJSONUpdate.bind(this);
 		this.onUnitUpdate = this.onUnitUpdate.bind(this);
 		this.onUnitStateChange = this.onUnitStateChange.bind(this);
-		this.unit.on('rawMessage', this.updateUptime);
-		this.unit.on('jsonUpdate', this.onJSONUpdate);
-		this.unit.on('settingsUpdate', this.onUnitUpdate);
-		this.unit.on('stateChange', this.onUnitStateChange);
+		this.onUnitReboot = this.onUnitReboot.bind(this);
+		this.onUnitReconnect = this.onUnitReconnect.bind(this);
+		this.unit.on("rawMessage", this.updateUptime);
+		this.unit.on("jsonUpdate", this.onJSONUpdate);
+		this.unit.on("settingsUpdate", this.onUnitUpdate);
+		this.unit.on("stateChange", this.onUnitStateChange);
+		this.unit.on("reboot", this.onUnitReboot);
+		this.unit.on("reconnect", this.onUnitReconnect);
 
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
 		this.log("Initializing unit device: '" + this.getName() + "'");
@@ -30,6 +34,22 @@ module.exports = class UnitDevice extends Homey.Device {
 		});
 
 		this.uptimeInterval = setInterval(this.updateUptime, 60000);
+	}
+
+	onUnitReboot(unit, oldJson) {
+		this.getDriver().triggerFlow(this, "unit_rebooted", {
+			"reset_reason": unit.json.System["Reset Reason"],
+			"boot_reason": unit.json.System["Last Boot Cause"]
+		});
+	}
+
+	onUnitReconnect(unit, oldJson) {
+		this.getDriver().triggerFlow(this, "unit_reconnected", {
+			"milliseconds_ago": unit.json.WiFi["Connected msec"],
+			"reconnects_number": unit.json.WiFi["Number Reconnects"],
+			"disconnect_reason_number": unit.json.WiFi["Last Disconnect Reason"],
+			"disconnect_reason_string": unit.json.WiFi["Last Disconnect Reason str"]
+		});
 	}
 
 	upgradeCapabilities() {
@@ -136,10 +156,12 @@ module.exports = class UnitDevice extends Homey.Device {
 	// Homey function
 	onDeleted() {
 		this.log("Device deleted", this.unit.mac, this.unit.name);
-		this.unit.removeListener('rawMessage', this.updateUptime);
-		this.unit.removeListener('jsonUpdate', this.onJSONUpdate);
-		this.unit.removeListener('settingsUpdate', this.onUnitUpdate);
-		this.unit.removeListener('stateChange', this.onUnitStateChange);
+		this.unit.removeListener("rawMessage", this.updateUptime);
+		this.unit.removeListener("jsonUpdate", this.onJSONUpdate);
+		this.unit.removeListener("settingsUpdate", this.onUnitUpdate);
+		this.unit.removeListener("stateChange", this.onUnitStateChange);
+		this.unit.removeListener("reboot", this.onUnitReboot);
+		this.unit.removeListener("reconnect", this.onUnitReconnect);
 		clearInterval(this.poller);
 		clearInterval(this.uptimeInterval);
 		this.unit.removeDriver();
