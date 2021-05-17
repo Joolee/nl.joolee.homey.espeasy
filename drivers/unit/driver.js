@@ -47,7 +47,7 @@ module.exports = class Unit extends GeneralDriver {
 		});
 
 		socket.on('getUnregisteredUnits', (data, callback) => {
-			this.log('Unregistered units requested');
+			this.log('Unregistered units list requested by pairing wizard');
 			const unregisteredUnits = [];
 
 			for (const unit of Homey.app.units.listUnregistered()) {
@@ -80,7 +80,7 @@ module.exports = class Unit extends GeneralDriver {
 					callback(null, error);
 				}
 				else {
-					this.log("Unit found", unit.name)
+					this.log("Requested unit found: '" + unit.name + "'")
 					const unitFound = (unit) => {
 						unit.on("rawevent", updateEventCount);
 

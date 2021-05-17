@@ -24,8 +24,10 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.unit.on('stateChange', this.onUnitStateChange);
 
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
-		this.log('Init:', this.getName());
-		this.unit.updateJSON();
+		this.log("Initializing unit device: '" + this.getName() + "'");
+		this.unit.updateJSON(false, () => {
+			this.onUnitStateChange(this.unit, this.unit.isOnline)
+		});
 
 		this.uptimeInterval = setInterval(this.updateUptime, 60000);
 	}
@@ -87,8 +89,10 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	onUnitStateChange(unit, state) {
-		this.log("Set online state to", state);
-		state ? this.setAvailable() : this.setUnavailable(Homey.__("offline"));
+		if (state != this.getAvailable()) {
+			this.log("Change online state to", state);
+			state ? this.setAvailable() : this.setUnavailable(Homey.__("offline"));
+		}
 	}
 
 	onUnitUpdate(unit, newSettings) {
