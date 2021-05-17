@@ -1,6 +1,6 @@
 {
   "id": "nl.joolee.homey.espeasy",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "compatibility": ">=2.0",
   "sdk": 2,
   "brandColor": "#2F4252",
@@ -839,6 +839,10 @@
           "en": "Unit rebooted",
           "nl": "Unit herstart"
         },
+        "hint": {
+          "en": "Triggers when reported uptime is lower then last reported uptime. (Doesn't detect a reboot that occurs within one minute of last boot.)",
+          "nl": "Activeert wanneer de uptime lager is dan de laatste bekende uptime. (Kan geen reboot detecteren dat binnen 1 minuut van opstarten plaatsvind)"
+        },
         "tokens": [
           {
             "name": "reset_reason",
@@ -856,7 +860,7 @@
               "en": "Boot reason",
               "nl": "Reden herstart"
             },
-            "example": "Software/System restart"
+            "example": "Manual reboot"
           }
         ],
         "args": [
@@ -2220,6 +2224,31 @@
               "hint": {
                 "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
                 "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
+          },
+          "children": [
+            {
+              "id": "invert",
+              "type": "checkbox",
+              "label": {
+                "en": "Invert device state",
+                "nl": "Draai apparaatstatus om"
+              },
+              "options": {
+                "type": "bool"
+              },
+              "value": false,
+              "hint": {
+                "en": "Consider state '0' on and state '1' off",
+                "nl": "Beschouw waarde '0' als aan en de waarde '1' als uit"
               }
             }
           ]

@@ -66,5 +66,9 @@
 	"1.8.0": {
 		"en": "Add support for gas sensors like the MH-Z19.",
 		"nl": "Voeg ondersteuning voor de gas sensoren zoals de MH-Z19."
+	},
+	"1.9.0": {
+		"en": "Added a bunch of flow cards for sensors and units; Lots of other small bugfixes and improvements",
+		"nl": "Een stapel flowkaarten toegevoegd voor sensoren en units; Een heleboel andere bugfixes en verbeteringen"
 	}
 }
