@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "main": "app.js",
     "dependencies": {
-        "homey-lib": "^2.15.0",
         "http.min": "^2.1.0"
     }
 }
