@@ -26,8 +26,10 @@ class ESPEasy extends Homey.App {
         const lang = Homey.ManagerI18n.getLanguage();
         if (i18n[lang])
             return i18n[lang];
-        else
+        else if (i18n['en'])
             return i18n['en'];
+        else
+            return `Untranslated string: ${i18n}`;
     }
 
     // This was a re-implementation of Homeylib.getCapability to include custom capabilities
