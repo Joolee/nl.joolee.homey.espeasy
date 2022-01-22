@@ -3,7 +3,7 @@
 const GeneralDevice = require('/lib/GeneralDevice.js');
 const net = require('net');
 const Homey = require('homey');
-const parsePacket = require('p1-reader/lib/parsePacket');
+const parsePacket = require('/lib/p1-parsePacket.js');
 
 module.exports = class P1_Device extends GeneralDevice {
     onInit() {
