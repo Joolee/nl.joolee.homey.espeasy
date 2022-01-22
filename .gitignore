@@ -105,3 +105,7 @@ dist
 
 # Homey
 env.json
+build/
+
+# Added by Homey CLI
+/.homeybuild/
