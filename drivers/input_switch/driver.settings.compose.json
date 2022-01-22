@@ -1,33 +1,30 @@
-[
-	{
-		"$extends": "unitInfo"
-	},
-	{
-		"$extends": "sensorInfo"
-	},
-	{
-		"type": "group",
-		"label": {
-			"en": "Device settings",
-			"nl": "Apparaatinstellingen"
-		},
-		"children": [
-			{
-				"id": "invert",
-				"type": "checkbox",
-				"label": {
-					"en": "Invert device state",
-					"nl": "Draai apparaatstatus om"
-				},
-				"options": {
-					"type": "bool"
-				},
-				"value": false,
-				"hint": {
-					"en": "Consider state '0' on and state '1' off",
-					"nl": "Beschouw waarde '0' als aan en de waarde '1' als uit"
-				}
-			}
-		]
-	}
+[{
+        "$extends": "unitInfo"
+    },
+    {
+        "$extends": "sensorInfo"
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
+        },
+        "children": [{
+            "id": "invert",
+            "type": "checkbox",
+            "label": {
+                "en": "Invert device state",
+                "nl": "Draai apparaatstatus om"
+            },
+            "options": {
+                "type": "bool"
+            },
+            "value": false,
+            "hint": {
+                "en": "Consider state '0' on and state '1' off",
+                "nl": "Beschouw waarde '0' als aan en de waarde '1' als uit"
+            }
+        }]
+    }
 ]

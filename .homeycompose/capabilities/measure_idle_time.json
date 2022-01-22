@@ -1,11 +1,11 @@
 {
-	"type": "number",
-	"title": {
-		"en": "Idle time",
-		"nl": "Inactiviteit"
-	},
-	"uiComponent": null,
-	"insights": false,
-	"getable": true,
-	"setable": false
+    "type": "number",
+    "title": {
+        "en": "Idle time",
+        "nl": "Inactiviteit"
+    },
+    "uiComponent": null,
+    "insights": false,
+    "getable": true,
+    "setable": false
 }

@@ -1,302 +1,301 @@
-[
-	{
-		"id": "gpio0",
-		"pin": 0,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 0 - D3",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio1",
-		"pin": 1,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 1 - D10",
-		"description": "TX0",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio2",
-		"pin": 2,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 2 - D4",
-		"description": "LED",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio3",
-		"pin": 3,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 3 - D9",
-		"description": "RX0",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio4",
-		"pin": 4,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 4 - D2",
-		"description": "I2C:SDA",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio5",
-		"pin": 5,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 5 - D1",
-		"description": "I2C:SCL",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio6",
-		"pin": 6,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 6",
-		"description": "",
-		"commands": {}
-	},
-	{
-		"id": "gpio7",
-		"pin": 7,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 7",
-		"description": "",
-		"commands": {}
-	},
-	{
-		"id": "gpio8",
-		"pin": 8,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 8",
-		"description": "",
-		"commands": {}
-	},
-	{
-		"id": "gpio9",
-		"pin": 9,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 9 - D11",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio10",
-		"pin": 10,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 10 - D12",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio11",
-		"pin": 11,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 11",
-		"description": "",
-		"commands": {}
-	},
-	{
-		"id": "gpio12",
-		"pin": 12,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 12 - D6",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio13",
-		"pin": 13,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 13 - D7",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio14",
-		"pin": 14,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 14 - D5",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio15",
-		"pin": 15,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 15 - D8",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio16",
-		"pin": 16,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 16 - D0",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": null,
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	}
+[{
+        "id": "gpio0",
+        "pin": 0,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 0 - D3",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio1",
+        "pin": 1,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 1 - D10",
+        "description": "TX0",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio2",
+        "pin": 2,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 2 - D4",
+        "description": "LED",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio3",
+        "pin": 3,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 3 - D9",
+        "description": "RX0",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio4",
+        "pin": 4,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 4 - D2",
+        "description": "I2C:SDA",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio5",
+        "pin": 5,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 5 - D1",
+        "description": "I2C:SCL",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio6",
+        "pin": 6,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 6",
+        "description": "",
+        "commands": {}
+    },
+    {
+        "id": "gpio7",
+        "pin": 7,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 7",
+        "description": "",
+        "commands": {}
+    },
+    {
+        "id": "gpio8",
+        "pin": 8,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 8",
+        "description": "",
+        "commands": {}
+    },
+    {
+        "id": "gpio9",
+        "pin": 9,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 9 - D11",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio10",
+        "pin": 10,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 10 - D12",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio11",
+        "pin": 11,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 11",
+        "description": "",
+        "commands": {}
+    },
+    {
+        "id": "gpio12",
+        "pin": 12,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 12 - D6",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio13",
+        "pin": 13,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 13 - D7",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio14",
+        "pin": 14,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 14 - D5",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio15",
+        "pin": 15,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 15 - D8",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio16",
+        "pin": 16,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 16 - D0",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": null,
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    }
 ]

@@ -1,50 +1,49 @@
 {
-	"id": "unit",
-	"name": {
-		"en": "ESP Easy Unit"
-	},
-	"class": "other",
-	"capabilities": [
-		"measure_uptime",
-		"measure_idle_time",
-		"measure_load",
-		"measure_ram",
-		"measure_heap",
-		"unit_uptime",
-		"measure_signal_strength",
-		"device_heartbeat"
-	],
-	"images": {
-		"large": "{{driverAssetsPath}}/images/large.png",
-		"small": "{{driverAssetsPath}}/images/small.png"
-	},
-	"pair": [
-		{
-			"id": "find_unit",
-			"navigation": {
-				"next": "setup_controller"
-			}
-		},
-		{
-			"id": "setup_controller",
-			"navigation": {
-				"prev": "find_unit",
-				"next": "done"
-			}
-		},
-		{
-			"id": "done",
-			"template": "done"
-		}
-	],
-	"capabilitiesOptions": {
-		"device_heartbeat": {
-			"preventInsights": true,
-			"preventTag ": true
-		},
-		"unit_uptime": {
-			"preventInsights": true,
-			"preventTag ": true
-		}
-	}
+    "id": "unit",
+    "name": {
+        "en": "ESP Easy Unit"
+    },
+    "class": "other",
+    "capabilities": [
+        "measure_uptime",
+        "measure_idle_time",
+        "measure_load",
+        "measure_ram",
+        "measure_heap",
+        "unit_uptime",
+        "measure_signal_strength",
+        "device_heartbeat"
+    ],
+    "images": {
+        "large": "{{driverAssetsPath}}/images/large.png",
+        "small": "{{driverAssetsPath}}/images/small.png"
+    },
+    "pair": [{
+            "id": "find_unit",
+            "navigation": {
+                "next": "setup_controller"
+            }
+        },
+        {
+            "id": "setup_controller",
+            "navigation": {
+                "prev": "find_unit",
+                "next": "done"
+            }
+        },
+        {
+            "id": "done",
+            "template": "done"
+        }
+    ],
+    "capabilitiesOptions": {
+        "device_heartbeat": {
+            "preventInsights": true,
+            "preventTag ": true
+        },
+        "unit_uptime": {
+            "preventInsights": true,
+            "preventTag ": true
+        }
+    }
 }

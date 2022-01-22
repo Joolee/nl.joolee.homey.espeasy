@@ -1,19 +1,17 @@
 {
-	"id": "measure_idle_time_changed",
-	"$filter": "capabilities=measure_uptime",
-	"title": {
-		"en": "Idle time changed",
-		"nl": "Inactiviteit is veranderd"
-	},
-	"tokens": [
-		{
-			"name": "measure_idle_time",
-			"type": "number",
-			"title": {
-				"en": "Idle minutes",
-				"nl": "Inactive minuten"
-			},
-			"example": 359
-		}
-	]
+    "id": "measure_idle_time_changed",
+    "$filter": "capabilities=measure_uptime",
+    "title": {
+        "en": "Idle time changed",
+        "nl": "Inactiviteit is veranderd"
+    },
+    "tokens": [{
+        "name": "measure_idle_time",
+        "type": "number",
+        "title": {
+            "en": "Idle minutes",
+            "nl": "Inactive minuten"
+        },
+        "example": 359
+    }]
 }

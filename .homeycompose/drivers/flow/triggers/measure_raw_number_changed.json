@@ -1,19 +1,17 @@
 {
-	"id": "measure_raw_number",
-	"$filter": "capabilities=measure_raw_number",
-	"title": {
-		"en": "Raw value changed",
-		"nl": "Ruwe waarde is veranderd"
-	},
-	"tokens": [
-		{
-			"name": "measure_raw_number",
-			"type": "number",
-			"title": {
-				"en": "Raw value",
-				"nl": "Ruwe waarde"
-			},
-			"example": 11.42
-		}
-	]
+    "id": "measure_raw_number",
+    "$filter": "capabilities=measure_raw_number",
+    "title": {
+        "en": "Raw value changed",
+        "nl": "Ruwe waarde is veranderd"
+    },
+    "tokens": [{
+        "name": "measure_raw_number",
+        "type": "number",
+        "title": {
+            "en": "Raw value",
+            "nl": "Ruwe waarde"
+        },
+        "example": 11.42
+    }]
 }

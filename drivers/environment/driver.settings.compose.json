@@ -1,8 +1,7 @@
-[
-	{
-		"$extends": "unitInfo"
-	},
-	{
-		"$extends": "sensorInfo"
-	}
+[{
+        "$extends": "unitInfo"
+    },
+    {
+        "$extends": "sensorInfo"
+    }
 ]

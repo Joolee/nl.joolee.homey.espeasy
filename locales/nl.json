@@ -1,123 +1,123 @@
 {
-	"offline": "Apparaat offline",
-	"waiting_for_unit": "Wachten op unit",
-	"p1": {
-		"connecting": "Bezig met verbinden met P1 Wifi Gateway op poort __port__",
-		"waiting": "BEzig met wachten op het eerste P1 datagram",
-		"connection_lost": "Er kan geen verbinding worden gemaakt",
-		"invalid_datagram": "Ongeldige data ontvangen",
-		"connected_to_http_server": "Het lijkt erop dat er is verbonden met een HTTP server. Controleer of het ingevoerde poortnummer dat van de P1 Wifi Gateway is en niet van de webserver."
-	},
-	"pair": {
-		"p1": {
-			"description": "Controleer of u een P1 datagram ziet wanneer u http://__esp-ip__:&lt;portnumber&gt; bezoekt, voordat u het apparaat aan Homey toevoegt. Bezoek de volgende websites voor meer informatie:",
-			"title": "Configureer de P1 Meter",
-			"device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
-			"portnumber": "Wifi Gateway TCP Poort:"
-		},
-		"sensor": {
-			"title": "Configureer apparaat",
-			"controller_list_placeholder": "-- Selecteer Homey --",
-			"variant_list_placeholder": "-- Selecteer apparaatvariant --",
-			"device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
-			"selectController": "You have this device enabled for multiple controllers. Select Homey:",
-			"select_capability": "Selecteer de gewenste Homey functionaliteit voor de waarde '__name__':",
-			"select_variant": "Selecteer de waarde van '__variant-title__' die is ingesteld voor dit apparaat in ESP Easy:",
-			"variant_hint": "Note: De 'values' die zijn ingesteld in ESP Easy voor dir apparaat dienen een unieke naam te hebben",
-			"controllerSettings": "Gebruik deze controller instellingen:",
-			"controller": "Controller:",
-			"taskIDX": "Apparaat IDX:",
-			"no_controller_selected": "Je moet een controller selecteren",
-			"no_variant_selected": "Je moet een variant selecteren",
-			"noController": "Je hebt geen controller ingesteld voor dit apparaat. Schakel de Homey controller in, in de ESP Easy instellingen voor dit apparaat. Configureer tevens een IDX dat uniek is voor het apparaat op de controller. Als Homey nog niet ingesteld is als controller, volg dan de handleiding op https://git.io/homey-esp-controller",
-			"idx0": "Apparaat IDX 0 kan niet worden gebruikt. Verander dit bij de apparaatinstellingen in ESP Easy.",
-			"duplicate": "Het gebruiken van een duplicaat IDX is niet ondersteund. Voor hulp kunt u terecht op https://git.io/homey-esp-idxs"
-		},
-		"unit": {
-			"find_title": "Vind ESP Easy unit",
-			"connect_description": "Voer de netwerklocatie van je ESP Easy unit in.<br>Een stap-voor-stap handleiding voor het opzetten van een nieuwe unit is te vinden op:<br>https://git.io/homey-esp-wiki",
-			"select_description": "Of selecteer de unit uit de onderstaande lijst:",
-			"list_placeholder": "-- Selecteer Unit --",
-			"host": "IP adres of hostname:",
-			"ip": "IP Adres:",
-			"port": "Poort nummer:",
-			"error_no_host": "Voer een geldig IP adres in!",
-			"warning_dhcp": "Deze unit heeft geen statisch IP adres geconfigureerd! Overweeg dit alsnog in te stellen in de unit.\n\nDruk op annuleren om terug te keren.",
-			"warning_no_events": "Homey heeft nog geen events ontvangen van de ESP unit! Weet je zeker dat de unit correct is geconfigureerd?\n\nDruk op annuleren om terug te keren.",
-			"controller_title": "Setup controller",
-			"controller_login": "Om homey informatie van de ESP unit te laten ontvangen, configureer je een nieuwe controller in ESP Easy op de pagina __url__.<br>Hint: De standaard logingegevens zijn: admin/configesp",
-			"controller_help": "Een gedetailleerde how-to is te vinden op<br>https://git.io/homey-esp-controller",
-			"controller_manual": "&gt; Of klik hier voor de technische details als je het aan durft.",
-			"publish_url": "Publish URL:",
-			"configure_first": "Klik op  \"volgende\" wanneer je de setup hebt afgerond",
-			"tip": "Als je nog geen apparaten hebt verbonden met de ESP unit, voeg dan een dummy apparaat toe: https://git.io/homey-esp-sysinfo",
-			"waiting": "Configureer Homey als controller in ESP Easy<br>Wachten op activiteit",
-			"finish": "Data ontvangen! Klik op volgende om de setup te voltooien.",
-			"protocol": "Protocol"
-		},
-		"gpio": {
-			"bool": {
-				"title": "Digitale output pin toevoegen",
-				"description": "Definieer de digitale output pin"
-			},
-			"pwm": {
-				"title": "PWM output pin toevoegen",
-				"description": "Definieer de PWM output pin"
-			},
-			"pulse": {
-				"title": "Puls output pin toevoegen",
-				"description": "Definieer de puls output pin",
-				"duration": "Standaard puls duur in ms:"
-			},
-			"rtttl": {
-				"title": "Melodie-pin toevoegen",
-				"description": "Definieer de melodie output pin",
-				"melody": "Standaard RTTTL melodie string:"
-			},
-			"tone": {
-				"title": "Voeg toon output pin toe",
-				"description": "Definieer de toon output pin",
-				"duration": "Standaard toon duur in ms:",
-				"frequency": "Standaard toon frequentie in hz:"
-			},
-			"select_unit": "ESP Easy unit:",
-			"unit_list_placeholder": "-- Selecteer Unit --",
-			"select_pin": "GPIO Pin:",
-			"gpio_list_placeholder": "-- Selecteer GPIO Pin --",
-			"pin_warning": "Pin is ingesteld als __mode__, dit zal worden overschreven wanneer je het apparaat toevoegt!",
-			"pin_mode_default": "Deze pin is nog niet geconfigureerd op de unit",
-			"selectCapability": "Select Homey functionaliteit:",
-			"error": {
-				"unit": "Je moet een unit selecteren",
-				"pin": "Je moet een GPIO pin selecteren",
-				"pulseDuration": "Je moet een standaardduratie opgeven",
-				"toneDuration": "Je moet een standaardduratie opgeven",
-				"toneFrequency": "Je moet een standaardfrequentie opgeven"
-			}
-		}
-	},
-	"minutes": "Minuten",
-	"gpio": {
-		"pinmodewarning": "Waarschuwing! Pin __pin__ veranderd van __frommode__ naar __tomode__",
-		"names": {
-			"bool": "digitale output",
-			"pulse": "puls output",
-			"pwm": "pwm output",
-			"servo": "servo output",
-			"tone": "toon output",
-			"rtttl": "melodie output",
-			"input": "digitale input"
-		},
-		"pin_not_found": "De definitie voor deze pin kan niet worden gevonden. Controlleer het board type en instellingen voor I/O extenders in de unit instellingen."
-	},
-	"sensor": {
-		"task_not_found": "De controller __controller__ kent geen apparaat met IDX __idx__",
-		"invalid_task": "Ongeldig apparaattype \"__type__\" voor controller __controller__, IDX __idx__",
-		"duplicate_idx": "De controller __controller__ kent meerdere apparaten met IDX __idx__",
-		"io_board_offline": "I/O Expander board lijkt offline"
-	},
-	"unit": {
-		"error_connecting": "Apparaat kan niet worden bereikt",
-		"on_board_pins": "On-board"
-	}
+    "offline": "Apparaat offline",
+    "waiting_for_unit": "Wachten op unit",
+    "p1": {
+        "connecting": "Bezig met verbinden met P1 Wifi Gateway op poort __port__",
+        "waiting": "BEzig met wachten op het eerste P1 datagram",
+        "connection_lost": "Er kan geen verbinding worden gemaakt",
+        "invalid_datagram": "Ongeldige data ontvangen",
+        "connected_to_http_server": "Het lijkt erop dat er is verbonden met een HTTP server. Controleer of het ingevoerde poortnummer dat van de P1 Wifi Gateway is en niet van de webserver."
+    },
+    "pair": {
+        "p1": {
+            "description": "Controleer of u een P1 datagram ziet wanneer u http://__esp-ip__:&lt;portnumber&gt; bezoekt, voordat u het apparaat aan Homey toevoegt. Bezoek de volgende websites voor meer informatie:",
+            "title": "Configureer de P1 Meter",
+            "device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
+            "portnumber": "Wifi Gateway TCP Poort:"
+        },
+        "sensor": {
+            "title": "Configureer apparaat",
+            "controller_list_placeholder": "-- Selecteer Homey --",
+            "variant_list_placeholder": "-- Selecteer apparaatvariant --",
+            "device_not_found": "Kan het geselecteerde apparaat niet meer vinden",
+            "selectController": "You have this device enabled for multiple controllers. Select Homey:",
+            "select_capability": "Selecteer de gewenste Homey functionaliteit voor de waarde '__name__':",
+            "select_variant": "Selecteer de waarde van '__variant-title__' die is ingesteld voor dit apparaat in ESP Easy:",
+            "variant_hint": "Note: De 'values' die zijn ingesteld in ESP Easy voor dir apparaat dienen een unieke naam te hebben",
+            "controllerSettings": "Gebruik deze controller instellingen:",
+            "controller": "Controller:",
+            "taskIDX": "Apparaat IDX:",
+            "no_controller_selected": "Je moet een controller selecteren",
+            "no_variant_selected": "Je moet een variant selecteren",
+            "noController": "Je hebt geen controller ingesteld voor dit apparaat. Schakel de Homey controller in, in de ESP Easy instellingen voor dit apparaat. Configureer tevens een IDX dat uniek is voor het apparaat op de controller. Als Homey nog niet ingesteld is als controller, volg dan de handleiding op https://git.io/homey-esp-controller",
+            "idx0": "Apparaat IDX 0 kan niet worden gebruikt. Verander dit bij de apparaatinstellingen in ESP Easy.",
+            "duplicate": "Het gebruiken van een duplicaat IDX is niet ondersteund. Voor hulp kunt u terecht op https://git.io/homey-esp-idxs"
+        },
+        "unit": {
+            "find_title": "Vind ESP Easy unit",
+            "connect_description": "Voer de netwerklocatie van je ESP Easy unit in.<br>Een stap-voor-stap handleiding voor het opzetten van een nieuwe unit is te vinden op:<br>https://git.io/homey-esp-wiki",
+            "select_description": "Of selecteer de unit uit de onderstaande lijst:",
+            "list_placeholder": "-- Selecteer Unit --",
+            "host": "IP adres of hostname:",
+            "ip": "IP Adres:",
+            "port": "Poort nummer:",
+            "error_no_host": "Voer een geldig IP adres in!",
+            "warning_dhcp": "Deze unit heeft geen statisch IP adres geconfigureerd! Overweeg dit alsnog in te stellen in de unit.\n\nDruk op annuleren om terug te keren.",
+            "warning_no_events": "Homey heeft nog geen events ontvangen van de ESP unit! Weet je zeker dat de unit correct is geconfigureerd?\n\nDruk op annuleren om terug te keren.",
+            "controller_title": "Setup controller",
+            "controller_login": "Om homey informatie van de ESP unit te laten ontvangen, configureer je een nieuwe controller in ESP Easy op de pagina __url__.<br>Hint: De standaard logingegevens zijn: admin/configesp",
+            "controller_help": "Een gedetailleerde how-to is te vinden op<br>https://git.io/homey-esp-controller",
+            "controller_manual": "&gt; Of klik hier voor de technische details als je het aan durft.",
+            "publish_url": "Publish URL:",
+            "configure_first": "Klik op  \"volgende\" wanneer je de setup hebt afgerond",
+            "tip": "Als je nog geen apparaten hebt verbonden met de ESP unit, voeg dan een dummy apparaat toe: https://git.io/homey-esp-sysinfo",
+            "waiting": "Configureer Homey als controller in ESP Easy<br>Wachten op activiteit",
+            "finish": "Data ontvangen! Klik op volgende om de setup te voltooien.",
+            "protocol": "Protocol"
+        },
+        "gpio": {
+            "bool": {
+                "title": "Digitale output pin toevoegen",
+                "description": "Definieer de digitale output pin"
+            },
+            "pwm": {
+                "title": "PWM output pin toevoegen",
+                "description": "Definieer de PWM output pin"
+            },
+            "pulse": {
+                "title": "Puls output pin toevoegen",
+                "description": "Definieer de puls output pin",
+                "duration": "Standaard puls duur in ms:"
+            },
+            "rtttl": {
+                "title": "Melodie-pin toevoegen",
+                "description": "Definieer de melodie output pin",
+                "melody": "Standaard RTTTL melodie string:"
+            },
+            "tone": {
+                "title": "Voeg toon output pin toe",
+                "description": "Definieer de toon output pin",
+                "duration": "Standaard toon duur in ms:",
+                "frequency": "Standaard toon frequentie in hz:"
+            },
+            "select_unit": "ESP Easy unit:",
+            "unit_list_placeholder": "-- Selecteer Unit --",
+            "select_pin": "GPIO Pin:",
+            "gpio_list_placeholder": "-- Selecteer GPIO Pin --",
+            "pin_warning": "Pin is ingesteld als __mode__, dit zal worden overschreven wanneer je het apparaat toevoegt!",
+            "pin_mode_default": "Deze pin is nog niet geconfigureerd op de unit",
+            "selectCapability": "Select Homey functionaliteit:",
+            "error": {
+                "unit": "Je moet een unit selecteren",
+                "pin": "Je moet een GPIO pin selecteren",
+                "pulseDuration": "Je moet een standaardduratie opgeven",
+                "toneDuration": "Je moet een standaardduratie opgeven",
+                "toneFrequency": "Je moet een standaardfrequentie opgeven"
+            }
+        }
+    },
+    "minutes": "Minuten",
+    "gpio": {
+        "pinmodewarning": "Waarschuwing! Pin __pin__ veranderd van __frommode__ naar __tomode__",
+        "names": {
+            "bool": "digitale output",
+            "pulse": "puls output",
+            "pwm": "pwm output",
+            "servo": "servo output",
+            "tone": "toon output",
+            "rtttl": "melodie output",
+            "input": "digitale input"
+        },
+        "pin_not_found": "De definitie voor deze pin kan niet worden gevonden. Controlleer het board type en instellingen voor I/O extenders in de unit instellingen."
+    },
+    "sensor": {
+        "task_not_found": "De controller __controller__ kent geen apparaat met IDX __idx__",
+        "invalid_task": "Ongeldig apparaattype \"__type__\" voor controller __controller__, IDX __idx__",
+        "duplicate_idx": "De controller __controller__ kent meerdere apparaten met IDX __idx__",
+        "io_board_offline": "I/O Expander board lijkt offline"
+    },
+    "unit": {
+        "error_connecting": "Apparaat kan niet worden bereikt",
+        "on_board_pins": "On-board"
+    }
 }

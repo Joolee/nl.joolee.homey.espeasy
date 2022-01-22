@@ -1,19 +1,17 @@
 {
-	"id": "measure_signal_strength_changed",
-	"$filter": "capabilities=measure_signal_strength",
-	"title": {
-		"en": "Signal strength changed",
-		"nl": "Signaalsterkte is veranderd"
-	},
-	"tokens": [
-		{
-			"name": "measure_signal_strength",
-			"type": "number",
-			"title": {
-				"en": "Signal strength",
-				"nl": "Signaalsterkte"
-			},
-			"example": -66
-		}
-	]
+    "id": "measure_signal_strength_changed",
+    "$filter": "capabilities=measure_signal_strength",
+    "title": {
+        "en": "Signal strength changed",
+        "nl": "Signaalsterkte is veranderd"
+    },
+    "tokens": [{
+        "name": "measure_signal_strength",
+        "type": "number",
+        "title": {
+            "en": "Signal strength",
+            "nl": "Signaalsterkte"
+        },
+        "example": -66
+    }]
 }

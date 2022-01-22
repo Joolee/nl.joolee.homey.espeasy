@@ -1,10 +1,10 @@
 {
-  "name": "nl.joolee.homey.espeasy",
-  "version": "0.0.1",
-  "main": "app.js",
-  "dependencies": {
-    "homey-lib": "^2.15.0",
-    "http.min": "^2.1.0",
-    "p1-reader": "^2.0.4"
-  }
+    "name": "nl.joolee.homey.espeasy",
+    "version": "0.0.1",
+    "main": "app.js",
+    "dependencies": {
+        "homey-lib": "^2.15.0",
+        "http.min": "^2.1.0",
+        "p1-reader": "^2.0.4"
+    }
 }

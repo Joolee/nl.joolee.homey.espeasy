@@ -1,20 +1,16 @@
 {
-	"actions": [
-		{
-			"id": "send_custom_melody",
-			"title": {
-				"en": "Play personalized melody"
-			},
-			"args": [
-				{
-					"type": "text",
-					"name": "melody_string",
-					"placeholder": {
-						"en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
-						"nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
-					}
-				}
-			]
-		}
-	]
+    "actions": [{
+        "id": "send_custom_melody",
+        "title": {
+            "en": "Play personalized melody"
+        },
+        "args": [{
+            "type": "text",
+            "name": "melody_string",
+            "placeholder": {
+                "en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
+                "nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
+            }
+        }]
+    }]
 }

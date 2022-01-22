@@ -1,14 +1,14 @@
 {
-	"pin": null,
-	"enabled": true,
-	"visible": true,
-	"warning": false,
-	"name": "",
-	"description": "",
-	"commands": {
-		"status": "Status,MCP",
-		"bool": "MCPGPIO",
-		"pulse": "MCPPulse",
-		"longpulse": "MCPLongPulse"
-	}
+    "pin": null,
+    "enabled": true,
+    "visible": true,
+    "warning": false,
+    "name": "",
+    "description": "",
+    "commands": {
+        "status": "Status,MCP",
+        "bool": "MCPGPIO",
+        "pulse": "MCPPulse",
+        "longpulse": "MCPLongPulse"
+    }
 }

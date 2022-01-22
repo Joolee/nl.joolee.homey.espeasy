@@ -1,74 +1,74 @@
 {
-	"1.0.0": {
-		"en": "Initial release",
-		"nl": "Eerste release"
-	},
-	"1.0.1": {
-		"en": "Updated app description",
-		"nl": "Applicatiebeschrijving geüpdatet"
-	},
-	"1.0.2": {
-		"en": "Fixed bug in unit initialisation",
-		"nl": "Bug opgelost in het laden van een nieuwe unit"
-	},
-	"1.0.3": {
-		"en": "Added Dutch translation",
-		"nl": "Nederlandse vertaling toegevoegd"
-	},
-	"1.0.4": {
-		"en": "Fixed unit ID handling which could prevent adding a unit",
-		"nl": "Verwerking van unit ID verbeterd. Dit kon zorgen dat een unit niet toegevoegd kon worden"
-	},
-	"1.0.5": {
-		"en": "Fix race condition in unit initialisation",
-		"nl": "Probleem in unit initialisatie opgelost dat zich voor deed bij snelle netwerken"
-	},
-	"1.1.0": {
-		"en": "Add support for input devices, starting with a basic 'input switch'",
-		"nl": "Ondersteuning voor invoerapparaten toegevoegd, beginnend met een eenvoudige 'input switch'"
-	},
-	"1.1.1": {
-		"en": "Miscellaneous fixes",
-		"nl": "Diverse fixes"
-	},
-	"1.2.0": {
-		"en": "Add experimental support for environmental sensors (temperature, pressure and humidity)",
-		"nl": "Experimentele ondersteuning toegevoegd voor ongevingssensoren (temperatuur, luchtdruk en luchtvochtigheid)"
-	},
-	"1.3.0": {
-		"en": "Add support for P1 Smart energy meters",
-		"nl": "Ondersteuning toegevoegd voor P1 smartmeters"
-	},
-	"1.3.1": {
-		"en": "Fixed typo's, one of which was breaking for the SONOFF environment device",
-		"nl": "Typfouten opgelost waarvan één breaking was voor de SONOFF environment sensor"
-	},
-	"1.4.0": {
-		"en": "Lots of bug fixes. Added WiFi strength and flow cards to Units. You might want to check your flows and insights. You can remove and re-add the unit without any effect on other devices.",
-		"nl": "Een boel bugs opgelost. WiFi signaalsterkte en trigger flow-cards toegevoegd aan units. Controleer je flows en insights, je kunt eventueel units opnieuw toevoegen zonder dat dit effect heeft op andere devices."
-	},
-	"1.5.0": {
-		"en": "Adds idle and uptime triggers and tokens to applicable devices. Adds support for 'Analog input' sensor. Add timeout option for unit polling. Rewrote unit pairing wizard. Added Wiki (click on Visit website). Add support for dummy device as 'Input switch' device. Also, lots of bugfixes!",
-		"nl": "Voegt idle en uptime triggers en tokens toe aan apparaten, Voegt ondersteuning voor 'Analog Input' apparaten toe. Voegt timeout optie toe voor het pollen van de unit. Pairing wizard voor units herschreven. Wiki toegevoegd (klik op Bezoek website). Ondersteuning voor Dummy apparaat toegevoegd als 'Input switch'. Tevens een hoop bugs opgelost!"
-	},
-	"1.6.0": {
-		"en": "Adds ability for 'Pulse Counter' devices and to use dummy devices as 'Environment sensor'",
-		"nl": "Ondersteuning toegevoegd voor 'Pulse Counter' apparaten en het gebruik van een Dummy apparaat als 'Environment sensor'"
-	},
-	"1.6.2": {
-		"en": "Make P1 sensors automagically reconnect on connection loss. Other small bug fixes.",
-		"nl": "P1 sensoren verbinden nu automagisch opnieuw bij een verbroken verbinding. Overige kleine bugfixes."
-	},
-	"1.7.1": {
-		"en": "Add support for MCP23017 GPIO extension board to GPIO Output devices; tailored pin-layouts for different boards; better support for ESP32 boards.",
-		"nl": "Voeg ondersteuning voor de MCP23017 GPIO uitbreidingschip bij gebruik als GPIO Output apparaten; aangepaste pin-layouts voor verschillende boards; betere ondersteuning voor ESP32 boards."
-	},
-	"1.8.0": {
-		"en": "Add support for gas sensors like the MH-Z19.",
-		"nl": "Voeg ondersteuning voor de gas sensoren zoals de MH-Z19."
-	},
-	"1.9.0": {
-		"en": "Added a bunch of flow cards for sensors and units; Lots of other small bugfixes and improvements",
-		"nl": "Een stapel flowkaarten toegevoegd voor sensoren en units; Een heleboel andere bugfixes en verbeteringen"
-	}
+    "1.0.0": {
+        "en": "Initial release",
+        "nl": "Eerste release"
+    },
+    "1.0.1": {
+        "en": "Updated app description",
+        "nl": "Applicatiebeschrijving geüpdatet"
+    },
+    "1.0.2": {
+        "en": "Fixed bug in unit initialisation",
+        "nl": "Bug opgelost in het laden van een nieuwe unit"
+    },
+    "1.0.3": {
+        "en": "Added Dutch translation",
+        "nl": "Nederlandse vertaling toegevoegd"
+    },
+    "1.0.4": {
+        "en": "Fixed unit ID handling which could prevent adding a unit",
+        "nl": "Verwerking van unit ID verbeterd. Dit kon zorgen dat een unit niet toegevoegd kon worden"
+    },
+    "1.0.5": {
+        "en": "Fix race condition in unit initialisation",
+        "nl": "Probleem in unit initialisatie opgelost dat zich voor deed bij snelle netwerken"
+    },
+    "1.1.0": {
+        "en": "Add support for input devices, starting with a basic 'input switch'",
+        "nl": "Ondersteuning voor invoerapparaten toegevoegd, beginnend met een eenvoudige 'input switch'"
+    },
+    "1.1.1": {
+        "en": "Miscellaneous fixes",
+        "nl": "Diverse fixes"
+    },
+    "1.2.0": {
+        "en": "Add experimental support for environmental sensors (temperature, pressure and humidity)",
+        "nl": "Experimentele ondersteuning toegevoegd voor ongevingssensoren (temperatuur, luchtdruk en luchtvochtigheid)"
+    },
+    "1.3.0": {
+        "en": "Add support for P1 Smart energy meters",
+        "nl": "Ondersteuning toegevoegd voor P1 smartmeters"
+    },
+    "1.3.1": {
+        "en": "Fixed typo's, one of which was breaking for the SONOFF environment device",
+        "nl": "Typfouten opgelost waarvan één breaking was voor de SONOFF environment sensor"
+    },
+    "1.4.0": {
+        "en": "Lots of bug fixes. Added WiFi strength and flow cards to Units. You might want to check your flows and insights. You can remove and re-add the unit without any effect on other devices.",
+        "nl": "Een boel bugs opgelost. WiFi signaalsterkte en trigger flow-cards toegevoegd aan units. Controleer je flows en insights, je kunt eventueel units opnieuw toevoegen zonder dat dit effect heeft op andere devices."
+    },
+    "1.5.0": {
+        "en": "Adds idle and uptime triggers and tokens to applicable devices. Adds support for 'Analog input' sensor. Add timeout option for unit polling. Rewrote unit pairing wizard. Added Wiki (click on Visit website). Add support for dummy device as 'Input switch' device. Also, lots of bugfixes!",
+        "nl": "Voegt idle en uptime triggers en tokens toe aan apparaten, Voegt ondersteuning voor 'Analog Input' apparaten toe. Voegt timeout optie toe voor het pollen van de unit. Pairing wizard voor units herschreven. Wiki toegevoegd (klik op Bezoek website). Ondersteuning voor Dummy apparaat toegevoegd als 'Input switch'. Tevens een hoop bugs opgelost!"
+    },
+    "1.6.0": {
+        "en": "Adds ability for 'Pulse Counter' devices and to use dummy devices as 'Environment sensor'",
+        "nl": "Ondersteuning toegevoegd voor 'Pulse Counter' apparaten en het gebruik van een Dummy apparaat als 'Environment sensor'"
+    },
+    "1.6.2": {
+        "en": "Make P1 sensors automagically reconnect on connection loss. Other small bug fixes.",
+        "nl": "P1 sensoren verbinden nu automagisch opnieuw bij een verbroken verbinding. Overige kleine bugfixes."
+    },
+    "1.7.1": {
+        "en": "Add support for MCP23017 GPIO extension board to GPIO Output devices; tailored pin-layouts for different boards; better support for ESP32 boards.",
+        "nl": "Voeg ondersteuning voor de MCP23017 GPIO uitbreidingschip bij gebruik als GPIO Output apparaten; aangepaste pin-layouts voor verschillende boards; betere ondersteuning voor ESP32 boards."
+    },
+    "1.8.0": {
+        "en": "Add support for gas sensors like the MH-Z19.",
+        "nl": "Voeg ondersteuning voor de gas sensoren zoals de MH-Z19."
+    },
+    "1.9.0": {
+        "en": "Added a bunch of flow cards for sensors and units; Lots of other small bugfixes and improvements",
+        "nl": "Een stapel flowkaarten toegevoegd voor sensoren en units; Een heleboel andere bugfixes en verbeteringen"
+    }
 }

@@ -1,14 +1,14 @@
 {
-	"type": "number",
-	"title": {
-		"en": "Equivalent CO2"
-	},
-	"icon": "/assets/icons/eco2.svg",
-	"insights": true,
-	"uiComponent": "sensor",
-	"getable": true,
-	"setable": false,
-	"units": {
-		"en": "PPM"
-	}
+    "type": "number",
+    "title": {
+        "en": "Equivalent CO2"
+    },
+    "icon": "/assets/icons/eco2.svg",
+    "insights": true,
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "units": {
+        "en": "PPM"
+    }
 }

@@ -1,32 +1,29 @@
 {
-	"actions": [
-		{
-			"id": "send_custom_tone",
-			"title": {
-				"en": "Play personalized tone"
-			},
-			"args": [
-				{
-					"type": "number",
-					"name": "tone_duration",
-					"min": 1,
-					"step": 1,
-					"placeholder": {
-						"en": "Duration in milliseconds",
-						"nl": "Duur in milliseconden"
-					}
-				},
-				{
-					"type": "number",
-					"name": "tone_frequency",
-					"min": 1,
-					"step": 1,
-					"placeholder": {
-						"en": "Frequency in hertz",
-						"nl": "Frequentie in hertz"
-					}
-				}
-			]
-		}
-	]
+    "actions": [{
+        "id": "send_custom_tone",
+        "title": {
+            "en": "Play personalized tone"
+        },
+        "args": [{
+                "type": "number",
+                "name": "tone_duration",
+                "min": 1,
+                "step": 1,
+                "placeholder": {
+                    "en": "Duration in milliseconds",
+                    "nl": "Duur in milliseconden"
+                }
+            },
+            {
+                "type": "number",
+                "name": "tone_frequency",
+                "min": 1,
+                "step": 1,
+                "placeholder": {
+                    "en": "Frequency in hertz",
+                    "nl": "Frequentie in hertz"
+                }
+            }
+        ]
+    }]
 }

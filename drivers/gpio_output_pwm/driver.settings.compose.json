@@ -1,32 +1,29 @@
-[
-	{
-		"$extends": "unitInfo"
-	},
-	{
-		"type": "group",
-		"label": {
-			"en": "Device settings",
-			"nl": "Apparaatinstellingen"
-		},
-		"children": [
-			{
-				"id": "pollInterval",
-				"type": "number",
-				"label": {
-					"en": "Polling interval"
-				},
-				"value": 60,
-				"min": 5,
-				"max": 3600,
-				"units": {
-					"en": "seconds",
-					"nl": "seconden"
-				},
-				"hint": {
-					"en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized",
-					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
-				}
-			}
-		]
-	}
+[{
+        "$extends": "unitInfo"
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "Device settings",
+            "nl": "Apparaatinstellingen"
+        },
+        "children": [{
+            "id": "pollInterval",
+            "type": "number",
+            "label": {
+                "en": "Polling interval"
+            },
+            "value": 60,
+            "min": 5,
+            "max": 3600,
+            "units": {
+                "en": "seconds",
+                "nl": "seconden"
+            },
+            "hint": {
+                "en": "Current releases of ESP Mega will always return '0' as PWM frequency so the state is ignored. The polling is to check for device reboots and other changes that will have te pin need to be re-initialized",
+                "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
+            }
+        }]
+    }
 ]

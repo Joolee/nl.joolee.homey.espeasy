@@ -1,10 +1,9 @@
 {
-	"triggers": [
-		{
-			"$extends": "measure_idle_time_changed"
-		},
-		{
-			"$extends": "measure_raw_number_changed"
-		}
-	]
+    "triggers": [{
+            "$extends": "measure_idle_time_changed"
+        },
+        {
+            "$extends": "measure_raw_number_changed"
+        }
+    ]
 }

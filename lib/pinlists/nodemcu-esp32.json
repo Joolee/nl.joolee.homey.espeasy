@@ -1,622 +1,621 @@
-[
-	{
-		"id": "gpio0",
-		"pin": 0,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 0",
-		"description": "Touch 1",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio1",
-		"pin": 1,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 1",
-		"description": "TX0",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio2",
-		"pin": 2,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 2",
-		"description": "Touch 2 / LED",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio3",
-		"pin": 3,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 3",
-		"description": "RX0",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio4",
-		"pin": 4,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 4",
-		"description": "Touch 0",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio5",
-		"pin": 5,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 5",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio6",
-		"pin": 6,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 6",
-		"description": "SCK/CLK",
-		"commands": {}
-	},
-	{
-		"id": "gpio7",
-		"pin": 7,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 7",
-		"description": "SDO/SD0",
-		"commands": {}
-	},
-	{
-		"id": "gpio8",
-		"pin": 8,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 8",
-		"description": "SDI/SD1",
-		"commands": {}
-	},
-	{
-		"id": "gpio9",
-		"pin": 9,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 9",
-		"description": "SHD/SD2",
-		"commands": {}
-	},
-	{
-		"id": "gpio10",
-		"pin": 10,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 10",
-		"description": "SWP/SD3",
-		"commands": {}
-	},
-	{
-		"id": "gpio11",
-		"pin": 11,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 11",
-		"description": "CSC/CMD",
-		"commands": {}
-	},
-	{
-		"id": "gpio12",
-		"pin": 12,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 12",
-		"description": "Touch 5",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio13",
-		"pin": 13,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 13",
-		"description": "Touch 4",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio14",
-		"pin": 14,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 14",
-		"description": "Touch 6",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio15",
-		"pin": 15,
-		"enabled": true,
-		"visible": true,
-		"warning": true,
-		"name": "GPIO 15",
-		"description": "Touch 3",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio16",
-		"pin": 16,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 16",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio17",
-		"pin": 17,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 17",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio18",
-		"pin": 18,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 18",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio19",
-		"pin": 19,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 19",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio20",
-		"pin": 20,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 20",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio21",
-		"pin": 21,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 21",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio22",
-		"pin": 22,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 22",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio23",
-		"pin": 23,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 23",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio24",
-		"pin": 24,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 24",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio25",
-		"pin": 25,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 25",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio26",
-		"pin": 26,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 26",
-		"description": "",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio27",
-		"pin": 27,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 27",
-		"description": "Touch 7",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio28",
-		"pin": 28,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 28",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio29",
-		"pin": 20,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 29",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio30",
-		"pin": 30,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 30",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio31",
-		"pin": 31,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 31",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio32",
-		"pin": 32,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 32",
-		"description": "Touch 9",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio33",
-		"pin": 33,
-		"enabled": true,
-		"visible": true,
-		"warning": false,
-		"name": "GPIO 33",
-		"description": "Touch 8",
-		"commands": {
-			"status": "Status,GPIO",
-			"bool": "GPIO",
-			"pwm": "PWM",
-			"pulse": "Pulse",
-			"longpulse": "LongPulse",
-			"longpulsems": "LongPulse_mS",
-			"servo": "Servo",
-			"tone": "tone",
-			"rtttl": "rtttl"
-		}
-	},
-	{
-		"id": "gpio34",
-		"pin": 34,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 34",
-		"description": "Input only",
-		"commands": {}
-	},
-	{
-		"id": "gpio35",
-		"pin": 35,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 35",
-		"description": "Input only",
-		"commands": {}
-	},
-	{
-		"id": "gpio36",
-		"pin": 36,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 36",
-		"description": "Input only",
-		"commands": {}
-	},
-	{
-		"id": "gpio37",
-		"pin": 37,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 37",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio38",
-		"pin": 38,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 38",
-		"description": "Not connected",
-		"commands": {}
-	},
-	{
-		"id": "gpio39",
-		"pin": 39,
-		"enabled": false,
-		"visible": false,
-		"warning": false,
-		"name": "GPIO 39",
-		"description": "Input only",
-		"commands": {}
-	}
+[{
+        "id": "gpio0",
+        "pin": 0,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 0",
+        "description": "Touch 1",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio1",
+        "pin": 1,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 1",
+        "description": "TX0",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio2",
+        "pin": 2,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 2",
+        "description": "Touch 2 / LED",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio3",
+        "pin": 3,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 3",
+        "description": "RX0",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio4",
+        "pin": 4,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 4",
+        "description": "Touch 0",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio5",
+        "pin": 5,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 5",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio6",
+        "pin": 6,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 6",
+        "description": "SCK/CLK",
+        "commands": {}
+    },
+    {
+        "id": "gpio7",
+        "pin": 7,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 7",
+        "description": "SDO/SD0",
+        "commands": {}
+    },
+    {
+        "id": "gpio8",
+        "pin": 8,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 8",
+        "description": "SDI/SD1",
+        "commands": {}
+    },
+    {
+        "id": "gpio9",
+        "pin": 9,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 9",
+        "description": "SHD/SD2",
+        "commands": {}
+    },
+    {
+        "id": "gpio10",
+        "pin": 10,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 10",
+        "description": "SWP/SD3",
+        "commands": {}
+    },
+    {
+        "id": "gpio11",
+        "pin": 11,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 11",
+        "description": "CSC/CMD",
+        "commands": {}
+    },
+    {
+        "id": "gpio12",
+        "pin": 12,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 12",
+        "description": "Touch 5",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio13",
+        "pin": 13,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 13",
+        "description": "Touch 4",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio14",
+        "pin": 14,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 14",
+        "description": "Touch 6",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio15",
+        "pin": 15,
+        "enabled": true,
+        "visible": true,
+        "warning": true,
+        "name": "GPIO 15",
+        "description": "Touch 3",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio16",
+        "pin": 16,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 16",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio17",
+        "pin": 17,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 17",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio18",
+        "pin": 18,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 18",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio19",
+        "pin": 19,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 19",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio20",
+        "pin": 20,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 20",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio21",
+        "pin": 21,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 21",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio22",
+        "pin": 22,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 22",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio23",
+        "pin": 23,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 23",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio24",
+        "pin": 24,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 24",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio25",
+        "pin": 25,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 25",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio26",
+        "pin": 26,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 26",
+        "description": "",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio27",
+        "pin": 27,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 27",
+        "description": "Touch 7",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio28",
+        "pin": 28,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 28",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio29",
+        "pin": 20,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 29",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio30",
+        "pin": 30,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 30",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio31",
+        "pin": 31,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 31",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio32",
+        "pin": 32,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 32",
+        "description": "Touch 9",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio33",
+        "pin": 33,
+        "enabled": true,
+        "visible": true,
+        "warning": false,
+        "name": "GPIO 33",
+        "description": "Touch 8",
+        "commands": {
+            "status": "Status,GPIO",
+            "bool": "GPIO",
+            "pwm": "PWM",
+            "pulse": "Pulse",
+            "longpulse": "LongPulse",
+            "longpulsems": "LongPulse_mS",
+            "servo": "Servo",
+            "tone": "tone",
+            "rtttl": "rtttl"
+        }
+    },
+    {
+        "id": "gpio34",
+        "pin": 34,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 34",
+        "description": "Input only",
+        "commands": {}
+    },
+    {
+        "id": "gpio35",
+        "pin": 35,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 35",
+        "description": "Input only",
+        "commands": {}
+    },
+    {
+        "id": "gpio36",
+        "pin": 36,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 36",
+        "description": "Input only",
+        "commands": {}
+    },
+    {
+        "id": "gpio37",
+        "pin": 37,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 37",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio38",
+        "pin": 38,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 38",
+        "description": "Not connected",
+        "commands": {}
+    },
+    {
+        "id": "gpio39",
+        "pin": 39,
+        "enabled": false,
+        "visible": false,
+        "warning": false,
+        "name": "GPIO 39",
+        "description": "Input only",
+        "commands": {}
+    }
 ]

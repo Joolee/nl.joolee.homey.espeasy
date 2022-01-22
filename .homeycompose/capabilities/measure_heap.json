@@ -3,8 +3,8 @@
     "title": {
         "en": "Heap Free",
         "nl": "Heap Beschikbaar"
-	},
-	"icon": "/assets/icons/heap.svg",
+    },
+    "icon": "/assets/icons/heap.svg",
     "insights": true,
     "uiComponent": "sensor",
     "getable": true,
