@@ -4,11 +4,23 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Launch app",
+            "type": "node",
+            "request": "launch",
+            "program": "/usr/local/bin/homey",
+            "args": ["app", "run"],
+            "serverReadyAction":{
+                "pattern": "Logging stdout & stderr",
+                "action": "startDebugging",
+                "name": "Attach to Homey"
+            }
+        },
     {
+        "name": "Attach to Homey",
         "type": "node",
         "request": "attach",
         "restart": true,
-        "name": "Attach to Homey",
         "address": "192.168.55.34",
         "port": 9222,
         "localRoot": "${workspaceFolder}",
