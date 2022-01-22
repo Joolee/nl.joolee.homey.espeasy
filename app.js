@@ -7,6 +7,11 @@ const HomeyLib = require('homey-lib');
 class ESPEasy extends Homey.App {
 
 	onInit() {
+		if (process.env.DEBUG === '1')
+		{
+			require('inspector').open(9222, '0.0.0.0', true);
+		}
+
 		this.triggers = {};
 		this.actions = {};
 		this.units = new ESPEasyUnits();
