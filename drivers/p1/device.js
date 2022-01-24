@@ -189,7 +189,7 @@ module.exports = class P1_Device extends GeneralDevice {
         this.setValue("alarm_active_tariff", dg.electricity.tariffIndicator.toString());
 
         // Gas meter
-        this.setValue("measure_gas", dg.gas.reading);
+        this.setValue("meter_gas", dg.gas.reading);
 
         this.setAvailable();
     }
