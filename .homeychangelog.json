@@ -70,5 +70,9 @@
     "1.9.0": {
         "en": "Added a bunch of flow cards for sensors and units; Lots of other small bugfixes and improvements",
         "nl": "Een stapel flowkaarten toegevoegd voor sensoren en units; Een heleboel andere bugfixes en verbeteringen"
+    },
+    "1.9.1": {
+        "en": "Fixed bug preventing gas readings for P1 device to work. Removed all but one NPM dependency from the app to reduce vulnerabilities",
+        "nl": "Een bug opgelost welke ervoor zorgde dat de gasmetingen van een P1 apparaat niet werkte. Op één na alle code dependencies verwijderd om beveiligingsproblemen te voorkomen."
     }
 }
