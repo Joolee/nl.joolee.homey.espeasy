@@ -4,6 +4,9 @@
 		"title": {
 			"en": "Play personalized tone"
 		},
+		"titleFormatted": {
+			"en": "Play tone of [[tone_frequency]]Hz for [[tone_duration]]ms"
+		},
 		"args": [{
 				"type": "number",
 				"name": "tone_duration",

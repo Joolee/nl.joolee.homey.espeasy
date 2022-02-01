@@ -4,6 +4,9 @@
 		"title": {
 			"en": "Play personalized melody"
 		},
+		"titleFormatted": {
+			"en": "Play personalized melody [[melody_string]]"
+		},
 		"args": [{
 			"type": "text",
 			"name": "melody_string",

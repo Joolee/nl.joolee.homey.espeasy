@@ -1,5 +1,4 @@
 {
-	"id": "unit",
 	"name": {
 		"en": "ESP Easy Unit"
 	},
@@ -14,10 +13,6 @@
 		"measure_signal_strength",
 		"device_heartbeat"
 	],
-	"images": {
-		"large": "{{driverAssetsPath}}/images/large.png",
-		"small": "{{driverAssetsPath}}/images/small.png"
-	},
 	"pair": [{
 			"id": "find_unit",
 			"navigation": {
@@ -45,5 +40,9 @@
 			"preventInsights": true,
 			"preventTag ": true
 		}
-	}
+	},
+	"$extends": [
+		"default-images",
+		"pair-list-settings-done"
+	]
 }

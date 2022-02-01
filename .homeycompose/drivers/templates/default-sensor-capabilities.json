@@ -1,0 +1,7 @@
+{
+	"class": "sensor",
+	"capabilities": [
+		"measure_idle_time",
+		"device_heartbeat"
+	]
+}

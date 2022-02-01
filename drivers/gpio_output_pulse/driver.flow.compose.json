@@ -4,6 +4,9 @@
 		"title": {
 			"en": "Send pulse of custom length"
 		},
+		"titleFormatted": {
+			"en": "Send pulse of length [[pulse_duration]]"
+		},
 		"args": [{
 			"type": "number",
 			"name": "pulse_duration",

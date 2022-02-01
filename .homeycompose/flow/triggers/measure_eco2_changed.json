@@ -1,6 +1,5 @@
 {
-	"id": "measure_eco2_changed",
-	"$filter": "capabilities=measure_eco2",
+	"$filter": "capabilities=measure_eco2&driver_id=pulse_counter|input_analog|gasses",
 	"title": {
 		"en": "Equivalent CO2 changed",
 		"nl": "Equivalent CO2 veranderd"

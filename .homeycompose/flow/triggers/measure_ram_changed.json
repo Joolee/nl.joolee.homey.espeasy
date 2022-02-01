@@ -1,6 +1,5 @@
 {
-	"id": "measure_ram_changed",
-	"$filter": "capabilities=measure_ram",
+	"$filter": "capabilities=measure_ram&driver_id=unit|pulse_counter|input_analog",
 	"title": {
 		"en": "System RAM usage changed",
 		"nl": "Beschikbaar werkgeheugen is veranderd"

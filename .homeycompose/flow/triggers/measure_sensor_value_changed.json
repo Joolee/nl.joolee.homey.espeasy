@@ -1,6 +1,5 @@
 {
-	"id": "measure_sensor_value",
-	"$filter": "capabilities=measure_sensor_value",
+	"$filter": "capabilities=measure_sensor_value&driver_id=pulse_counter",
 	"title": {
 		"en": "Raw sensor value changed",
 		"nl": "Ruwe sensorwaarde is veranderd"

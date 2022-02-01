@@ -1,6 +1,5 @@
 {
-	"id": "measure_heap_changed",
-	"$filter": "capabilities=measure_heap",
+	"$filter": "capabilities=measure_heap&driver_id=unit|pulse_counter|input_analog",
 	"title": {
 		"en": "Available heap blocks changed",
 		"nl": "Beschikbare heap blocks veranderd"

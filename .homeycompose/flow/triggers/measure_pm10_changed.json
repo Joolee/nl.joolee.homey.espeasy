@@ -1,5 +1,5 @@
 {
-	"$filter": "capabilities=measure_pm10",
+	"$filter": "capabilities=measure_pm10&driver_id=dust|pulse_counter|input_analog",
 	"title": {
 		"en": "The PM10 value has changed",
 		"nl": "De PM10 waarde is veranderd",

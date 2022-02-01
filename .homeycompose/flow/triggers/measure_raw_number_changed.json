@@ -1,6 +1,5 @@
 {
-	"id": "measure_raw_number",
-	"$filter": "capabilities=measure_raw_number",
+	"$filter": "capabilities=measure_raw_number&driver_id=pulse_counter|input_analog",
 	"title": {
 		"en": "Raw value changed",
 		"nl": "Ruwe waarde is veranderd"

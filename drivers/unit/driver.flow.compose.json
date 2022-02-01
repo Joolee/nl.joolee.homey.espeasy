@@ -1,23 +1,5 @@
 {
 	"triggers": [{
-			"$extends": "measure_heap_changed"
-		},
-		{
-			"$extends": "measure_idle_time_changed"
-		},
-		{
-			"$extends": "measure_load_changed"
-		},
-		{
-			"$extends": "measure_ram_changed"
-		},
-		{
-			"$extends": "measure_signal_strength_changed"
-		},
-		{
-			"$extends": "measure_uptime_changed"
-		},
-		{
 			"id": "unit_rebooted",
 			"title": {
 				"en": "Unit rebooted",
@@ -97,6 +79,9 @@
 			"title": {
 				"en": "Send command"
 			},
+			"titleFormatted": {
+				"en": "Send command [[command_string]]"
+			},
 			"args": [{
 				"type": "text",
 				"name": "command_string",
@@ -111,6 +96,9 @@
 			"title": {
 				"en": "Start event"
 			},
+			"titleFormatted": {
+				"en": "Start event [[event_name]]"
+			},
 			"args": [{
 				"type": "text",
 				"name": "event_name",
@@ -124,6 +112,9 @@
 			"id": "start_event_with_parameter",
 			"title": {
 				"en": "Start event (with parameter)"
+			},
+			"titleFormatted": {
+				"en": "Start event [[event_name]] [[event_parameter]]"
 			},
 			"args": [{
 					"type": "text",
@@ -147,6 +138,9 @@
 			"title": {
 				"en": "Set task value"
 			},
+			"titleFormatted": {
+				"en": "Set task [[task_value_name]] to [[task_new_value]]"
+			},
 			"args": [{
 					"type": "autocomplete",
 					"name": "task_value_name",
@@ -169,6 +163,9 @@
 			"id": "run_task",
 			"title": {
 				"en": "Run (update) task"
+			},
+			"titleFormatted": {
+				"en": "Run (update) task [[task_name]]"
 			},
 			"args": [{
 				"type": "autocomplete",

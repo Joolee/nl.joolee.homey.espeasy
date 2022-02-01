@@ -1,6 +1,5 @@
 {
-	"id": "measure_signal_strength_changed",
-	"$filter": "capabilities=measure_signal_strength",
+	"$filter": "capabilities=measure_signal_strength&driver_id=unit|pulse_counter|input_analog",
 	"title": {
 		"en": "Signal strength changed",
 		"nl": "Signaalsterkte is veranderd"

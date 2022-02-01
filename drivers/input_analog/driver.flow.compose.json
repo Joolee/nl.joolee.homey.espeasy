@@ -1,36 +1,3 @@
 {
-	"triggers": [{
-			"$extends": "measure_idle_time_changed"
-		},
-		{
-			"$extends": "measure_eco2_changed"
-		},
-		{
-			"$extends": "measure_heap_changed"
-		},
-		{
-			"$extends": "measure_load_changed"
-		},
-		{
-			"$extends": "measure_ram_changed"
-		},
-		{
-			"$extends": "measure_signal_strength_changed"
-		},
-		{
-			"$extends": "measure_tvoc_changed"
-		},
-		{
-			"$extends": "measure_dust_changed"
-		},
-		{
-			"$extends": "measure_pm1_changed"
-		},
-		{
-			"$extends": "measure_pm10_changed"
-		},
-		{
-			"$extends": "measure_unknown_changed"
-		}
-	]
+	"triggers": []
 }

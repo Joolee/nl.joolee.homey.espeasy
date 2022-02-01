@@ -1,6 +1,5 @@
 {
-	"id": "measure_load_changed",
-	"$filter": "capabilities=measure_load",
+	"$filter": "capabilities=measure_load&driver_id=unit|pulse_counter|input_analog",
 	"title": {
 		"en": "System load changed",
 		"nl": "Systeembelasting is veranderd"

@@ -1,0 +1,24 @@
+{
+	"pair": [{
+			"id": "list_devices",
+			"template": "list_devices",
+			"options": {
+				"singular": true
+			},
+			"navigation": {
+				"next": "settings"
+			}
+		},
+		{
+			"id": "settings",
+			"navigation": {
+				"prev": "list_devices",
+				"next": "done"
+			}
+		},
+		{
+			"id": "done",
+			"template": "done"
+		}
+	]
+}

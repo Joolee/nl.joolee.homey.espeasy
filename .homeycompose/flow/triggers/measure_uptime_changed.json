@@ -1,6 +1,5 @@
 {
-	"id": "measure_uptime_changed",
-	"$filter": "capabilities=measure_uptime",
+	"$filter": "capabilities=measure_uptime&driver_id=unit",
 	"title": {
 		"en": "Uptime changed",
 		"nl": "Uptime is veranderd"

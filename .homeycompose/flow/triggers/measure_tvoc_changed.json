@@ -1,6 +1,5 @@
 {
-	"id": "measure_tvoc_changed",
-	"$filter": "capabilities=measure_tvoc",
+	"$filter": "capabilities=measure_tvoc&driver_id=pulse_counter|input_analog|gasses",
 	"title": {
 		"en": "TVOC changed",
 		"nl": "TVOC veranderd"

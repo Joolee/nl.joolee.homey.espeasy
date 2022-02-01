@@ -1,23 +1,10 @@
 {
-	"id": "gpio_rtttl",
 	"name": {
 		"en": "GPIO Melody Output"
 	},
-	"class": "other",
-	"capabilities": [],
-	"images": {
-		"large": "{{driverAssetsPath}}/images/large.png",
-		"small": "{{driverAssetsPath}}/images/small.png"
-	},
-	"pair": [{
-			"id": "start",
-			"navigation": {
-				"next": "done"
-			}
-		},
-		{
-			"id": "done",
-			"template": "done"
-		}
+	"$extends": [
+		"default-output-capabilities",
+		"default-images",
+		"pair-start-done"
 	]
 }
