@@ -21,6 +21,15 @@
             "$extends": "measure_tvoc_changed"
         },
         {
+            "$extends": "measure_dust_changed"
+        },
+        {
+            "$extends": "measure_pm1_changed"
+        },
+        {
+            "$extends": "measure_pm10_changed"
+        },
+        {
             "$extends": "measure_unknown_changed"
         }
     ]

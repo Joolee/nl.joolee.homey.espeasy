@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 110 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/Homey-SVG-Icons -->
+	<path
+		stroke="black" stroke-width="4" fill="transparent" stroke-linecap="round"
+		d="M 31 81
+		C 2 82, 2 47, 21 42
+		C 30 10, 69 10, 78 42
+		C 85 43, 91 50, 91 56"
+	></path>
+
+	<!-- Middle dot -->
+	<circle cx="49.5" cy="45.4" r="1.7" fill="black"/>
+
+	<!-- Above/Below -->
+	<circle cx="49.5" cy="34.3" r="1.7" fill="black"/>
+	<circle cx="49.5" cy="56.5" r="1.7" fill="black"/>
+
+	<!-- Left/right -->
+	<circle cx="67" cy="45.4" r="1.7" fill="black"/>
+	<circle cx="32" cy="45.4" r="1.7" fill="black"/>
+
+	<!-- Square -->
+	<circle cx="40.7" cy="39.7" r="1.7" fill="black"/>
+	<circle cx="58.3" cy="39.7" r="1.7" fill="black"/>
+	<circle cx="58.3" cy="51" r="1.7" fill="black"/>
+	<circle cx="40.7" cy="51" r="1.7" fill="black"/>
+
+	<text x="33" y="82" font-size="27" letter-spacing="-1.5" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="black">PM 10</text>
+</svg>
