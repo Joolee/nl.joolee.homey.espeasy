@@ -1,2 +1,4 @@
 .git
 /tools
+*.md
+/LICENSE
