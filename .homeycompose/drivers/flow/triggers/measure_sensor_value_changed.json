@@ -1,17 +1,17 @@
 {
-    "id": "measure_sensor_value",
-    "$filter": "capabilities=measure_sensor_value",
-    "title": {
-        "en": "Raw sensor value changed",
-        "nl": "Ruwe sensorwaarde is veranderd"
-    },
-    "tokens": [{
-        "name": "measure_sensor_value",
-        "type": "number",
-        "title": {
-            "en": "Raw sensor value",
-            "nl": "Ruwe sensorwaarde"
-        },
-        "example": 11.42
-    }]
+	"id": "measure_sensor_value",
+	"$filter": "capabilities=measure_sensor_value",
+	"title": {
+		"en": "Raw sensor value changed",
+		"nl": "Ruwe sensorwaarde is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_sensor_value",
+		"type": "number",
+		"title": {
+			"en": "Raw sensor value",
+			"nl": "Ruwe sensorwaarde"
+		},
+		"example": 11.42
+	}]
 }

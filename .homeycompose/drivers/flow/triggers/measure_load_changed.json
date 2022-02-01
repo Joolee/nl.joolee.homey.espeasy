@@ -1,17 +1,17 @@
 {
-    "id": "measure_load_changed",
-    "$filter": "capabilities=measure_load",
-    "title": {
-        "en": "System load changed",
-        "nl": "Systeembelasting is veranderd"
-    },
-    "tokens": [{
-        "name": "measure_load",
-        "type": "number",
-        "title": {
-            "en": "System load",
-            "nl": "Systeembelasting"
-        },
-        "example": 11.42
-    }]
+	"id": "measure_load_changed",
+	"$filter": "capabilities=measure_load",
+	"title": {
+		"en": "System load changed",
+		"nl": "Systeembelasting is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_load",
+		"type": "number",
+		"title": {
+			"en": "System load",
+			"nl": "Systeembelasting"
+		},
+		"example": 11.42
+	}]
 }

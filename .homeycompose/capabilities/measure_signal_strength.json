@@ -1,15 +1,15 @@
 {
-    "type": "number",
-    "title": {
-        "en": "Signal strength",
-        "nl": "Signaalsterkte"
-    },
-    "icon": "/assets/icons/wifi.svg",
-    "insights": true,
-    "uiComponent": "sensor",
-    "getable": true,
-    "setable": false,
-    "units": {
-        "en": "dB"
-    }
+	"type": "number",
+	"title": {
+		"en": "Signal strength",
+		"nl": "Signaalsterkte"
+	},
+	"icon": "/assets/icons/wifi.svg",
+	"insights": true,
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false,
+	"units": {
+		"en": "dB"
+	}
 }

@@ -1,18 +1,16 @@
 {
-    "$filter": "capabilities=measure_dust",
-    "title": {
-      "en": "The dust value has changed",
-      "nl": "De stof waarde is veranderd"
-    },
-    "tokens": [
-      {
-        "name": "measure_dust",
-        "title": {
-          "en": "Dust",
-          "nl": "Stof"
-        },
-        "type": "number",
-        "example": 2
-      }
-    ]
-  }
+	"$filter": "capabilities=measure_dust",
+	"title": {
+		"en": "The dust value has changed",
+		"nl": "De stof waarde is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_dust",
+		"title": {
+			"en": "Dust",
+			"nl": "Stof"
+		},
+		"type": "number",
+		"example": 2
+	}]
+}

@@ -1,11 +1,11 @@
 {
-    "type": "number",
-    "title": {
-        "en": "Raw sensor value",
-        "nl": "Ruwe sensorwaarde"
-    },
-    "insights": true,
-    "uiComponent": null,
-    "getable": true,
-    "setable": false
+	"type": "number",
+	"title": {
+		"en": "Raw sensor value",
+		"nl": "Ruwe sensorwaarde"
+	},
+	"insights": true,
+	"uiComponent": null,
+	"getable": true,
+	"setable": false
 }

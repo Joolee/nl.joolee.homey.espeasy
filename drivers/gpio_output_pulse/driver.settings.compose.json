@@ -1,56 +1,56 @@
 [{
-        "$extends": "unitInfo"
-    },
-    {
-        "type": "group",
-        "label": {
-            "en": "Device settings",
-            "nl": "Apparaatinstellingen"
-        },
-        "children": [{
-                "id": "pollInterval",
-                "type": "number",
-                "label": {
-                    "en": "Polling interval"
-                },
-                "value": 60,
-                "min": 5,
-                "max": 3600,
-                "units": {
-                    "en": "seconds",
-                    "nl": "seconden"
-                },
-                "hint": {
-                    "en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
-                    "nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
-                }
-            },
-            {
-                "id": "duration",
-                "type": "number",
-                "label": {
-                    "en": "Pulse duration",
-                    "nl": "Pulsduratie"
-                },
-                "value": 500,
-                "units": {
-                    "en": "milliseconds",
-                    "nl": "milliseconden"
-                }
-            },
-            {
-                "id": "invert",
-                "type": "checkbox",
-                "label": {
-                    "en": "Invert command",
-                    "nl": "Draai commando om"
-                },
-                "value": false,
-                "hint": {
-                    "en": "Send state '0' as pulse command instead of '1'",
-                    "nl": "Stuur de waarde '0' als pulse commando in plaats van '1'"
-                }
-            }
-        ]
-    }
+		"$extends": "unitInfo"
+	},
+	{
+		"type": "group",
+		"label": {
+			"en": "Device settings",
+			"nl": "Apparaatinstellingen"
+		},
+		"children": [{
+				"id": "pollInterval",
+				"type": "number",
+				"label": {
+					"en": "Polling interval"
+				},
+				"value": 60,
+				"min": 5,
+				"max": 3600,
+				"units": {
+					"en": "seconds",
+					"nl": "seconden"
+				},
+				"hint": {
+					"en": "Request pin status from the unit and re-initialize the pin when, for example, a unit reboot or other app has changed the state",
+					"nl": "Vraagt de pinstatus op bij de unit en her-initialiseert deze wanneer de unit bijvoorbeeld is herstart of wanneer een andere app de pin status heeft gewijzigd."
+				}
+			},
+			{
+				"id": "duration",
+				"type": "number",
+				"label": {
+					"en": "Pulse duration",
+					"nl": "Pulsduratie"
+				},
+				"value": 500,
+				"units": {
+					"en": "milliseconds",
+					"nl": "milliseconden"
+				}
+			},
+			{
+				"id": "invert",
+				"type": "checkbox",
+				"label": {
+					"en": "Invert command",
+					"nl": "Draai commando om"
+				},
+				"value": false,
+				"hint": {
+					"en": "Send state '0' as pulse command instead of '1'",
+					"nl": "Stuur de waarde '0' als pulse commando in plaats van '1'"
+				}
+			}
+		]
+	}
 ]

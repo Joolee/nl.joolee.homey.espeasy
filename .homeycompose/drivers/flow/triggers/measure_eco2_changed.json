@@ -1,16 +1,16 @@
 {
-    "id": "measure_eco2_changed",
-    "$filter": "capabilities=measure_eco2",
-    "title": {
-        "en": "Equivalent CO2 changed",
-        "nl": "Equivalent CO2 veranderd"
-    },
-    "tokens": [{
-        "name": "measure_eco2",
-        "type": "number",
-        "title": {
-            "en": "Equivalent CO2"
-        },
-        "example": 7
-    }]
+	"id": "measure_eco2_changed",
+	"$filter": "capabilities=measure_eco2",
+	"title": {
+		"en": "Equivalent CO2 changed",
+		"nl": "Equivalent CO2 veranderd"
+	},
+	"tokens": [{
+		"name": "measure_eco2",
+		"type": "number",
+		"title": {
+			"en": "Equivalent CO2"
+		},
+		"example": 7
+	}]
 }

@@ -1,12 +1,12 @@
 {
-    "type": "number",
-    "title": {
-        "en": "Unknown value",
-        "nl": "Onbekende waarde"
-    },
-    "icon": "/assets/icons/unknown.svg",
-    "insights": true,
-    "uiComponent": "sensor",
-    "getable": true,
-    "setable": false
+	"type": "number",
+	"title": {
+		"en": "Unknown value",
+		"nl": "Onbekende waarde"
+	},
+	"icon": "/assets/icons/unknown.svg",
+	"insights": true,
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false
 }

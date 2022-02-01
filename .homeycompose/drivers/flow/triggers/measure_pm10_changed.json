@@ -1,24 +1,22 @@
 {
-    "$filter": "capabilities=measure_pm10",
-    "title": {
-      "en": "The PM10 value has changed",
-      "nl": "De PM10 waarde is veranderd",
-      "de": "Der PM10-Wert hat sich geändert",
-      "fr": "La valeur PM10 a changé",
-      "it": "Il valore di PM10 è cambiato",
-      "sv": "PM1-värdet har ändrats",
-      "no": "PM1-verdien er endret",
-      "es": "El valor de PM10 ha cambiado",
-      "da": "PM10-værdien har ændret sig"
-    },
-    "tokens": [
-      {
-        "name": "measure_pm1",
-        "title": {
-          "en": "PM10"
-        },
-        "type": "number",
-        "example": 2
-      }
-    ]
-  }
+	"$filter": "capabilities=measure_pm10",
+	"title": {
+		"en": "The PM10 value has changed",
+		"nl": "De PM10 waarde is veranderd",
+		"de": "Der PM10-Wert hat sich geändert",
+		"fr": "La valeur PM10 a changé",
+		"it": "Il valore di PM10 è cambiato",
+		"sv": "PM1-värdet har ändrats",
+		"no": "PM1-verdien er endret",
+		"es": "El valor de PM10 ha cambiado",
+		"da": "PM10-værdien har ændret sig"
+	},
+	"tokens": [{
+		"name": "measure_pm1",
+		"title": {
+			"en": "PM10"
+		},
+		"type": "number",
+		"example": 2
+	}]
+}

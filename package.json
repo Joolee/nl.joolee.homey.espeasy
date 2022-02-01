@@ -1,8 +1,8 @@
 {
-    "name": "nl.joolee.homey.espeasy",
-    "version": "0.0.1",
-    "main": "app.js",
-    "dependencies": {
-        "http.min": "^2.1.0"
-    }
+	"name": "nl.joolee.homey.espeasy",
+	"version": "0.0.1",
+	"main": "app.js",
+	"dependencies": {
+		"http.min": "^2.1.0"
+	}
 }

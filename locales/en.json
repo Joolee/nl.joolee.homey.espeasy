@@ -1,123 +1,123 @@
 {
-    "offline": "Device offline",
-    "waiting_for_unit": "Waiting for unit",
-    "p1": {
-        "connecting": "Connecting to P1 Wifi Gateway on port __port__",
-        "waiting": "Waiting for first P1 datagram",
-        "connection_lost": "Unable to connect",
-        "invalid_datagram": "Invalid data received",
-        "connected_to_http_server": "Seem to be connected to a HTTP server on port __port__. Make sure you configure the P1 relay port and not the webserver port."
-    },
-    "pair": {
-        "p1": {
-            "description": "Make sure you see a P1 datagram when you visit http://__esp-ip__:&lt;portnumber&gt; before adding the P1 device to Homey.<br>Visit the folowing websites for more information:",
-            "title": "Configure new P1 Meter",
-            "device_not_found": "Could not find selected device",
-            "portnumber": "Wifi Gateway TCP Port:"
-        },
-        "sensor": {
-            "title": "Configure device",
-            "controller_list_placeholder": "-- Select Homey --",
-            "variant_list_placeholder": "-- Select device variant --",
-            "device_not_found": "Could not find selected device",
-            "selectController": "You have this device enabled for multiple controllers. Select Homey:",
-            "select_capability": "Select Homey device capability for value '__name__':",
-            "select_variant": "Select the '__variant-title__' you configured for this device in ESP Easy:",
-            "variant_hint": "Note: The 'values' defined in ESP Easy for this device must have a unique name",
-            "controllerSettings": "Using these controller settings:",
-            "controller": "Controller:",
-            "taskIDX": "Device IDX:",
-            "no_controller_selected": "You need to select a controller",
-            "no_variant_selected": "You need to select a device variant",
-            "noController": "You don't have a controller enabled for this device. Enable the Homey controller and set a unique IDX in the ESP Easy device settings. If you haven't set-up Homey as a controller yet, you can follow the step-by-step guide at: https://git.io/homey-esp-controller",
-            "idx0": "Using device IDX 0 is not supported. Change it in the ESP Easy device settings page.",
-            "duplicate": "Using a duplicate device IDX is not supported. You can find help with this issue at https://git.io/homey-esp-idxs"
-        },
-        "unit": {
-            "find_title": "Locate ESP Easy unit",
-            "connect_description": "Enter the network information of your ESP Easy unit.<br>Detailed information about setting up your unit can be found at:<br>https://git.io/homey-esp-wiki",
-            "select_description": "Or select your unit from the list below:",
-            "list_placeholder": "-- Select Unit --",
-            "host": "IP address or hostname:",
-            "ip": "IP Address:",
-            "port": "Port number:",
-            "error_no_host": "You need to input a valid IP address!",
-            "warning_dhcp": "No static IP detected for this unit, consider configuring a static IP address.\n\nPress Cancel to return to the previous page.",
-            "warning_no_events": "Homey has not received any events from the ESP unit yet! Are your sure you configured the controller correctly?\n\nPress Cancel to return to the previous page.",
-            "controller_title": "Setup controller",
-            "controller_login": "To allow Homey to receive events from ESP Easy, you need to set up Homey as new controller at __url__.<br>Note: The default credentials are admin/configesp",
-            "controller_help": "You can find a detailed how-to at<br>https://git.io/homey-esp-controller",
-            "controller_manual": "&gt; Or click here for the technical details if you want to give it a go.",
-            "publish_url": "Publish URL:",
-            "configure_first": "Click \"Next\" when you have finished the setup",
-            "tip": "Tip: If you don't have any sensors connected yet, add a dummy device: https://git.io/homey-esp-sysinfo",
-            "waiting": "Please configure Homey as controller in ESP Easy<br>Waiting for device events",
-            "finish": "Events received! Click next to finish setup",
-            "protocol": "Protocol"
-        },
-        "gpio": {
-            "bool": {
-                "title": "Add digital output pin",
-                "description": "Define the digital output pin"
-            },
-            "pwm": {
-                "title": "Add PWM output pin",
-                "description": "Define the PWM output pin"
-            },
-            "pulse": {
-                "title": "Add pulse output pin",
-                "description": "Define the pulse output pin",
-                "duration": "Default pulse duration in ms:"
-            },
-            "rtttl": {
-                "title": "Add melody pin",
-                "description": "Define the melody output pin",
-                "melody": "Default RTTTL melody string:"
-            },
-            "tone": {
-                "title": "Add tone output pin",
-                "description": "Define the tone output pin",
-                "duration": "Default tone duration in ms:",
-                "frequency": "Default tone frequency in hz:"
-            },
-            "select_unit": "ESP Easy unit:",
-            "unit_list_placeholder": "-- Select Unit --",
-            "select_pin": "GPIO Pin:",
-            "gpio_list_placeholder": "-- Select GPIO Pin --",
-            "pin_warning": "Pin is configured as __mode__, which will be overridden when you add this device!",
-            "pin_mode_default": "Your unit has no configuration for this pin yet",
-            "selectCapability": "Select Homey device capability:",
-            "error": {
-                "unit": "You need to select a unit",
-                "pin": "You need to select a GPIO pin",
-                "pulseDuration": "You need to enter a valid default pulse duration",
-                "toneDuration": "You need to enter a valid default tone duration",
-                "toneFrequency": "You need to enter a valid default tone frequency"
-            }
-        }
-    },
-    "minutes": "Minutes",
-    "gpio": {
-        "pinmodewarning": "Warning! Changed pin __pin__ from __frommode__ to __tomode__",
-        "names": {
-            "bool": "digital output",
-            "pulse": "pulse output",
-            "pwm": "pwm output",
-            "servo": "servo output",
-            "tone": "tone output",
-            "rtttl": "melody output",
-            "input": "digital input"
-        },
-        "pin_not_found": "Could not find pin definition. Check board type and expansion board settings for unit."
-    },
-    "sensor": {
-        "task_not_found": "Controller __controller__ does not contain a device with IDX __idx__",
-        "invalid_task": "Invalid device type of \"__type__\" for controller __controller__, IDX __idx__",
-        "duplicate_idx": "Controller __controller__ has multiple devices with IDX __idx__",
-        "io_board_offline": "I/O Expander board seems to be offline"
-    },
-    "unit": {
-        "error_connecting": "Could not reach device",
-        "on_board_pins": "On-board"
-    }
+	"offline": "Device offline",
+	"waiting_for_unit": "Waiting for unit",
+	"p1": {
+		"connecting": "Connecting to P1 Wifi Gateway on port __port__",
+		"waiting": "Waiting for first P1 datagram",
+		"connection_lost": "Unable to connect",
+		"invalid_datagram": "Invalid data received",
+		"connected_to_http_server": "Seem to be connected to a HTTP server on port __port__. Make sure you configure the P1 relay port and not the webserver port."
+	},
+	"pair": {
+		"p1": {
+			"description": "Make sure you see a P1 datagram when you visit http://__esp-ip__:&lt;portnumber&gt; before adding the P1 device to Homey.<br>Visit the folowing websites for more information:",
+			"title": "Configure new P1 Meter",
+			"device_not_found": "Could not find selected device",
+			"portnumber": "Wifi Gateway TCP Port:"
+		},
+		"sensor": {
+			"title": "Configure device",
+			"controller_list_placeholder": "-- Select Homey --",
+			"variant_list_placeholder": "-- Select device variant --",
+			"device_not_found": "Could not find selected device",
+			"selectController": "You have this device enabled for multiple controllers. Select Homey:",
+			"select_capability": "Select Homey device capability for value '__name__':",
+			"select_variant": "Select the '__variant-title__' you configured for this device in ESP Easy:",
+			"variant_hint": "Note: The 'values' defined in ESP Easy for this device must have a unique name",
+			"controllerSettings": "Using these controller settings:",
+			"controller": "Controller:",
+			"taskIDX": "Device IDX:",
+			"no_controller_selected": "You need to select a controller",
+			"no_variant_selected": "You need to select a device variant",
+			"noController": "You don't have a controller enabled for this device. Enable the Homey controller and set a unique IDX in the ESP Easy device settings. If you haven't set-up Homey as a controller yet, you can follow the step-by-step guide at: https://git.io/homey-esp-controller",
+			"idx0": "Using device IDX 0 is not supported. Change it in the ESP Easy device settings page.",
+			"duplicate": "Using a duplicate device IDX is not supported. You can find help with this issue at https://git.io/homey-esp-idxs"
+		},
+		"unit": {
+			"find_title": "Locate ESP Easy unit",
+			"connect_description": "Enter the network information of your ESP Easy unit.<br>Detailed information about setting up your unit can be found at:<br>https://git.io/homey-esp-wiki",
+			"select_description": "Or select your unit from the list below:",
+			"list_placeholder": "-- Select Unit --",
+			"host": "IP address or hostname:",
+			"ip": "IP Address:",
+			"port": "Port number:",
+			"error_no_host": "You need to input a valid IP address!",
+			"warning_dhcp": "No static IP detected for this unit, consider configuring a static IP address.\n\nPress Cancel to return to the previous page.",
+			"warning_no_events": "Homey has not received any events from the ESP unit yet! Are your sure you configured the controller correctly?\n\nPress Cancel to return to the previous page.",
+			"controller_title": "Setup controller",
+			"controller_login": "To allow Homey to receive events from ESP Easy, you need to set up Homey as new controller at __url__.<br>Note: The default credentials are admin/configesp",
+			"controller_help": "You can find a detailed how-to at<br>https://git.io/homey-esp-controller",
+			"controller_manual": "&gt; Or click here for the technical details if you want to give it a go.",
+			"publish_url": "Publish URL:",
+			"configure_first": "Click \"Next\" when you have finished the setup",
+			"tip": "Tip: If you don't have any sensors connected yet, add a dummy device: https://git.io/homey-esp-sysinfo",
+			"waiting": "Please configure Homey as controller in ESP Easy<br>Waiting for device events",
+			"finish": "Events received! Click next to finish setup",
+			"protocol": "Protocol"
+		},
+		"gpio": {
+			"bool": {
+				"title": "Add digital output pin",
+				"description": "Define the digital output pin"
+			},
+			"pwm": {
+				"title": "Add PWM output pin",
+				"description": "Define the PWM output pin"
+			},
+			"pulse": {
+				"title": "Add pulse output pin",
+				"description": "Define the pulse output pin",
+				"duration": "Default pulse duration in ms:"
+			},
+			"rtttl": {
+				"title": "Add melody pin",
+				"description": "Define the melody output pin",
+				"melody": "Default RTTTL melody string:"
+			},
+			"tone": {
+				"title": "Add tone output pin",
+				"description": "Define the tone output pin",
+				"duration": "Default tone duration in ms:",
+				"frequency": "Default tone frequency in hz:"
+			},
+			"select_unit": "ESP Easy unit:",
+			"unit_list_placeholder": "-- Select Unit --",
+			"select_pin": "GPIO Pin:",
+			"gpio_list_placeholder": "-- Select GPIO Pin --",
+			"pin_warning": "Pin is configured as __mode__, which will be overridden when you add this device!",
+			"pin_mode_default": "Your unit has no configuration for this pin yet",
+			"selectCapability": "Select Homey device capability:",
+			"error": {
+				"unit": "You need to select a unit",
+				"pin": "You need to select a GPIO pin",
+				"pulseDuration": "You need to enter a valid default pulse duration",
+				"toneDuration": "You need to enter a valid default tone duration",
+				"toneFrequency": "You need to enter a valid default tone frequency"
+			}
+		}
+	},
+	"minutes": "Minutes",
+	"gpio": {
+		"pinmodewarning": "Warning! Changed pin __pin__ from __frommode__ to __tomode__",
+		"names": {
+			"bool": "digital output",
+			"pulse": "pulse output",
+			"pwm": "pwm output",
+			"servo": "servo output",
+			"tone": "tone output",
+			"rtttl": "melody output",
+			"input": "digital input"
+		},
+		"pin_not_found": "Could not find pin definition. Check board type and expansion board settings for unit."
+	},
+	"sensor": {
+		"task_not_found": "Controller __controller__ does not contain a device with IDX __idx__",
+		"invalid_task": "Invalid device type of \"__type__\" for controller __controller__, IDX __idx__",
+		"duplicate_idx": "Controller __controller__ has multiple devices with IDX __idx__",
+		"io_board_offline": "I/O Expander board seems to be offline"
+	},
+	"unit": {
+		"error_connecting": "Could not reach device",
+		"on_board_pins": "On-board"
+	}
 }

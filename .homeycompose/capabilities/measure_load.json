@@ -1,16 +1,16 @@
 {
-    "type": "number",
-    "title": {
-        "en": "System load",
-        "nl": "Systeembelasting"
-    },
-    "icon": "/assets/icons/cpu.svg",
-    "decimals": 2,
-    "insights": true,
-    "uiComponent": "sensor",
-    "getable": true,
-    "setable": false,
-    "units": {
-        "en": "%"
-    }
+	"type": "number",
+	"title": {
+		"en": "System load",
+		"nl": "Systeembelasting"
+	},
+	"icon": "/assets/icons/cpu.svg",
+	"decimals": 2,
+	"insights": true,
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false,
+	"units": {
+		"en": "%"
+	}
 }

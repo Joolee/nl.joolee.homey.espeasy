@@ -1,66 +1,67 @@
 <link href="../../../assets/pairing/pair.css" rel="stylesheet" type="text/css" />
 <script src="../../../assets/pairing/unit.js" type="text/javascript"></script>
 <style>
-    #status {
-        margin-top: 25px;
-    }
-    
-    #status div {
-        text-align: center;
-    }
-    
-    div.icon {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-    
-    #controllerSuccess {
-        display: none;
-    }
-    
-    #controllerSuccess .icon {
-        color: green;
-    }
+	#status {
+		margin-top: 25px;
+	}
+
+	#status div {
+		text-align: center;
+	}
+
+	div.icon {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	#controllerSuccess {
+		display: none;
+	}
+
+	#controllerSuccess .icon {
+		color: green;
+	}
+
 </style>
 <p id="controllerLogin"></p>
 <p data-i18n="pair.unit.controller_help"></p>
 <a data-i18n="pair.unit.controller_manual" id="trymanual"></a>
 <section id="technical" class="hidden">
-    <table>
-        <tr>
-            <th data-i18n="pair.unit.protocol"></th>
-            <td>Generic HTTP</td>
-        </tr>
-        <tr>
-            <th data-i18n="pair.unit.ip"></th>
-            <td id="homeyIP"></td>
-        </tr>
-        <tr>
-            <th data-i18n="pair.unit.port"></th>
-            <td id="homeyPort"></td>
-        </tr>
-        <tr>
-            <th data-i18n="pair.unit.publish_url"></th>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                api/app/nl.joolee.ho<wbr>mey.esp<wbr>easy/?i=%ip%&m=%m<wbr>ac%&t=%tsk<wbr>name%&x=%id%<wbr>&k=%valn<wbr>ame%&v=%value%</td>
-        </tr>
-    </table>
+	<table>
+		<tr>
+			<th data-i18n="pair.unit.protocol"></th>
+			<td>Generic HTTP</td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.ip"></th>
+			<td id="homeyIP"></td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.port"></th>
+			<td id="homeyPort"></td>
+		</tr>
+		<tr>
+			<th data-i18n="pair.unit.publish_url"></th>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				api/app/nl.joolee.ho<wbr>mey.esp<wbr>easy/?i=%ip%&m=%m<wbr>ac%&t=%tsk<wbr>name%&x=%id%<wbr>&k=%valn<wbr>ame%&v=%value%</td>
+		</tr>
+	</table>
 </section>
 <p></p>
 
 <p data-i18n="pair.unit.configure_first" id="configureFirst"></p>
 
 <section id="status" class="hidden">
-    <p id="controllerTip" data-i18n="pair.unit.tip"></p>
-    <div id="waiting">
-        <div class="icon"><span class="fa fa-sun fa-spin fa-5x"></span></div>
-        <span data-i18n="pair.unit.waiting"></span>
-    </div>
-    <div id="controllerSuccess">
-        <div class="icon"><span class="fa fa-check fa-5x"></span></div>
-        <span data-i18n="pair.unit.finish"></span>
-    </div>
+	<p id="controllerTip" data-i18n="pair.unit.tip"></p>
+	<div id="waiting">
+		<div class="icon"><span class="fa fa-sun fa-spin fa-5x"></span></div>
+		<span data-i18n="pair.unit.waiting"></span>
+	</div>
+	<div id="controllerSuccess">
+		<div class="icon"><span class="fa fa-check fa-5x"></span></div>
+		<span data-i18n="pair.unit.finish"></span>
+	</div>
 </section>

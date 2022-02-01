@@ -1,11 +1,11 @@
 {
-    "type": "number",
-    "title": {
-        "en": "Raw value",
-        "nl": "Ruwe waarde"
-    },
-    "insights": true,
-    "uiComponent": null,
-    "getable": true,
-    "setable": false
+	"type": "number",
+	"title": {
+		"en": "Raw value",
+		"nl": "Ruwe waarde"
+	},
+	"insights": true,
+	"uiComponent": null,
+	"getable": true,
+	"setable": false
 }

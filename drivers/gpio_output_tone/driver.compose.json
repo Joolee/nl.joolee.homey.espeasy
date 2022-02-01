@@ -1,23 +1,23 @@
 {
-    "id": "gpio_tone",
-    "name": {
-        "en": "GPIO Tone Output"
-    },
-    "class": "other",
-    "capabilities": [],
-    "images": {
-        "large": "{{driverAssetsPath}}/images/large.png",
-        "small": "{{driverAssetsPath}}/images/small.png"
-    },
-    "pair": [{
-            "id": "start",
-            "navigation": {
-                "next": "done"
-            }
-        },
-        {
-            "id": "done",
-            "template": "done"
-        }
-    ]
+	"id": "gpio_tone",
+	"name": {
+		"en": "GPIO Tone Output"
+	},
+	"class": "other",
+	"capabilities": [],
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"pair": [{
+			"id": "start",
+			"navigation": {
+				"next": "done"
+			}
+		},
+		{
+			"id": "done",
+			"template": "done"
+		}
+	]
 }

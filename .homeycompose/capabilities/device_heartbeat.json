@@ -1,12 +1,12 @@
 {
-    "type": "string",
-    "title": {
-        "en": "Last seen",
-        "nl": "Laatste activiteit"
-    },
-    "icon": "/assets/icons/heartbeat.svg",
-    "uiComponent": "sensor",
-    "insights": false,
-    "getable": true,
-    "setable": false
+	"type": "string",
+	"title": {
+		"en": "Last seen",
+		"nl": "Laatste activiteit"
+	},
+	"icon": "/assets/icons/heartbeat.svg",
+	"uiComponent": "sensor",
+	"insights": false,
+	"getable": true,
+	"setable": false
 }

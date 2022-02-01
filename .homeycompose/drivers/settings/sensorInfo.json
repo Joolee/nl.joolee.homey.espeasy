@@ -1,32 +1,32 @@
 {
-    "type": "group",
-    "label": {
-        "en": "Device identification",
-        "nl": "Apparaatidentificatie"
-    },
-    "children": [{
-            "id": "controller",
-            "type": "number",
-            "label": {
-                "en": "Controller ID"
-            },
-            "value": 0,
-            "hint": {
-                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
-                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
-            }
-        },
-        {
-            "id": "taskIDX",
-            "type": "label",
-            "label": {
-                "en": "Task/Device IDX"
-            },
-            "value": "",
-            "hint": {
-                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
-                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
-            }
-        }
-    ]
+	"type": "group",
+	"label": {
+		"en": "Device identification",
+		"nl": "Apparaatidentificatie"
+	},
+	"children": [{
+			"id": "controller",
+			"type": "number",
+			"label": {
+				"en": "Controller ID"
+			},
+			"value": 0,
+			"hint": {
+				"en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+				"nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+			}
+		},
+		{
+			"id": "taskIDX",
+			"type": "label",
+			"label": {
+				"en": "Task/Device IDX"
+			},
+			"value": "",
+			"hint": {
+				"en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+				"nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+			}
+		}
+	]
 }

@@ -1,17 +1,17 @@
 {
-    "id": "measure_heap_changed",
-    "$filter": "capabilities=measure_heap",
-    "title": {
-        "en": "Available heap blocks changed",
-        "nl": "Beschikbare heap blocks veranderd"
-    },
-    "tokens": [{
-        "name": "measure_heap",
-        "type": "number",
-        "title": {
-            "en": "Heap Free",
-            "nl": "Heap Beschikbaar"
-        },
-        "example": 13112
-    }]
+	"id": "measure_heap_changed",
+	"$filter": "capabilities=measure_heap",
+	"title": {
+		"en": "Available heap blocks changed",
+		"nl": "Beschikbare heap blocks veranderd"
+	},
+	"tokens": [{
+		"name": "measure_heap",
+		"type": "number",
+		"title": {
+			"en": "Heap Free",
+			"nl": "Heap Beschikbaar"
+		},
+		"example": 13112
+	}]
 }

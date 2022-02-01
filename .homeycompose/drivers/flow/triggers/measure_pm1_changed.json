@@ -1,24 +1,22 @@
 {
-    "$filter": "capabilities=measure_pm1",
-    "title": {
-      "en": "The PM1 value has changed",
-      "nl": "De PM1 waarde is veranderd",
-      "de": "Der PM1-Wert hat sich geändert",
-      "fr": "La valeur PM1 a changé",
-      "it": "Il valore di PM1 è cambiato",
-      "sv": "PM1-värdet har ändrats",
-      "no": "PM1-verdien er endret",
-      "es": "El valor de PM1 ha cambiado",
-      "da": "PM1-værdien har ændret sig"
-    },
-    "tokens": [
-      {
-        "name": "measure_pm1",
-        "title": {
-          "en": "PM1"
-        },
-        "type": "number",
-        "example": 2
-      }
-    ]
-  }
+	"$filter": "capabilities=measure_pm1",
+	"title": {
+		"en": "The PM1 value has changed",
+		"nl": "De PM1 waarde is veranderd",
+		"de": "Der PM1-Wert hat sich geändert",
+		"fr": "La valeur PM1 a changé",
+		"it": "Il valore di PM1 è cambiato",
+		"sv": "PM1-värdet har ändrats",
+		"no": "PM1-verdien er endret",
+		"es": "El valor de PM1 ha cambiado",
+		"da": "PM1-værdien har ændret sig"
+	},
+	"tokens": [{
+		"name": "measure_pm1",
+		"title": {
+			"en": "PM1"
+		},
+		"type": "number",
+		"example": 2
+	}]
+}

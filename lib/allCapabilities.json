@@ -1,1378 +1,1378 @@
 {
-  "alarm_battery": {
-    "title": {
-      "en": "Battery alarm",
-      "nl": "Batterij alarm",
-      "de": "Batterie-Alarm",
-      "fr": "Alarme batterie",
-      "it": "Allarme batteria",
-      "sv": "Batterialarm",
-      "no": "Batterialarm",
-      "es": "Alarma de batería",
-      "da": "Batterialarm",
-      "ru": "Сигнал аккумулятора",
-      "pl": "Alarm stanu baterii"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "battery"
-  },
-  "alarm_co2": {
-    "title": {
-      "en": "CO2 alarm",
-      "nl": "CO2 alarm",
-      "de": "CO2-Alarm",
-      "fr": "Alarme CO2",
-      "it": "Allarme CO2",
-      "no": "CO2-alarm",
-      "es": "Alarma de CO2",
-      "da": "CO2-alarm",
-      "ru": "Сигнал CO2",
-      "pl": "Alarm o CO2"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_co": {
-    "title": {
-      "en": "CO alarm",
-      "nl": "CO alarm",
-      "de": "CO-Alarm",
-      "fr": "Alarme CO",
-      "it": "Allarme CO",
-      "sv": "CO-larm",
-      "no": "CO-alarm",
-      "es": "Alarma de CO",
-      "da": "CO-alarm",
-      "ru": "Сигнал CO",
-      "pl": "Alarm o CO"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_contact": {
-    "title": {
-      "en": "Contact alarm",
-      "nl": "Contact alarm",
-      "de": "Kontakt-Alarm",
-      "fr": "Alarme contact",
-      "it": "Allarme contatto",
-      "sv": "Kontaktalarm",
-      "no": "Kontaktalarm",
-      "es": "Alarma de contacto",
-      "da": "Kontaktalarm",
-      "ru": "Контактный сигнал",
-      "pl": "Alarm otwarcia"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_fire": {
-    "title": {
-      "en": "Fire alarm",
-      "nl": "Brandalarm",
-      "de": "Feuer-Alarm",
-      "fr": "Alarme incendie",
-      "it": "Allarme antincendio",
-      "sv": "Brandlarm",
-      "no": "Brannalarm",
-      "es": "Alarma de incendios",
-      "da": "Brandalarm",
-      "ru": "Пожарный сигнал",
-      "pl": "Alarm przeciwpożarowy"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_generic": {
-    "title": {
-      "en": "Generic alarm",
-      "nl": "Algemeen alarm",
-      "de": "Allgemeiner Alarm",
-      "fr": "Alarme générique",
-      "it": "Allarme generico",
-      "sv": "Generiskt larm",
-      "no": "Generell alarm",
-      "es": "Alarma general",
-      "da": "Generisk alarm",
-      "ru": "Общий сигнал",
-      "pl": "Alarm ogólny"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_heat": {
-    "title": {
-      "en": "Heat alarm",
-      "nl": "Hittealarm",
-      "de": "Hitze-Alarm",
-      "fr": "Alarme chaleur",
-      "it": "Allarme di calore",
-      "sv": "Värmelarm",
-      "no": "Varmealarm",
-      "es": "Alarma de calor",
-      "da": "Varmealarm",
-      "ru": "Сигнал перегрева",
-      "pl": "Alarm termiczny"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_motion": {
-    "title": {
-      "en": "Motion alarm",
-      "nl": "Bewegingsalarm",
-      "de": "Bewegungs-Alarm",
-      "fr": "Alarme mouvement",
-      "it": "Allarme di movimento",
-      "sv": "Rörelselarm",
-      "no": "Bevegelsesalarm",
-      "es": "Alarma de movimiento",
-      "da": "Bevægelsesalarm",
-      "ru": "Сигнал движения",
-      "pl": "Czujnik ruchu"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_night": {
-    "title": {
-      "en": "Night alarm",
-      "nl": "Nachtalarm",
-      "de": "Nacht-Alarm",
-      "fr": "Alarme nuit",
-      "it": "Allarme notturno",
-      "sv": "Nattlarm",
-      "no": "Nattalarm",
-      "es": "Alarma nocturna",
-      "da": "Natalarm",
-      "ru": "Ночной сигнал",
-      "pl": "Alarm nocny"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_pm25": {
-    "title": {
-      "en": "PM2.5 alarm",
-      "nl": "PM2.5 alarm",
-      "de": "PM2.5-Alarm",
-      "fr": "Alarme PM2.5",
-      "it": "Allarme PM2.5",
-      "sv": "PM2.5-larm",
-      "no": "PM2.5-alarm",
-      "es": "Alarma de PM2,5",
-      "da": "PM2,5-alarm",
-      "ru": "Сигнал ТЧ 2.5",
-      "pl": "Alarm o stężeniu PM2.5"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_smoke": {
-    "title": {
-      "en": "Smoke alarm",
-      "nl": "Rookmelder",
-      "de": "Rauch-Alarm",
-      "fr": "Alarme fumée",
-      "it": "Allarme fumo",
-      "sv": "Röklarm",
-      "no": "Røykalarm",
-      "es": "Alarma de humo",
-      "da": "Røgalarm",
-      "ru": "Сигнал дыма",
-      "pl": "Alarm przeciwdymny"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_tamper": {
-    "title": {
-      "en": "Tamper alarm",
-      "nl": "Sabotagealarm",
-      "de": "Sabotage-Alarm",
-      "fr": "Alarme sabotage",
-      "it": "Allarme manomissione",
-      "sv": "Sabotagelarm",
-      "no": "Sabotasjealarm",
-      "es": "Alarma de sabotaje",
-      "da": "Sabotagealarm",
-      "ru": "Противовзломный сигнал",
-      "pl": "Alarm antyingerencyjny"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "alarm_water": {
-    "title": {
-      "en": "Water alarm",
-      "nl": "Wateralarm",
-      "de": "Wasser-Alarm",
-      "fr": "Alarme eau",
-      "it": "Allarme acqua",
-      "sv": "Vattenalarm",
-      "no": "Vannalarm",
-      "es": "Alarma de agua",
-      "da": "Vandalarm",
-      "ru": "Сигнал протечки воды",
-      "pl": "Alarm zalania wodą"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "button": {
-    "title": {
-      "en": "Button",
-      "nl": "Knop",
-      "de": "Taste",
-      "fr": "Bouton",
-      "it": "Pulsante",
-      "sv": "Knapp",
-      "no": "Knapp",
-      "es": "Botón",
-      "da": "Knap",
-      "ru": "Кнопка",
-      "pl": "Przycisk"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "channel_down": {
-    "title": {
-      "en": "Channel down",
-      "nl": "Kanaal omlaag",
-      "de": "Kanal runter",
-      "fr": "Chane bas",
-      "it": "Canale verso il basso",
-      "sv": "Kanal ned",
-      "no": "Lavere kanal",
-      "es": "Bajar de canal",
-      "da": "Kanal ned",
-      "ru": "Канал вниз",
-      "pl": "Kanał w dół"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "channel_up": {
-    "title": {
-      "en": "Channel up",
-      "nl": "Kanaal omhoog",
-      "de": "Kanal hoch",
-      "fr": "Chaîne haut",
-      "it": "Canale verso l'alto",
-      "sv": "Kanal upp",
-      "no": "Høyere kanal",
-      "es": "Subir de canal",
-      "da": "Kanal op",
-      "ru": "Канал наверх",
-      "pl": "Kanał w górę"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "dim": {
-    "title": {
-      "en": "Dim level",
-      "nl": "Dim niveau",
-      "de": "Dimmlevel",
-      "fr": "Intensité lumineuse",
-      "it": "Intensità luminosa",
-      "sv": "Dimningsnivå",
-      "no": "Dempingsnivå",
-      "es": "Intensidad de la luz",
-      "da": "Lysniveau",
-      "ru": "Уровень яркости",
-      "pl": "Poziom przygaszenia"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "slider"
-  },
-  "garagedoor_closed": {
-    "title": {
-      "en": "Closed",
-      "nl": "Gesloten",
-      "de": "Geschlossen",
-      "fr": "Fermé",
-      "it": "Chiuse",
-      "sv": "Stängd",
-      "no": "Lukket",
-      "es": "Cerrados",
-      "da": "Lukket",
-      "ru": "Закрыта",
-      "pl": "Zamknięta"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle"
-  },
-  "homealarm_state": {
-    "title": {
-      "en": "Home alarm state",
-      "nl": "Thuisalarm status",
-      "de": "Heim-Alarm-Status",
-      "fr": "Etat de l'alarme de maison",
-      "it": "Stato dell'allarme domestico",
-      "sv": "Hemlarmsstatus",
-      "no": "Hjemmealarmstatus",
-      "es": "Estado de la alarma doméstica",
-      "da": "Hjemmealarmstatus",
-      "ru": "Состояние домашней сигнализации",
-      "pl": "Stan alarmu domowego"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "picker"
-  },
-  "light_hue": {
-    "title": {
-      "en": "Hue",
-      "nl": "Hue",
-      "de": "Farbton",
-      "fr": "Teinte",
-      "it": "Tonalità",
-      "sv": "Nyans",
-      "no": "Fargetone",
-      "es": "Tonalidad",
-      "da": "Farvetone",
-      "ru": "Оттенок",
-      "pl": "Odcień"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "color"
-  },
-  "light_mode": {
-    "title": {
-      "en": "Light mode",
-      "nl": "Lamp modus",
-      "de": "Lichtmodus",
-      "fr": "Mode lumière",
-      "it": "Modalità luce",
-      "sv": "Lampläge",
-      "no": "Lysmodus",
-      "es": "Modo de la luz",
-      "da": "Lystilstand",
-      "ru": "Режим света",
-      "pl": "Tryb oświetlenia"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "color"
-  },
-  "light_saturation": {
-    "title": {
-      "en": "Color saturation",
-      "nl": "Kleurverzadiging",
-      "de": "Farbsättigung",
-      "fr": "Saturation de couleur",
-      "it": "Saturazione colore",
-      "sv": "Färggmättnad",
-      "no": "Fargemetning",
-      "es": "Saturación del color",
-      "da": "Farvemætning",
-      "ru": "Насыщенность цвета",
-      "pl": "Nasycenie barwy"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "color"
-  },
-  "light_temperature": {
-    "title": {
-      "en": "Color temperature",
-      "nl": "Kleurtemperatuur",
-      "de": "Farbtemperatur",
-      "fr": "Température de couleur",
-      "it": "Temperatura colore",
-      "sv": "Färgtemperatur",
-      "no": "Fargetemperatur",
-      "es": "Temperatura del color",
-      "da": "Farvetemperatur",
-      "ru": "Температура цвета",
-      "pl": "Temperatura barwy"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "color"
-  },
-  "locked": {
-    "title": {
-      "en": "Locked",
-      "nl": "Op slot",
-      "de": "Verriegelt",
-      "fr": "Verrouillé",
-      "it": "Chiusa",
-      "sv": "Låst",
-      "no": "Låst",
-      "es": "Cerrada",
-      "da": "Låst",
-      "ru": "Закрыто",
-      "pl": "Zablokowane"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle"
-  },
-  "lock_mode": {
-    "title": {
-      "en": "Lock mode",
-      "nl": "Slot modus",
-      "de": "Schloss-Modus",
-      "fr": "Mode verrou",
-      "it": "Modalità serratura",
-      "sv": "Låsläge",
-      "no": "Låsemodus",
-      "es": "Modo de la cerradura",
-      "da": "Lås-tilstand",
-      "ru": "Режим замка",
-      "pl": "Tryb zamknięcia"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "picker"
-  },
-  "measure_battery": {
-    "title": {
-      "en": "Battery",
-      "nl": "Accuniveau",
-      "de": "Batterie",
-      "fr": "Batterie",
-      "it": "Batteria",
-      "sv": "Batteri",
-      "no": "Batteri",
-      "es": "Batería",
-      "da": "Batteri",
-      "ru": "Аккумулятор",
-      "pl": "Bateria"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "min": 0,
-    "max": 100,
-    "uiComponent": "battery"
-  },
-  "measure_co2": {
-    "title": {
-      "en": "CO2",
-      "nl": "CO2",
-      "de": "CO2",
-      "fr": "CO2",
-      "it": "CO2",
-      "sv": "CO2",
-      "no": "CO2",
-      "da": "CO2",
-      "ru": "CO2",
-      "pl": "CO2"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_co": {
-    "title": {
-      "en": "CO",
-      "nl": "CO",
-      "de": "CO",
-      "fr": "CO",
-      "it": "CO",
-      "sv": "CO",
-      "no": "CO",
-      "da": "CO",
-      "ru": "CO",
-      "pl": "CO"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_current": {
-    "title": {
-      "en": "Current",
-      "nl": "Stroom",
-      "de": "Strom",
-      "fr": "Courant",
-      "it": "Corrente",
-      "sv": "Ström",
-      "no": "Strøm",
-      "es": "Corriente",
-      "da": "Strøm",
-      "ru": "Текущее значение",
-      "pl": "Prąd"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_gust_angle": {
-    "title": {
-      "en": "Gust angle",
-      "nl": "Windstoot richting",
-      "de": "Böenrichtung",
-      "fr": "Direction d'un coup de vent",
-      "it": "Angolo delle raffiche",
-      "sv": "Vindriktning",
-      "no": "Vindretning",
-      "es": "Dirección del aire",
-      "da": "Vindretning",
-      "ru": "Угол порывов ветра",
-      "pl": "Kąt porywu wiatru"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_gust_strength": {
-    "title": {
-      "en": "Gust strength",
-      "nl": "Windstoot kracht",
-      "de": "Böenstärke",
-      "fr": "Force d'un coup de vent",
-      "it": "Intensità delle raffiche",
-      "sv": "Vindstyrka",
-      "no": "Vindstyrke",
-      "es": "Fuerza del aire",
-      "da": "Vindstyrke",
-      "ru": "Сила порывов ветра",
-      "pl": "Siła porywu wiatru"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_humidity": {
-    "title": {
-      "en": "Humidity",
-      "nl": "Luchtvochtigheid",
-      "de": "Luftfeuchtigkeit",
-      "fr": "Humidité",
-      "it": "Umidità",
-      "sv": "Luftfuktighet",
-      "no": "Luftfuktighet",
-      "es": "Humedad",
-      "da": "Luftfugtighed",
-      "ru": "Влажность",
-      "pl": "Wilgotność"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_luminance": {
-    "title": {
-      "en": "Luminance",
-      "nl": "Helderheid",
-      "de": "Helligkeit",
-      "fr": "Luminance",
-      "it": "Luminanza",
-      "sv": "Luminans",
-      "no": "Luminans",
-      "es": "Luminancia",
-      "da": "Luminans",
-      "ru": "Яркость",
-      "pl": "Luminacja"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_noise": {
-    "title": {
-      "en": "Noise",
-      "nl": "Geluid",
-      "de": "Lärm",
-      "fr": "Bruit",
-      "it": "Rumore",
-      "sv": "Buller",
-      "no": "Støy",
-      "es": "Ruido",
-      "ru": "Шум",
-      "pl": "Hałas"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_pm25": {
-    "title": {
-      "en": "PM2.5",
-      "nl": "PM2.5",
-      "de": "PM2.5",
-      "fr": "PM2.5",
-      "it": "PM2.5",
-      "sv": "PM2.5",
-      "no": "PM2.5",
-      "es": "PM2,5",
-      "ru": "ТЧ 2.5",
-      "pl": "PM2.5"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_power": {
-    "title": {
-      "en": "Power",
-      "nl": "Vermogen",
-      "de": "Leistung",
-      "fr": "Puissance",
-      "it": "Potenza",
-      "sv": "Effekt",
-      "no": "Effekt",
-      "es": "Potencia",
-      "da": "Effekt",
-      "ru": "Электроэнергия",
-      "pl": "Moc"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_pressure": {
-    "title": {
-      "en": "Pressure",
-      "nl": "Druk",
-      "de": "Druck",
-      "fr": "Pression",
-      "it": "Pressione",
-      "sv": "Tryck",
-      "no": "Trykk",
-      "es": "Presión",
-      "da": "Tryk",
-      "ru": "Давление",
-      "pl": "Ciśnienie"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_rain": {
-    "title": {
-      "en": "Rain",
-      "nl": "Regen",
-      "de": "Niederschlag",
-      "fr": "Pluie",
-      "it": "Pioggia",
-      "sv": "Regn",
-      "no": "Regn",
-      "es": "Lluvia",
-      "da": "Regn",
-      "ru": "Дождь",
-      "pl": "Deszcz"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_temperature": {
-    "title": {
-      "en": "Temperature",
-      "nl": "Temperatuur",
-      "de": "Temperatur",
-      "fr": "Température",
-      "it": "Temperatura",
-      "sv": "Temperatur",
-      "no": "Temperatur",
-      "es": "Temperatura",
-      "da": "Temperatur",
-      "ru": "Температура",
-      "pl": "Temperatura"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_ultraviolet": {
-    "title": {
-      "en": "Ultraviolet",
-      "nl": "Ultraviolet",
-      "de": "Ultraviolett",
-      "fr": "Ultraviolet",
-      "it": "Ultravioletto",
-      "sv": "Ultraviolett",
-      "no": "Ultrafiolett",
-      "es": "Ultravioleta",
-      "da": "Ultraviolet",
-      "ru": "Ультрафиолетовое излучение",
-      "pl": "Promieniowanie UV"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_voltage": {
-    "title": {
-      "en": "Voltage",
-      "nl": "Voltage",
-      "de": "Spannung",
-      "fr": "Voltage",
-      "it": "Voltaggio",
-      "sv": "Spänning",
-      "no": "Spenning",
-      "es": "Tensión",
-      "da": "Elektrisk spænding",
-      "ru": "Вольтаж",
-      "pl": "Napięcie"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_water": {
-    "title": {
-      "en": "Water flow",
-      "nl": "Waterdoorstroming",
-      "de": "Wasserfluss",
-      "fr": "Débit d'eau",
-      "it": "Flusso d'acqua",
-      "sv": "Vattenflöde",
-      "no": "Vannstrøm",
-      "es": "Caudal del agua",
-      "da": "Vandstrøm",
-      "ru": "Поток воды",
-      "pl": "Poziom przepływu wody"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_wind_angle": {
-    "title": {
-      "en": "Wind angle",
-      "nl": "Windrichting",
-      "de": "Windrichtung",
-      "fr": "Angle du vent",
-      "it": "Angolo del vento",
-      "sv": "Vindvinkel",
-      "no": "Vindvinkel",
-      "es": "Ángulo del viento",
-      "da": "Vindvinkel",
-      "ru": "Угол ветра",
-      "pl": "Kąt wiatru"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "measure_wind_strength": {
-    "title": {
-      "en": "Wind strength",
-      "nl": "Windsnelheid",
-      "de": "Windstärke",
-      "fr": "Force du vent",
-      "it": "Forza del vento",
-      "sv": "Vindstyrka",
-      "no": "Vindstyrke",
-      "es": "Fuerza del viento",
-      "da": "Vindstyrke",
-      "ru": "Сила ветра",
-      "pl": "Siła wiatru"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "meter_gas": {
-    "title": {
-      "en": "Gas meter",
-      "nl": "Gasmeter",
-      "de": "Gaszähler",
-      "fr": "Compteur de gaz",
-      "it": "Contatore del gas",
-      "sv": "Gasmätare",
-      "no": "Gassmåler",
-      "es": "Contador de gas",
-      "da": "Gasmåler",
-      "ru": "Счетчик газа",
-      "pl": "Licznik gazowy"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "min": 0,
-    "uiComponent": "sensor"
-  },
-  "meter_power": {
-    "title": {
-      "en": "Energy",
-      "nl": "Energie",
-      "de": "Energie",
-      "fr": "Énergie",
-      "it": "Energia",
-      "sv": "Energi",
-      "no": "Energi",
-      "es": "Energía",
-      "da": "Energi",
-      "ru": "Электроэнергия",
-      "pl": "Energia"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "meter_rain": {
-    "title": {
-      "en": "Rain meter",
-      "nl": "Regenmeter",
-      "de": "Regenzähler",
-      "fr": "Compteur de pluie",
-      "it": "Misuratore di pioggia",
-      "sv": "Regnmätare",
-      "no": "Regnmåler",
-      "es": "Pluviómetro",
-      "da": "Regnmåler",
-      "ru": "Счетчик дождя",
-      "pl": "Licznik deszczu"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  },
-  "meter_water": {
-    "title": {
-      "en": "Water meter",
-      "nl": "Watermeter",
-      "de": "Wasserzähler",
-      "fr": "Compteur d'eau",
-      "it": "Contatore dell'acqua",
-      "sv": "Vattenmätare",
-      "no": "Vannmåler",
-      "es": "Contador de agua",
-      "da": "Vandmåler",
-      "ru": "Счетчик воды",
-      "pl": "Licznik wody"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "min": 0,
-    "uiComponent": "sensor"
-  },
-  "onoff": {
-    "title": {
-      "en": "Turned on",
-      "nl": "Aangezet",
-      "de": "Eingeschaltet",
-      "fr": "Activé",
-      "it": "Attivato",
-      "sv": "Aktiverad",
-      "no": "Slått på",
-      "es": "Encendido",
-      "da": "Tændt",
-      "ru": "Включено",
-      "pl": "Włączone"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle"
-  },
-  "speaker_album": {
-    "title": {
-      "en": "Album",
-      "nl": "Album",
-      "de": "Album",
-      "fr": "Album",
-      "it": "Album",
-      "sv": "Album",
-      "no": "Album",
-      "es": "Álbum",
-      "da": "Album",
-      "ru": "Альбом",
-      "pl": "Album"
-    },
-    "type": "string",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "media"
-  },
-  "speaker_artist": {
-    "title": {
-      "en": "Artist",
-      "nl": "Artiest",
-      "de": "Künstler",
-      "fr": "Artiste",
-      "it": "Artista",
-      "sv": "Artist",
-      "no": "Artist",
-      "es": "Artista",
-      "da": "Kunstner",
-      "ru": "Исполнитель",
-      "pl": "Wykonawca"
-    },
-    "type": "string",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "media"
-  },
-  "speaker_duration": {
-    "title": {
-      "en": "Duration",
-      "nl": "Lengte",
-      "de": "Länge",
-      "fr": "Durée",
-      "it": "Durata",
-      "sv": "Längd",
-      "no": "Varighet",
-      "es": "Duración",
-      "da": "Varighed",
-      "ru": "Продолжительность",
-      "pl": "Czas trwania"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "media"
-  },
-  "speaker_next": {
-    "title": {
-      "en": "Next",
-      "nl": "Volgende",
-      "de": "Weiter",
-      "fr": "Suivant",
-      "it": "Successivo",
-      "sv": "Nästa",
-      "no": "Neste",
-      "es": "Siguiente",
-      "da": "Næste",
-      "ru": "Дальше",
-      "pl": "Dalej"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "media"
-  },
-  "speaker_playing": {
-    "title": {
-      "en": "Playing",
-      "nl": "Afspelen",
-      "de": "Abspielen",
-      "fr": "Lire",
-      "it": "In riproduzione",
-      "sv": "Spelas",
-      "no": "Avspilles",
-      "es": "Reproduciendo",
-      "da": "Spiller",
-      "ru": "Воспроизведение",
-      "pl": "Odtwarzanie"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "media"
-  },
-  "speaker_position": {
-    "title": {
-      "en": "Position",
-      "nl": "Positie",
-      "de": "Positiv",
-      "fr": "Position",
-      "it": "Posizione",
-      "sv": "Position",
-      "no": "Posisjon",
-      "es": "Posición",
-      "da": "Position",
-      "ru": "Позиция",
-      "pl": "Pozycja"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "media"
-  },
-  "speaker_prev": {
-    "title": {
-      "en": "Previous",
-      "nl": "Vorige",
-      "de": "Zurück",
-      "fr": "Précédent",
-      "it": "Precedente",
-      "sv": "Föregående",
-      "no": "Forrige",
-      "es": "Anterior",
-      "da": "Forrige",
-      "ru": "Назад",
-      "pl": "Wróć"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "media"
-  },
-  "speaker_repeat": {
-    "title": {
-      "en": "Repeat",
-      "de": "Wiederholen",
-      "fr": "Répéter",
-      "it": "Ripeti",
-      "sv": "Upprepa",
-      "no": "Gjenta",
-      "es": "Repetir",
-      "da": "Gentag",
-      "ru": "Повторить",
-      "pl": "Powtórz"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "media"
-  },
-  "speaker_shuffle": {
-    "title": {
-      "en": "Shuffle",
-      "de": "Zufallswiedergabe",
-      "fr": "Aléatoire",
-      "it": "Ordine casuale",
-      "sv": "Blanda",
-      "no": "Tilfeldig rekkefølge",
-      "es": "Aleatorio",
-      "da": "Shuffle",
-      "ru": "В случайном порядке",
-      "pl": "Odtwarzaj losowo"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "media"
-  },
-  "speaker_track": {
-    "title": {
-      "en": "Track",
-      "nl": "Track",
-      "de": "Track",
-      "fr": "Titre",
-      "it": "Traccia",
-      "sv": "Spår",
-      "no": "Spor",
-      "es": "Pista",
-      "da": "Spor",
-      "ru": "Трек",
-      "pl": "Utwór"
-    },
-    "type": "string",
-    "getable": true,
-    "setable": false,
-    "uiComponent": "media"
-  },
-  "target_temperature": {
-    "title": {
-      "en": "Target temperature",
-      "nl": "Ingestelde temperatuur",
-      "de": "Ziel-Temperatur",
-      "fr": "Température cible",
-      "it": "Temperatura nominale",
-      "sv": "Måltemperatur",
-      "no": "Ønsket temperatur",
-      "es": "Temperatura configurada",
-      "da": "Måltemperatur",
-      "ru": "Целевая температура",
-      "pl": "Cel temperatury"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 4,
-    "max": 35,
-    "uiComponent": "thermostat"
-  },
-  "thermostat_mode": {
-    "title": {
-      "en": "Thermostat mode",
-      "nl": "Thermostaat modus",
-      "de": "Thermostat-Modus",
-      "fr": "Mode thermostat",
-      "it": "Modalità termostato",
-      "sv": "Termostatläge",
-      "no": "Termostatmodus",
-      "es": "Modo del termostato",
-      "da": "Termostattilstand",
-      "ru": "Режим термостата",
-      "pl": "Tryb termostatu"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "picker"
-  },
-  "vacuumcleaner_state": {
-    "title": {
-      "en": "Vacuum cleaner state",
-      "de": "Staubsauger-Status",
-      "fr": "Etat de l'aspirateur",
-      "it": "Stato dell'aspirapolvere",
-      "sv": "Dammsugarstatus",
-      "no": "Støvsugerstatus",
-      "es": "Modo de la aspiradora",
-      "da": "Støvsugerstatus",
-      "ru": "Состояние пылесоса",
-      "pl": "Stan odkurzacza"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "picker"
-  },
-  "volume_down": {
-    "title": {
-      "en": "Volume down",
-      "nl": "Volume omlaag",
-      "de": "Lautstärke runter",
-      "fr": "Baisser le volume",
-      "it": "Volume abbassato",
-      "sv": "Volym ned",
-      "no": "Volum ned",
-      "es": "Bajar volumen",
-      "da": "Ned for lyden",
-      "ru": "Звук тише",
-      "pl": "Zmniejsz głośność"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "volume_mute": {
-    "title": {
-      "en": "Volume muted",
-      "nl": "Gedempt volume",
-      "de": "Lautstärke stumm",
-      "fr": "Volume sourdine",
-      "it": "Volume disattivato",
-      "sv": "Volym inaktiverad",
-      "no": "Volym dempet",
-      "es": "Silenciar volumen",
-      "da": "Lyd slået fra",
-      "ru": "Звук выключен",
-      "pl": "Głośność wyciszona"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "volume_set": {
-    "title": {
-      "en": "Set volume",
-      "de": "Lautstärke setzen",
-      "fr": "Définir le volume",
-      "it": "Imposta il volume",
-      "sv": "Ställ in volym",
-      "no": "Innstill volum",
-      "es": "Configurar volumen",
-      "da": "Indstil lydstyrken",
-      "ru": "Установить громкость",
-      "pl": "Ustaw głośność"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "slider"
-  },
-  "volume_up": {
-    "title": {
-      "en": "Volume up",
-      "nl": "Volume omhoog",
-      "de": "Lautstärke hoch",
-      "fr": "Augmenter le volume",
-      "it": "Volume alzato",
-      "sv": "Volym upp",
-      "no": "Volum opp",
-      "es": "Subir volumen",
-      "da": "Op for lyden",
-      "ru": "Звук громче",
-      "pl": "Zwiększ głośność"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "windowcoverings_closed": {
-    "title": {
-      "en": "Closed",
-      "nl": "Gesloten",
-      "de": "Geschlossen",
-      "fr": "Fermé",
-      "it": "Chiuse",
-      "sv": "Stängd",
-      "no": "Lukket",
-      "es": "Cerrados",
-      "da": "Lukket",
-      "ru": "Закрыто",
-      "pl": "Zasunięte"
-    },
-    "type": "boolean",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle"
-  },
-  "windowcoverings_set": {
-    "title": {
-      "en": "Position",
-      "nl": "Positie",
-      "de": "Position",
-      "fr": "Position",
-      "it": "Posizione",
-      "sv": "Position",
-      "no": "Posisjon",
-      "es": "Posición",
-      "da": "Position",
-      "ru": "Позиция",
-      "pl": "Pozycja"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "slider"
-  },
-  "windowcoverings_state": {
-    "title": {
-      "en": "Window coverings state",
-      "nl": "Raambekleding status",
-      "de": "Jalousien-Status",
-      "fr": "Etat des stores",
-      "it": "Stato delle tapparelle",
-      "sv": "Status för fönsterskydd",
-      "no": "Status for vindusbeskyttelse",
-      "es": "Estado de los cobertores de ventanas",
-      "da": "Status for vinduesdække",
-      "ru": "Состояние оконных навесов",
-      "pl": "Stan osłon okiennych"
-    },
-    "type": "enum",
-    "getable": true,
-    "setable": true,
-    "uiComponent": "ternary"
-  },
-  "windowcoverings_tilt_down": {
-    "title": {
-      "en": "Window coverings tilt down",
-      "de": "Jalousien nach unten gekippt",
-      "fr": "Stores baissés",
-      "it": "Tapparelle abbassate",
-      "sv": "Fönsterskydd nedfällda",
-      "no": "Vindusbeskyttelser lukket",
-      "es": "Cobertores de ventanas inclinados hacia abajo",
-      "da": "Vinduesdække nedad",
-      "ru": "Наклонить вниз оконные навесы",
-      "pl": "Zasunięcie osłon okiennych"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  },
-  "windowcoverings_tilt_set": {
-    "title": {
-      "en": "Window coverings tilt set",
-      "de": "Jalousien-Kippstellung setzen",
-      "fr": "Définir l'inclinaison des stores",
-      "it": "Imposta l'inclinazione delle tapparelle",
-      "sv": "Ställ in lutning för fönsterskydd",
-      "no": "Innstill helning for vindusbeskyttelse",
-      "es": "Configurar la inclinación de los cobertores de ventanas",
-      "da": "Indstil hældning for vinduesdække",
-      "ru": "Угол наклона оконных навесов установлен",
-      "pl": "Ustawienie osłon okiennych"
-    },
-    "type": "number",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 1,
-    "uiComponent": "slider"
-  },
-  "windowcoverings_tilt_up": {
-    "title": {
-      "en": "Window coverings tilt up",
-      "de": "Jalousien nach oben gekippt",
-      "fr": "Stores levés",
-      "it": "Tapparelle alzate",
-      "sv": "Fönsterskydd öppna",
-      "no": "Vindusbeskyttelser åpne",
-      "es": "Cobertores de ventanas inclinados hacia arriba",
-      "da": "Vinduesdække opad",
-      "ru": "Приподнять оконные навесы",
-      "pl": "Rozchylenie osłon okiennych"
-    },
-    "type": "boolean",
-    "getable": false,
-    "setable": true,
-    "uiComponent": "button"
-  }
+	"alarm_battery": {
+		"title": {
+			"en": "Battery alarm",
+			"nl": "Batterij alarm",
+			"de": "Batterie-Alarm",
+			"fr": "Alarme batterie",
+			"it": "Allarme batteria",
+			"sv": "Batterialarm",
+			"no": "Batterialarm",
+			"es": "Alarma de batería",
+			"da": "Batterialarm",
+			"ru": "Сигнал аккумулятора",
+			"pl": "Alarm stanu baterii"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "battery"
+	},
+	"alarm_co2": {
+		"title": {
+			"en": "CO2 alarm",
+			"nl": "CO2 alarm",
+			"de": "CO2-Alarm",
+			"fr": "Alarme CO2",
+			"it": "Allarme CO2",
+			"no": "CO2-alarm",
+			"es": "Alarma de CO2",
+			"da": "CO2-alarm",
+			"ru": "Сигнал CO2",
+			"pl": "Alarm o CO2"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_co": {
+		"title": {
+			"en": "CO alarm",
+			"nl": "CO alarm",
+			"de": "CO-Alarm",
+			"fr": "Alarme CO",
+			"it": "Allarme CO",
+			"sv": "CO-larm",
+			"no": "CO-alarm",
+			"es": "Alarma de CO",
+			"da": "CO-alarm",
+			"ru": "Сигнал CO",
+			"pl": "Alarm o CO"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_contact": {
+		"title": {
+			"en": "Contact alarm",
+			"nl": "Contact alarm",
+			"de": "Kontakt-Alarm",
+			"fr": "Alarme contact",
+			"it": "Allarme contatto",
+			"sv": "Kontaktalarm",
+			"no": "Kontaktalarm",
+			"es": "Alarma de contacto",
+			"da": "Kontaktalarm",
+			"ru": "Контактный сигнал",
+			"pl": "Alarm otwarcia"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_fire": {
+		"title": {
+			"en": "Fire alarm",
+			"nl": "Brandalarm",
+			"de": "Feuer-Alarm",
+			"fr": "Alarme incendie",
+			"it": "Allarme antincendio",
+			"sv": "Brandlarm",
+			"no": "Brannalarm",
+			"es": "Alarma de incendios",
+			"da": "Brandalarm",
+			"ru": "Пожарный сигнал",
+			"pl": "Alarm przeciwpożarowy"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_generic": {
+		"title": {
+			"en": "Generic alarm",
+			"nl": "Algemeen alarm",
+			"de": "Allgemeiner Alarm",
+			"fr": "Alarme générique",
+			"it": "Allarme generico",
+			"sv": "Generiskt larm",
+			"no": "Generell alarm",
+			"es": "Alarma general",
+			"da": "Generisk alarm",
+			"ru": "Общий сигнал",
+			"pl": "Alarm ogólny"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_heat": {
+		"title": {
+			"en": "Heat alarm",
+			"nl": "Hittealarm",
+			"de": "Hitze-Alarm",
+			"fr": "Alarme chaleur",
+			"it": "Allarme di calore",
+			"sv": "Värmelarm",
+			"no": "Varmealarm",
+			"es": "Alarma de calor",
+			"da": "Varmealarm",
+			"ru": "Сигнал перегрева",
+			"pl": "Alarm termiczny"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_motion": {
+		"title": {
+			"en": "Motion alarm",
+			"nl": "Bewegingsalarm",
+			"de": "Bewegungs-Alarm",
+			"fr": "Alarme mouvement",
+			"it": "Allarme di movimento",
+			"sv": "Rörelselarm",
+			"no": "Bevegelsesalarm",
+			"es": "Alarma de movimiento",
+			"da": "Bevægelsesalarm",
+			"ru": "Сигнал движения",
+			"pl": "Czujnik ruchu"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_night": {
+		"title": {
+			"en": "Night alarm",
+			"nl": "Nachtalarm",
+			"de": "Nacht-Alarm",
+			"fr": "Alarme nuit",
+			"it": "Allarme notturno",
+			"sv": "Nattlarm",
+			"no": "Nattalarm",
+			"es": "Alarma nocturna",
+			"da": "Natalarm",
+			"ru": "Ночной сигнал",
+			"pl": "Alarm nocny"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_pm25": {
+		"title": {
+			"en": "PM2.5 alarm",
+			"nl": "PM2.5 alarm",
+			"de": "PM2.5-Alarm",
+			"fr": "Alarme PM2.5",
+			"it": "Allarme PM2.5",
+			"sv": "PM2.5-larm",
+			"no": "PM2.5-alarm",
+			"es": "Alarma de PM2,5",
+			"da": "PM2,5-alarm",
+			"ru": "Сигнал ТЧ 2.5",
+			"pl": "Alarm o stężeniu PM2.5"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_smoke": {
+		"title": {
+			"en": "Smoke alarm",
+			"nl": "Rookmelder",
+			"de": "Rauch-Alarm",
+			"fr": "Alarme fumée",
+			"it": "Allarme fumo",
+			"sv": "Röklarm",
+			"no": "Røykalarm",
+			"es": "Alarma de humo",
+			"da": "Røgalarm",
+			"ru": "Сигнал дыма",
+			"pl": "Alarm przeciwdymny"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_tamper": {
+		"title": {
+			"en": "Tamper alarm",
+			"nl": "Sabotagealarm",
+			"de": "Sabotage-Alarm",
+			"fr": "Alarme sabotage",
+			"it": "Allarme manomissione",
+			"sv": "Sabotagelarm",
+			"no": "Sabotasjealarm",
+			"es": "Alarma de sabotaje",
+			"da": "Sabotagealarm",
+			"ru": "Противовзломный сигнал",
+			"pl": "Alarm antyingerencyjny"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"alarm_water": {
+		"title": {
+			"en": "Water alarm",
+			"nl": "Wateralarm",
+			"de": "Wasser-Alarm",
+			"fr": "Alarme eau",
+			"it": "Allarme acqua",
+			"sv": "Vattenalarm",
+			"no": "Vannalarm",
+			"es": "Alarma de agua",
+			"da": "Vandalarm",
+			"ru": "Сигнал протечки воды",
+			"pl": "Alarm zalania wodą"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"button": {
+		"title": {
+			"en": "Button",
+			"nl": "Knop",
+			"de": "Taste",
+			"fr": "Bouton",
+			"it": "Pulsante",
+			"sv": "Knapp",
+			"no": "Knapp",
+			"es": "Botón",
+			"da": "Knap",
+			"ru": "Кнопка",
+			"pl": "Przycisk"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"channel_down": {
+		"title": {
+			"en": "Channel down",
+			"nl": "Kanaal omlaag",
+			"de": "Kanal runter",
+			"fr": "Chane bas",
+			"it": "Canale verso il basso",
+			"sv": "Kanal ned",
+			"no": "Lavere kanal",
+			"es": "Bajar de canal",
+			"da": "Kanal ned",
+			"ru": "Канал вниз",
+			"pl": "Kanał w dół"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"channel_up": {
+		"title": {
+			"en": "Channel up",
+			"nl": "Kanaal omhoog",
+			"de": "Kanal hoch",
+			"fr": "Chaîne haut",
+			"it": "Canale verso l'alto",
+			"sv": "Kanal upp",
+			"no": "Høyere kanal",
+			"es": "Subir de canal",
+			"da": "Kanal op",
+			"ru": "Канал наверх",
+			"pl": "Kanał w górę"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"dim": {
+		"title": {
+			"en": "Dim level",
+			"nl": "Dim niveau",
+			"de": "Dimmlevel",
+			"fr": "Intensité lumineuse",
+			"it": "Intensità luminosa",
+			"sv": "Dimningsnivå",
+			"no": "Dempingsnivå",
+			"es": "Intensidad de la luz",
+			"da": "Lysniveau",
+			"ru": "Уровень яркости",
+			"pl": "Poziom przygaszenia"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "slider"
+	},
+	"garagedoor_closed": {
+		"title": {
+			"en": "Closed",
+			"nl": "Gesloten",
+			"de": "Geschlossen",
+			"fr": "Fermé",
+			"it": "Chiuse",
+			"sv": "Stängd",
+			"no": "Lukket",
+			"es": "Cerrados",
+			"da": "Lukket",
+			"ru": "Закрыта",
+			"pl": "Zamknięta"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "toggle"
+	},
+	"homealarm_state": {
+		"title": {
+			"en": "Home alarm state",
+			"nl": "Thuisalarm status",
+			"de": "Heim-Alarm-Status",
+			"fr": "Etat de l'alarme de maison",
+			"it": "Stato dell'allarme domestico",
+			"sv": "Hemlarmsstatus",
+			"no": "Hjemmealarmstatus",
+			"es": "Estado de la alarma doméstica",
+			"da": "Hjemmealarmstatus",
+			"ru": "Состояние домашней сигнализации",
+			"pl": "Stan alarmu domowego"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "picker"
+	},
+	"light_hue": {
+		"title": {
+			"en": "Hue",
+			"nl": "Hue",
+			"de": "Farbton",
+			"fr": "Teinte",
+			"it": "Tonalità",
+			"sv": "Nyans",
+			"no": "Fargetone",
+			"es": "Tonalidad",
+			"da": "Farvetone",
+			"ru": "Оттенок",
+			"pl": "Odcień"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "color"
+	},
+	"light_mode": {
+		"title": {
+			"en": "Light mode",
+			"nl": "Lamp modus",
+			"de": "Lichtmodus",
+			"fr": "Mode lumière",
+			"it": "Modalità luce",
+			"sv": "Lampläge",
+			"no": "Lysmodus",
+			"es": "Modo de la luz",
+			"da": "Lystilstand",
+			"ru": "Режим света",
+			"pl": "Tryb oświetlenia"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "color"
+	},
+	"light_saturation": {
+		"title": {
+			"en": "Color saturation",
+			"nl": "Kleurverzadiging",
+			"de": "Farbsättigung",
+			"fr": "Saturation de couleur",
+			"it": "Saturazione colore",
+			"sv": "Färggmättnad",
+			"no": "Fargemetning",
+			"es": "Saturación del color",
+			"da": "Farvemætning",
+			"ru": "Насыщенность цвета",
+			"pl": "Nasycenie barwy"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "color"
+	},
+	"light_temperature": {
+		"title": {
+			"en": "Color temperature",
+			"nl": "Kleurtemperatuur",
+			"de": "Farbtemperatur",
+			"fr": "Température de couleur",
+			"it": "Temperatura colore",
+			"sv": "Färgtemperatur",
+			"no": "Fargetemperatur",
+			"es": "Temperatura del color",
+			"da": "Farvetemperatur",
+			"ru": "Температура цвета",
+			"pl": "Temperatura barwy"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "color"
+	},
+	"locked": {
+		"title": {
+			"en": "Locked",
+			"nl": "Op slot",
+			"de": "Verriegelt",
+			"fr": "Verrouillé",
+			"it": "Chiusa",
+			"sv": "Låst",
+			"no": "Låst",
+			"es": "Cerrada",
+			"da": "Låst",
+			"ru": "Закрыто",
+			"pl": "Zablokowane"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "toggle"
+	},
+	"lock_mode": {
+		"title": {
+			"en": "Lock mode",
+			"nl": "Slot modus",
+			"de": "Schloss-Modus",
+			"fr": "Mode verrou",
+			"it": "Modalità serratura",
+			"sv": "Låsläge",
+			"no": "Låsemodus",
+			"es": "Modo de la cerradura",
+			"da": "Lås-tilstand",
+			"ru": "Режим замка",
+			"pl": "Tryb zamknięcia"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "picker"
+	},
+	"measure_battery": {
+		"title": {
+			"en": "Battery",
+			"nl": "Accuniveau",
+			"de": "Batterie",
+			"fr": "Batterie",
+			"it": "Batteria",
+			"sv": "Batteri",
+			"no": "Batteri",
+			"es": "Batería",
+			"da": "Batteri",
+			"ru": "Аккумулятор",
+			"pl": "Bateria"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"min": 0,
+		"max": 100,
+		"uiComponent": "battery"
+	},
+	"measure_co2": {
+		"title": {
+			"en": "CO2",
+			"nl": "CO2",
+			"de": "CO2",
+			"fr": "CO2",
+			"it": "CO2",
+			"sv": "CO2",
+			"no": "CO2",
+			"da": "CO2",
+			"ru": "CO2",
+			"pl": "CO2"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_co": {
+		"title": {
+			"en": "CO",
+			"nl": "CO",
+			"de": "CO",
+			"fr": "CO",
+			"it": "CO",
+			"sv": "CO",
+			"no": "CO",
+			"da": "CO",
+			"ru": "CO",
+			"pl": "CO"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_current": {
+		"title": {
+			"en": "Current",
+			"nl": "Stroom",
+			"de": "Strom",
+			"fr": "Courant",
+			"it": "Corrente",
+			"sv": "Ström",
+			"no": "Strøm",
+			"es": "Corriente",
+			"da": "Strøm",
+			"ru": "Текущее значение",
+			"pl": "Prąd"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_gust_angle": {
+		"title": {
+			"en": "Gust angle",
+			"nl": "Windstoot richting",
+			"de": "Böenrichtung",
+			"fr": "Direction d'un coup de vent",
+			"it": "Angolo delle raffiche",
+			"sv": "Vindriktning",
+			"no": "Vindretning",
+			"es": "Dirección del aire",
+			"da": "Vindretning",
+			"ru": "Угол порывов ветра",
+			"pl": "Kąt porywu wiatru"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_gust_strength": {
+		"title": {
+			"en": "Gust strength",
+			"nl": "Windstoot kracht",
+			"de": "Böenstärke",
+			"fr": "Force d'un coup de vent",
+			"it": "Intensità delle raffiche",
+			"sv": "Vindstyrka",
+			"no": "Vindstyrke",
+			"es": "Fuerza del aire",
+			"da": "Vindstyrke",
+			"ru": "Сила порывов ветра",
+			"pl": "Siła porywu wiatru"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_humidity": {
+		"title": {
+			"en": "Humidity",
+			"nl": "Luchtvochtigheid",
+			"de": "Luftfeuchtigkeit",
+			"fr": "Humidité",
+			"it": "Umidità",
+			"sv": "Luftfuktighet",
+			"no": "Luftfuktighet",
+			"es": "Humedad",
+			"da": "Luftfugtighed",
+			"ru": "Влажность",
+			"pl": "Wilgotność"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_luminance": {
+		"title": {
+			"en": "Luminance",
+			"nl": "Helderheid",
+			"de": "Helligkeit",
+			"fr": "Luminance",
+			"it": "Luminanza",
+			"sv": "Luminans",
+			"no": "Luminans",
+			"es": "Luminancia",
+			"da": "Luminans",
+			"ru": "Яркость",
+			"pl": "Luminacja"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_noise": {
+		"title": {
+			"en": "Noise",
+			"nl": "Geluid",
+			"de": "Lärm",
+			"fr": "Bruit",
+			"it": "Rumore",
+			"sv": "Buller",
+			"no": "Støy",
+			"es": "Ruido",
+			"ru": "Шум",
+			"pl": "Hałas"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_pm25": {
+		"title": {
+			"en": "PM2.5",
+			"nl": "PM2.5",
+			"de": "PM2.5",
+			"fr": "PM2.5",
+			"it": "PM2.5",
+			"sv": "PM2.5",
+			"no": "PM2.5",
+			"es": "PM2,5",
+			"ru": "ТЧ 2.5",
+			"pl": "PM2.5"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_power": {
+		"title": {
+			"en": "Power",
+			"nl": "Vermogen",
+			"de": "Leistung",
+			"fr": "Puissance",
+			"it": "Potenza",
+			"sv": "Effekt",
+			"no": "Effekt",
+			"es": "Potencia",
+			"da": "Effekt",
+			"ru": "Электроэнергия",
+			"pl": "Moc"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_pressure": {
+		"title": {
+			"en": "Pressure",
+			"nl": "Druk",
+			"de": "Druck",
+			"fr": "Pression",
+			"it": "Pressione",
+			"sv": "Tryck",
+			"no": "Trykk",
+			"es": "Presión",
+			"da": "Tryk",
+			"ru": "Давление",
+			"pl": "Ciśnienie"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_rain": {
+		"title": {
+			"en": "Rain",
+			"nl": "Regen",
+			"de": "Niederschlag",
+			"fr": "Pluie",
+			"it": "Pioggia",
+			"sv": "Regn",
+			"no": "Regn",
+			"es": "Lluvia",
+			"da": "Regn",
+			"ru": "Дождь",
+			"pl": "Deszcz"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_temperature": {
+		"title": {
+			"en": "Temperature",
+			"nl": "Temperatuur",
+			"de": "Temperatur",
+			"fr": "Température",
+			"it": "Temperatura",
+			"sv": "Temperatur",
+			"no": "Temperatur",
+			"es": "Temperatura",
+			"da": "Temperatur",
+			"ru": "Температура",
+			"pl": "Temperatura"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_ultraviolet": {
+		"title": {
+			"en": "Ultraviolet",
+			"nl": "Ultraviolet",
+			"de": "Ultraviolett",
+			"fr": "Ultraviolet",
+			"it": "Ultravioletto",
+			"sv": "Ultraviolett",
+			"no": "Ultrafiolett",
+			"es": "Ultravioleta",
+			"da": "Ultraviolet",
+			"ru": "Ультрафиолетовое излучение",
+			"pl": "Promieniowanie UV"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_voltage": {
+		"title": {
+			"en": "Voltage",
+			"nl": "Voltage",
+			"de": "Spannung",
+			"fr": "Voltage",
+			"it": "Voltaggio",
+			"sv": "Spänning",
+			"no": "Spenning",
+			"es": "Tensión",
+			"da": "Elektrisk spænding",
+			"ru": "Вольтаж",
+			"pl": "Napięcie"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_water": {
+		"title": {
+			"en": "Water flow",
+			"nl": "Waterdoorstroming",
+			"de": "Wasserfluss",
+			"fr": "Débit d'eau",
+			"it": "Flusso d'acqua",
+			"sv": "Vattenflöde",
+			"no": "Vannstrøm",
+			"es": "Caudal del agua",
+			"da": "Vandstrøm",
+			"ru": "Поток воды",
+			"pl": "Poziom przepływu wody"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_wind_angle": {
+		"title": {
+			"en": "Wind angle",
+			"nl": "Windrichting",
+			"de": "Windrichtung",
+			"fr": "Angle du vent",
+			"it": "Angolo del vento",
+			"sv": "Vindvinkel",
+			"no": "Vindvinkel",
+			"es": "Ángulo del viento",
+			"da": "Vindvinkel",
+			"ru": "Угол ветра",
+			"pl": "Kąt wiatru"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"measure_wind_strength": {
+		"title": {
+			"en": "Wind strength",
+			"nl": "Windsnelheid",
+			"de": "Windstärke",
+			"fr": "Force du vent",
+			"it": "Forza del vento",
+			"sv": "Vindstyrka",
+			"no": "Vindstyrke",
+			"es": "Fuerza del viento",
+			"da": "Vindstyrke",
+			"ru": "Сила ветра",
+			"pl": "Siła wiatru"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"meter_gas": {
+		"title": {
+			"en": "Gas meter",
+			"nl": "Gasmeter",
+			"de": "Gaszähler",
+			"fr": "Compteur de gaz",
+			"it": "Contatore del gas",
+			"sv": "Gasmätare",
+			"no": "Gassmåler",
+			"es": "Contador de gas",
+			"da": "Gasmåler",
+			"ru": "Счетчик газа",
+			"pl": "Licznik gazowy"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"min": 0,
+		"uiComponent": "sensor"
+	},
+	"meter_power": {
+		"title": {
+			"en": "Energy",
+			"nl": "Energie",
+			"de": "Energie",
+			"fr": "Énergie",
+			"it": "Energia",
+			"sv": "Energi",
+			"no": "Energi",
+			"es": "Energía",
+			"da": "Energi",
+			"ru": "Электроэнергия",
+			"pl": "Energia"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"meter_rain": {
+		"title": {
+			"en": "Rain meter",
+			"nl": "Regenmeter",
+			"de": "Regenzähler",
+			"fr": "Compteur de pluie",
+			"it": "Misuratore di pioggia",
+			"sv": "Regnmätare",
+			"no": "Regnmåler",
+			"es": "Pluviómetro",
+			"da": "Regnmåler",
+			"ru": "Счетчик дождя",
+			"pl": "Licznik deszczu"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "sensor"
+	},
+	"meter_water": {
+		"title": {
+			"en": "Water meter",
+			"nl": "Watermeter",
+			"de": "Wasserzähler",
+			"fr": "Compteur d'eau",
+			"it": "Contatore dell'acqua",
+			"sv": "Vattenmätare",
+			"no": "Vannmåler",
+			"es": "Contador de agua",
+			"da": "Vandmåler",
+			"ru": "Счетчик воды",
+			"pl": "Licznik wody"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"min": 0,
+		"uiComponent": "sensor"
+	},
+	"onoff": {
+		"title": {
+			"en": "Turned on",
+			"nl": "Aangezet",
+			"de": "Eingeschaltet",
+			"fr": "Activé",
+			"it": "Attivato",
+			"sv": "Aktiverad",
+			"no": "Slått på",
+			"es": "Encendido",
+			"da": "Tændt",
+			"ru": "Включено",
+			"pl": "Włączone"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "toggle"
+	},
+	"speaker_album": {
+		"title": {
+			"en": "Album",
+			"nl": "Album",
+			"de": "Album",
+			"fr": "Album",
+			"it": "Album",
+			"sv": "Album",
+			"no": "Album",
+			"es": "Álbum",
+			"da": "Album",
+			"ru": "Альбом",
+			"pl": "Album"
+		},
+		"type": "string",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "media"
+	},
+	"speaker_artist": {
+		"title": {
+			"en": "Artist",
+			"nl": "Artiest",
+			"de": "Künstler",
+			"fr": "Artiste",
+			"it": "Artista",
+			"sv": "Artist",
+			"no": "Artist",
+			"es": "Artista",
+			"da": "Kunstner",
+			"ru": "Исполнитель",
+			"pl": "Wykonawca"
+		},
+		"type": "string",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "media"
+	},
+	"speaker_duration": {
+		"title": {
+			"en": "Duration",
+			"nl": "Lengte",
+			"de": "Länge",
+			"fr": "Durée",
+			"it": "Durata",
+			"sv": "Längd",
+			"no": "Varighet",
+			"es": "Duración",
+			"da": "Varighed",
+			"ru": "Продолжительность",
+			"pl": "Czas trwania"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "media"
+	},
+	"speaker_next": {
+		"title": {
+			"en": "Next",
+			"nl": "Volgende",
+			"de": "Weiter",
+			"fr": "Suivant",
+			"it": "Successivo",
+			"sv": "Nästa",
+			"no": "Neste",
+			"es": "Siguiente",
+			"da": "Næste",
+			"ru": "Дальше",
+			"pl": "Dalej"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "media"
+	},
+	"speaker_playing": {
+		"title": {
+			"en": "Playing",
+			"nl": "Afspelen",
+			"de": "Abspielen",
+			"fr": "Lire",
+			"it": "In riproduzione",
+			"sv": "Spelas",
+			"no": "Avspilles",
+			"es": "Reproduciendo",
+			"da": "Spiller",
+			"ru": "Воспроизведение",
+			"pl": "Odtwarzanie"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "media"
+	},
+	"speaker_position": {
+		"title": {
+			"en": "Position",
+			"nl": "Positie",
+			"de": "Positiv",
+			"fr": "Position",
+			"it": "Posizione",
+			"sv": "Position",
+			"no": "Posisjon",
+			"es": "Posición",
+			"da": "Position",
+			"ru": "Позиция",
+			"pl": "Pozycja"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "media"
+	},
+	"speaker_prev": {
+		"title": {
+			"en": "Previous",
+			"nl": "Vorige",
+			"de": "Zurück",
+			"fr": "Précédent",
+			"it": "Precedente",
+			"sv": "Föregående",
+			"no": "Forrige",
+			"es": "Anterior",
+			"da": "Forrige",
+			"ru": "Назад",
+			"pl": "Wróć"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "media"
+	},
+	"speaker_repeat": {
+		"title": {
+			"en": "Repeat",
+			"de": "Wiederholen",
+			"fr": "Répéter",
+			"it": "Ripeti",
+			"sv": "Upprepa",
+			"no": "Gjenta",
+			"es": "Repetir",
+			"da": "Gentag",
+			"ru": "Повторить",
+			"pl": "Powtórz"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "media"
+	},
+	"speaker_shuffle": {
+		"title": {
+			"en": "Shuffle",
+			"de": "Zufallswiedergabe",
+			"fr": "Aléatoire",
+			"it": "Ordine casuale",
+			"sv": "Blanda",
+			"no": "Tilfeldig rekkefølge",
+			"es": "Aleatorio",
+			"da": "Shuffle",
+			"ru": "В случайном порядке",
+			"pl": "Odtwarzaj losowo"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "media"
+	},
+	"speaker_track": {
+		"title": {
+			"en": "Track",
+			"nl": "Track",
+			"de": "Track",
+			"fr": "Titre",
+			"it": "Traccia",
+			"sv": "Spår",
+			"no": "Spor",
+			"es": "Pista",
+			"da": "Spor",
+			"ru": "Трек",
+			"pl": "Utwór"
+		},
+		"type": "string",
+		"getable": true,
+		"setable": false,
+		"uiComponent": "media"
+	},
+	"target_temperature": {
+		"title": {
+			"en": "Target temperature",
+			"nl": "Ingestelde temperatuur",
+			"de": "Ziel-Temperatur",
+			"fr": "Température cible",
+			"it": "Temperatura nominale",
+			"sv": "Måltemperatur",
+			"no": "Ønsket temperatur",
+			"es": "Temperatura configurada",
+			"da": "Måltemperatur",
+			"ru": "Целевая температура",
+			"pl": "Cel temperatury"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 4,
+		"max": 35,
+		"uiComponent": "thermostat"
+	},
+	"thermostat_mode": {
+		"title": {
+			"en": "Thermostat mode",
+			"nl": "Thermostaat modus",
+			"de": "Thermostat-Modus",
+			"fr": "Mode thermostat",
+			"it": "Modalità termostato",
+			"sv": "Termostatläge",
+			"no": "Termostatmodus",
+			"es": "Modo del termostato",
+			"da": "Termostattilstand",
+			"ru": "Режим термостата",
+			"pl": "Tryb termostatu"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "picker"
+	},
+	"vacuumcleaner_state": {
+		"title": {
+			"en": "Vacuum cleaner state",
+			"de": "Staubsauger-Status",
+			"fr": "Etat de l'aspirateur",
+			"it": "Stato dell'aspirapolvere",
+			"sv": "Dammsugarstatus",
+			"no": "Støvsugerstatus",
+			"es": "Modo de la aspiradora",
+			"da": "Støvsugerstatus",
+			"ru": "Состояние пылесоса",
+			"pl": "Stan odkurzacza"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "picker"
+	},
+	"volume_down": {
+		"title": {
+			"en": "Volume down",
+			"nl": "Volume omlaag",
+			"de": "Lautstärke runter",
+			"fr": "Baisser le volume",
+			"it": "Volume abbassato",
+			"sv": "Volym ned",
+			"no": "Volum ned",
+			"es": "Bajar volumen",
+			"da": "Ned for lyden",
+			"ru": "Звук тише",
+			"pl": "Zmniejsz głośność"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"volume_mute": {
+		"title": {
+			"en": "Volume muted",
+			"nl": "Gedempt volume",
+			"de": "Lautstärke stumm",
+			"fr": "Volume sourdine",
+			"it": "Volume disattivato",
+			"sv": "Volym inaktiverad",
+			"no": "Volym dempet",
+			"es": "Silenciar volumen",
+			"da": "Lyd slået fra",
+			"ru": "Звук выключен",
+			"pl": "Głośność wyciszona"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"volume_set": {
+		"title": {
+			"en": "Set volume",
+			"de": "Lautstärke setzen",
+			"fr": "Définir le volume",
+			"it": "Imposta il volume",
+			"sv": "Ställ in volym",
+			"no": "Innstill volum",
+			"es": "Configurar volumen",
+			"da": "Indstil lydstyrken",
+			"ru": "Установить громкость",
+			"pl": "Ustaw głośność"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "slider"
+	},
+	"volume_up": {
+		"title": {
+			"en": "Volume up",
+			"nl": "Volume omhoog",
+			"de": "Lautstärke hoch",
+			"fr": "Augmenter le volume",
+			"it": "Volume alzato",
+			"sv": "Volym upp",
+			"no": "Volum opp",
+			"es": "Subir volumen",
+			"da": "Op for lyden",
+			"ru": "Звук громче",
+			"pl": "Zwiększ głośność"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"windowcoverings_closed": {
+		"title": {
+			"en": "Closed",
+			"nl": "Gesloten",
+			"de": "Geschlossen",
+			"fr": "Fermé",
+			"it": "Chiuse",
+			"sv": "Stängd",
+			"no": "Lukket",
+			"es": "Cerrados",
+			"da": "Lukket",
+			"ru": "Закрыто",
+			"pl": "Zasunięte"
+		},
+		"type": "boolean",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "toggle"
+	},
+	"windowcoverings_set": {
+		"title": {
+			"en": "Position",
+			"nl": "Positie",
+			"de": "Position",
+			"fr": "Position",
+			"it": "Posizione",
+			"sv": "Position",
+			"no": "Posisjon",
+			"es": "Posición",
+			"da": "Position",
+			"ru": "Позиция",
+			"pl": "Pozycja"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "slider"
+	},
+	"windowcoverings_state": {
+		"title": {
+			"en": "Window coverings state",
+			"nl": "Raambekleding status",
+			"de": "Jalousien-Status",
+			"fr": "Etat des stores",
+			"it": "Stato delle tapparelle",
+			"sv": "Status för fönsterskydd",
+			"no": "Status for vindusbeskyttelse",
+			"es": "Estado de los cobertores de ventanas",
+			"da": "Status for vinduesdække",
+			"ru": "Состояние оконных навесов",
+			"pl": "Stan osłon okiennych"
+		},
+		"type": "enum",
+		"getable": true,
+		"setable": true,
+		"uiComponent": "ternary"
+	},
+	"windowcoverings_tilt_down": {
+		"title": {
+			"en": "Window coverings tilt down",
+			"de": "Jalousien nach unten gekippt",
+			"fr": "Stores baissés",
+			"it": "Tapparelle abbassate",
+			"sv": "Fönsterskydd nedfällda",
+			"no": "Vindusbeskyttelser lukket",
+			"es": "Cobertores de ventanas inclinados hacia abajo",
+			"da": "Vinduesdække nedad",
+			"ru": "Наклонить вниз оконные навесы",
+			"pl": "Zasunięcie osłon okiennych"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	},
+	"windowcoverings_tilt_set": {
+		"title": {
+			"en": "Window coverings tilt set",
+			"de": "Jalousien-Kippstellung setzen",
+			"fr": "Définir l'inclinaison des stores",
+			"it": "Imposta l'inclinazione delle tapparelle",
+			"sv": "Ställ in lutning för fönsterskydd",
+			"no": "Innstill helning for vindusbeskyttelse",
+			"es": "Configurar la inclinación de los cobertores de ventanas",
+			"da": "Indstil hældning for vinduesdække",
+			"ru": "Угол наклона оконных навесов установлен",
+			"pl": "Ustawienie osłon okiennych"
+		},
+		"type": "number",
+		"getable": true,
+		"setable": true,
+		"min": 0,
+		"max": 1,
+		"uiComponent": "slider"
+	},
+	"windowcoverings_tilt_up": {
+		"title": {
+			"en": "Window coverings tilt up",
+			"de": "Jalousien nach oben gekippt",
+			"fr": "Stores levés",
+			"it": "Tapparelle alzate",
+			"sv": "Fönsterskydd öppna",
+			"no": "Vindusbeskyttelser åpne",
+			"es": "Cobertores de ventanas inclinados hacia arriba",
+			"da": "Vinduesdække opad",
+			"ru": "Приподнять оконные навесы",
+			"pl": "Rozchylenie osłon okiennych"
+		},
+		"type": "boolean",
+		"getable": false,
+		"setable": true,
+		"uiComponent": "button"
+	}
 }
