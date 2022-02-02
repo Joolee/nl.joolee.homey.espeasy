@@ -24,6 +24,10 @@ module.exports = class Input_Analog_Driver extends SensorDriver {
 			{
 				"name": "Analog input - PCF8591",
 				"plugin": 7
+			},
+			{
+				"name": "Generic - Dummy Device",
+				"plugin": 33,
 			}
 		]
 
