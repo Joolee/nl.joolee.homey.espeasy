@@ -74,5 +74,9 @@
 	"1.9.1": {
 		"en": "Fixed bug preventing gas readings for P1 device to work. Removed all but one NPM dependency from the app to reduce vulnerabilities",
 		"nl": "Een bug opgelost welke ervoor zorgde dat de gasmetingen van een P1 apparaat niet werkte. Op één na alle code dependencies verwijderd om beveiligingsproblemen te voorkomen."
+	},
+	"1.10.0": {
+		"en": "Huge internal changes and support for lots of new devices",
+		"nl": "Grote interne wijzigingen en ondersteuning voor een hoop nieuwe apparaten"
 	}
 }
