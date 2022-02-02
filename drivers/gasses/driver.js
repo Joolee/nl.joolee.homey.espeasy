@@ -29,6 +29,11 @@ module.exports = class Gasses_Driver extends SensorDriver {
 				"name": "Gases - CCS811 TVOC/eCO2",
 				"plugin": 90,
 				"values": ["TVOC", "eCO2"]
+			},
+			{
+				"name": "Gases - CO2 Senseair",
+				"plugin": 52,
+				"values": ["CO2"]
 			}
 		]
 
