@@ -1,0 +1,11 @@
+{
+	"name": {
+		"en": "Distance",
+		"nl": "Afstand"
+	},
+	"$extends": [
+		"default-images",
+		"default-sensor-capabilities",
+		"pair-list-settings-done"
+	]
+}

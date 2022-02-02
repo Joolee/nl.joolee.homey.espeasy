@@ -1,0 +1,16 @@
+{
+	"$filter": "capabilities=measure_distance_inch&driver_id=distance|pulse_counter|input_analog",
+	"title": {
+		"en": "The distance value has changed",
+		"nl": "De afstandwaarde is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_distance",
+		"title": {
+			"en": "Distance",
+			"nl": "Afstand"
+		},
+		"type": "number",
+		"example": 2
+	}]
+}

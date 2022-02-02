@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/Homey-SVG-Icons -->
+
+	<!-- Start line -->
+	<line x1="10" y1="40" x2="10" y2="60" stroke="black" stroke-width="3" stroke-linecap="square" />
+
+	<!-- Middle line -->
+	<line x1="20" y1="50" x2="80" y2="50" stroke="black" stroke-width="3" stroke-linecap="round" />
+
+	<!-- Left arrow -->
+	<line x1="20" y1="50" x2="29" y2="43" stroke="black" stroke-width="3" stroke-linecap="round" />
+	<line x1="20" y1="50" x2="29" y2="57" stroke="black" stroke-width="3" stroke-linecap="round" />
+
+	<!-- Right arrow -->
+	<line x1="80" y1="50" x2="71" y2="43" stroke="black" stroke-width="3" stroke-linecap="round" />
+	<line x1="80" y1="50" x2="71" y2="57" stroke="black" stroke-width="3" stroke-linecap="round" />
+
+	<!-- Stop line -->
+	<line x1="90" y1="40" x2="90" y2="60" stroke="black" stroke-width="3" stroke-linecap="square" />
+</svg>

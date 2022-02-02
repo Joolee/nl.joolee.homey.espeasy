@@ -38,7 +38,763 @@
   "homeyCommunityTopicId": 30381,
   "source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
   "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy/wiki",
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "The distance value has changed",
+          "nl": "De afstandwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_distance",
+            "title": {
+              "en": "Distance",
+              "nl": "Afstand"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_distance_cm_changed"
+      },
+      {
+        "title": {
+          "en": "The distance value has changed",
+          "nl": "De afstandwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_distance",
+            "title": {
+              "en": "Distance",
+              "nl": "Afstand"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_distance_inch_changed"
+      },
+      {
+        "title": {
+          "en": "The distance value has changed",
+          "nl": "De afstandwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_distance",
+            "title": {
+              "en": "Distance",
+              "nl": "Afstand"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_distance_mm_changed"
+      },
+      {
+        "title": {
+          "en": "The dust value has changed",
+          "nl": "De stof waarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_dust",
+            "title": {
+              "en": "Dust",
+              "nl": "Stof"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_dust_changed"
+      },
+      {
+        "title": {
+          "en": "Equivalent CO2 changed",
+          "nl": "Equivalent CO2 veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_eco2",
+            "type": "number",
+            "title": {
+              "en": "Equivalent CO2"
+            },
+            "example": 7
+          }
+        ],
+        "id": "measure_eco2_changed"
+      },
+      {
+        "title": {
+          "en": "Available heap blocks changed",
+          "nl": "Beschikbare heap blocks veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_heap",
+            "type": "number",
+            "title": {
+              "en": "Heap Free",
+              "nl": "Heap Beschikbaar"
+            },
+            "example": 13112
+          }
+        ],
+        "id": "measure_heap_changed"
+      },
+      {
+        "title": {
+          "en": "Idle time changed",
+          "nl": "Inactiviteit is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_idle_time",
+            "type": "number",
+            "title": {
+              "en": "Idle minutes",
+              "nl": "Inactive minuten"
+            },
+            "example": 359
+          }
+        ],
+        "id": "measure_idle_time_changed"
+      },
+      {
+        "title": {
+          "en": "System load changed",
+          "nl": "Systeembelasting is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_load",
+            "type": "number",
+            "title": {
+              "en": "System load",
+              "nl": "Systeembelasting"
+            },
+            "example": 11.42
+          }
+        ],
+        "id": "measure_load_changed"
+      },
+      {
+        "title": {
+          "en": "The PM1 value has changed",
+          "nl": "De PM1 waarde is veranderd",
+          "de": "Der PM1-Wert hat sich geändert",
+          "fr": "La valeur PM1 a changé",
+          "it": "Il valore di PM1 è cambiato",
+          "sv": "PM1-värdet har ändrats",
+          "no": "PM1-verdien er endret",
+          "es": "El valor de PM1 ha cambiado",
+          "da": "PM1-værdien har ændret sig"
+        },
+        "tokens": [
+          {
+            "name": "measure_pm1",
+            "title": {
+              "en": "PM1"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_pm1_changed"
+      },
+      {
+        "title": {
+          "en": "The PM10 value has changed",
+          "nl": "De PM10 waarde is veranderd",
+          "de": "Der PM10-Wert hat sich geändert",
+          "fr": "La valeur PM10 a changé",
+          "it": "Il valore di PM10 è cambiato",
+          "sv": "PM1-värdet har ändrats",
+          "no": "PM1-verdien er endret",
+          "es": "El valor de PM10 ha cambiado",
+          "da": "PM10-værdien har ændret sig"
+        },
+        "tokens": [
+          {
+            "name": "measure_pm1",
+            "title": {
+              "en": "PM10"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "id": "measure_pm10_changed"
+      },
+      {
+        "title": {
+          "en": "System RAM usage changed",
+          "nl": "Beschikbaar werkgeheugen is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_ram",
+            "type": "number",
+            "title": {
+              "en": "Free RAM",
+              "nl": "Beschikbaar RAM"
+            },
+            "example": 14680
+          }
+        ],
+        "id": "measure_ram_changed"
+      },
+      {
+        "title": {
+          "en": "Raw value changed",
+          "nl": "Ruwe waarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_raw_number",
+            "type": "number",
+            "title": {
+              "en": "Raw value",
+              "nl": "Ruwe waarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "id": "measure_raw_number_changed"
+      },
+      {
+        "title": {
+          "en": "Raw sensor value changed",
+          "nl": "Ruwe sensorwaarde is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_sensor_value",
+            "type": "number",
+            "title": {
+              "en": "Raw sensor value",
+              "nl": "Ruwe sensorwaarde"
+            },
+            "example": 11.42
+          }
+        ],
+        "id": "measure_sensor_value_changed"
+      },
+      {
+        "title": {
+          "en": "Signal strength changed",
+          "nl": "Signaalsterkte is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_signal_strength",
+            "type": "number",
+            "title": {
+              "en": "Signal strength",
+              "nl": "Signaalsterkte"
+            },
+            "example": -66
+          }
+        ],
+        "id": "measure_signal_strength_changed"
+      },
+      {
+        "title": {
+          "en": "TVOC changed",
+          "nl": "TVOC veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_tvoc",
+            "type": "number",
+            "title": {
+              "en": "Total Volatile Organic Compounds "
+            },
+            "example": 3
+          }
+        ],
+        "id": "measure_tvoc_changed"
+      },
+      {
+        "title": {
+          "en": "'Unknown value' changed",
+          "nl": "'Onbekende waarde' veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_unknown",
+            "type": "number",
+            "title": {
+              "en": "Unknown value",
+              "nl": "Onbekende waarde"
+            },
+            "example": 13112
+          }
+        ],
+        "id": "measure_unknown_changed"
+      },
+      {
+        "title": {
+          "en": "Uptime changed",
+          "nl": "Uptime is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_uptime",
+            "type": "number",
+            "title": {
+              "en": "Uptime minutes",
+              "nl": "Uptime minuten"
+            },
+            "example": -66
+          }
+        ],
+        "id": "measure_uptime_changed"
+      },
+      {
+        "id": "unit_rebooted",
+        "title": {
+          "en": "Unit rebooted",
+          "nl": "Unit herstart"
+        },
+        "hint": {
+          "en": "Triggers when reported uptime is lower then last reported uptime. (Doesn't detect a reboot that occurs within one minute of last boot.)",
+          "nl": "Activeert wanneer de uptime lager is dan de laatste bekende uptime. (Kan geen reboot detecteren dat binnen 1 minuut van opstarten plaatsvind)"
+        },
+        "tokens": [
+          {
+            "name": "reset_reason",
+            "type": "string",
+            "title": {
+              "en": "Reboot reason",
+              "nl": "Reden herstart"
+            },
+            "example": "Software/System restart"
+          },
+          {
+            "name": "boot_reason",
+            "type": "string",
+            "title": {
+              "en": "Boot reason",
+              "nl": "Reden herstart"
+            },
+            "example": "Manual reboot"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          }
+        ]
+      },
+      {
+        "id": "unit_reconnected",
+        "title": {
+          "en": "Unit WiFi reconnected",
+          "nl": "Unit WiFi opnieuw verbonden"
+        },
+        "tokens": [
+          {
+            "name": "milliseconds_ago",
+            "type": "number",
+            "title": {
+              "en": "Milliseconds ago",
+              "nl": "Milliseconden geleden"
+            },
+            "example": 784
+          },
+          {
+            "name": "reconnects_number",
+            "type": "number",
+            "title": {
+              "en": "Total number of reconnects",
+              "nl": "Totaal aantal verbrekingen"
+            },
+            "example": 3
+          },
+          {
+            "name": "disconnect_reason_number",
+            "type": "number",
+            "title": {
+              "en": "Disconnect reason",
+              "nl": "Reden verbreking"
+            },
+            "example": 2
+          },
+          {
+            "name": "disconnect_reason_string",
+            "type": "string",
+            "title": {
+              "en": "Disconnect reason",
+              "nl": "Reden verbreking"
+            },
+            "example": "(2) Previous authentication no longer valid"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "send_custom_pulse",
+        "title": {
+          "en": "Send pulse of custom length"
+        },
+        "titleFormatted": {
+          "en": "Send pulse of length [[pulse_duration]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_pulse"
+          },
+          {
+            "type": "number",
+            "name": "pulse_duration",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Duration in milliseconds",
+              "nl": "Duur in milliseconden"
+            }
+          }
+        ]
+      },
+      {
+        "id": "send_custom_melody",
+        "title": {
+          "en": "Play personalized melody"
+        },
+        "titleFormatted": {
+          "en": "Play personalized melody [[melody_string]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_rtttl"
+          },
+          {
+            "type": "text",
+            "name": "melody_string",
+            "placeholder": {
+              "en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
+              "nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
+            }
+          }
+        ]
+      },
+      {
+        "id": "send_custom_tone",
+        "title": {
+          "en": "Play personalized tone"
+        },
+        "titleFormatted": {
+          "en": "Play tone of [[tone_frequency]]Hz for [[tone_duration]]ms"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=gpio_output_tone"
+          },
+          {
+            "type": "number",
+            "name": "tone_duration",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Duration in milliseconds",
+              "nl": "Duur in milliseconden"
+            }
+          },
+          {
+            "type": "number",
+            "name": "tone_frequency",
+            "min": 1,
+            "step": 1,
+            "placeholder": {
+              "en": "Frequency in hertz",
+              "nl": "Frequentie in hertz"
+            }
+          }
+        ]
+      },
+      {
+        "id": "send_custom_command",
+        "title": {
+          "en": "Send command"
+        },
+        "titleFormatted": {
+          "en": "Send command [[command_string]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "command_string",
+            "placeholder": {
+              "en": "ESP Easy command, will be send through HTTP",
+              "nl": "ESP Easy commando, wordt verzonden via HTTP"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_event",
+        "title": {
+          "en": "Start event"
+        },
+        "titleFormatted": {
+          "en": "Start event [[event_name]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "event_name",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_event_with_parameter",
+        "title": {
+          "en": "Start event (with parameter)"
+        },
+        "titleFormatted": {
+          "en": "Start event [[event_name]] [[event_parameter]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "text",
+            "name": "event_name",
+            "placeholder": {
+              "en": "Event name",
+              "nl": "Event naam"
+            }
+          },
+          {
+            "type": "text",
+            "name": "event_parameter",
+            "placeholder": {
+              "en": "Event parameter"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_task_value",
+        "title": {
+          "en": "Set task value"
+        },
+        "titleFormatted": {
+          "en": "Set task [[task_value_name]] to [[task_new_value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "autocomplete",
+            "name": "task_value_name",
+            "placeholder": {
+              "en": "Value name or ID",
+              "nl": "Value naam of ID"
+            }
+          },
+          {
+            "type": "text",
+            "name": "task_new_value",
+            "placeholder": {
+              "en": "New value",
+              "nl": "Nieuwe waarde"
+            }
+          }
+        ]
+      },
+      {
+        "id": "run_task",
+        "title": {
+          "en": "Run (update) task"
+        },
+        "titleFormatted": {
+          "en": "Run (update) task [[task_name]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=unit"
+          },
+          {
+            "type": "autocomplete",
+            "name": "task_name",
+            "placeholder": {
+              "en": "Task name or ID",
+              "nl": "Task naam of ID"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
+    {
+      "images": {
+        "large": "/drivers/distance/assets/images/large.png",
+        "small": "/drivers/distance/assets/images/small.png"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_idle_time",
+        "device_heartbeat"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "settings"
+          }
+        },
+        {
+          "id": "settings",
+          "navigation": {
+            "prev": "list_devices",
+            "next": "done"
+          }
+        },
+        {
+          "id": "done",
+          "template": "done"
+        }
+      ],
+      "name": {
+        "en": "Distance",
+        "nl": "Afstand"
+      },
+      "id": "distance",
+      "settings": [
+        {
+          "id": "unitInfo",
+          "type": "group",
+          "label": {
+            "en": "Unit information",
+            "nl": "Unitinformatie"
+          },
+          "children": [
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC Address",
+                "nl": "MAC-Adres"
+              },
+              "value": "",
+              "hint": {
+                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+                "nl": "Het MAC-Adres van je ESP Easy unit. Dit gebruikt Homey om een unit te identificeren, binnenkomende berichten worden hiermee herkent en als het IP adres van afzender niet overeen komt, wordt deze aangepast in Homey."
+              }
+            },
+            {
+              "id": "host",
+              "type": "label",
+              "label": {
+                "en": "Unit hostname",
+                "nl": "Unit hostnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The hostname or IP address can be changed in the unit settings but it will change automagically when Homey receives an event from another IP with the same MAC address.",
+                "nl": "Het IP adres kan veranderd worden n de unit instellingen. Deze wordt automagisch geüpdate wanneer Homey een bericht binnen krijgt van een nieuwe IP met hetzelfde MAC-adres."
+              }
+            },
+            {
+              "id": "idx",
+              "type": "label",
+              "label": {
+                "en": "Unit ID"
+              },
+              "value": "",
+              "hint": {
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that.",
+                "nl": "Zoals kan worden ingesteld op de ESP Easy instellingenpagina. Dit ID wordt momenteel niet gebruikt door Homey."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensorInfo",
+          "type": "group",
+          "label": {
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
+          },
+          "children": [
+            {
+              "id": "controller",
+              "type": "number",
+              "label": {
+                "en": "Controller ID"
+              },
+              "value": 0,
+              "hint": {
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+              }
+            },
+            {
+              "id": "taskIDX",
+              "type": "label",
+              "label": {
+                "en": "Task/Device IDX"
+              },
+              "value": "",
+              "hint": {
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "images": {
         "large": "/drivers/dust/assets/images/large.png",
@@ -2029,373 +2785,6 @@
       ]
     }
   ],
-  "flow": {
-    "actions": [
-      {
-        "id": "send_custom_pulse",
-        "title": {
-          "en": "Send pulse of custom length"
-        },
-        "titleFormatted": {
-          "en": "Send pulse of length [[pulse_duration]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=gpio_output_pulse"
-          },
-          {
-            "type": "number",
-            "name": "pulse_duration",
-            "min": 1,
-            "step": 1,
-            "placeholder": {
-              "en": "Duration in milliseconds",
-              "nl": "Duur in milliseconden"
-            }
-          }
-        ]
-      },
-      {
-        "id": "send_custom_melody",
-        "title": {
-          "en": "Play personalized melody"
-        },
-        "titleFormatted": {
-          "en": "Play personalized melody [[melody_string]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=gpio_output_rtttl"
-          },
-          {
-            "type": "text",
-            "name": "melody_string",
-            "placeholder": {
-              "en": "RTTTL Melody like: d=8,o=6,b=340:c,e,g",
-              "nl": "RTTTL Melodie zoals: d=8,o=6,b=340:c,e,g"
-            }
-          }
-        ]
-      },
-      {
-        "id": "send_custom_tone",
-        "title": {
-          "en": "Play personalized tone"
-        },
-        "titleFormatted": {
-          "en": "Play tone of [[tone_frequency]]Hz for [[tone_duration]]ms"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=gpio_output_tone"
-          },
-          {
-            "type": "number",
-            "name": "tone_duration",
-            "min": 1,
-            "step": 1,
-            "placeholder": {
-              "en": "Duration in milliseconds",
-              "nl": "Duur in milliseconden"
-            }
-          },
-          {
-            "type": "number",
-            "name": "tone_frequency",
-            "min": 1,
-            "step": 1,
-            "placeholder": {
-              "en": "Frequency in hertz",
-              "nl": "Frequentie in hertz"
-            }
-          }
-        ]
-      },
-      {
-        "id": "send_custom_command",
-        "title": {
-          "en": "Send command"
-        },
-        "titleFormatted": {
-          "en": "Send command [[command_string]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          },
-          {
-            "type": "text",
-            "name": "command_string",
-            "placeholder": {
-              "en": "ESP Easy command, will be send through HTTP",
-              "nl": "ESP Easy commando, wordt verzonden via HTTP"
-            }
-          }
-        ]
-      },
-      {
-        "id": "start_event",
-        "title": {
-          "en": "Start event"
-        },
-        "titleFormatted": {
-          "en": "Start event [[event_name]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          },
-          {
-            "type": "text",
-            "name": "event_name",
-            "placeholder": {
-              "en": "Event name",
-              "nl": "Event naam"
-            }
-          }
-        ]
-      },
-      {
-        "id": "start_event_with_parameter",
-        "title": {
-          "en": "Start event (with parameter)"
-        },
-        "titleFormatted": {
-          "en": "Start event [[event_name]] [[event_parameter]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          },
-          {
-            "type": "text",
-            "name": "event_name",
-            "placeholder": {
-              "en": "Event name",
-              "nl": "Event naam"
-            }
-          },
-          {
-            "type": "text",
-            "name": "event_parameter",
-            "placeholder": {
-              "en": "Event parameter"
-            }
-          }
-        ]
-      },
-      {
-        "id": "set_task_value",
-        "title": {
-          "en": "Set task value"
-        },
-        "titleFormatted": {
-          "en": "Set task [[task_value_name]] to [[task_new_value]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          },
-          {
-            "type": "autocomplete",
-            "name": "task_value_name",
-            "placeholder": {
-              "en": "Value name or ID",
-              "nl": "Value naam of ID"
-            }
-          },
-          {
-            "type": "text",
-            "name": "task_new_value",
-            "placeholder": {
-              "en": "New value",
-              "nl": "Nieuwe waarde"
-            }
-          }
-        ]
-      },
-      {
-        "id": "run_task",
-        "title": {
-          "en": "Run (update) task"
-        },
-        "titleFormatted": {
-          "en": "Run (update) task [[task_name]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          },
-          {
-            "type": "autocomplete",
-            "name": "task_name",
-            "placeholder": {
-              "en": "Task name or ID",
-              "nl": "Task naam of ID"
-            }
-          }
-        ]
-      }
-    ],
-    "triggers": [
-      {
-        "id": "measure_sensor_value_changed",
-        "title": {
-          "en": "Raw sensor value changed",
-          "nl": "Ruwe sensorwaarde is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_sensor_value",
-            "type": "number",
-            "title": {
-              "en": "Raw sensor value",
-              "nl": "Ruwe sensorwaarde"
-            },
-            "example": 11.42
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pulse_counter&capabilities=measure_sensor_value"
-          }
-        ]
-      },
-      {
-        "id": "measure_uptime_changed",
-        "title": {
-          "en": "Uptime changed",
-          "nl": "Uptime is veranderd"
-        },
-        "tokens": [
-          {
-            "name": "measure_uptime",
-            "type": "number",
-            "title": {
-              "en": "Uptime minutes",
-              "nl": "Uptime minuten"
-            },
-            "example": -66
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit&capabilities=measure_uptime"
-          }
-        ]
-      },
-      {
-        "id": "unit_rebooted",
-        "title": {
-          "en": "Unit rebooted",
-          "nl": "Unit herstart"
-        },
-        "hint": {
-          "en": "Triggers when reported uptime is lower then last reported uptime. (Doesn't detect a reboot that occurs within one minute of last boot.)",
-          "nl": "Activeert wanneer de uptime lager is dan de laatste bekende uptime. (Kan geen reboot detecteren dat binnen 1 minuut van opstarten plaatsvind)"
-        },
-        "tokens": [
-          {
-            "name": "reset_reason",
-            "type": "string",
-            "title": {
-              "en": "Reboot reason",
-              "nl": "Reden herstart"
-            },
-            "example": "Software/System restart"
-          },
-          {
-            "name": "boot_reason",
-            "type": "string",
-            "title": {
-              "en": "Boot reason",
-              "nl": "Reden herstart"
-            },
-            "example": "Manual reboot"
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          }
-        ]
-      },
-      {
-        "id": "unit_reconnected",
-        "title": {
-          "en": "Unit WiFi reconnected",
-          "nl": "Unit WiFi opnieuw verbonden"
-        },
-        "tokens": [
-          {
-            "name": "milliseconds_ago",
-            "type": "number",
-            "title": {
-              "en": "Milliseconds ago",
-              "nl": "Milliseconden geleden"
-            },
-            "example": 784
-          },
-          {
-            "name": "reconnects_number",
-            "type": "number",
-            "title": {
-              "en": "Total number of reconnects",
-              "nl": "Totaal aantal verbrekingen"
-            },
-            "example": 3
-          },
-          {
-            "name": "disconnect_reason_number",
-            "type": "number",
-            "title": {
-              "en": "Disconnect reason",
-              "nl": "Reden verbreking"
-            },
-            "example": 2
-          },
-          {
-            "name": "disconnect_reason_string",
-            "type": "string",
-            "title": {
-              "en": "Disconnect reason",
-              "nl": "Reden verbreking"
-            },
-            "example": "(2) Previous authentication no longer valid"
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=unit"
-          }
-        ]
-      }
-    ]
-  },
   "capabilities": {
     "alarm_active_tariff": {
       "type": "enum",
@@ -2435,6 +2824,54 @@
       "insights": false,
       "getable": true,
       "setable": false
+    },
+    "measure_distance_cm": {
+      "type": "number",
+      "title": {
+        "en": "Distance",
+        "nl": "Afstand"
+      },
+      "icon": "/assets/icons/measure_distance.svg",
+      "decimals": 2,
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "cm"
+      }
+    },
+    "measure_distance_inch": {
+      "type": "number",
+      "title": {
+        "en": "Distance",
+        "nl": "Afstand"
+      },
+      "icon": "/assets/icons/measure_distance.svg",
+      "decimals": 2,
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "\""
+      }
+    },
+    "measure_distance_mm": {
+      "type": "number",
+      "title": {
+        "en": "Distance",
+        "nl": "Afstand"
+      },
+      "icon": "/assets/icons/measure_distance.svg",
+      "decimals": 2,
+      "insights": true,
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "mm"
+      }
     },
     "measure_dust": {
       "type": "number",

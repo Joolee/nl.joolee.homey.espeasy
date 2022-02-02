@@ -1,0 +1,16 @@
+{
+	"type": "number",
+	"title": {
+		"en": "Distance",
+		"nl": "Afstand"
+	},
+	"icon": "/assets/icons/measure_distance.svg",
+	"decimals": 2,
+	"insights": true,
+	"uiComponent": "sensor",
+	"getable": true,
+	"setable": false,
+	"units": {
+		"en": "mm"
+	}
+}
