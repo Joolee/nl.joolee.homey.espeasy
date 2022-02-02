@@ -2,3 +2,5 @@
 /tools
 *.md
 /LICENSE
+package-lock.json
+package.json
