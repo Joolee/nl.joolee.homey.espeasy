@@ -357,6 +357,53 @@
         "id": "measure_uptime_changed"
       },
       {
+        "id": "switch_long_press",
+        "title": {
+          "en": "Longpress event",
+          "nl": "Lang ingedrukt"
+        },
+        "hint": {
+          "en": "Trigger conditions depend on the device configuration in the ESP unit.",
+          "nl": "Activatie is afhankelijk van de instellingen in de ESP unit."
+        },
+        "tokens": [
+          {
+            "name": "switch_event",
+            "type": "number",
+            "title": {
+              "en": "Event number",
+              "nl": "Event nummer"
+            },
+            "example": "11"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_switch"
+          }
+        ]
+      },
+      {
+        "id": "switch_double_click",
+        "title": {
+          "en": "Doubleclick event",
+          "nl": "Dubbelklik event"
+        },
+        "hint": {
+          "en": "Trigger conditions depend on the device configuration in the ESP unit.",
+          "nl": "Activatie is afhankelijk van de instellingen in de ESP unit."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=input_switch"
+          }
+        ]
+      },
+      {
         "id": "unit_rebooted",
         "title": {
           "en": "Unit rebooted",

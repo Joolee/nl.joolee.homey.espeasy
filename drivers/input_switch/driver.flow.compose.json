@@ -1,2 +1,34 @@
 {
+	"triggers": [{
+			"id": "switch_long_press",
+			"title": {
+				"en": "The switch is pressed long",
+				"nl": "De schakelaar is lang ingedrukt"
+			},
+			"hint": {
+				"en": "Trigger conditions depend on the device configuration in the ESP unit.",
+				"nl": "Activatie is afhankelijk van de instellingen in de ESP unit."
+			},
+			"tokens": [{
+				"name": "switch_event",
+				"type": "number",
+				"title": {
+					"en": "Event number",
+					"nl": "Event nummer"
+				},
+				"example": "11"
+			}]
+		},
+		{
+			"id": "switch_double_click",
+			"title": {
+				"en": "The switch is double-clicked",
+				"nl": "De schakelaar is tweemaal ingedrukt"
+			},
+			"hint": {
+				"en": "Trigger conditions depend on the device configuration in the ESP unit.",
+				"nl": "Activatie is afhankelijk van de instellingen in de ESP unit."
+			}
+		}
+	]
 }

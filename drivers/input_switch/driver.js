@@ -5,6 +5,9 @@ const Homey = require('homey');
 
 module.exports = class Input_Switch_Driver extends SensorDriver {
 	onInit() {
+		this.addTriggerFlow("switch_long_press");
+		this.addTriggerFlow("switch_double_click");
+
 		this.taskTypes = [{
 				"name": "Switch input - Switch",
 				"plugin": 1
@@ -28,14 +31,38 @@ module.exports = class Input_Switch_Driver extends SensorDriver {
 			"capability": cap =>
 				!cap.setable && cap.getable && cap.type == "boolean",
 			"validate": (taskVal, value) => {
+				value = Number(value);
 				if (value == -1)
 					return Homey.__("sensor.io_board_offline")
-				else
+				else if ([0, 1, 3, 10, 11].includes(value))
 					return true;
+				else
+					return false;
 			},
-			"modifier": function(value) {
-				// Use full blown function because I need "this" from it's caller
-				return this.getSetting('invert') ? value : !value
+			// Use full blown function because I need "this" from it's caller
+			"modifier": function(value, rawValue, oldValue, capability) {
+				switch (Number(rawValue)) {
+					case 10:
+					case 11:
+						// Handle long click
+						this.getDriver().triggerFlow(this, "switch_long_press", {
+							"switch_event": rawValue
+						});
+						return null;
+
+					case 3:
+						// Handle doubleclick
+						this.getDriver().triggerFlow(this, "switch_double_click");
+						return null;
+
+					case 1:
+					case 0:
+						// Normal state change
+						return this.getSetting('invert') ? !value : value;
+					default:
+						this.error('input_switch/driver.js switch default reached with values:', value, rawValue, oldValue, capability);
+						return value;
+				}
 			}
 		}]
 
