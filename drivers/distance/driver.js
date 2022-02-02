@@ -16,7 +16,7 @@ module.exports = class Environment_Driver extends SensorDriver {
 				"values": ["distance_cm"]
 			},
 			{
-				"name": 'Keypad - TTP229 Touch',
+				"name": 'Position - HC-SR04, RCW-0001, etc.',
 				"variantTitle": "Measuring unit",
 				"plugin": 13,
 				"variants": {
