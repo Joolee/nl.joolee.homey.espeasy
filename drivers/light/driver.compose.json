@@ -1,0 +1,11 @@
+{
+	"name": {
+		"en": "Light strength",
+		"nl": "Lichtsterkte"
+	},
+	"$extends": [
+		"default-images",
+		"default-sensor-capabilities",
+		"pair-list-settings-done"
+	]
+}

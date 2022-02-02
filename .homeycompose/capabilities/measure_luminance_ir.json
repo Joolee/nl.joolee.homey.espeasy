@@ -1,0 +1,21 @@
+{
+	"type": "number",
+	"title": {
+		"en": "Infrared luminance",
+		"nl": "Helderheid Infrarood"
+	},
+	"icon": "/assets/icons/measure_luminance_ir.svg",
+	"units": {
+		"en": "lx"
+	},
+	"insights": true,
+	"desc": {
+		"en": "Infrared luminance in Lux (lx)",
+		"nl": "Helderheid infrarood in Lux (lx)"
+	},
+	"chartType": "spline",
+	"decimals": 2,
+	"getable": true,
+	"setable": false,
+	"uiComponent": "sensor"
+}

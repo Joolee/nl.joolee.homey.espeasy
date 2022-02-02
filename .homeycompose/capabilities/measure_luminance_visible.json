@@ -1,0 +1,21 @@
+{
+	"type": "number",
+	"title": {
+		"en": "Visible spectrum luminance",
+		"nl": "Helderheid zichtbaar spectrum"
+	},
+	"icon": "/assets/icons/measure_luminance_visible.svg",
+	"units": {
+		"en": "lx"
+	},
+	"insights": true,
+	"desc": {
+		"en": "Visible spectrum luminance in Lux (lx)",
+		"nl": "Helderheid zichtbaar spectrum in Lux (lx)"
+	},
+	"chartType": "spline",
+	"decimals": 2,
+	"getable": true,
+	"setable": false,
+	"uiComponent": "sensor"
+}

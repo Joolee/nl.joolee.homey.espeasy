@@ -1,0 +1,16 @@
+{
+	"$filter": "capabilities=measure_luminance_visible&driver_id=light|pulse_counter|input_analog",
+	"title": {
+		"en": "The visible spectrum luminance changed",
+		"nl": "De helderheid van het zichtbaar spectrum is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_luminance_visible",
+		"title": {
+			"en": "Luminance",
+			"nl": "Helderheid"
+		},
+		"type": "number",
+		"example": 100
+	}]
+}

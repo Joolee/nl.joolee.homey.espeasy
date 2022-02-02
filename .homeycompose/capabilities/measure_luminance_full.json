@@ -1,0 +1,21 @@
+{
+	"type": "number",
+	"title": {
+		"en": "Full spectrum luminance",
+		"nl": "Helderheid volledig spectrum"
+	},
+	"icon": "/assets/icons/measure_luminance_full.svg",
+	"units": {
+		"en": "lx"
+	},
+	"insights": true,
+	"desc": {
+		"en": "Full spectrum luminance in Lux (lx)",
+		"nl": "Helderheid volledig spectrum in Lux (lx)"
+	},
+	"chartType": "spline",
+	"decimals": 2,
+	"getable": true,
+	"setable": false,
+	"uiComponent": "sensor"
+}

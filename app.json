@@ -185,6 +185,60 @@
       },
       {
         "title": {
+          "en": "The full spectrum luminance changed",
+          "nl": "De helderheid van het volledig spectrum is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_luminance_full",
+            "title": {
+              "en": "Luminance",
+              "nl": "Helderheid"
+            },
+            "type": "number",
+            "example": 100
+          }
+        ],
+        "id": "measure_luminance_full_changed"
+      },
+      {
+        "title": {
+          "en": "The infrared luminance changed",
+          "nl": "De helderheid van infrarood is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_luminance_ir",
+            "title": {
+              "en": "Luminance",
+              "nl": "Helderheid"
+            },
+            "type": "number",
+            "example": 100
+          }
+        ],
+        "id": "measure_luminance_ir_changed"
+      },
+      {
+        "title": {
+          "en": "The visible spectrum luminance changed",
+          "nl": "De helderheid van het zichtbaar spectrum is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "measure_luminance_visible",
+            "title": {
+              "en": "Luminance",
+              "nl": "Helderheid"
+            },
+            "type": "number",
+            "example": 100
+          }
+        ],
+        "id": "measure_luminance_visible_changed"
+      },
+      {
+        "title": {
           "en": "The PM1 value has changed",
           "nl": "De PM1 waarde is veranderd",
           "de": "Der PM1-Wert hat sich geändert",
@@ -2094,6 +2148,129 @@
     },
     {
       "images": {
+        "large": "/drivers/light/assets/images/large.png",
+        "small": "/drivers/light/assets/images/small.png"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_idle_time",
+        "device_heartbeat"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "settings"
+          }
+        },
+        {
+          "id": "settings",
+          "navigation": {
+            "prev": "list_devices",
+            "next": "done"
+          }
+        },
+        {
+          "id": "done",
+          "template": "done"
+        }
+      ],
+      "name": {
+        "en": "Light strength",
+        "nl": "Lichtsterkte"
+      },
+      "id": "light",
+      "settings": [
+        {
+          "id": "unitInfo",
+          "type": "group",
+          "label": {
+            "en": "Unit information",
+            "nl": "Unitinformatie"
+          },
+          "children": [
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC Address",
+                "nl": "MAC-Adres"
+              },
+              "value": "",
+              "hint": {
+                "en": "The MAC Address of your ESP Easy unit. This is the identifier Homey uses for your unit. Any incoming messages will be matched by MAC addres so if the IP address does not match, it is updated on Homey's end.",
+                "nl": "Het MAC-Adres van je ESP Easy unit. Dit gebruikt Homey om een unit te identificeren, binnenkomende berichten worden hiermee herkent en als het IP adres van afzender niet overeen komt, wordt deze aangepast in Homey."
+              }
+            },
+            {
+              "id": "host",
+              "type": "label",
+              "label": {
+                "en": "Unit hostname",
+                "nl": "Unit hostnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The hostname or IP address can be changed in the unit settings but it will change automagically when Homey receives an event from another IP with the same MAC address.",
+                "nl": "Het IP adres kan veranderd worden n de unit instellingen. Deze wordt automagisch geüpdate wanneer Homey een bericht binnen krijgt van een nieuwe IP met hetzelfde MAC-adres."
+              }
+            },
+            {
+              "id": "idx",
+              "type": "label",
+              "label": {
+                "en": "Unit ID"
+              },
+              "value": "",
+              "hint": {
+                "en": "As defined on the ESP Easy settings page. Is currently not used to identify a unit, we use the MAC address for that.",
+                "nl": "Zoals kan worden ingesteld op de ESP Easy instellingenpagina. Dit ID wordt momenteel niet gebruikt door Homey."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sensorInfo",
+          "type": "group",
+          "label": {
+            "en": "Device identification",
+            "nl": "Apparaatidentificatie"
+          },
+          "children": [
+            {
+              "id": "controller",
+              "type": "number",
+              "label": {
+                "en": "Controller ID"
+              },
+              "value": 0,
+              "hint": {
+                "en": "Controller number of Homey in ESP Easy. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Controller nummer van Homey in ESP Easy. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+              }
+            },
+            {
+              "id": "taskIDX",
+              "type": "label",
+              "label": {
+                "en": "Task/Device IDX"
+              },
+              "value": "",
+              "hint": {
+                "en": "IDX as configured on device page for the Homey controller. Find more information at: https://git.io/homey-esp-idxs",
+                "nl": "Het IDX dat voor dit apparaat is geconfigureerd voor de Homey controller. Zie voor meer informatie: https://git.io/homey-esp-idxs"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "images": {
         "large": "/drivers/p1/assets/images/large.png",
         "small": "/drivers/p1/assets/images/small.png"
       },
@@ -3003,6 +3180,69 @@
       "units": {
         "en": "%"
       }
+    },
+    "measure_luminance_full": {
+      "type": "number",
+      "title": {
+        "en": "Full spectrum luminance",
+        "nl": "Helderheid volledig spectrum"
+      },
+      "icon": "/assets/icons/measure_luminance_full.svg",
+      "units": {
+        "en": "lx"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Full spectrum luminance in Lux (lx)",
+        "nl": "Helderheid volledig spectrum in Lux (lx)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_luminance_ir": {
+      "type": "number",
+      "title": {
+        "en": "Infrared luminance",
+        "nl": "Helderheid Infrarood"
+      },
+      "icon": "/assets/icons/measure_luminance_ir.svg",
+      "units": {
+        "en": "lx"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Infrared luminance in Lux (lx)",
+        "nl": "Helderheid infrarood in Lux (lx)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_luminance_visible": {
+      "type": "number",
+      "title": {
+        "en": "Visible spectrum luminance",
+        "nl": "Helderheid zichtbaar spectrum"
+      },
+      "icon": "/assets/icons/measure_luminance_visible.svg",
+      "units": {
+        "en": "lx"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Visible spectrum luminance in Lux (lx)",
+        "nl": "Helderheid zichtbaar spectrum in Lux (lx)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     },
     "measure_pm1": {
       "type": "number",

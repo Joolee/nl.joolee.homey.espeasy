@@ -1,0 +1,16 @@
+{
+	"$filter": "capabilities=measure_luminance_ir&driver_id=light|pulse_counter|input_analog",
+	"title": {
+		"en": "The infrared luminance changed",
+		"nl": "De helderheid van infrarood is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_luminance_ir",
+		"title": {
+			"en": "Luminance",
+			"nl": "Helderheid"
+		},
+		"type": "number",
+		"example": 100
+	}]
+}

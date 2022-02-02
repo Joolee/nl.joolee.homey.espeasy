@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/Homey-SVG-Icons -->
+
+	<circle cx="50" cy="50" r="32" stroke="black" stroke-width="4" fill="transparent" />
+
+	<path
+		fill="black"
+		d="M 50 25
+		A 1,1 0 0,1 50 75
+		Z"
+	></path>
+
+	<!-- Overlay another half circle and rotate it a bit -->
+	<path
+		fill="black"
+		d="M 50 25
+		A 1,1 0 0,1 50 75
+		Z"
+	transform="rotate(130 50 50)"></path>
+
+</svg>

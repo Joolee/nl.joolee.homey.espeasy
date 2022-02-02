@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- https://github.com/Joolee/Homey-SVG-Icons -->
+
+	<circle cx="50" cy="50" r="32" stroke="black" stroke-width="4" fill="transparent" />
+
+	<path
+		fill="black"
+		d="M 50 25
+		A 1,1 0 0,1 50 75
+		L 50 60
+		C 54 60, 63 59, 70 50 
+		C 63 41, 54 40, 50 40
+		Z"
+	></path>
+
+	<circle cx="50" cy="50" r="5" fill="black" />
+</svg>
