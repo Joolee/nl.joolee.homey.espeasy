@@ -56,6 +56,11 @@ module.exports = class Environment_Driver extends SensorDriver {
 				"values": ["Temperature"]
 			},
 			{
+				"name": 'Environment - BME680',
+				"plugin": 16,
+				"values": ["Temperature", "Humidity", "Pressure", "TVOC"]
+			},
+			{
 				"name": "Generic - Dummy Device",
 				"plugin": 33,
 				"variantTitle": "Output Data Type",
@@ -105,6 +110,10 @@ module.exports = class Environment_Driver extends SensorDriver {
 			{
 				"name": "Pressure",
 				"capability": "measure_pressure"
+			},
+			{
+				"name": "TVOC",
+				"capability": "measure_tvoc"
 			}
 		]
 
