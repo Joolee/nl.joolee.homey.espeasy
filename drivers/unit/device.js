@@ -119,9 +119,6 @@ module.exports = class UnitDevice extends Homey.Device {
 
 	onUnitUpdate(unit, newSettings) {
 		this.updateHostname(unit, newSettings.host, newSettings.port);
-		this.setSettings({
-			"idx": newSettings.idx.toString()
-		}).catch(error => this.log('Settings update failed', error, newSettings.idx));
 	}
 
 
