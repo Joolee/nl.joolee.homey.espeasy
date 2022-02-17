@@ -206,10 +206,13 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	setValue(capability, value) {
-		if (!this.getCapabilities().includes(capability) && value > 0)
+		let hasCapability = this.hasCapability(capability);
+		if (!hasCapability && value > 0) {
 			this.addCapability(capability);
+			hasCapability = true;
+		}
 
-		if (this.getCapabilities().includes(capability) && this.getCapabilityValue(capability) != value)
+		if (hasCapability && this.getCapabilityValue(capability) != value)
 			this.setCapabilityValue(capability, value)
 	}
 

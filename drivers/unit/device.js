@@ -60,10 +60,10 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.migrateCapability("custom_load", "measure_load");
 		this.migrateCapability("custom_ram", "measure_ram");
 
-		if (!this.getCapabilities().includes("measure_signal_strength"))
+		if (!this.hasCapability("measure_signal_strength"))
 			this.addCapability("measure_signal_strength");
 
-		if (!this.getCapabilities().includes("measure_uptime")) {
+		if (!this.hasCapability("measure_uptime")) {
 			this.addCapability("measure_uptime");
 			this.setCapabilityOptions("unit_uptime", {
 				"preventInsights": true,
@@ -71,7 +71,7 @@ module.exports = class UnitDevice extends Homey.Device {
 			});
 		}
 
-		if (!this.getCapabilities().includes("measure_idle_time")) {
+		if (!this.hasCapability("measure_idle_time")) {
 			this.addCapability("measure_idle_time");
 			this.setCapabilityOptions("device_heartbeat", {
 				"preventInsights": true,
@@ -176,11 +176,11 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.setValue("measure_signal_strength", json.WiFi["RSSI"]);
 
 		// ESP32 chips don't supply this value
-		if (!this.getCapabilities().includes("measure_heap") && json.System["Heap Max Free Block"]) {
+		if (!this.hasCapability("measure_heap") && json.System["Heap Max Free Block"]) {
 			this.addCapability("measure_heap");
 		}
 
-		if (this.getCapabilities().includes("measure_heap")) {
+		if (this.hasCapability("measure_heap")) {
 			if (json.System["Heap Max Free Block"]) {
 				this.setValue("measure_heap", json.System["Heap Max Free Block"]);
 			} else {
@@ -199,7 +199,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	migrateCapability(oldCapability, newCapability) {
-		if (this.getCapabilities().includes(oldCapability)) {
+		if (this.hasCapability(oldCapability)) {
 			this.log("Migrate capability", oldCapability, newCapability);
 			this.removeCapability(oldCapability);
 			this.addCapability(newCapability);

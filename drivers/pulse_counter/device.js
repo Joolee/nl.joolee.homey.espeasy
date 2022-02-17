@@ -38,7 +38,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 
 	addRemoveTotalCapability(variant = this.getSetting("variant")) {
 		const needsTotal = ["delta_total", "delta_total_time"].includes(variant);
-		const hasTotal = this.getCapabilities().includes("measure_sensor_value");
+		const hasTotal = this.hasCapability("measure_sensor_value");
 		if (needsTotal && !hasTotal) {
 			this.log("Adding capability 'measure_sensor_value'");
 			this.addCapability("measure_sensor_value");
