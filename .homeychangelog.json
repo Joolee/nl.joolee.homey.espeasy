@@ -78,5 +78,9 @@
 	"1.10.0": {
 		"en": "Huge internal changes and support for lots of new devices",
 		"nl": "Grote interne wijzigingen en ondersteuning voor een hoop nieuwe apparaten"
+	},
+	"1.10.1": {
+		"en": "Fix two crashes; When saving unit settings and receiving corrypt P1 datagram",
+		"nl": "Twee crashes gerepareerd; Bij opslaan unit instellingen en bij ontvangen van een corrupt P1 datagram"
 	}
 }
