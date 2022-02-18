@@ -186,7 +186,9 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.setValue("meter_power.delivered2", dg.electricity.delivered.tariff2.reading);
 
 		// Active tariff
-		this.setValue("alarm_active_tariff", dg.electricity.tariffIndicator.toString());
+		if (dg.electricity.tariffIndicator) {
+			this.setValue("alarm_active_tariff", dg.electricity.tariffIndicator.toString());
+		}
 
 		// Gas meter
 		this.setValue("meter_gas", dg.gas.reading);
@@ -195,7 +197,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	onError(error) {
-		if (typeof error == "string" && error.substr(0, 22) == "Error: write after end")
+		if (typeof error == "string" && error.slice(0, 22) == "Error: write after end")
 			return;
 
 		if (error.errno && error.errno == "ECONNRESET") {
@@ -207,12 +209,12 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	setValue(capability, value) {
 		let hasCapability = this.hasCapability(capability);
-		if (!hasCapability && value > 0) {
+		if (!hasCapability && value !== undefined && value > 0) {
 			this.addCapability(capability);
 			hasCapability = true;
 		}
 
-		if (hasCapability && this.getCapabilityValue(capability) != value)
+		if (hasCapability && value !== undefined && this.getCapabilityValue(capability) != value)
 			this.setCapabilityValue(capability, value)
 	}
 
