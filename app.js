@@ -1,25 +1,64 @@
 'use strict';
 
 const Homey = require('homey');
+const http = require('http.min');
 const ESPEasyUnits = require('./lib/ESPEasyUnits.js');
+const TelemetryDimensions = require('./lib/telemetryDimensions.json');
 
 class ESPEasy extends Homey.App {
 
 	onInit() {
 		if (process.env.DEBUG === '1') {
 			require('inspector').open(9222, '0.0.0.0', true);
+		} else {
+			this.registerErrorHandling();
 		}
+
+		this.telemetryUrl = ["https://", "espeasy.homey.joolee.nl", "/matomo.php"];
+		this.telemetrySite = 3;
+		this.updateTelemetry = this.updateTelemetry.bind(this);
+		this.sendTelemetry = this.sendTelemetry.bind(this);
 
 		this.triggers = {};
 		this.actions = {};
 		this.units = new ESPEasyUnits();
-		this.log('App started');
 
-		process.on('unhandledRejection', (reason, p) => {
-			this.log("Unhandled Rejection at:", p);
-			this.log("Rejection reason:", reason);
-			this.log("Rejection stack:", reason.stack);
+		this.startTelemetry();
+	}
+
+	registerErrorHandling() {
+		process.on('uncaughtException', error => {
+			this.sendTelemetry('Javascript Error', 'uncaughtException', '/error/uncaughtException', {
+				e_n: error.message
+			});
+			this.error("Unhandled Exception", error);
 		});
+		process.on('unhandledRejection', (error, promise) => {
+			this.sendTelemetry('Javascript Error', 'unhandledRejection', '/error/unhandledRejection', {
+				e_n: error.message + ' - ' + promise
+			});
+			this.error("Unhandled Rejection at:", p);
+			this.error("Rejection reason:", error);
+			this.error("Rejection stack:", error.stack);
+		});
+	}
+
+	get supportedTasks() {
+		if (this._supportedTasks)
+			return this._supportedTasks;
+
+		this._supportedTasks = Object.values(Homey.ManagerDrivers.getDrivers()).flatMap(driver => {
+			if (driver.taskTypes)
+				return driver.taskTypes.map(type => `${type.plugin} - ${type.name}`);
+			else
+				return [];
+		}).sort((a, b) => a.localeCompare(b, undefined, {
+			numeric: true
+		}));
+
+		this._supportedTasks.unshift('26 - Generic - System Info');
+
+		return this._supportedTasks;
 	}
 
 	getI18nString(i18n) {
@@ -51,6 +90,115 @@ class ESPEasy extends Homey.App {
 			...defaultCapabilities,
 			...customCapabilities
 		};
+	}
+
+	get telemetryId() {
+		let id = Homey.ManagerSettings.get('telemetryId');
+
+		if (!id) {
+			id = (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2);
+			Homey.ManagerSettings.set('telemetryId', id);
+		}
+		return id;
+	}
+
+	sendTelemetry(source, reason, url, metrics) {
+		try {
+			metrics = {
+				action_name: `${source} / ${reason}`,
+				...metrics,
+				uid: this.telemetryId,
+				idsite: this.telemetrySite,
+				url: this.telemetryUrl[0] + this.telemetryUrl[1] + url,
+				lang: Homey.ManagerI18n.getLanguage(),
+				rec: 1,
+				bots: 1,
+				apiv: 1,
+				send_image: 0,
+			};
+
+			console.log("Sending telemetry", metrics, this.parseDimensions(metrics));
+
+			http.get({
+				uri: this.telemetryUrl.join(''),
+				query: this.parseDimensions(metrics)
+			}).catch(function(result) {
+				this.log('Telemetry http error');
+				this.log('Code: ' + result.response.statusCode)
+				this.log('Response:', result.data)
+			});
+		} catch (error) {
+			this.error('Error sending telemetry:', error);
+		}
+	}
+
+	parseDimensions(metrics) {
+		let query = {};
+		for (const [key, value] of Object.entries(metrics)) {
+			const dimensionKey = TelemetryDimensions.indexOf(key);
+			if (dimensionKey > -1) {
+				query[`dimension${dimensionKey}`] = value;
+			} else if (String(key).indexOf(' ') !== -1) {
+				console.error('Unsupported metric', key);
+			} else {
+				query[key] = value;
+			}
+		}
+		return query;
+	}
+
+	startTelemetry() {
+		try {
+			this.log('Using telemetry ID:', this.telemetryId);
+
+			// Update this telemetry when app has had time to initialize
+			setTimeout(this.updateTelemetry, 120000, 'Initialized', false);
+			setInterval(this.updateTelemetry, 604000000, "Weekly update", true);
+			setInterval(this.sendTelemetry, 86000000, "App", "Daily Ping", {
+				ping: 1
+			});
+
+			let metrics = {
+				// Start a 'new session' when the app starts
+				"new_visit": 1,
+				"App version": Homey.manifest.version,
+				"Homey firmware version": Homey.version,
+			}
+
+			this.sendTelemetry('App', 'Started', '/app/start', metrics);
+		} catch (error) {
+			this.error('Error starting app telemetry:', error);
+		}
+	}
+
+	updateTelemetry(reason, recurse) {
+		try {
+			const onlineUnits = this.units.listOnline();
+			let metrics = {
+				"Total tasks": onlineUnits.reduce((numTasks, unit) => numTasks + unit.tasks.length, 0),
+				"Total tasks in use": onlineUnits.reduce((numTasks, unit) => {
+					numTasks += unit.sensors.length;
+					numTasks += unit.tasks.filter(task => task.TaskDeviceNumber == 26 && task.Type == 'Generic - System Info').length;
+					return numTasks;
+				}, 0),
+				"Total units": this.units.units.length,
+				"Total GPIO used": onlineUnits.reduce((numTasks, unit) => numTasks + unit.gpios.length, 0),
+			}
+
+			this.sendTelemetry('App', reason, '/app/initialized', metrics);
+		} catch (error) {
+			this.error('Error updating app telemetry:', error);
+		}
+
+		if (recurse) {
+			this.units.listOnline().forEach(unit => {
+				try {
+					unit.updateTelemetry(reason, recurse)
+				} catch (error) {
+					this.error('Error updating unit telemetry:', unit.name, error);
+				}
+			});
+		}
 	}
 }
 

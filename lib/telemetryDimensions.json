@@ -1,0 +1,22 @@
+["-",
+	"App version",
+	"Homey firmware version",
+	"Total units",
+	"Total tasks",
+	"Total tasks in use",
+	"Total GPIO used",
+
+	"Unit board",
+	"Unit extension boards",
+	"Unit registered",
+	"Unit tasks",
+	"Unit tasks in use",
+	"Unit GPIO's in use",
+	"Unit firmware version",
+	"Unit firmware type",
+	"Unit systeminfo task",
+
+	"Task plugin",
+	"Task driver",
+	"Task capabilities"
+]
