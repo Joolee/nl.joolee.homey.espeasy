@@ -4,29 +4,29 @@ const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
 module.exports = class Environment_Driver extends SensorDriver {
-	onInit() {
-		this.taskTypes = [{
-				"name": 'Light/Lux - BH1750',
-				"plugin": 10,
-				"values": ["Lux"]
-			},
-			{
-				"name": 'Light/Lux - TSL2561',
-				"plugin": 15,
-				"values": ["Lux", "Lux_Infrared", "Lux_Broadband"]
-			},
-			{
-				"name": 'Light/Lux - TSL2591 [TESTING]',
-				"plugin": 74,
-				"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]
-			},
-			{
-				"name": 'Light/Lux - TSL2591',
-				"plugin": 74,
-				"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]
-			},
-		]
+	taskTypes = [{
+			"name": 'Light/Lux - BH1750',
+			"plugin": 10,
+			"values": ["Lux"]
+		},
+		{
+			"name": 'Light/Lux - TSL2561',
+			"plugin": 15,
+			"values": ["Lux", "Lux_Infrared", "Lux_Broadband"]
+		},
+		{
+			"name": 'Light/Lux - TSL2591 [TESTING]',
+			"plugin": 74,
+			"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]
+		},
+		{
+			"name": 'Light/Lux - TSL2591',
+			"plugin": 74,
+			"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]
+		},
+	];
 
+	onInit() {
 		this.values = [{
 				"name": "Lux",
 				"capability": "measure_luminance"

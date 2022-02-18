@@ -4,27 +4,27 @@ const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
 module.exports = class Input_Switch_Driver extends SensorDriver {
+	taskTypes = [{
+			"name": "Switch input - Switch",
+			"plugin": 1
+		},
+		{
+			"name": "Switch input - MCP23017",
+			"plugin": 9
+		},
+		{
+			"name": "Switch input - PCF8574",
+			"plugin": 19
+		},
+		{
+			"name": "Generic - Dummy Device",
+			"plugin": 33
+		}
+	];
+
 	onInit() {
 		this.addTriggerFlow("switch_long_press");
 		this.addTriggerFlow("switch_double_click");
-
-		this.taskTypes = [{
-				"name": "Switch input - Switch",
-				"plugin": 1
-			},
-			{
-				"name": "Switch input - MCP23017",
-				"plugin": 9
-			},
-			{
-				"name": "Switch input - PCF8574",
-				"plugin": 19
-			},
-			{
-				"name": "Generic - Dummy Device",
-				"plugin": 33
-			}
-		]
 
 		this.values = [{
 			"name": "State",

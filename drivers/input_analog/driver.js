@@ -4,33 +4,33 @@ const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
 module.exports = class Input_Analog_Driver extends SensorDriver {
-	onInit() {
-		this.taskTypes = [{
-				"name": "Analog input - internal",
-				"plugin": 2
-			},
-			{
-				"name": "Analog input - MCP3221 [TESTING]",
-				"plugin": 60
-			},
-			{
-				"name": "Analog input - MCP3221",
-				"plugin": 60
-			},
-			{
-				"name": "Analog input - ADS1115",
-				"plugin": 25
-			},
-			{
-				"name": "Analog input - PCF8591",
-				"plugin": 7
-			},
-			{
-				"name": "Generic - Dummy Device",
-				"plugin": 33,
-			}
-		]
+	taskTypes = [{
+			"name": "Analog input - internal",
+			"plugin": 2
+		},
+		{
+			"name": "Analog input - MCP3221 [TESTING]",
+			"plugin": 60
+		},
+		{
+			"name": "Analog input - MCP3221",
+			"plugin": 60
+		},
+		{
+			"name": "Analog input - ADS1115",
+			"plugin": 25
+		},
+		{
+			"name": "Analog input - PCF8591",
+			"plugin": 7
+		},
+		{
+			"name": "Generic - Dummy Device",
+			"plugin": 33,
+		}
+	];
 
+	onInit() {
 		this.values = [{
 			"name": "Analog",
 			"capability": cap =>
