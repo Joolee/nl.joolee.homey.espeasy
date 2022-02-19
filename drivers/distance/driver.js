@@ -3,7 +3,7 @@
 const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
-module.exports = class Environment_Driver extends SensorDriver {
+module.exports = class Distance_Driver extends SensorDriver {
 	taskTypes = [{
 			"name": 'Distance - VL53L1X (400cm) [TESTING]',
 			"plugin": 113,

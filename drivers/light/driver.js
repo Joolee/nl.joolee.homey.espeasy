@@ -3,7 +3,7 @@
 const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
-module.exports = class Environment_Driver extends SensorDriver {
+module.exports = class Light_Driver extends SensorDriver {
 	taskTypes = [{
 			"name": 'Light/Lux - BH1750',
 			"plugin": 10,

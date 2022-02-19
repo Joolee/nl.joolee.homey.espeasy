@@ -3,7 +3,7 @@
 const SensorDriver = require('/lib/SensorDriver.js');
 const Homey = require('homey');
 
-module.exports = class Environment_Driver extends SensorDriver {
+module.exports = class Dust_Driver extends SensorDriver {
 	taskTypes = [{
 			"name": 'Dust - PMS5003',
 			"plugin": 53,
