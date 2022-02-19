@@ -8,7 +8,7 @@
 		"nl": "Applicatiebeschrijving geüpdatet"
 	},
 	"1.0.2": {
-		"en": "Fixed bug in unit initialisation",
+		"en": "Fixed bug in unit initialization",
 		"nl": "Bug opgelost in het laden van een nieuwe unit"
 	},
 	"1.0.3": {
@@ -82,5 +82,9 @@
 	"1.10.1": {
 		"en": "Fix two crashes; When saving unit settings and receiving corrypt P1 datagram",
 		"nl": "Twee crashes gerepareerd; Bij opslaan unit instellingen en bij ontvangen van een corrupt P1 datagram"
+	},
+	"1.11.0": {
+		"en": "Added new Energy driver, fixed some bugs and added privacy-friendly telemetry",
+		"nl": "Nieuwe energiedriver toegevoegd, enkele bugs opgelost en privacy-vriendelijke telemetrie geintroduceert"
 	}
 }
