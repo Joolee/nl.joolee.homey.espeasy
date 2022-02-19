@@ -15,11 +15,6 @@ module.exports = class Light_Driver extends SensorDriver {
 			"values": ["Lux", "Lux_Infrared", "Lux_Broadband"]
 		},
 		{
-			"name": 'Light/Lux - TSL2591 [TESTING]',
-			"plugin": 74,
-			"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]
-		},
-		{
 			"name": 'Light/Lux - TSL2591',
 			"plugin": 74,
 			"values": ["Lux", "Lux_Broadband", "Lux_Visible", "Lux_Infrared"]

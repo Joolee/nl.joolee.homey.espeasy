@@ -5,11 +5,6 @@ const Homey = require('homey');
 
 module.exports = class Distance_Driver extends SensorDriver {
 	taskTypes = [{
-			"name": 'Distance - VL53L1X (400cm) [TESTING]',
-			"plugin": 113,
-			"values": ["distance_cm"]
-		},
-		{
 			"name": 'Distance - VL53L1X (400cm)',
 			"plugin": 113,
 			"values": ["distance_cm"]
@@ -30,11 +25,6 @@ module.exports = class Distance_Driver extends SensorDriver {
 					"values": ["distance_inch"]
 				}
 			}
-		},
-		{
-			"name": 'Distance - VL53L0X (200cm) [TESTING]',
-			"plugin": 110,
-			"values": ["distance_cm"]
 		},
 		{
 			"name": 'Distance - VL53L0X (200cm)',

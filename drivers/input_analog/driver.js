@@ -9,10 +9,6 @@ module.exports = class Input_Analog_Driver extends SensorDriver {
 			"plugin": 2
 		},
 		{
-			"name": "Analog input - MCP3221 [TESTING]",
-			"plugin": 60
-		},
-		{
 			"name": "Analog input - MCP3221",
 			"plugin": 60
 		},
