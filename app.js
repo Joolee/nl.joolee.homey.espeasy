@@ -24,6 +24,15 @@ class ESPEasy extends Homey.App {
 		this.units = new ESPEasyUnits();
 
 		this.startTelemetry();
+
+		Homey.on('cpuwarn', data => this.sendTelemetry('App', 'CPU Warning', `/app/cpuwarn/${data.limit}/${data.count}`, {}));
+		Homey.on('memwarn', data => this.sendTelemetry('App', 'Memory Warning', `/app/memwarn/${data.limit}/${data.count}`, {}));
+		Homey.on('unload', data => this.sendTelemetry('App', 'Unload', `/app/unload`, {}));
+	}
+
+
+	onUninit() {
+		sendTelemetry('App', 'Uninit', '/app/uninit', {});
 	}
 
 	registerErrorHandling() {
