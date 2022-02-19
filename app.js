@@ -187,7 +187,7 @@ class ESPEasy extends Homey.App {
 				"Total tasks": onlineUnits.reduce((numTasks, unit) => numTasks + unit.tasks.length, 0),
 				"Total tasks in use": onlineUnits.reduce((numTasks, unit) => {
 					numTasks += unit.sensors.length;
-					numTasks += unit.tasks.filter(task => task.TaskDeviceNumber == 26 && task.Type == 'Generic - System Info').length;
+					numTasks += unit.getTasksByName(26, 'Generic - System Info', false).length;
 					return numTasks;
 				}, 0),
 				"Total units": this.units.units.length,
