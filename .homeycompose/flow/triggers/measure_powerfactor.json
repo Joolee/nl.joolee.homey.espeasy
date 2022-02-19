@@ -1,0 +1,16 @@
+{
+	"$filter": "capabilities=measure_powerfactor&driver_id=energy|pulse_counter|input_analog",
+	"title": {
+		"en": "The power factor value has changed",
+		"nl": "De vermogensfactor is veranderd"
+	},
+	"tokens": [{
+		"name": "measure_powerfactor",
+		"title": {
+			"en": "Power Factor",
+			"nl": "Vermogensfactor"
+		},
+		"type": "number",
+		"example": 2
+	}]
+}

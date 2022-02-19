@@ -1,5 +1,5 @@
 {
-	"$filter": "capabilities=measure_unknown&driver_id=pulse_counter|input_analog|gasses",
+	"$filter": "capabilities=measure_unknown&driver_id=energy|pulse_counter|input_analog|gasses",
 	"title": {
 		"en": "'Unknown value' changed",
 		"nl": "'Onbekende waarde' veranderd"
