@@ -1,7 +1,7 @@
 # ESP Easy
 <img align="right" src="https://github.com/Joolee/nl.joolee.homey.espeasy/raw/master/assets/images/small.png">
 
-[ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) is a firmware for ESP8266 boards like the WeMos D1 and NodeMCU. It allows you to quickly make custom devices with switches, sensors and other hardware for use in Domotica setups. [Homey](https://homey.app/) is a Domotica controller with support for a bunch of different protocols. This app binds them together by adding support to Homey for connecting with ESP Easy units.
+[ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) is a firmware for ESP32 and ESP8266 boards like the WeMos D1 and NodeMCU. It allows you to quickly make custom devices with switches, sensors and other hardware for use in Domotica setups. [Homey](https://homey.app/) is a Domotica controller with support for a bunch of different protocols. This app binds them together by adding support to Homey for connecting with ESP Easy units and their connected sensors.
 
 # Usage
 Follow these steps to start using ESP Easy together with Homey:
@@ -20,3 +20,6 @@ Follow these steps to start using ESP Easy together with Homey:
 * [Get a new device supported](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/Get-new-device-supported)
 
 As my own use cases are limited, I need your input for Supporting more boards, devices and languages. [Read here](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/Get-new-device-supported) how you can help me!
+
+# Privacy
+Since version 1.11.0, some basic telemetry data is collected by the app. Read all about it on my [privacy](https://github.com/Joolee/nl.joolee.homey.espeasy/wiki/Privacy) page on the wiki.

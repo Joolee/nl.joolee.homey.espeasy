@@ -1,5 +1,5 @@
-ESP Easy is een firmware voor ESP8266 ontwikkelbordjes zoals de WeMos D1 en NodeMCU. Met deze bordjes kun je snel en eenvoudig je eigen domoticaaparatuur maken en met deze app kun je ze ook nog eens koppelen met Homey!
+ESP Easy is een firmware voor ESP32 ontwikkelbordjes zoals de WeMos D1 en NodeMCU. Met deze bordjes kun je snel en eenvoudig je eigen domoticaaparatuur maken en met deze app kun je ze ook nog eens koppelen met Homey!
 
-Deze app is ontwikkeld en getest op een NodeMCU V3 bord. Als je problemen ervaart met andere ontwikkelbordjes of de pin-layout getoond wil hebben in de GPIO pairing wizzard, laat het weten op Github!
+Met de ESP Easy app kun je elke 'device' appart toevoegen als apparaat in Homey. Heb je bijvoorbeeld een bordje in de meterkast welke met de P1 poort van je watermeter is verbonden maar ook een temperatuursensor heeft? Dan kun je in Homey drie apparaten toevoegen: het ESP bordje zelf en twee 'environment' sensoren. Verder kun je alle beschikbare GPIO poorten gebruiken voor zowel input als output en kun je zelfs eigen commando's naar het bordje toesturen. 
 
 Mijn eigen use-cases zijn beperkt dus ik heb jouw input nodig om meer borjes en apparaten te kunnen ondersteunen. Je kunt helpen op Github door informatie over jouw set-up op te sturen of direct code aan te dragen.
