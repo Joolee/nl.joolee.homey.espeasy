@@ -78,7 +78,7 @@ module.exports = class P1_Device extends GeneralDevice {
 				"Task capabilities": capabilities.sort().join(', ')
 			};
 
-			Homey.app.sendTelemetry('Sensor', reason, '/device/sensor/p1', metrics);
+			Homey.app.telemetry.send('Sensor', reason, '/device/sensor/p1', metrics);
 		} catch (error) {
 			this.error('Error sending P1 telemetry:', error);
 		}
@@ -230,7 +230,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		if (error.errno && error.errno == "ECONNRESET") {
 			this.log("Connection reset. Previous connection had probably not been closed correctly");
 		} else {
-			this.log("Error received:", error);
+			this.error("Error received:", error);
 		}
 	}
 
