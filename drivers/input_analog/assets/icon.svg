@@ -2,5 +2,5 @@
 <svg version="1.1" viewBox="0 0 190 160" xmlns="http://www.w3.org/2000/svg">
 	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
 	<!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths -->
-	<path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" stroke-width="7" fill="transparent" stroke-linecap="square"/>
+	<path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" stroke-width="7" fill="none" fill-opacity="0" stroke-linecap="square"/>
 </svg>

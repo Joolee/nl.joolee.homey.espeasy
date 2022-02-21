@@ -2,7 +2,7 @@
 <svg version="1.1" viewBox="0 0 108 100" xmlns="http://www.w3.org/2000/svg">
 	<!-- https://github.com/Joolee/nl.joolee.homey.espeasy -->
 	<path
-		stroke="black" stroke-width="4" fill="transparent" stroke-linecap="round"
+		stroke="black" stroke-width="4" fill="none" fill-opacity="0" stroke-linecap="round"
 		d="M 26 81
 		C -3 82, -3 47, 16 42
 		C 25 10, 64 10, 73 42
