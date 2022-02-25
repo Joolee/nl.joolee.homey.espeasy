@@ -86,5 +86,9 @@
 	"1.11.0": {
 		"en": "Added new Energy driver, fixed some bugs and added privacy-friendly telemetry",
 		"nl": "Nieuwe energiedriver toegevoegd, enkele bugs opgelost en privacy-vriendelijke telemetrie geintroduceert"
+	},
+	"1.11.1": {
+		"en": "Fix crash when not debugging",
+		"nl": "Lost een crash op wanneer debugging niet actief is"
 	}
 }

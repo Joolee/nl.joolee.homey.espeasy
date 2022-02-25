@@ -1,40 +1,40 @@
 {
-	"id": "nl.joolee.homey.espeasy",
-	"version": "1.11.0",
-	"compatibility": ">=2.0",
-	"sdk": 2,
-	"brandColor": "#2F4252",
-	"name": {
-		"en": "ESP Easy",
-		"nl": "ESP Easy"
-	},
-	"description": {
-		"en": "Build your own sensors",
-		"nl": "Bouw je eigen sensoren"
-	},
-	"category": [
-		"tools"
-	],
-	"permissions": [],
-	"images": {
-		"large": "/assets/images/large.png",
-		"small": "/assets/images/small.png"
-	},
-	"author": {
-		"name": "Joolee",
-		"email": "homey-app@joolee.nl"
-	},
-	"contributing": {
-		"donate": {
-			"paypal": {
-				"username": "joolee3000"
-			}
-		}
-	},
-	"bugs": {
-		"url": "https://github.com/Joolee/nl.joolee.homey.espeasy/issues"
-	},
-	"homeyCommunityTopicId": 30381,
-	"source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
-	"homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy/wiki"
+  "id": "nl.joolee.homey.espeasy",
+  "version": "1.11.1",
+  "compatibility": ">=2.0",
+  "sdk": 2,
+  "brandColor": "#2F4252",
+  "name": {
+    "en": "ESP Easy",
+    "nl": "ESP Easy"
+  },
+  "description": {
+    "en": "Build your own sensors",
+    "nl": "Bouw je eigen sensoren"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Joolee",
+    "email": "homey-app@joolee.nl"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "joolee3000"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Joolee/nl.joolee.homey.espeasy/issues"
+  },
+  "homeyCommunityTopicId": 30381,
+  "source": "https://github.com/Joolee/nl.joolee.homey.espeasy",
+  "homepage": "https://github.com/Joolee/nl.joolee.homey.espeasy/wiki"
 }

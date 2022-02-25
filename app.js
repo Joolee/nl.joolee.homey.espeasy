@@ -10,8 +10,6 @@ class ESPEasy extends Homey.App {
 		if (process.env.DEBUG === '1') {
 			require('inspector').open(9222, '0.0.0.0', false);
 			process.stdout.write = () => {}
-		} else {
-			this.registerErrorHandling();
 		}
 
 		this.updateTelemetry = this.updateTelemetry.bind(this);
