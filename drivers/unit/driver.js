@@ -35,7 +35,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 		socket.on('showView', (viewId, callback) => {
 			if (viewId == "setup_controller") {
 				if (unit) {
-					unit.on("rawevent", updateEventCount);
+					unit.on("event", updateEventCount);
 				} else {
 					this.log("Clicked next too soon!");
 				}
@@ -71,7 +71,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 
 		socket.on('connect', (data, callback) => {
 			if (unit) {
-				unit.removeListener("rawevent", updateEventCount);
+				unit.removeListener("event", updateEventCount);
 				unit = null;
 			}
 
@@ -83,7 +83,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 				} else {
 					this.log("Requested unit found: '" + unit.name + "'")
 					const unitFound = (unit) => {
-						unit.on("rawevent", updateEventCount);
+						unit.on("event", updateEventCount);
 
 						callback(null, {
 							"name": unit.name,
