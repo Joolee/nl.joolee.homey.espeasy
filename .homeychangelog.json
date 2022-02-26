@@ -80,7 +80,7 @@
 		"nl": "Grote interne wijzigingen en ondersteuning voor een hoop nieuwe apparaten"
 	},
 	"1.10.1": {
-		"en": "Fix two crashes; When saving unit settings and receiving corrypt P1 datagram",
+		"en": "Fix two crashes; When saving unit settings and receiving corrupt P1 datagram",
 		"nl": "Twee crashes gerepareerd; Bij opslaan unit instellingen en bij ontvangen van een corrupt P1 datagram"
 	},
 	"1.11.0": {
@@ -90,5 +90,9 @@
 	"1.11.1": {
 		"en": "Fix crash when not debugging",
 		"nl": "Lost een crash op wanneer debugging niet actief is"
+	},
+	"1.11.2": {
+		"en": "Improved P1 parsing of corrupt datagrams",
+		"nl": "Verwerken van corrupte datagramd van P1 apparaten is verbeterd"
 	}
 }
