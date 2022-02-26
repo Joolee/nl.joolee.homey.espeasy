@@ -56,6 +56,14 @@ class ESPEasy extends Homey.App {
 			return `Untranslated string: ${i18n}`;
 	}
 
+	safeIncrement(i) {
+		// I don't want a crash because of an app that runs too long :)
+		if (i++ >= Number.MAX_SAFE_INTEGER - 10) {
+			return 0;
+		}
+		return i;
+	}
+
 	// This was a re-implementation of Homeylib.getCapability to include custom capabilities
 	// I removed Homeylib alltogether to reduce dependencies
 	getCapability(capability) {
