@@ -166,30 +166,45 @@ module.exports = class P1_Device extends GeneralDevice {
 			this.errorMsg = null;
 		}
 
-		// Multiple datagrams might have been received for some reason
-		// Split on lines beginning with /
-		let dg = data.toString().split(/^\//).filter(n => n);
+		try {
+			const dg = this.parseDatagram(data);
 
-		if (dg.length == 0) {
-			this.error('Received empty');
-			return;
-		}
+			if (!this.datagramCount) {
+				this.debug("First datagram received:\n", dg, dg);
+			}
+			this.datagramCount = Homey.app.safeIncrement(this.datagramCount);
 
-		if (dg.length > 1) {
-			this.error('Received multiple datagrams, only using last one', dg.length);
-		}
-		dg = '/' + dg[dg.length - 1];
+			dg.version = (dg.version / 10).toString();
 
-		if (!/^![0-9A-F]{4}$/m.test(dg)) {
-			this.error('Received corrupt datagrams', dg);
-		}
+			if (this.getSetting("meterType") != dg.meterType || this.getSetting("DSMRVersion") != dg.version) {
+				this.log('P1 properties changed', dg.meterType, dg.version);
+				this.setSettings({
+					"meterType": dg.meterType,
+					"DSMRVersion": dg.version
+				});
+			}
 
-		// Remove CRC16 line because the parser will throw a warning
-		// The ESP should have checked this already anyway
-		const packet = parsePacket(dg.replace(/^![0-9A-F]{4}$/m, ''));
+			// Power usage
+			this.setValue("measure_power", dg.electricity.received.actual.reading * 1000);
+			this.setValue("meter_power.received1", dg.electricity.received.tariff1.reading);
+			this.setValue("meter_power.received2", dg.electricity.received.tariff2.reading);
 
-		if (!packet.electricity.received.actual.reading) {
-			this.error("Invalid datagram received...", dg);
+			// Power surplus
+			this.setValue("measure_power.delivery", 0 - dg.electricity.delivered.actual * 1000);
+			this.setValue("meter_power.delivered1", dg.electricity.delivered.tariff1.reading);
+			this.setValue("meter_power.delivered2", dg.electricity.delivered.tariff2.reading);
+
+			// Active tariff
+			if (dg.electricity.tariffIndicator) {
+				this.setValue("alarm_active_tariff", dg.electricity.tariffIndicator.toString());
+			}
+
+			// Gas meter
+			this.setValue("meter_gas", dg.gas.reading);
+
+		} catch (error) {
+			// It's a soft error as we'll receive more datagrams ㄟ( ▔, ▔ )ㄏ
+			this.log('Datagram error', this.dgCount, error);
 			this.setUnavailable(Homey.__("p1.invalid_datagram", {
 				"port": this.port
 			}));
@@ -198,40 +213,36 @@ module.exports = class P1_Device extends GeneralDevice {
 
 		this.updateHeartbeat();
 		this.lastDatagram = new Date();
-
-		if (!this.datagrams++) {
-			this.debug("First datagram received:\n", packet, dg);
-		}
-
-		packet.version = (packet.version / 10).toString();
-
-		if (this.getSetting("meterType") != packet.meterType || this.getSetting("DSMRVersion") != packet.version) {
-			this.log('P1 properties changed', packet.meterType, packet.version);
-			this.setSettings({
-				"meterType": packet.meterType,
-				"DSMRVersion": packet.version
-			});
-		}
-
-		// Power usage
-		this.setValue("measure_power", packet.electricity.received.actual.reading * 1000);
-		this.setValue("meter_power.received1", packet.electricity.received.tariff1.reading);
-		this.setValue("meter_power.received2", packet.electricity.received.tariff2.reading);
-
-		// Power surplus
-		this.setValue("measure_power.delivery", 0 - packet.electricity.delivered.actual * 1000);
-		this.setValue("meter_power.delivered1", packet.electricity.delivered.tariff1.reading);
-		this.setValue("meter_power.delivered2", packet.electricity.delivered.tariff2.reading);
-
-		// Active tariff
-		if (packet.electricity.tariffIndicator) {
-			this.setValue("alarm_active_tariff", packet.electricity.tariffIndicator.toString());
-		}
-
-		// Gas meter
-		this.setValue("meter_gas", packet.gas.reading);
-
 		this.setAvailable();
+	}
+
+	parseDatagram(data) {
+		// Multiple datagrams might have been received for some reason
+		// Split on lines beginning with /, keep de /
+		let dgs = data.toString().split(/^(?=\/)/mg).filter(n => n);
+
+		if (dgs.length == 0) {
+			throw new Error('Received empty datagram?');
+		} else if (dgs.length > 1) {
+			this.log('Received multiple datagrams, looking for last valid datagram', dgs.length);
+		}
+
+		// Find last valid datagram from array.
+		// First line must start with /, second line empty and last line must be !{CRC16}
+		const dg = dgs.reverse().find(dg => {
+			let lines = dg.replace(/\r/g, '').split('\n');
+			const valid = lines[1] == '';
+			lines = lines.filter(l => l); // Remove all empty lines
+			return valid && lines[0].charAt(0) == '/' && /^![0-9A-F]{4}$/.test(lines[lines.length - 1]);
+		});
+
+		if (!dg) {
+			throw new Error(`Received corrupt datagrams ${dgs.toString()}`);
+		}
+
+		// Remove CRC16 line because the parser will throw a warning
+		// The ESP should have checked this already anyway
+		return parsePacket(dg.replace(/^![0-9A-F]{4}$/m, ''));
 	}
 
 	onError(error) {
