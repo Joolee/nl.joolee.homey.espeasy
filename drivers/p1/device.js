@@ -17,31 +17,22 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.log("Init:", this.unit.name, this.constructor.name, this.port);
 		this.p1 = new net.Socket();
 
-		this.onUnitUpdate = this.onUnitUpdate.bind(this);
-		this.connect = this.connect.bind(this);
-		this.detectProblems = this.detectProblems.bind(this);
-		this.onConnected = this.onConnected.bind(this);
-		this.onClosed = this.onClosed.bind(this);
-		this.onData = this.onData.bind(this);
-		this.onError = this.onError.bind(this);
-		this.destroy = this.destroy.bind(this);
-		this.onTimeout = this.onTimeout.bind(this);
-
-		this.p1.on("connect", this.onConnected);
-		this.p1.on("timeout", this.onTimeout);
-		this.p1.on("close", this.onClosed);
-		this.p1.on("end", this.onClosed);
-		this.p1.on("data", this.onData);
-		this.p1.on("error", this.onError);
+		this.p1.on("connect", this.onConnected.bind(this));
+		this.p1.on("timeout", this.onTimeout.bind(this));
+		this.p1.on("close", this.onClosed.bind(this));
+		this.p1.on("end", this.onClosed.bind(this));
+		this.p1.on("data", this.onData.bind(this));
+		this.p1.on("error", this.onError.bind(this));
 		this.p1.setTimeout(60000);
-		Homey.on("unload", this.destroy);
+		Homey.on("unload", this.destroy.bind(this));
 
+		this.onUnitUpdate = this.onUnitUpdate.bind(this);
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
 
-		this.datagrams = 0;
+		this.datagramCount = 0;
 
 		this.connect();
-		this.keepAlive = setInterval(this.detectProblems, 60000);
+		this.keepAlive = setInterval(this.detectProblems.bind(this), 60000);
 	}
 
 	detectProblems() {
@@ -145,7 +136,7 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	onConnected() {
 		const server = this.p1.address();
-		this.log("Connected to P1 server at", this.unit.ip, this.port);
+		this.log("Connected to P1 server at", server.address, server.port);
 		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.waiting"));
 
 		this.connected = new Date();
@@ -159,7 +150,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.log("Connection lost");
 		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.connection_lost"));
 		this.connected = null;
-		setTimeout(this.connect, 5000);
+		setTimeout(this.connect.bind(this), 5000);
 	}
 
 	onData(data) {
