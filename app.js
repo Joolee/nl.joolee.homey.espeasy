@@ -28,7 +28,7 @@ class ESPEasy extends Homey.App {
 	}
 
 	unitInitialized(unit) {
-		if (!this.telemetry.appInitialized && this.units.getUnits().length == this.units.listOnline().length) {
+		if (!this.telemetry.appInitialized && this.units.getAll().length == this.units.getOnline().length) {
 			Homey.app.updateTelemetry('Initialized', '/app/initialized', false);
 			this.telemetry.appInitialized = true;
 		}
@@ -93,7 +93,7 @@ class ESPEasy extends Homey.App {
 
 	updateTelemetry(reason, url, recurse) {
 		try {
-			const onlineUnits = this.units.listOnline();
+			const onlineUnits = this.units.getOnline();
 			let metrics = {
 				"Total tasks": onlineUnits.reduce((numTasks, unit) => numTasks + unit.tasks.length, 0),
 				"Total tasks in use": onlineUnits.reduce((numTasks, unit) => {
@@ -101,7 +101,7 @@ class ESPEasy extends Homey.App {
 					numTasks += unit.getTasksByName(26, 'Generic - System Info', false).length;
 					return numTasks;
 				}, 0),
-				"Total units": this.units.units.length,
+				"Total units": this.units.getAll().length,
 				"Total GPIO used": onlineUnits.reduce((numTasks, unit) => numTasks + unit.gpios.length, 0),
 			}
 
@@ -111,7 +111,7 @@ class ESPEasy extends Homey.App {
 		}
 
 		if (recurse) {
-			this.units.listOnline().forEach(unit => {
+			this.units.getOnline().forEach(unit => {
 				try {
 					unit.updateTelemetry(reason, recurse)
 				} catch (error) {
