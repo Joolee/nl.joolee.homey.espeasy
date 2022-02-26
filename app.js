@@ -12,8 +12,6 @@ class ESPEasy extends Homey.App {
 			process.stdout.write = () => {}
 		}
 
-		this.updateTelemetry = this.updateTelemetry.bind(this);
-
 		this.triggers = {};
 		this.actions = {};
 		this.units = new ESPEasyUnits();
@@ -22,10 +20,18 @@ class ESPEasy extends Homey.App {
 			host: 'espeasy.homey.joolee.nl',
 			siteId: 2
 		});
+		Homey.app.units.on('unit-initialized', this.unitInitialized.bind(this))
 	}
 
 	onUninit() {
 		this.telemetry.send('App', 'Uninit', '/app/uninit', {});
+	}
+
+	unitInitialized(unit) {
+		if (!this.telemetry.appInitialized && this.units.getUnits().length == this.units.listOnline().length) {
+			Homey.app.updateTelemetry('Initialized', '/app/initialized', false);
+			this.telemetry.appInitialized = true;
+		}
 	}
 
 	get supportedTasks() {
