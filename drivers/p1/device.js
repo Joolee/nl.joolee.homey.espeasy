@@ -15,15 +15,15 @@ module.exports = class P1_Device extends GeneralDevice {
 
 		this.unit.addSensor(this);
 		this.log("Init:", this.unit.name, this.constructor.name, this.port);
-		this.p1 = new net.Socket();
+		this.socket = new net.Socket();
 
-		this.p1.on("connect", this.onConnected.bind(this));
-		this.p1.on("timeout", this.onTimeout.bind(this));
-		this.p1.on("close", this.onClosed.bind(this));
-		this.p1.on("end", this.onClosed.bind(this));
-		this.p1.on("data", this.onData.bind(this));
-		this.p1.on("error", this.onError.bind(this));
-		this.p1.setTimeout(60000);
+		this.socket.on("connect", this.onConnected.bind(this));
+		this.socket.on("timeout", this.onTimeout.bind(this));
+		this.socket.on("close", this.onClosed.bind(this));
+		this.socket.on("end", this.onClosed.bind(this));
+		this.socket.on("data", this.onData.bind(this));
+		this.socket.on("error", this.onError.bind(this));
+		this.socket.setTimeout(60000);
 		Homey.on("unload", this.destroy.bind(this));
 
 		this.onUnitUpdate = this.onUnitUpdate.bind(this);
@@ -78,7 +78,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	onTimeout() {
 		// Reconnect
 		this.log("Not receiving any datagrams, trying to reconnect");
-		this.p1.end();
+		this.socket.end();
 	}
 
 	// Override GeneralDevice function
@@ -88,14 +88,14 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	// New IP address for unit
 	onUnitUpdate(unit, newSettings) {
-		this.p1.end();
+		this.socket.end();
 	}
 
 	destroy() {
 		this.log("Destroying all connections");
 		this.connected = null;
-		this.p1.removeAllListeners("close", this.onClosed);
-		this.p1.destroy();
+		this.socket.removeAllListeners("close", this.onClosed);
+		this.socket.destroy();
 	}
 
 	// New port number for this device
@@ -103,7 +103,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		callback();
 		if (changedKeys.includes('p1port')) {
 			this.errorMSg = null;
-			this.p1.end();
+			this.socket.end();
 		}
 	}
 
@@ -122,12 +122,12 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	connect() {
-		if (!this.p1.connecting) {
+		if (!this.socket.connecting) {
 			this.log("Connecting to P1 server at", this.unit.ip, this.port);
 			this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.connecting", {
 				"port": this.port
 			}));
-			this.p1.connect({
+			this.socket.connect({
 				"host": this.unit.ip,
 				"port": this.port
 			});
@@ -135,7 +135,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	onConnected() {
-		const server = this.p1.address();
+		const server = this.socket.address();
 		this.log("Connected to P1 server at", server.address, server.port);
 		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.waiting"));
 
@@ -143,7 +143,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.lastDatagram = null;
 
 		// To test if the user entered the HTTP port...
-		this.p1.write("GET / HTTP");
+		this.socket.write("GET / HTTP");
 	}
 
 	onClosed() {
@@ -160,7 +160,7 @@ module.exports = class P1_Device extends GeneralDevice {
 				"port": this.port
 			});
 			this.setUnavailable(this.errorMsg);
-			this.p1.end();
+			this.socket.end();
 			return;
 		} else {
 			this.errorMsg = null;
