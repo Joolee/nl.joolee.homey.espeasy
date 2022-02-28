@@ -20,7 +20,12 @@ class ESPEasy extends Homey.App {
 			host: 'espeasy.homey.joolee.nl',
 			siteId: 2
 		});
-		Homey.app.units.on('unit-initialized', this.unitInitialized.bind(this))
+
+		if (this.units.getAll().length) {
+			this.units.on('unit-initialized', this.unitInitialized.bind(this));
+		} else {
+			this.unitInitialized();
+		}
 	}
 
 	onUninit() {
@@ -29,7 +34,7 @@ class ESPEasy extends Homey.App {
 
 	unitInitialized(unit) {
 		if (!this.telemetry.appInitialized && this.units.getAll().length == this.units.getOnline().length) {
-			Homey.app.updateTelemetry('Initialized', '/app/initialized', false);
+			this.updateTelemetry('Initialized', '/app/initialized', false);
 			this.telemetry.appInitialized = true;
 		}
 	}
