@@ -60,23 +60,32 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.migrateCapability("custom_load", "measure_load");
 		this.migrateCapability("custom_ram", "measure_ram");
 
-		if (!this.hasCapability("measure_signal_strength"))
-			this.addCapability("measure_signal_strength");
-
-		if (!this.hasCapability("measure_uptime")) {
-			this.addCapability("measure_uptime");
-			this.setCapabilityOptions("unit_uptime", {
-				"preventInsights": true,
-				"preventTag ": true
-			});
+		if (!this.hasCapability("measure_signal_strength")) {
+			this.addCapability("measure_signal_strength")
+				.catch(this.error.bind(this, `Error adding capability [measure_signal_strength] for unit`));
 		}
 
+		// I want both capabilities one is pretty-printed, the other is for tags and insights
+		if (!this.hasCapability("measure_uptime")) {
+			this.addCapability("measure_uptime")
+				.catch(this.error.bind(this, `Error adding capability [measure_uptime] for unit`));
+
+			this.setCapabilityOptions("unit_uptime", {
+					"preventInsights": true,
+					"preventTag ": true
+				})
+				.catch(this.error.bind(this, `Error setting capability options [measure_uptime] for unit`));
+		}
+
+		// I want both capabilities one is pretty-printed, the other is for tags and insights
 		if (!this.hasCapability("measure_idle_time")) {
-			this.addCapability("measure_idle_time");
+			this.addCapability("measure_idle_time")
+				.catch(this.error.bind(this, `Error adding capability [measure_idle_time] for unit`));
 			this.setCapabilityOptions("device_heartbeat", {
-				"preventInsights": true,
-				"preventTag ": true
-			});
+					"preventInsights": true,
+					"preventTag ": true
+				})
+				.catch(this.error.bind(this, `Error setting capability options [device_heartbeat] for unit`));
 		}
 	}
 
@@ -95,18 +104,24 @@ module.exports = class UnitDevice extends Homey.Device {
 
 			const idleTime = Math.floor((new Date().getTime() - this.unit.lastEvent.getTime()) / 60);
 			if (this.getCapabilityValue("measure_idle_time") != idleTime) {
-				this.setCapabilityValue("device_heartbeat", this.unit.lastEvent.toLocaleString());
-				this.setCapabilityValue("measure_idle_time", idleTime);
+				this.setCapabilityValue("device_heartbeat", this.unit.lastEvent.toLocaleString())
+					.catch(this.error.bind(this, `Error setting capability [device_heartbeat] value to '${this.unit.lastEvent.toLocaleString()}' for unit`));
+				this.setCapabilityValue("measure_idle_time", idleTime)
+					.catch(this.error.bind(this, `Error setting capability [measure_idle_time] value to '${idleTime}' for unit`));
 			}
 
 			const uptime = this.unit.json.System["Uptime"];
 			if (this.getCapabilityValue("measure_uptime") != uptime) {
-				this.setCapabilityValue("unit_uptime", uptime + " " + Homey.__("minutes"));
-				this.setCapabilityValue("measure_uptime", uptime);
+				this.setCapabilityValue("unit_uptime", uptime + " " + Homey.__("minutes"))
+					.catch(this.error.bind(this, `Error setting capability [unit_uptime] value to '${uptime} ${Homey.__("minutes")}' for unit`));
+				this.setCapabilityValue("measure_uptime", uptime)
+					.catch(this.error.bind(this, `Error setting capability [measure_uptime] value to '${uptime}' for unit`));
 			}
 		} else {
-			this.setCapabilityValue("measure_idle_time", null);
-			this.setCapabilityValue("measure_uptime", null);
+			this.setCapabilityValue("measure_idle_time", null)
+				.catch(this.error.bind(this, `Error setting capability [measure_idle_time] value to null for unit`));
+			this.setCapabilityValue("measure_uptime", null)
+				.catch(this.error.bind(this, `Error setting capability [measure_uptime] value to null for unit`));
 		}
 	}
 
@@ -177,14 +192,16 @@ module.exports = class UnitDevice extends Homey.Device {
 
 		// ESP32 chips don't supply this value
 		if (!this.hasCapability("measure_heap") && json.System["Heap Max Free Block"]) {
-			this.addCapability("measure_heap");
+			this.addCapability("measure_heap")
+				.catch(this.error.bind(this, `Error adding capability [measure_heap] for unit`));
 		}
 
 		if (this.hasCapability("measure_heap")) {
 			if (json.System["Heap Max Free Block"]) {
 				this.setValue("measure_heap", json.System["Heap Max Free Block"]);
 			} else {
-				this.removeCapability("measure_heap");
+				this.removeCapability("measure_heap")
+					.catch(this.error.bind(this, `Error removing capability [measure_heap] for unit`));
 			}
 		}
 
@@ -194,15 +211,17 @@ module.exports = class UnitDevice extends Homey.Device {
 	setValue(key, value) {
 		if (this.getCapabilityValue(key) != value) {
 			this.setCapabilityValue(key, value)
-				.catch(this.log);
+				.catch(this.error.bind(this, `Error setting capability [${key}] value to ${value} for unit`));
 		}
 	}
 
 	migrateCapability(oldCapability, newCapability) {
 		if (this.hasCapability(oldCapability)) {
 			this.log("Migrate capability", oldCapability, newCapability);
-			this.removeCapability(oldCapability);
-			this.addCapability(newCapability);
+			this.removeCapability(oldCapability)
+				.catch(this.error.bind(this, `Error removing old capability [${oldCapability}] for unit`));
+			this.addCapability(newCapability)
+				.catch(this.error.bind(this, `Error adding new capability [${newCapability}] for unit`));
 		}
 	}
 

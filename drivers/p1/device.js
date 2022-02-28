@@ -259,12 +259,15 @@ module.exports = class P1_Device extends GeneralDevice {
 	setValue(capability, value) {
 		let hasCapability = this.hasCapability(capability);
 		if (!hasCapability && value !== undefined && value > 0) {
-			this.addCapability(capability);
+			this.addCapability(capability)
+				.catch(this.error.bind(this, `Error adding capability [${capability}] for P1 device`));;
 			hasCapability = true;
 		}
 
-		if (hasCapability && value !== undefined && this.getCapabilityValue(capability) != value)
+		if (hasCapability && value !== undefined && this.getCapabilityValue(capability) != value) {
 			this.setCapabilityValue(capability, value)
+				.catch(this.error.bind(this, `Error setting capability [${capability}] value to ${value} for p1 device`));
+		}
 	}
 
 	get port() {

@@ -14,10 +14,11 @@ module.exports = class GPIO_Bool_Device extends GPIODevice {
 		if ((pinStatus.state === 1) != homeyStatus) {
 			this.log('Pin', this.id, 'Updating state from ESP unit:', pinStatus.state);
 			this.setCapabilityValue(
-				this.capability,
-				(pinStatus.state == 1),
-				this.setAvailable
-			);
+					this.capability,
+					(pinStatus.state == 1),
+					this.setAvailable
+				)
+				.catch(this.error.bind(this, `Error setting capability [${this.capability}] value to ${pinStatus.state == 1} for gpio_output_bool device`));;
 		}
 
 		if (!this.getAvailable()) {

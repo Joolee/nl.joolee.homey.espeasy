@@ -17,11 +17,13 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 	onSettings(oldSettings, newSettings, changedKeys, callback) {
 		if (changedKeys.includes("set_total")) {
 			const capability = this.getSetting("capability-0");
-			this.setCapabilityValue(capability, newSettings["set_total"]);
+			this.setCapabilityValue(capability, newSettings["set_total"])
+				.catch(this.error.bind(this, `Error setting capability [${capability}] value to new total '${newSettings["set_total"]}' for pulse_counter`));
 
 			const multiplier = Number(this.getSetting("value_multiplier"));
 			const raw = newSettings["set_total"] / multiplier;
-			this.setCapabilityValue("measure_raw_number", raw);
+			this.setCapabilityValue("measure_raw_number", raw)
+				.catch(this.error.bind(this, `Error setting capability [measure_raw_number] value to new total '${raw}' for pulse_counter`));
 
 			this.log("Total value manually set to", newSettings["set_total"], raw);
 		}
@@ -41,10 +43,12 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 		const hasTotal = this.hasCapability("measure_sensor_value");
 		if (needsTotal && !hasTotal) {
 			this.log("Adding capability 'measure_sensor_value'");
-			this.addCapability("measure_sensor_value");
+			this.addCapability("measure_sensor_value")
+				.catch(this.error.bind(this, `Error adding capability [measure_sensor_value] for pulse_counter`));
 		} else if (hasTotal && !needsTotal) {
 			this.log("Removing capability 'measure_sensor_value'");
-			this.removeCapability("measure_sensor_value");
+			this.removeCapability("measure_sensor_value")
+				.catch(this.error.bind(this, `Error removing capability [measure_sensor_value] for pulse_counter`));
 		}
 	}
 
@@ -68,13 +72,15 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 				// Total is the only thing I get so work with it
 			case "total-2":
 				total = Number(value);
-				this.setCapabilityValue("measure_sensor_value", total);
+				this.setCapabilityValue("measure_sensor_value", total)
+					.catch(this.error.bind(this, `Error setting capability [measure_sensor_value:1] value to '${total}' for pulse_counter`));
 				break;
 
 				// If I get delta's, only use totals when wanted
 			case "delta_total-2":
 			case "delta_total_time-2":
-				this.setCapabilityValue("measure_sensor_value", Number(value));
+				this.setCapabilityValue("measure_sensor_value", Number(value))
+					.catch(this.error.bind(this, `Error setting capability [measure_sensor_value:2] value to '${Number(value)}' for pulse_counter`));
 				if (this.getSetting("use_totals") || !oldValue) {
 					total = Number(value);
 				}
@@ -94,7 +100,8 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 		}
 
 		if (total != this.getCapabilityValue("measure_raw_number")) {
-			this.setCapabilityValue("measure_raw_number", total);
+			this.setCapabilityValue("measure_raw_number", total)
+				.catch(this.error.bind(this, `Error setting capability [measure_raw_number] value to '${Number(value)}' for pulse_counter`));
 		}
 
 		value = Number(this.getSetting("value_multiplier")) * total;
@@ -105,10 +112,10 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 				.catch((...args) => {
 					if (args[0].message && args[0].message == "invalid_type") {
 						const capabilityProperties = Homey.app.getCapability(capability);
-						this.log(`Invalid value type for capability '${capability}'. Got value '${value}' (${typeof value}) but expected type ${capabilityProperties.type}`);
+						this.error(`Invalid value type for capability '${capability}'. Got value '${value}' (${typeof value}) but expected type ${capabilityProperties.type}`);
 					} else {
 						args.push(capability, value);
-						this.log.apply(this, args);
+						this.error.apply(this, `Error setting capability [${capability}] value to ${value} for pulse_counter device`, args);
 					}
 				});
 		}
