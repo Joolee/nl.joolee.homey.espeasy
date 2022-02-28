@@ -98,5 +98,9 @@
 	"1.11.3": {
 		"en": "Fix a crash during pairing, adds bunch of error loging to track down a capabilities error",
 		"nl": "Lost een crash op bij pairen, voegt een stapel error logging toe om een error mbt capabilities op te zoeken"
+	},
+	"1.11.4": {
+		"en": "Improve handling http errors for units and P1 devices",
+		"nl": "Verbeterd omgang met http errors bij units en P1 apparaten"
 	}
 }
