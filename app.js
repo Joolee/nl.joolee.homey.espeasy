@@ -21,11 +21,9 @@ class ESPEasy extends Homey.App {
 			siteId: 2
 		});
 
-		if (this.units.getAll().length) {
-			this.units.on('unit-initialized', this.unitInitialized.bind(this));
-		} else {
-			this.unitInitialized();
-		}
+		this.units.on('unit-initialized', this.unitInitialized.bind(this));
+		// When, just before time, number of units is still 0, send that telemetry 
+		setTimeout(this.unitInitialized.bind(this), this.telemetry.initialTimeout - 1000);
 	}
 
 	onUninit() {
@@ -33,7 +31,7 @@ class ESPEasy extends Homey.App {
 	}
 
 	unitInitialized(unit) {
-		if (!this.telemetry.appInitialized && this.units.getAll().length == this.units.getOnline().length) {
+		if (!this.telemetry.appInitialized && this.units.getAll().length >= this.units.getOnline().length) {
 			this.updateTelemetry('Initialized', '/app/initialized', false);
 			this.telemetry.appInitialized = true;
 		}
