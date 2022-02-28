@@ -94,5 +94,9 @@
 	"1.11.2": {
 		"en": "Improved P1 parsing of corrupt datagrams",
 		"nl": "Verwerken van corrupte datagramd van P1 apparaten is verbeterd"
+	},
+	"1.11.3": {
+		"en": "Fix a crash during pairing, adds bunch of error loging to track down a capabilities error",
+		"nl": "Lost een crash op bij pairen, voegt een stapel error logging toe om een error mbt capabilities op te zoeken"
 	}
 }
