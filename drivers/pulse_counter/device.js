@@ -8,6 +8,8 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 
 		this.addRemoveTotalCapability = this.addRemoveTotalCapability.bind(this);
 
+		// Events can be distributed before the 'total' capability is fully added, we should ignore those
+		this.totalCapabilityResolved = false;
 		this.addRemoveTotalCapability();
 		this.setSettings({
 			"set_total": 0
@@ -29,6 +31,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 		}
 
 		if (changedKeys.includes("variant")) {
+			this.totalCapabilityResolved = false;
 			this.addRemoveTotalCapability(newSettings["variant"]);
 		}
 		super.onSettings(oldSettings, newSettings, changedKeys, callback);
@@ -39,16 +42,25 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 	}
 
 	addRemoveTotalCapability(variant = this.getSetting("variant")) {
-		const needsTotal = ["delta_total", "delta_total_time"].includes(variant);
+		this.totalCapabilityResolved = false;
+		const needsTotal = variant.includes('total');
 		const hasTotal = this.hasCapability("measure_sensor_value");
 		if (needsTotal && !hasTotal) {
 			this.log("Adding capability 'measure_sensor_value'");
 			this.addCapability("measure_sensor_value")
+				.then(() => {
+					this.totalCapabilityResolved = true;
+				})
 				.catch(this.error.bind(this, `Error adding capability [measure_sensor_value] for pulse_counter`));
 		} else if (hasTotal && !needsTotal) {
 			this.log("Removing capability 'measure_sensor_value'");
 			this.removeCapability("measure_sensor_value")
+				.then(() => {
+					this.totalCapabilityResolved = true;
+				})
 				.catch(this.error.bind(this, `Error removing capability [measure_sensor_value] for pulse_counter`));
+		} else {
+			this.totalCapabilityResolved = true;
 		}
 	}
 
@@ -60,6 +72,11 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 		const oldValue = this.getCapabilityValue(capability);
 		const oldRaw = this.getCapabilityValue("measure_raw_number");
 		let total = null;
+
+		if (variant.includes('total') && !this.totalCapabilityResolved) {
+			this.log('Total capability not yet fully resolved. Ignoring this event');
+			return;
+		}
 
 		switch (variant + '-' + taskValue.ValueNumber) {
 			// Getting only delta
@@ -88,10 +105,6 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 
 			case "delta_total_time-3":
 				// Ignore for now
-				break;
-
-			default:
-				this.log("Ignoring" + variant + '-' + taskValue.ValueNumber, value);
 				break;
 		}
 
