@@ -251,8 +251,11 @@ module.exports = class P1_Device extends GeneralDevice {
 
 		if (error.errno && error.errno == "ECONNRESET") {
 			this.log("Connection reset. Previous connection had probably not been closed correctly");
+		} else if (error.errno && error.errno == "EHOSTUNREACH" || error.errno == "ECONNREFUSED") {
+			this.log("P1 device unreachable");
+			this.setUnavailable(`P1 device unreachable: ${error.errno}`);
 		} else {
-			this.error("Error received:", error);
+			this.error("Unknown error received:", error);
 		}
 	}
 
