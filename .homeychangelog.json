@@ -102,5 +102,9 @@
 	"1.11.4": {
 		"en": "Improve handling http errors for units and P1 devices",
 		"nl": "Verbeterd omgang met http errors bij units en P1 apparaten"
+	},
+	"1.11.5": {
+		"en": "Fixed elusive error for pulse_counter_device when 'total' variant is used",
+		"nl": "Probleem opgelost voor pulse_counter_device wanneer een variant met 'total' wordt gebruikt"
 	}
 }
