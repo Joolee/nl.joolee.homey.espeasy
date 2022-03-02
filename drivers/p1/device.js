@@ -260,6 +260,10 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	setValue(capability, value) {
+		if (value === undefined) {
+			return;
+		}
+
 		let hasCapability = this.hasCapability(capability);
 		if (!hasCapability && value !== undefined && value > 0) {
 			this.addCapability(capability)

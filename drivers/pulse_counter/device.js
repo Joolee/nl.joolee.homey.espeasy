@@ -108,7 +108,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 				break;
 		}
 
-		if (total === null) {
+		if (total === null || value === undefined) {
 			return;
 		}
 

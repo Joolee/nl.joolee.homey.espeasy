@@ -209,7 +209,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	setValue(key, value) {
-		if (this.getCapabilityValue(key) != value) {
+		if (value !== undefined && this.getCapabilityValue(key) != value) {
 			this.setCapabilityValue(key, value)
 				.catch(this.error.bind(this, `Error setting capability [${key}] value to ${value} for unit`));
 		}
