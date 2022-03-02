@@ -128,7 +128,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	onUnitStateChange(unit, state) {
 		if (state != this.getAvailable()) {
 			this.log("Change online state to", state);
-			state ? this.setAvailable() : this.setUnavailable(Homey.__("offline"));
+			state ? this.setAvailable() : this.setUnavailable(this.unit.getOfflineReason());
 		}
 	}
 
