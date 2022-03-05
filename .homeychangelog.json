@@ -106,5 +106,9 @@
 	"1.11.5": {
 		"en": "Fixed elusive error for pulse_counter_device when 'total' variant is used",
 		"nl": "Probleem opgelost voor pulse_counter_device wanneer een variant met 'total' wordt gebruikt"
+	},
+	"1.11.6": {
+		"en": "Hopefuly fixes a chrash I can't reproduce, improves error handling in general",
+		"nl": "Hopelijk een chrash opgelost welke ik niet kan reproduceren. Verbeterde foutafhandeling in het algemeen"
 	}
 }
