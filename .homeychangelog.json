@@ -110,5 +110,9 @@
 	"1.11.6": {
 		"en": "Hopefuly fixes a chrash I can't reproduce, improves error handling in general",
 		"nl": "Hopelijk een chrash opgelost welke ik niet kan reproduceren. Verbeterde foutafhandeling in het algemeen"
+	},
+	"1.11.7": {
+		"en": "Another try at fixing unreproducable chrash and other small bugfixes.",
+		"nl": "Nog een poging een onreproduceerbare chrash op te lossen, samen met wat andere kleine bugfixes"
 	}
 }
