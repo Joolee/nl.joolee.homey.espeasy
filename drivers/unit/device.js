@@ -4,6 +4,13 @@ const util = require('util');
 module.exports = class UnitDevice extends Homey.Device {
 	// Homey function
 	onInit() {
+		this.removeAllListeners('__log').removeAllListeners('__error');
+		this.on('__log', (...props) => {
+			this.getDriver().log.bind(this, `[${this.getName()}]`)(...props);
+		}).on('__error', (...props) => {
+			this.getDriver().error.bind(this, `[${this.getName()}]`)(...props);
+		});
+
 		this.setUnavailable("Initializing");
 		this.unit = Homey.app.units.findUnit(
 			this.getData().mac,
@@ -28,7 +35,7 @@ module.exports = class UnitDevice extends Homey.Device {
 		this.unit.on("reconnect", this.onUnitReconnect);
 
 		this.unit.setPollInterval(this.getSetting('pollInterval'));
-		this.log("Initializing unit device: '" + this.getName() + "'");
+		this.log(`Initializing unit device: ${this.getSetting('host')}`);
 		this.unit.updateJSON(false, () => {
 			this.onUnitStateChange(this.unit, this.unit.isOnline)
 		});

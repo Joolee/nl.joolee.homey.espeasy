@@ -8,6 +8,12 @@ const parsePacket = require('/lib/p1-parsePacket.js');
 module.exports = class P1_Device extends GeneralDevice {
 	onInit() {
 		super.onInit();
+		this.removeAllListeners('__log').removeAllListeners('__error');
+		this.on('__log', (...props) => {
+			this.getDriver().log.bind(this, `[${this.unit.ip}]`)(...props);
+		}).on('__error', (...props) => {
+			this.getDriver().error.bind(this, `[${this.unit.ip}]`)(...props);
+		});
 
 		this.migrateCapability("custom_active_tariff", "alarm_active_tariff");
 
