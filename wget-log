@@ -1,6 +1,0 @@
---2022-02-21 17:48:25--  https://espeasy.homey.joolee.nl/matomo.php?ping=1
-Resolving espeasy.homey.joolee.nl (espeasy.homey.joolee.nl)... 136.144.233.59, 2a01:7c8:d005:3be:1337::1
-Connecting to espeasy.homey.joolee.nl (espeasy.homey.joolee.nl)|136.144.233.59|:443... connected.
-HTTP request sent, awaiting response... 400 Bad Request
-2022-02-21 17:48:25 ERROR 400: Bad Request.
-
