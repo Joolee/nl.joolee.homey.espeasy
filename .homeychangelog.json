@@ -114,5 +114,9 @@
 	"1.11.7": {
 		"en": "Another try at fixing unreproducable chrash and other small bugfixes.",
 		"nl": "Nog een poging een onreproduceerbare chrash op te lossen, samen met wat andere kleine bugfixes"
+	},
+	"1.12.0": {
+		"en": "Add measurements for three phases to P1 device and support for SHT30/31/35 environment plugin.",
+		"nl": "Voegt metingen toe voor drie fases aan P1 apparaat en ondersteuning voor de SHT30/31/35 environment plugin"
 	}
 }
