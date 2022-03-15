@@ -2483,6 +2483,42 @@
             "en": "Surplus tariff 2",
             "nl": "Teruglevering tarief 2"
           }
+        },
+        "measure_power.received_l1": {
+          "title": {
+            "en": "Usage phase L1",
+            "nl": "Verbruik fase L1"
+          }
+        },
+        "measure_power.received_l2": {
+          "title": {
+            "en": "Usage phase L2",
+            "nl": "Verbruik fase L2"
+          }
+        },
+        "measure_power.received_l3": {
+          "title": {
+            "en": "Usage phase L3",
+            "nl": "Verbruik fase L3"
+          }
+        },
+        "measure_power.delivered_l1": {
+          "title": {
+            "en": "Surplus phase L1",
+            "nl": "Teruglevering fase L1"
+          }
+        },
+        "measure_power.delivered_l2": {
+          "title": {
+            "en": "Surplus phase L2",
+            "nl": "Teruglevering fase L2"
+          }
+        },
+        "measure_power.delivered_l3": {
+          "title": {
+            "en": "Surplus phase L3",
+            "nl": "Teruglevering fase L3"
+          }
         }
       },
       "energy": {

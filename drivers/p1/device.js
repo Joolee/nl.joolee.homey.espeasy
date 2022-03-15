@@ -190,15 +190,24 @@ module.exports = class P1_Device extends GeneralDevice {
 				});
 			}
 
-			// Power usage
+			// Total power usage
 			this.setValue("measure_power", dg.electricity.received.actual.reading * 1000);
 			this.setValue("meter_power.received1", dg.electricity.received.tariff1.reading);
 			this.setValue("meter_power.received2", dg.electricity.received.tariff2.reading);
 
-			// Power surplus
+			// Total power surplus
 			this.setValue("measure_power.delivery", 0 - dg.electricity.delivered.actual * 1000);
 			this.setValue("meter_power.delivered1", dg.electricity.delivered.tariff1.reading);
 			this.setValue("meter_power.delivered2", dg.electricity.delivered.tariff2.reading);
+
+			// Power usage per phase
+			// Only if phase 2 is not null
+			if (dg.electricity.instantaneous.power.positive.L2.reading) {
+				for (let i = 1; i < 4; i++) {
+					this.setValue('measure_power.received_l' + i, dg.electricity.instantaneous.power.positive['L' + i].reading * 1000);
+					this.setValue('measure_power.delivered_l' + i, dg.electricity.instantaneous.power.negative['L' + i].reading * 1000);
+				}
+			}
 
 			// Active tariff
 			if (dg.electricity.tariffIndicator) {
