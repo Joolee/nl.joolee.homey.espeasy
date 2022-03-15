@@ -56,18 +56,9 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	updateTelemetry(reason, recurse) {
 		try {
-			// List of all 'optional' capabilities
-			const measureCaps = ["measure_power",
-				"meter_power.received1",
-				"meter_power.received2",
-				"measure_power.delivery",
-				"meter_power.delivered1",
-				"meter_power.delivered2",
-				"alarm_active_tariff",
-				"meter_gas"
-			]
-			// Find out which ones are used
-			const capabilities = this.getCapabilities().filter(cap => measureCaps.includes(cap));
+			// Find out which dynamic capabilities are used
+			const defaultCaps = this.getDriver().getManifest().capabilities;
+			const capabilities = this.getCapabilities().filter(cap => !defaultCaps.includes(cap));
 
 			let metrics = {
 				"Task plugin": '44 - Communication - P1 Wifi Gateway',
