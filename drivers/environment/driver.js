@@ -60,6 +60,11 @@ module.exports = class Environment_Driver extends SensorDriver {
 			"values": ["Temperature", "Humidity", "Pressure", "TVOC"]
 		},
 		{
+			"name": 'Environment - SHT30/31/35',
+			"plugin": 68,
+			"values": ["Temperature", "Humidity"]
+		},
+		{
 			"name": "Generic - Dummy Device",
 			"plugin": 33,
 			"variantTitle": "Output Data Type",
