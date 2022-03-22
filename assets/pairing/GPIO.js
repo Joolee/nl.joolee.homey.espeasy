@@ -139,7 +139,8 @@ $(document).ready(() => {
 
 // Override "next" button. This can break!
 document.body.addEventListener('click', (event) => {
-	if (event.target.id != "hy-nav-next" && event.target.parentNode.id != "hy-nav-next") {
+	let targets = ['hy-nav-next', 'hy-nav-continue'];
+	if (!targets.includes(event.target.id) && !targets.includes(event.target.parentNode.id)) {
 		return;
 	}
 

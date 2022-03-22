@@ -53,7 +53,8 @@ function find_unit() {
 
 	// Override "next" button. This can break!
 	document.body.addEventListener("click", (event) => {
-		if (Homey.getCurrentView() != "find_unit" || (event.target.id != "hy-nav-next" && event.target.parentNode.id != "hy-nav-next")) {
+		let targets = ['hy-nav-next', 'hy-nav-continue'];
+		if (Homey.getCurrentView() != "find_unit" || (!targets.includes(event.target.id) && !targets.includes(event.target.parentNode.id))) {
 			return;
 		}
 
@@ -129,7 +130,8 @@ function setup_controller() {
 
 	// Override "next" button. This can break!
 	document.body.addEventListener("click", (event) => {
-		if (Homey.getCurrentView() != "setup_controller" || (event.target.id != "hy-nav-next" && event.target.parentNode.id != "hy-nav-next")) {
+		let targets = ['hy-nav-next', 'hy-nav-continue'];
+		if (Homey.getCurrentView() != "setup_controller" || (!targets.includes(event.target.id) && !targets.includes(event.target.parentNode.id))) {
 			return;
 		}
 
