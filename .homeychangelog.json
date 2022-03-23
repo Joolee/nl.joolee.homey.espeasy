@@ -118,5 +118,9 @@
 	"1.12.0": {
 		"en": "Add measurements for three phases to P1 device and support for SHT30/31/35 environment plugin.",
 		"nl": "Voegt metingen toe voor drie fases aan P1 apparaat en ondersteuning voor de SHT30/31/35 environment plugin"
+	},
+	"1.12.1": {
+		"en": "Support for changes in firmware 7.4, the app will now cap sensorvalues to the min/max of a capabilty and some other bugfixes.",
+		"nl": "Ondersteuning voor firmware 7.4, de app zal nu sensorwaarden beperken tot de min/max van een capability en wat andere bugfixes"
 	}
 }
