@@ -252,7 +252,10 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	onError(error) {
-		if (typeof error == "string" && error.slice(0, 22) == "Error: write after end")
+		console.log(typeof error);
+		if (typeof error == "string" && (
+				error.slice(0, 22) == "Error: write after end" ||
+				error.includes('ERR_STREAM_WRITE_AFTER_END')))
 			return;
 
 		if (error.errno && error.errno == "ECONNRESET") {
