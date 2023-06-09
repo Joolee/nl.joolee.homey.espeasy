@@ -22,6 +22,7 @@ class ESPEasy extends Homey.App {
 		this.units = new ESPEasyUnits();
 
 		this.telemetry = new Telemetry({
+			app: this,
 			host: 'espeasy.homey.joolee.nl',
 			siteId: 2
 		});
