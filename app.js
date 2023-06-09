@@ -61,7 +61,7 @@ class ESPEasy extends Homey.App {
 	}
 
 	getI18nString(i18n) {
-		const lang = Homey.ManagerI18n.getLanguage();
+		const lang = this.homey.i18n.getLanguage();
 		if (i18n[lang])
 			return i18n[lang];
 		else if (i18n['en'])
