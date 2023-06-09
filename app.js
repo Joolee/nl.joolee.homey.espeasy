@@ -8,8 +8,13 @@ class ESPEasy extends Homey.App {
 
 	onInit() {
 		if (process.env.DEBUG === '1') {
-			require('inspector').open(9222, '0.0.0.0', false);
-			process.stdout.write = () => {}
+			try {
+				require('inspector').waitForDebugger();
+			}
+			catch(error) {
+				require('inspector').open(9222, '0.0.0.0', true);
+				process.stdout.write = () => {}
+			}
 		}
 
 		this.triggers = {};
