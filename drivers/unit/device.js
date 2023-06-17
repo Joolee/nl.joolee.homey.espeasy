@@ -12,7 +12,7 @@ module.exports = class UnitDevice extends Homey.Device {
 		});
 
 		this.setUnavailable("Initializing");
-		this.unit = Homey.app.units.findUnit(
+		this.unit = this.homey.app.units.findUnit(
 			this.getData().mac,
 			this.getSetting('host'),
 			this.getSetting('port'));

@@ -124,7 +124,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 			this.setCapabilityValue(capability, value)
 				.catch((...args) => {
 					if (args[0].message && args[0].message == "invalid_type") {
-						const capabilityProperties = Homey.app.getCapability(capability);
+						const capabilityProperties = this.homey.app.getCapability(capability);
 						this.error(`Invalid value type for capability '${capability}'. Got value '${value}' (${typeof value}) but expected type ${capabilityProperties.type}`);
 					} else {
 						args.push(capability, value);

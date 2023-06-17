@@ -52,7 +52,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 			this.log('Unregistered units list requested by pairing wizard');
 			const unregisteredUnits = [];
 
-			for (const unit of Homey.app.units.getUnregistered()) {
+			for (const unit of this.homey.app.units.getUnregistered()) {
 				unregisteredUnits.push({
 					"name": unit.name,
 					"idx": unit.idx,
@@ -76,7 +76,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 			}
 
 			this.log(`User requested connection to: ${data[0]}:${data[1]}`);
-			unit = Homey.app.units.findUnit(null, data[0], data[1], true, (error, unit, newlyFound) => {
+			unit = this.homey.app.units.findUnit(null, data[0], data[1], true, (error, unit, newlyFound) => {
 				if (error) {
 					// Can't get the error message back to the client so I'll send it as data
 					callback(null, error);

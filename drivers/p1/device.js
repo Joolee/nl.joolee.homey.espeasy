@@ -30,7 +30,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.socket.on("data", this.onData.bind(this));
 		this.socket.on("error", this.onError.bind(this));
 		this.socket.setTimeout(60000);
-		Homey.on("unload", this.destroy.bind(this));
+		this.homey.on("unload", this.destroy.bind(this));
 
 		this.onUnitUpdate = this.onUnitUpdate.bind(this);
 		this.unit.on('settingsUpdate', this.onUnitUpdate);
@@ -66,7 +66,7 @@ module.exports = class P1_Device extends GeneralDevice {
 				"Task capabilities": capabilities.sort().join(', ')
 			};
 
-			Homey.app.telemetry.send('Sensor', reason, '/device/sensor/p1', metrics);
+			this.homey.app.telemetry.send('Sensor', reason, '/device/sensor/p1', metrics);
 		} catch (error) {
 			this.error('Error sending P1 telemetry:', error);
 		}
@@ -111,7 +111,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		this.unit.removeListener('settingsUpdate', this.onUnitUpdate);
 		this.unit.deleteSensor(this);
 
-		Homey.removeListener("unload", this.destroy)
+		this.homey.removeListener("unload", this.destroy)
 
 		clearInterval(this.keepAlive);
 
@@ -169,7 +169,7 @@ module.exports = class P1_Device extends GeneralDevice {
 			if (!this.datagramCount) {
 				this.debug("First datagram received:\n", dg, dg);
 			}
-			this.datagramCount = Homey.app.safeIncrement(this.datagramCount);
+			this.datagramCount = this.homey.app.safeIncrement(this.datagramCount);
 
 			dg.version = (dg.version / 10).toString();
 
