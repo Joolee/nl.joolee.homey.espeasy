@@ -33,7 +33,7 @@ module.exports = class Input_Switch_Driver extends SensorDriver {
 			"validate": (taskVal, value) => {
 				value = Number(value);
 				if (value == -1)
-					return Homey.__("sensor.io_board_offline")
+					return this.homey.__("sensor.io_board_offline")
 				else if ([0, 1, 3, 10, 11].includes(value))
 					return true;
 				else

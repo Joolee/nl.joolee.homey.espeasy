@@ -119,8 +119,8 @@ module.exports = class UnitDevice extends Homey.Device {
 
 			const uptime = this.unit.json.System["Uptime"];
 			if (this.getCapabilityValue("measure_uptime") != uptime) {
-				this.setCapabilityValue("unit_uptime", uptime + " " + Homey.__("minutes"))
-					.catch(this.error.bind(this, `Error setting capability [unit_uptime] value to '${uptime} ${Homey.__("minutes")}' for unit`));
+				this.setCapabilityValue("unit_uptime", uptime + " " + this.homey.__("minutes"))
+					.catch(this.error.bind(this, `Error setting capability [unit_uptime] value to '${uptime} ${this.homey.__("minutes")}' for unit`));
 				this.setCapabilityValue("measure_uptime", uptime)
 					.catch(this.error.bind(this, `Error setting capability [measure_uptime] value to '${uptime}' for unit`));
 			}
@@ -272,7 +272,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	async autoCompleteTaskName(args, query) {
 		if (!this.unit.json) {
 			this.log("autoCompleteTaskName: Device offline");
-			return Promise.reject(Homey.__("offline"));
+			return Promise.reject(this.homey.__("offline"));
 		}
 
 		const tasks = this.unit.tasks.map(task => ({
@@ -287,7 +287,7 @@ module.exports = class UnitDevice extends Homey.Device {
 	async autoCompleteTaskValueName(args, query) {
 		if (!this.unit.json) {
 			this.log("autoCompleteTaskValueName: Device offline");
-			return Promise.reject(Homey.__("offline"));
+			return Promise.reject(this.homey.__("offline"));
 		}
 
 		const valueNames = [];

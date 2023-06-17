@@ -88,7 +88,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 						callback(null, {
 							"name": unit.name,
 							"idx": (unit.idx ? unit.idx.toString() : 'unknown'),
-							"uptime": unit.uptime + ' ' + Homey.__("minutes"),
+							"uptime": unit.uptime + ' ' + this.homey.__("minutes"),
 							"eventCount": unit.eventCount,
 							"staticIP": unit.hasStaticIP(),
 							"host": unit.hostname,

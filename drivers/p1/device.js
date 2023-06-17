@@ -121,7 +121,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	connect() {
 		if (!this.socket.connecting) {
 			this.log("Connecting to P1 server at", this.unit.ip, this.port);
-			this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.connecting", {
+			this.setUnavailable(this.errorMsg ? this.errorMsg : this.homey.__("p1.connecting", {
 				"port": this.port
 			}));
 			this.socket.connect({
@@ -134,7 +134,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	onConnected() {
 		const server = this.socket.address();
 		this.log("Connected to P1 server at", server.address, server.port);
-		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.waiting"));
+		this.setUnavailable(this.errorMsg ? this.errorMsg : this.homey.__("p1.waiting"));
 
 		this.connected = new Date();
 		this.lastDatagram = null;
@@ -145,7 +145,7 @@ module.exports = class P1_Device extends GeneralDevice {
 
 	onClosed() {
 		this.log("Connection lost");
-		this.setUnavailable(this.errorMsg ? this.errorMsg : Homey.__("p1.connection_lost"));
+		this.setUnavailable(this.errorMsg ? this.errorMsg : this.homey.__("p1.connection_lost"));
 		this.connected = null;
 		setTimeout(this.connect.bind(this), 5000);
 	}
@@ -153,7 +153,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	onData(data) {
 		if (data.toString().substr(0, 4) == "HTTP") {
 			this.log("Connected to HTTP server...");
-			this.errorMsg = Homey.__("p1.connected_to_http_server", {
+			this.errorMsg = this.homey.__("p1.connected_to_http_server", {
 				"port": this.port
 			});
 			this.setUnavailable(this.errorMsg);
@@ -211,7 +211,7 @@ module.exports = class P1_Device extends GeneralDevice {
 		} catch (error) {
 			// It's a soft error as we'll receive more datagrams ㄟ( ▔, ▔ )ㄏ
 			this.log('Datagram error', this.dgCount, error);
-			this.setUnavailable(Homey.__("p1.invalid_datagram", {
+			this.setUnavailable(this.homey.__("p1.invalid_datagram", {
 				"port": this.port
 			}));
 			return;
