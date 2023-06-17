@@ -8,7 +8,7 @@ module.exports = class UnitDriver extends GeneralDriver {
 
 		// Find local subnet as user hint for pairing screen
 		this.homeyIp = null;
-		Homey.ManagerCloud.getLocalAddress((error, address) => {
+		this.homey.cloud.getLocalAddress((error, address) => {
 			if (!error && address) {
 				this.homeyIp = address;
 			}
