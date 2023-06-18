@@ -96,7 +96,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	}
 
 	// New port number for this device
-	onSettings(oldSettings, newSettings, changedKeys, callback) {
+	onSettings({ changedKeys }) {
 		callback();
 		if (changedKeys.includes('p1port')) {
 			this.errorMSg = null;

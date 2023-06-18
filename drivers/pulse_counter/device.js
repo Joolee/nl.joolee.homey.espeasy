@@ -16,7 +16,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 		});
 	}
 
-	onSettings(oldSettings, newSettings, changedKeys, callback) {
+	onSettings({ oldSettings, newSettings, changedKeys, callback }) {
 		if (changedKeys.includes("set_total")) {
 			const capability = this.getSetting("capability-0");
 			this.setCapabilityValue(capability, newSettings["set_total"])
@@ -34,7 +34,7 @@ module.exports = class Pulse_Counter_Device extends SensorDevice {
 			this.totalCapabilityResolved = false;
 			this.addRemoveTotalCapability(newSettings["variant"]);
 		}
-		super.onSettings(oldSettings, newSettings, changedKeys, callback);
+		super.onSettings(...arguments);
 
 		this.setSettings({
 			"set_total": 0
