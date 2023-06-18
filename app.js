@@ -6,7 +6,7 @@ const Telemetry = require('./lib/Telemetry.js');
 
 class ESPEasy extends Homey.App {
 
-	onInit() {
+	constructor() {
 		if (process.env.DEBUG === '1') {
 			try {
 				require('inspector').waitForDebugger();
@@ -16,6 +16,11 @@ class ESPEasy extends Homey.App {
 				process.stdout.write = () => {}
 			}
 		}
+
+		super(...arguments);
+	}
+
+	onInit() {
 
 		this.triggers = {};
 		this.actions = {};
