@@ -32,6 +32,8 @@ class ESPEasy extends Homey.App {
 		});
 
 		this.units.on('unit-initialized', this.unitInitialized.bind(this));
+		this.getSupportedTasks = this.getSupportedTasks.bind(this);
+
 		// When, just before time, number of units is still 0, send that telemetry 
 		setTimeout(this.unitInitialized.bind(this), this.telemetry.initialTimeout - 1000);
 	}
@@ -47,11 +49,11 @@ class ESPEasy extends Homey.App {
 		}
 	}
 
-	get supportedTasks() {
+	getSupportedTasks() {
 		if (this._supportedTasks)
 			return this._supportedTasks;
 
-		this._supportedTasks = Object.values(this.homey.getDrivers()).flatMap(driver => {
+		this._supportedTasks = Object.values(this.homey.drivers.getDrivers()).flatMap(driver => {
 			if (driver.taskTypes)
 				return driver.taskTypes.map(type => `${type.plugin} - ${type.name}`);
 			else
