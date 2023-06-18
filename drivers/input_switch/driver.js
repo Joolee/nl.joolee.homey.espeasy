@@ -45,14 +45,14 @@ module.exports = class Input_Switch_Driver extends SensorDriver {
 					case 10:
 					case 11:
 						// Handle long click
-						this.getDriver().triggerFlow(this, "switch_long_press", {
+						this.driver.triggerFlow(this, "switch_long_press", {
 							"switch_event": rawValue
 						});
 						return null;
 
 					case 3:
 						// Handle doubleclick
-						this.getDriver().triggerFlow(this, "switch_double_click");
+						this.driver.triggerFlow(this, "switch_double_click");
 						return null;
 
 					case 1:

@@ -46,7 +46,7 @@ class ESPEasy extends Homey.App {
 		if (this._supportedTasks)
 			return this._supportedTasks;
 
-		this._supportedTasks = Object.values(Homey.ManagerDrivers.getDrivers()).flatMap(driver => {
+		this._supportedTasks = Object.values(this.homey.getDrivers()).flatMap(driver => {
 			if (driver.taskTypes)
 				return driver.taskTypes.map(type => `${type.plugin} - ${type.name}`);
 			else

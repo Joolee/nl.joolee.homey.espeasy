@@ -10,9 +10,9 @@ module.exports = class P1_Device extends GeneralDevice {
 		super.onInit();
 		this.removeAllListeners('__log').removeAllListeners('__error');
 		this.on('__log', (...props) => {
-			this.getDriver().log.bind(this, `[${this.unit.ip}]`)(...props);
+			this.driver.log.bind(this, `[${this.unit.ip}]`)(...props);
 		}).on('__error', (...props) => {
-			this.getDriver().error.bind(this, `[${this.unit.ip}]`)(...props);
+			this.driver.error.bind(this, `[${this.unit.ip}]`)(...props);
 		});
 
 		this.migrateCapability("custom_active_tariff", "alarm_active_tariff");
@@ -57,7 +57,7 @@ module.exports = class P1_Device extends GeneralDevice {
 	updateTelemetry(reason, recurse) {
 		try {
 			// Find out which dynamic capabilities are used
-			const defaultCaps = this.getDriver().getManifest().capabilities;
+			const defaultCaps = this.driver.manifest.capabilities;
 			const capabilities = this.getCapabilities().filter(cap => !defaultCaps.includes(cap));
 
 			let metrics = {

@@ -6,9 +6,9 @@ module.exports = class UnitDevice extends Homey.Device {
 	onInit() {
 		this.removeAllListeners('__log').removeAllListeners('__error');
 		this.on('__log', (...props) => {
-			this.getDriver().log.bind(this, `[${this.getName()}]`)(...props);
+			this.driver.log.bind(this, `[${this.getName()}]`)(...props);
 		}).on('__error', (...props) => {
-			this.getDriver().error.bind(this, `[${this.getName()}]`)(...props);
+			this.driver.error.bind(this, `[${this.getName()}]`)(...props);
 		});
 
 		this.setUnavailable("Initializing");
@@ -44,14 +44,14 @@ module.exports = class UnitDevice extends Homey.Device {
 	}
 
 	onUnitReboot(unit, oldJson) {
-		this.getDriver().triggerFlow(this, "unit_rebooted", {
+		this.driver.triggerFlow(this, "unit_rebooted", {
 			"reset_reason": unit.json.System["Reset Reason"],
 			"boot_reason": unit.json.System["Last Boot Cause"]
 		});
 	}
 
 	onUnitReconnect(unit, oldJson) {
-		this.getDriver().triggerFlow(this, "unit_reconnected", {
+		this.driver.triggerFlow(this, "unit_reconnected", {
 			"milliseconds_ago": unit.json.WiFi["Connected msec"],
 			"reconnects_number": unit.json.WiFi["Number Reconnects"],
 			"disconnect_reason_number": unit.json.WiFi["Last Disconnect Reason"],
