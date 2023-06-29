@@ -1,6 +1,6 @@
 'use strict';
 
-const GPIODevice = require('/lib/GPIODevice.js');
+const GPIODevice = require('../../lib/GPIODevice.js');
 const util = require('util');
 
 module.exports = class GPIO_RTTTL_Device extends GPIODevice {

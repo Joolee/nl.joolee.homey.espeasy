@@ -1,6 +1,6 @@
 'use strict';
 
-const SensorDriver = require('/lib/SensorDriver.js');
+const SensorDriver = require('../../lib/SensorDriver.js');
 const Homey = require('homey');
 
 module.exports = class Energy_Driver extends SensorDriver {

@@ -1,6 +1,6 @@
 'use strict';
 
-const GPIODriver = require('/lib/GPIODriver.js');
+const GPIODriver = require('../../lib/GPIODriver.js');
 
 module.exports = class GPIO_PWM_Driver extends GPIODriver {
 	onInit() {

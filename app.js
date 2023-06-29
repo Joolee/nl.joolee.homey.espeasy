@@ -97,7 +97,7 @@ class ESPEasy extends Homey.App {
 	// The data source is still HomeyLib
 	// Note: Only properties 'title', 'type', 'getable', 'setable', 'min', 'max' and 'uiComponent' are included
 	getCapabilities() {
-		const defaultCapabilities = require("/assets/json/allCapabilities.json");
+		const defaultCapabilities = require("./assets/json/allCapabilities.json");
 		const customCapabilities = this.manifest["capabilities"];
 
 		return {

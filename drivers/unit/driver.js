@@ -1,6 +1,6 @@
 const Homey = require('homey');
 const http = require('http.min');
-const GeneralDriver = require('/lib/GeneralDriver.js');
+const GeneralDriver = require('../../lib/GeneralDriver.js');
 
 module.exports = class UnitDriver extends GeneralDriver {
 	onInit() {
