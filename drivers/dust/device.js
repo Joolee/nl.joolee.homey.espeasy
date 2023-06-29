@@ -1,6 +1,6 @@
 'use strict';
 
-const SensorDevice = require('/lib/SensorDevice.js');
+const SensorDevice = require('../../lib/SensorDevice.js');
 
 module.exports = class Dust_Device extends SensorDevice {
 

@@ -1,9 +1,9 @@
 'use strict';
 
-const GeneralDevice = require('/lib/GeneralDevice.js');
+const GeneralDevice = require('../../lib/GeneralDevice.js');
 const net = require('net');
 const Homey = require('homey');
-const parsePacket = require('/lib/p1-parsePacket.js');
+const parsePacket = require('../../lib/p1-parsePacket.js');
 
 module.exports = class P1_Device extends GeneralDevice {
 	onInit() {

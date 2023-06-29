@@ -1,6 +1,6 @@
 'use strict';
 
-const GPIODevice = require('/lib/GPIODevice.js');
+const GPIODevice = require('../../lib/GPIODevice.js');
 
 module.exports = class GPIO_PWM_Device extends GPIODevice {
 
